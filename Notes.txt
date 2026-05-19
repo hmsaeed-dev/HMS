@@ -1,5 +1,0 @@
-IN PROGRESS CHANGES
-
-
-1. In previous session of Gemini, we were trying to rename folder names without breaking the system paths.
-

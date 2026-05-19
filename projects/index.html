@@ -16,82 +16,73 @@
 <body>
 
   <a href="../index.html" class="cs-back">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
     Back to Portfolio
   </a>
 
   <header class="cs-hero">
-    <div class="container reveal">
+    <div class="cs-hero-content">
+      <p class="cs-hero-eyebrow">Case Studies</p>
       <h1 class="cs-title">Selected <em>Works</em></h1>
       <p class="cs-intro">A deep dive into the architecture, logic, and philosophy behind my digital builds.</p>
+      
+      <div class="cs-hero-stats">
+        <div class="cs-stat">
+          <span class="cs-stat-num" id="statProjects">0</span>
+          <span class="cs-stat-label">Projects</span>
+        </div>
+        <div class="cs-stat">
+          <span class="cs-stat-num" id="statTech">0</span>
+          <span class="cs-stat-label">Technologies</span>
+        </div>
+      </div>
     </div>
   </header>
 
   <main class="container">
     
-    <!-- CASE STUDY: HOUSE OF WISDOM -->
+    <!-- Filter Bar -->
+    <div class="cs-filter-bar">
+      <div class="cs-filter-left">
+        <span class="cs-filter-label">Filter by</span>
+        <!-- Buttons injected by JS -->
+      </div>
+      <div class="cs-view-count">
+        Showing <span id="visibleCount">0</span> works
+      </div>
+    </div>
+
+    <div id="case-studies-container">
+      <!-- Dynamic content injected by JS -->
+    </div>
+
+  </main>
+
+  <template id="tpl-case-study">
     <section class="case-study reveal">
       <div class="cs-grid">
         
         <aside class="cs-meta">
-          <span class="cs-tag">Lead Project</span>
-          <h2 class="cs-sidebar-title">House of Wisdom</h2>
-          <p class="cs-sidebar-desc">A digital library system designed for modularity and scalability using Vanilla JavaScript.</p>
+          <span class="cs-tag"></span>
+          <h2 class="cs-sidebar-title"></h2>
+          <p class="cs-sidebar-desc"></p>
           
           <div class="cs-tech-list">
-            <span class="cs-tech-item">ES Modules</span>
-            <span class="cs-tech-item">MVC Pattern</span>
-            <span class="cs-tech-item">Modular CSS</span>
-            <span class="cs-tech-item">Local Storage</span>
+            <!-- Injected -->
           </div>
 
           <div class="project-links">
-            <a href="https://github.com/HMSaeed101" class="btn-outline">Source Code</a>
+            <a href="#" class="btn-outline btn-source">Source Code</a>
           </div>
         </aside>
 
         <article class="cs-content">
-          <h4>The Challenge</h4>
-          <p>Most beginners build "spaghetti code" where UI logic and data logic are tangled. My goal was to build a system that could grow without breaking, necessitating a clear separation of concerns.</p>
-
-          <h4>Architecture: The MVC Pattern</h4>
-          <p>I implemented a Model-View-Controller architecture. This isn't just a buzzword; it's a structural promise. The <strong>Model</strong> handles the data (books, users), the <strong>View</strong> handles the DOM, and the <strong>Controller</strong> acts as the bridge.</p>
-          
-          <div class="cs-diagram">
-            <strong>Model:</strong> data.js (State Management)<br>
-            <strong>View:</strong> render.js (UI Components)<br>
-            <strong>Controller:</strong> main.js (Event Listeners & Orchestration)
-          </div>
-
-          <h4>Technical Highlight: Modular CSS</h4>
-          <p>To avoid the "Global Namespace CSS" nightmare, I used a modular approach where each component (Navbar, Grid, Modal) has its own stylesheet, orchestrated through a single entry point.</p>
-
-          <div class="cs-code-preview">
-/* main.css entry point */
-@import './base/rules.css';
-@import './components/nav.css';
-@import './components/library-grid.css';
-          </div>
-
-          <h4>The "Storyteller" Insight</h4>
-          <p>Building this project taught me that code is just another language for telling a story. If the architecture is confusing, the "story" of the data gets lost. Clean code is simply a clear narrative.</p>
+           <!-- Injected -->
         </article>
 
       </div>
     </section>
-
-    <!-- Placeholder for next project -->
-    <section class="case-study reveal" style="opacity: 0.5;">
-      <div class="cs-grid">
-        <aside class="cs-meta">
-          <span class="cs-tag">Productivity</span>
-          <h2 class="cs-sidebar-title">Personal Finance Tracker</h2>
-          <p class="cs-sidebar-desc">Case study coming soon. Focusing on Data Visualization and Offline Persistence.</p>
-        </aside>
-      </div>
-    </section>
-
-  </main>
+  </template>
 
   <footer class="section" style="text-align: center; color: var(--ink-40);">
     <div class="container">
