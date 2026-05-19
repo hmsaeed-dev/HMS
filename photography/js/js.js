@@ -3,7 +3,7 @@ import { photos } from "./javascript/data.js";
 /*
     Import your photos data from your existing data.js
     The photos array is already defined there — we just reuse it.
-    If you want extended descriptions per photo, add a `desc` field to each photo object in data.js (see comment below).
+    If you want extended descriptions per photo, add a `desc` field to each photo object in data.js
  */
 
 /*

@@ -17,7 +17,6 @@
 .pg-grid {
 	columns: 3 300px;
 	column-gap: 1.25rem;
-    perspective: 1200px;
 }
 
 .pg-item {
@@ -27,10 +26,7 @@
 	overflow: hidden;
 	position: relative;
 	cursor: pointer;
-	transition:
-		opacity 0.4s,
-		transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-    transform-style: preserve-3d;
+	transition: opacity 0.4s;
 }
 .pg-item.hidden {
 	display: none;
