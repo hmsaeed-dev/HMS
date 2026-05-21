@@ -1,0 +1,115 @@
+/* ── HOBBIES GRID ─────────────────────────────────────────── */
+.hobbies-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 1.5rem;
+	margin-top: 3rem;
+}
+
+.hobby-card {
+	background: var(--white);
+	padding: 2rem;
+	border-radius: var(--radiussm);
+	border: 1px solid var(--ink-10);
+	display: flex;
+	align-items: center;
+	gap: 1.25rem;
+	transition: var(--transition);
+	position: relative;
+	overflow: hidden;
+}
+
+.hobby-card:hover {
+	border-color: var(--olive);
+	transform: transform(1.1);
+	box-shadow: 0 12px 30px -10px var(--box-shadow);
+}
+
+.hobby-card.main-hub {
+	background: var(--olive);
+	color: var(--white);
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.hobby-card.main-hub .serif {
+	color: var(--white);
+	font-size: 2.5rem;
+	margin: 0;
+	line-height: 1;
+}
+
+.hobby-card.main-hub p {
+	opacity: 0.9;
+	font-size: 0.95rem;
+	margin-top: 0.5rem;
+}
+
+.hobby-card.portal {
+	background: var(--warm-bg);
+	cursor: pointer;
+}
+
+.hobby-icon {
+	width: 54px;
+	height: 54px;
+	background: var(--ink-10);
+	border-radius: 14px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--olive);
+	flex-shrink: 0;
+	transition: var(--transition);
+}
+
+.hobby-card:hover .hobby-icon {
+	background: var(--olive);
+	color: var(--white);
+}
+
+.hobby-info {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+}
+
+.hobby-info h4 {
+	font-size: 1.15rem;
+	margin: 0;
+	color: var(--ink);
+	font-weight: 600;
+}
+
+.hobby-info span {
+	font-size: 0.8rem;
+	color: var(--ink-40);
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	font-weight: 500;
+}
+
+/* Specific portal arrow logic */
+.hobby-card.portal::after {
+	content: "→";
+	position: absolute;
+	right: 1.5rem;
+	top: 50%;
+	transform: translateY(-50%) translateX(10px);
+	opacity: 0;
+	transition: var(--transition);
+	font-size: 1.2rem;
+	color: var(--olive);
+}
+
+.hobby-card.portal:hover::after {
+	opacity: 1;
+	transform: translateY(-50%) translateX(0);
+}
+
+@media (max-width: 768px) {
+	.hobbies-grid {
+		grid-template-columns: 1fr;
+	}
+}

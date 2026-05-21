@@ -80,8 +80,8 @@ Blobs
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#academic">Academic</a>
+      <a href="#hobbies">Hobbies</a>
       <a href="#skills">Skills</a>
-      <a href="#photography">Photography</a>
       <a href="blogs.html">Blog</a>
       <a href="#contact">Contact</a>
 
@@ -114,14 +114,16 @@ Blobs
     Academic
   </a>
 
+    <a href="#hobbies" class="mobile-link">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+    </svg>
+    Hobbies
+  </a>
+
   <a href="#skills" class="mobile-link">
     <svg class="icon" viewBox="0 0 24 24"><path fill="#c3d59cb3" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
     Skills & Tools
-  </a>
-
-  <a href="#photography" class="mobile-link">
-    <svg class="icon" viewBox="0 0 24 24"><path fill="#c3d59cb3" d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-    Photography
   </a>
 
   <a href="blogs.html" class="mobile-link">
@@ -286,6 +288,93 @@ Blobs
   </div>
 </template>
 
+
+<!-- ── HOBBIES ────────────────────────────────────────────── -->
+<section id="hobbies" class="section">
+  <div class="container">
+    <div class="reveal">
+      <h2 class="section-title">Beyond the Terminal</h2>
+      <p class="section-sub">Personal interests that fuel my professional curiosity.</p>
+      <div class="divider"></div>
+    </div>
+
+    <div class="hobbies-grid">
+      <!-- The Hub -->
+      <div class="hobby-card main-hub reveal">
+        <h3 class="serif">Hobbies</h3>
+        <p>The threads that tie my disciplines together.</p>
+      </div>
+
+      <!-- Chess -->
+      <div class="hobby-card reveal reveal-delay-1">
+        <div class="hobby-icon">
+          <svg viewBox="0 0 24 24" class="icon"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/><path d="M12 11V7"/></svg>
+        </div>
+        <div class="hobby-info">
+          <h4>Chess</h4>
+          <span>Strategic Logic</span>
+        </div>
+      </div>
+
+      <!-- Reading -->
+      <div class="hobby-card reveal reveal-delay-2">
+        <div class="hobby-icon">
+          <svg viewBox="0 0 24 24" class="icon"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        </div>
+        <div class="hobby-info">
+          <h4>Reading</h4>
+          <span>World Building</span>
+        </div>
+      </div>
+
+      <!-- Photography Portal -->
+      <a href="photography/index.html" class="hobby-card reveal reveal-delay-3 portal">
+        <div class="hobby-icon">
+          <svg viewBox="0 0 24 24" class="icon"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+        </div>
+        <div class="hobby-info">
+          <h4>Photography</h4>
+          <span>View Gallery →</span>
+        </div>
+      </a>
+
+      <!-- Travelling -->
+      <div class="hobby-card reveal reveal-delay-1">
+        <div class="hobby-icon">
+          <svg viewBox="0 0 24 24" class="icon"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div class="hobby-info">
+          <h4>Travelling</h4>
+          <span>Expanding Horizons</span>
+        </div>
+      </div>
+
+      <!-- Woodworking / Walking -->
+      <div class="hobby-card reveal reveal-delay-2">
+        <div class="hobby-icon">
+          <svg viewBox="0 0 24 24" class="icon"><path d="M12 18H3"/><path d="M3 14h18"/><path d="M3 10h18"/><path d="M3 6h18"/><path d="M19 14v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1"/><path d="M19 10V9a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v1"/></svg>
+        </div>
+        <div class="hobby-info">
+          <h4>Craft & Nature</h4>
+          <span>Woodworking & Walking</span>
+        </div>
+      </div>
+
+      <!-- Football / Table Tennis -->
+      <div class="hobby-card reveal reveal-delay-3">
+        <div class="hobby-icon">
+          <svg viewBox="0 0 24 24" class="icon"><circle cx="12" cy="12" r="10"/><path d="M6.7 6.7l10.6 10.6"/><path d="M6.7 17.3l10.6-10.6"/></svg>
+        </div>
+        <div class="hobby-info">
+          <h4>Football & TT</h4>
+          <span>Agility & Teamwork</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- ── SKILLS ─────────────────────────────────────────────── -->
 <section id="skills" class="section">
   <div class="container">
@@ -317,44 +406,6 @@ Blobs
   <span class="skill-pill">
   </span>
 </template>
-
-
-<!-- ── PHOTOGRAPHY ─────────────────────────────────────────── -->
-<section id="photography" class="section bg-white">
-  <div class="container">
-
-    <div class="reveal">
-
-      <a class="contact-icon" href="https://www.instagram.com/hms_aeed" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-      <svg class="icon"><use href="#icon-instagram"/></svg>
-      </a>
-
-      <h2 class="section-title">Photography</h2>
-
-      <p class="section-sub">Captured with Patience, Shared with Purpose</p>
-
-      <a href="photography/" class="btn-outline" style="margin-top:1.25rem;">
-      Gallery →
-      </a>
-
-      <div class="divider"></div>
-
-    </div>
-
-    <div class="photo-grid reveal reveal-delay-1" id="photo-grid"></div>
-
-  </div>
-</section>
-
-<template id="tpl-photo-item">
-  <div class="photo-item">
-    <img src="" alt="" loading="lazy">
-    <div class="photo-overlay">
-      <span class="photo-caption"></span>
-    </div>
-  </div>
-</template>
-
 
 <!-- ── CONTACT ─────────────────────────────────────────────── -->
 <section id="contact" class="section">
@@ -465,30 +516,6 @@ Blobs
     </div>
   </div>
 </footer>
-
-
-
-<!-- ── LIGHTBOX ────────────────────────────────────────────── -->
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
-
-  <button class="lightbox-close" id="lightboxClose" aria-label="Close">
-  ✕
-  </button>
-
-  <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous photo">
-    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-  </button>
-
-  <img id="lightboxImg" src="" alt="">
-
-  <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next photo">
-    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-  </button>
-
-  <div class="lightbox-counter" id="lightboxCounter"></div>
-
-</div>
-
 
 <!--Back to Top Button-->
 <button class="back-to-top" id="backToTop" aria-label="Back to top">
