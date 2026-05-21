@@ -47,18 +47,6 @@
 	width: 100%;
 }
 
-.pg-hero-eyebrow {
-	font-size: 0.68rem;
-	letter-spacing: 0.25em;
-	text-transform: uppercase;
-	color: rgba(181, 149, 106, 0.9);
-	font-weight: 500;
-	margin-bottom: 1rem;
-	opacity: 0;
-	transform: translateY(16px);
-	animation: fadeUp 0.7s 0.2s forwards;
-}
-
 .pg-hero-title {
 	font-family: "Cormorant Garamond", serif;
 	font-size: clamp(4rem, 12vw, 9rem);
