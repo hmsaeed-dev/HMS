@@ -15,18 +15,19 @@ import {
 	initThemeToggle,
 } from "./utils.js";
 
-// Controller fetches from model, passes to view
+// Global UI features run first
+initThemeToggle();
+initMobileMenu();
+
+// Controller fetches from model, passes to view (Safe due to null-checks in utils)
 renderProjects(projects);
 renderPhotos(photos);
 renderAcademics(academics);
 renderSkills(skills);
 
-// Controller wires view dependencies together
+// Feature initializations
 const openLightbox = initLightbox();
 initPhotoGrid(openLightbox);
-initMobileMenu();
 initScrollReveal();
 initScrollSpy();
 initBackToTop();
-initThemeToggle();
-

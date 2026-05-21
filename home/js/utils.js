@@ -8,6 +8,8 @@ export function initLightbox() {
 	const nextBtn = document.getElementById("lightboxNext");
 	const counter = document.getElementById("lightboxCounter");
 
+	if (!lightbox || !lightboxImg) return null;
+
 	let currentIndex = 0;
 	let items = [];
 
@@ -40,31 +42,38 @@ export function initLightbox() {
 
 	function updateControls() {
 		if (items.length <= 1) {
-			prevBtn.style.display = "none";
-			nextBtn.style.display = "none";
-			counter.style.display = "none";
+			if (prevBtn) prevBtn.style.display = "none";
+			if (nextBtn) nextBtn.style.display = "none";
+			if (counter) counter.style.display = "none";
 		} else {
-			prevBtn.style.display = "";
-			nextBtn.style.display = "";
-			counter.style.display = "";
-			counter.textContent = `${currentIndex + 1} / ${items.length}`;
+			if (prevBtn) prevBtn.style.display = "";
+			if (nextBtn) nextBtn.style.display = "";
+			if (counter) {
+				counter.style.display = "";
+				counter.textContent = `${currentIndex + 1} / ${items.length}`;
+			}
 		}
 	}
 
-	document
-		.getElementById("lightboxClose")
-		.addEventListener("click", closeLightbox);
+	const closeBtn = document.getElementById("lightboxClose");
+	if (closeBtn) closeBtn.addEventListener("click", closeLightbox);
+
 	lightbox.addEventListener("click", (e) => {
 		if (e.target === lightbox) closeLightbox();
 	});
-	prevBtn.addEventListener("click", (e) => {
-		e.stopPropagation();
-		navigate(-1);
-	});
-	nextBtn.addEventListener("click", (e) => {
-		e.stopPropagation();
-		navigate(1);
-	});
+
+	if (prevBtn) {
+		prevBtn.addEventListener("click", (e) => {
+			e.stopPropagation();
+			navigate(-1);
+		});
+	}
+	if (nextBtn) {
+		nextBtn.addEventListener("click", (e) => {
+			e.stopPropagation();
+			navigate(1);
+		});
+	}
 
 	document.addEventListener("keydown", (e) => {
 		if (!lightbox.classList.contains("open")) return;
@@ -77,10 +86,11 @@ export function initLightbox() {
 }
 
 /* ── MOBILE MENU ──────────────────────────────────────────── */
-// ... (omitting for brevity in prompt, but I will replace the whole block)
 export function initMobileMenu() {
 	const menuToggle = document.getElementById("menuToggle");
 	const mobileMenu = document.getElementById("mobileMenu");
+
+	if (!menuToggle || !mobileMenu) return;
 
 	menuToggle.addEventListener("click", () =>
 		mobileMenu.classList.toggle("open"),
@@ -103,6 +113,9 @@ export function initMobileMenu() {
 
 /* ── SCROLL REVEAL ────────────────────────────────────────── */
 export function initScrollReveal() {
+	const revealElements = document.querySelectorAll(".reveal");
+	if (revealElements.length === 0) return;
+
 	const observer = new IntersectionObserver(
 		(entries) => {
 			entries.forEach((e) => {
@@ -115,7 +128,7 @@ export function initScrollReveal() {
 		{ threshold: 0.1 },
 	);
 
-	document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+	revealElements.forEach((el) => observer.observe(el));
 }
 
 /* ── SCROLL SPY + PROGRESS BAR ────────────────────────────── */
@@ -123,6 +136,8 @@ export function initScrollSpy() {
 	const sections = document.querySelectorAll("section[id]");
 	const navLinks = document.querySelectorAll(".nav-links a");
 	const progressBar = document.getElementById("scrollProgress");
+
+	if (sections.length === 0 && !progressBar) return;
 
 	function updateProgress() {
 		const scrollTop = window.scrollY;
@@ -132,23 +147,26 @@ export function initScrollSpy() {
 		if (progressBar) progressBar.style.width = progress + "%";
 	}
 
-	const spy = new IntersectionObserver(
-		(entries) => {
-			entries.forEach((entry) => {
-				if (!entry.isIntersecting) return;
-				const id = entry.target.getAttribute("id");
-				navLinks.forEach((link) => {
-					link.classList.toggle(
-						"active",
-						link.getAttribute("href") === `#${id}`,
-					);
+	if (sections.length > 0) {
+		const spy = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (!entry.isIntersecting) return;
+					const id = entry.target.getAttribute("id");
+					navLinks.forEach((link) => {
+						link.classList.toggle(
+							"active",
+							link.getAttribute("href") === `#${id}`,
+						);
+					});
 				});
-			});
-		},
-		{ rootMargin: "-40% 0px -55% 0px" },
-	);
+			},
+			{ rootMargin: "-40% 0px -55% 0px" },
+		);
 
-	sections.forEach((s) => spy.observe(s));
+		sections.forEach((s) => spy.observe(s));
+	}
+
 	window.addEventListener("scroll", updateProgress, { passive: true });
 	updateProgress();
 }
@@ -156,6 +174,7 @@ export function initScrollSpy() {
 /* ── PHOTO GRID ─────────────────────────────────────────── */
 export function initPhotoGrid(openLightbox) {
 	const grid = document.getElementById("photo-grid");
+	if (!grid || !openLightbox) return;
 
 	grid.addEventListener("click", (e) => {
 		const item = e.target.closest(".photo-item");
@@ -169,9 +188,12 @@ export function initPhotoGrid(openLightbox) {
 /* ── Render List ─────────────────────────────────────────── */
 export function renderList(containerId, dataArray, buildElement) {
 	const container = document.getElementById(containerId);
+	if (!container) return;
+
 	const fragment = document.createDocumentFragment();
 	dataArray.forEach((item, i) => {
-		fragment.appendChild(buildElement(item, i));
+		const el = buildElement(item, i);
+		if (el) fragment.appendChild(el);
 	});
 	container.appendChild(fragment);
 }
@@ -179,15 +201,15 @@ export function renderList(containerId, dataArray, buildElement) {
 /* ── Clone Template ─────────────────────────────────────────── */
 export function cloneTemplate(id) {
 	const template = document.getElementById(id);
-	if (!template) {
-		throw new Error(`cloneTemplate: no <template> found with id "${id}"`);
-	}
+	if (!template) return null;
 	return template.content.cloneNode(true).firstElementChild;
 }
 
 /* ── Back to Top ─────────────────────────────────────────── */
 export function initBackToTop() {
 	const btn = document.getElementById("backToTop");
+	if (!btn) return;
+
 	window.addEventListener(
 		"scroll",
 		() => {
@@ -209,7 +231,6 @@ export function initThemeToggle() {
 		localStorage.setItem("theme", theme);
 	}
 
-	// 1. Load saved theme or use system preference
 	let current = localStorage.getItem("theme");
 	if (!current) {
 		current = window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -218,9 +239,7 @@ export function initThemeToggle() {
 	}
 	setTheme(current);
 
-	// 2. Find ALL toggle elements and attach click listeners
 	const toggles = document.querySelectorAll(".theme-toggle");
-
 	toggles.forEach((toggle) => {
 		toggle.addEventListener("click", (e) => {
 			const currentTheme = html.getAttribute("data-theme");

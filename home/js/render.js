@@ -5,6 +5,8 @@ import { renderList, cloneTemplate } from "./utils.js";
 export function renderProjects(projects) {
   renderList('projects-grid', projects, (p, i) => {
     const card = cloneTemplate('tpl-project-card');
+    if (!card) return null;
+
     card.style.setProperty('--delay', (i * 0.08) + 's');
 
     card.querySelector('img').src                    = p.img;
@@ -22,6 +24,7 @@ export function renderProjects(projects) {
 export function renderPhotos(photos) {
   renderList('photo-grid', photos, (ph) => {
     const item = cloneTemplate('tpl-photo-item');
+    if (!item) return null;
 
     item.dataset.src                                  = ph.src;
     item.dataset.caption                              = ph.caption;
@@ -37,6 +40,7 @@ export function renderPhotos(photos) {
 export function renderAcademics(academics) {
   renderList('academic-list', academics, (a) => {
     const item = cloneTemplate('tpl-academic-item');
+    if (!item) return null;
 
     item.querySelector('.academic-year').textContent   = a.year;
     item.querySelector('.academic-degree').textContent = a.degree;
@@ -51,6 +55,8 @@ export function renderAcademics(academics) {
 export function renderSkills(skills) {
   renderList('skills-grid', skills, (cat) => {
     const section = cloneTemplate('tpl-skills-category');
+    if (!section) return null;
+
     section.querySelector('.skills-category-title').textContent = cat.category;
     section.dataset.color = cat.colorKey;
 
@@ -58,8 +64,10 @@ export function renderSkills(skills) {
 
     cat.items.forEach(name => {
       const pill = cloneTemplate('tpl-skill-pill');
-      pill.append(document.createTextNode(name));
-      pills.appendChild(pill);
+      if (pill) {
+        pill.append(document.createTextNode(name));
+        pills.appendChild(pill);
+      }
     });
 
     return section;

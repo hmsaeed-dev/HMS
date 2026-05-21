@@ -8,12 +8,13 @@ import { renderList, cloneTemplate } from "../../home/js/utils.js";
 export function renderCaseStudies(studies, containerId) {
 	renderList(containerId, studies, (study) => {
 		const el = cloneTemplate("tpl-case-study");
+		if (!el) return null;
+
 		el.dataset.category = study.tag;
 
 		if (study.isPlaceholder) {
 			el.classList.add("is-teaser");
 		}
-// ... rest of method
 
 		el.querySelector(".cs-tag").textContent = study.tag;
 		el.querySelector(".cs-sidebar-title").textContent = study.title;
@@ -85,11 +86,12 @@ export function renderCaseStudies(studies, containerId) {
 export function renderFilters(studies) {
     const categories = ["all", ...new Set(studies.map(s => s.tag).filter(Boolean))];
     const filterContainer = document.querySelector(".cs-filter-left");
-    
+    if (!filterContainer) return;
+
     // Keep the "Filter by" label
     const label = filterContainer.querySelector(".cs-filter-label");
     filterContainer.innerHTML = "";
-    filterContainer.appendChild(label);
+    if (label) filterContainer.appendChild(label);
 
     categories.forEach(cat => {
         const btn = document.createElement("button");
@@ -110,6 +112,10 @@ export function renderFilters(studies) {
  */
 export function updateCount(containerId, countId) {
     const container = document.getElementById(containerId);
+    if (!container) return;
+    const countEl = document.getElementById(countId);
+    if (!countEl) return;
+
     const visibleItems = container.querySelectorAll(".case-study:not(.hidden)");
-    document.getElementById(countId).textContent = visibleItems.length;
+    countEl.textContent = visibleItems.length;
 }
