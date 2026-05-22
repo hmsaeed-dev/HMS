@@ -1,0 +1,526 @@
+/* ── PHOTOGRAPHY COMPONENT (HERO, GRID, FILTERS, LIGHTBOX) ──────────────── */
+
+/* ── HERO SECTION ────────────────────────────────────────── */
+
+.pg-hero {
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+}
+
+.pg-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.6) saturate(0.8);
+    transform: scale(1.1);
+    transition: transform 6s cubic-bezier(0.23, 1, 0.32, 1), opacity 2s ease;
+    opacity: 0;
+    z-index: -1;
+}
+.pg-hero-bg.loaded {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.pg-hero-content {
+    max-width: 800px;
+    padding: 0 2rem;
+    z-index: 1;
+}
+
+.pg-hero-title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(4rem, 12vw, 8.5rem);
+    font-weight: 300;
+    line-height: 0.9;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+.pg-hero-title em {
+    font-style: italic;
+    font-weight: 500;
+    color: var(--olive-lt);
+}
+
+.pg-hero-sub {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 500px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.pg-hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.pg-stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.pg-stat-num {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--olive-lt);
+}
+
+.pg-stat-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.pg-back {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.7);
+    z-index: 10;
+    transition: color 0.3s;
+}
+.pg-back:hover {
+    color: var(--olive-lt);
+}
+
+/* ── GALLERY BODY ───────────────────────────────────────── */
+
+.pg-body {
+	background: var(--warm-bg);
+	padding: clamp(3rem, 8vw, 6rem) 0 clamp(4rem, 10vw, 8rem);
+}
+
+.pg-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 clamp(1.25rem, 5vw, 4rem);
+}
+
+/* ── MASONRY GRID ───────────────────────────────────────── */
+
+.pg-grid {
+	columns: 3 300px;
+	column-gap: 1.25rem;
+}
+
+.pg-item {
+	break-inside: avoid;
+	margin-bottom: 1.25rem;
+	border-radius: 20px;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+	transition: opacity 0.4s;
+}
+.pg-item.hidden {
+	display: none;
+}
+
+.pg-item img {
+	width: 100%;
+	display: block;
+	transition:
+        transform 1.2s cubic-bezier(0.23, 1, 0.32, 1),
+        opacity 4s ease;
+    opacity: 0;
+}
+
+.pg-item img.loaded {
+    opacity: 1;
+}
+
+/* Overlay */
+.pg-overlay {
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(
+		to top,
+		rgba(13, 13, 11, 0.82) 0%,
+		rgba(13, 13, 11, 0.3) 45%,
+		transparent 70%
+	);
+	opacity: 0;
+	transition: opacity 0.35s;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding: 1.5rem;
+}
+.pg-item:hover .pg-overlay {
+	opacity: 1;
+}
+
+.pg-overlay-cat {
+	font-size: 0.6rem;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: rgba(181, 149, 106, 0.85);
+	font-weight: 600;
+	margin-bottom: 0.3rem;
+}
+
+.pg-overlay-caption {
+	color: #f7f4ef;
+	font-family: "Cormorant Garamond", serif;
+	font-size: 1.1rem;
+	font-weight: 600;
+	line-height: 1.3;
+}
+
+.pg-overlay-exif {
+	font-size: 0.65rem;
+	color: rgba(181, 149, 106, 0.9);
+	letter-spacing: 0.05em;
+	margin-top: 0.2rem;
+	font-weight: 500;
+}
+
+.pg-overlay-desc {
+	color: rgba(247, 244, 239, 0.65);
+	font-size: 0.78rem;
+	margin-top: 0.3rem;
+	line-height: 1.5;
+	font-style: italic;
+}
+
+/* Zoom icon badge */
+.pg-zoom-badge {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	background: rgba(247, 244, 239, 0.15);
+	backdrop-filter: blur(8px);
+	border: 1px solid rgba(247, 244, 239, 0.2);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #f7f4ef;
+	opacity: 0;
+	transform: scale(0.7);
+	transition:
+		opacity 0.3s,
+		transform 0.3s;
+}
+.pg-item:hover .pg-zoom-badge {
+	opacity: 1;
+	transform: scale(1);
+}
+
+/* Empty State Styling */
+.pg-empty {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 2rem;
+    text-align: center;
+    background: rgba(247, 244, 239, 0.02);
+    border: 1px dashed rgba(181, 149, 106, 0.2);
+    border-radius: 40px;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.pg-empty.show {
+    display: flex;
+}
+
+.pg-empty-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    filter: sepia(1) saturate(0.5) opacity(0.4);
+}
+
+.pg-empty-title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2.2rem;
+    color: var(--ink-60);
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+}
+
+.pg-empty-sub {
+    font-size: 0.95rem;
+    color: var(--ink-40);
+    font-style: italic;
+    max-width: 340px;
+    line-height: 1.6;
+}
+
+/* ── FILTER BAR ─────────────────────────────────────────── */
+
+.pg-filter-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 1rem;
+	margin-bottom: 2.5rem;
+	padding-bottom: 2rem;
+	border-bottom: 1px solid var(--ink-10);
+}
+
+.pg-filter-left {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	flex-wrap: wrap;
+}
+
+.pg-filter-label {
+	font-size: 0.68rem;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	color: var(--ink-40);
+	font-weight: 500;
+	margin-right: 0.5rem;
+}
+
+.pg-filter-btn {
+	padding: 0.45rem 1.2rem;
+	border-radius: 99px;
+	border: 1.5px solid var(--ink-10);
+	background: none;
+	font-family: "DM Sans", sans-serif;
+	font-size: 0.8rem;
+	font-weight: 500;
+	color: var(--ink-60);
+	cursor: pointer;
+	transition:
+		background 0.2s,
+		border-color 0.2s,
+		color 0.2s;
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+}
+.pg-filter-btn:hover,
+.pg-filter-btn.active {
+	background: var(--olive);
+	border-color: var(--olive);
+	color: #fff;
+}
+.pg-filter-btn .count {
+	font-size: 0.68rem;
+	opacity: 0.75;
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 99px;
+	padding: 0.05rem 0.45rem;
+}
+.pg-filter-btn:not(.active) .count {
+	background: var(--ink-10);
+	color: var(--ink-40);
+}
+
+.pg-view-count {
+	font-size: 0.78rem;
+	color: var(--ink-40);
+	font-style: italic;
+}
+.pg-view-count span {
+	color: var(--olive);
+	font-style: normal;
+	font-weight: 600;
+}
+
+/* ── LIGHTBOX ───────────────────────────────────────────── */
+
+.pg-lightbox {
+	display: none;
+	position: fixed;
+	inset: 0;
+	z-index: 300;
+	background: rgba(8, 8, 7, 0.98);
+	backdrop-filter: blur(20px);
+	align-items: center;
+	justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.pg-lightbox.open {
+	display: flex;
+    opacity: 1;
+}
+
+.pg-lb-inner {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+}
+
+.pg-lb-img-wrap {
+	position: relative;
+	max-width: min(90vw, 1000px);
+	max-height: 85vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.pg-lb-img {
+	max-width: 100%;
+	max-height: 80vh;
+	border-radius: 12px;
+	box-shadow: 0 50px 120px rgba(0, 0, 0, 0.8);
+	transition: 
+        opacity 0.3s ease,
+        transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+	display: block;
+}
+.pg-lb-img.switching {
+	opacity: 0;
+    transform: scale(0.98);
+}
+
+.pg-lb-caption {
+	position: absolute;
+	bottom: -1rem;
+	left: 0;
+	right: 0;
+	padding: 2.5rem 2rem 1.5rem;
+	background: linear-gradient(
+		to top,
+		rgba(8, 8, 7, 0.95) 0%,
+		rgba(8, 8, 7, 0.7) 60%,
+		transparent 100%
+	);
+	border-radius: 0 0 12px 12px;
+	opacity: 0;
+	transform: translateY(10px);
+	transition:
+		opacity 0.4s ease,
+		transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    pointer-events: none;
+}
+.pg-lb-caption.show {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.pg-lb-cat {
+	font-size: 0.65rem;
+	letter-spacing: 0.25em;
+	text-transform: uppercase;
+	color: rgba(181, 149, 106, 0.9);
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+}
+
+.pg-lb-title {
+	font-family: "Cormorant Garamond", serif;
+	font-size: 1.6rem;
+	font-weight: 500;
+	color: #f7f4ef;
+	line-height: 1.2;
+}
+
+.pg-lb-exif {
+	font-size: 0.75rem;
+	letter-spacing: 0.08em;
+	color: rgba(181, 149, 106, 0.8);
+	margin-top: 0.4rem;
+	font-weight: 500;
+}
+
+.pg-lb-desc {
+	font-size: 0.88rem;
+	color: rgba(247, 244, 239, 0.5);
+	font-style: italic;
+	margin-top: 0.6rem;
+	line-height: 1.6;
+    max-width: 500px;
+}
+
+.pg-lb-close {
+	position: fixed;
+	top: 2rem;
+	right: 2rem;
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	background: rgba(247, 244, 239, 0.05);
+	border: 1px solid rgba(247, 244, 239, 0.1);
+	color: rgba(247, 244, 239, 0.6);
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.2rem;
+	transition: all 0.3s ease;
+	z-index: 10;
+}
+.pg-lb-close:hover {
+	background: rgba(247, 244, 239, 0.15);
+    color: #f7f4ef;
+    transform: rotate(90deg);
+}
+
+.pg-lb-nav {
+	position: fixed;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background: rgba(247, 244, 239, 0.03);
+	border: 1px solid rgba(247, 244, 239, 0.08);
+	color: rgba(247, 244, 239, 0.4);
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+	z-index: 10;
+}
+.pg-lb-nav:hover {
+	background: rgba(247, 244, 239, 0.12);
+    color: #f7f4ef;
+    border-color: rgba(181, 149, 106, 0.3);
+}
+.pg-lb-prev { left: 2rem; }
+.pg-lb-prev:hover { transform: translateY(-50%) translateX(-5px); }
+.pg-lb-next { right: 2rem; }
+.pg-lb-next:hover { transform: translateY(-50%) translateX(5px); }
+
+.pg-lb-counter {
+	position: fixed;
+	bottom: 2rem;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 0.7rem;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	color: rgba(247, 244, 239, 0.4);
+	background: rgba(247, 244, 239, 0.05);
+	border: 1px solid rgba(247, 244, 239, 0.08);
+	padding: 0.4rem 1.2rem;
+	border-radius: 99px;
+	backdrop-filter: blur(10px);
+}

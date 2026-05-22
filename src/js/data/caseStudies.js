@@ -1,5 +1,3 @@
-/* ── PROJECTS DATA ────────────────────────────────────────── */
-
 export const caseStudies = [
 	{
 		id: "house-of-wisdom",
