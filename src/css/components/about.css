@@ -16,7 +16,7 @@
 	color: var(--ink-60);
 	margin-bottom: var(--fs-700);
 	padding: 10px;
-	cursor : text;
+	cursor: text;
 }
 
 .philosophy-box {
@@ -31,7 +31,7 @@
 	font-size: var(--fs-400);
 	line-height: 1.8;
 	position: relative;
-	cursor : url("../../Assets/Icons/graduation-cap.svg"), auto;
+	cursor: url("../../Assets/Pics/icons/graduation-cap.svg"), auto;
 }
 .philosophy-box::before {
 	content: "\201C";
@@ -58,7 +58,7 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: var(--fs-400);
-	cursor : zoom-in;
+	cursor: zoom-in;
 }
 .about-imgs img {
 	border-radius: var(--radius);
