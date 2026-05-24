@@ -3,7 +3,7 @@ export const projects = [
 		title: "Photography Portfolio",
 		tag: "Observance",
 		desc: "A narrative-driven gallery showcasing macro, flora, and landscape photography with technical EXIF insights.",
-		img: "Assets/Pics/clicks/logo.webp",
+		img: "/src/icons/user.svg",
 		demo: "photography/index.html",
 		code: "https://github.com/HMSaeed101",
 	},
