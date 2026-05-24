@@ -3,11 +3,17 @@ export const caseStudies = [
 		id: "house-of-wisdom",
 		tag: "Lead Project",
 		title: "House of Wisdom",
-		shortDesc: "A digital library system designed for modularity and scalability using Vanilla JavaScript.",
-		techStack: ["ES Modules", "MVC Pattern", "Modular CSS", "Local Storage"],
+		shortDesc:
+			"A digital library system designed for modularity and scalability using Vanilla JavaScript.",
+		techStack: [
+			"ES Modules",
+			"MVC Pattern",
+			"Modular CSS",
+			"Local Storage",
+		],
 		links: {
-			source: "https://github.com/HMSaeed101",
-			demo: "#",
+			source: "https://github.com/HMSaeed101/E-Library",
+			demo: "https://hmslibrary.netlify.app/",
 		},
 		sections: [
 			{
@@ -32,7 +38,7 @@ export const caseStudies = [
 @import './components/library-grid.css';`,
 			},
 			{
-				heading: "The \"Storyteller\" Insight",
+				heading: 'The "Storyteller" Insight',
 				content: `Building this project taught me that code is just another language for telling a story. If the architecture is confusing, the "story" of the data gets lost. Clean code is simply a clear narrative.`,
 			},
 		],
@@ -41,7 +47,8 @@ export const caseStudies = [
 		id: "finance-tracker",
 		tag: "Productivity",
 		title: "Personal Finance Tracker",
-		shortDesc: "Case study coming soon. Focusing on Data Visualization and Offline Persistence.",
+		shortDesc:
+			"Case study coming soon. Focusing on Data Visualization and Offline Persistence.",
 		techStack: [],
 		links: {},
 		isPlaceholder: true,
