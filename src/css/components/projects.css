@@ -3,7 +3,7 @@
 /* ── HERO SECTION ────────────────────────────────────────── */
 
 .cs-hero {
-    background: url("../../../icons/pro-pic.jpg");
+    background: url("/src/icons/pro-pic.jpg");
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
