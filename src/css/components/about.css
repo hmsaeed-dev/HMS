@@ -58,7 +58,6 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: var(--fs-400);
-	cursor: zoom-in;
 }
 .about-imgs img {
 	border-radius: var(--radius);

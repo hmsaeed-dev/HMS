@@ -116,6 +116,32 @@ function renderFilters(data) {
 	});
 }
 
+// function renderGrid(grid, data) {
+// 	if (!grid) return;
+// 	grid.innerHTML = "";
+
+// 	data.forEach((photo, i) => {
+// 		const item = document.createElement("div");
+// 		item.className = "pg-item reveal";
+// 		item.dataset.category = photo.category || "";
+// 		item.dataset.index = i;
+// 		item.dataset.src = `../${photo.src}`;
+// 		item.dataset.caption = photo.caption;
+
+// 		item.innerHTML = `
+//             <img src="../${photo.src}" alt="${photo.caption}" loading="${i < 6 ? "eager" : "lazy"}" onload="this.classList.add('loaded')">
+//             <div class="pg-overlay">
+//                 <div class="pg-overlay-cat">${photo.category || ""}</div>
+//                 <div class="pg-overlay-caption">${photo.caption}</div>
+//                 ${photo.exif ? `<div class="pg-overlay-exif">${photo.exif}</div>` : ""}
+//                 ${photo.desc ? `<div class="pg-overlay-desc">${photo.desc}</div>` : ""}
+//             </div>
+//             <div class="pg-zoom-badge">…</div>
+//         `;
+// 		grid.appendChild(item);
+// 	});
+// }
+
 function renderGrid(grid, data) {
 	if (!grid) return;
 	grid.innerHTML = "";
@@ -125,11 +151,11 @@ function renderGrid(grid, data) {
 		item.className = "pg-item reveal";
 		item.dataset.category = photo.category || "";
 		item.dataset.index = i;
-		item.dataset.src = `../${photo.src}`;
+		item.dataset.src = photo.src;
 		item.dataset.caption = photo.caption;
 
 		item.innerHTML = `
-            <img src="../${photo.src}" alt="${photo.caption}" loading="${i < 6 ? "eager" : "lazy"}" onload="this.classList.add('loaded')">
+            <img src="${photo.src}" alt="${photo.caption}" loading="${i < 6 ? "eager" : "lazy"}" onload="this.classList.add('loaded')">
             <div class="pg-overlay">
                 <div class="pg-overlay-cat">${photo.category || ""}</div>
                 <div class="pg-overlay-caption">${photo.caption}</div>
@@ -141,6 +167,7 @@ function renderGrid(grid, data) {
 		grid.appendChild(item);
 	});
 }
+
 
 function updateVisibleCount(grid, visibleCountEl, pgEmpty) {
 	const visible = getVisibleItems(grid, ".pg-item").length;

@@ -4,3 +4,4 @@
 - Reactive Typography
 - Lines Squiggle - Blobs
 - Back to top button on other pages also
+- Using Cloudinary for Optimized Pics loading Speed
