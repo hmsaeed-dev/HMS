@@ -1,9 +1,16 @@
-
 - Live updates card, NOW, What  im currently focused on, floating over side screen for readers to read
-- Something map-like background for location things
 - Reactive Typography
 - Lines Squiggle - Blobs
-- Back to top button on other pages also
-- Using Cloudinary for Optimized Pics loading Speed
-- Add Doulingo Profile + Chess Profile In Hobbies Skills
-- Website Loading Pics Links
+- Add Doulingo Profile + Chess Profile In Hobbies / Skills
+
+# My STORY
+- Something map-like background for location things
+
+# Photography Page / HMS Clicks
+- Swipe Feature for Mobile Displays
+- Insta and Pinterest Integration
+- HMS Clicks Brand Identity
+- Indexing Images for HMS CLicks
+
+# Academics Page
+- LinkedIn Integration
