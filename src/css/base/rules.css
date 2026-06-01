@@ -27,7 +27,7 @@
   --color-surface:     var(--white);
   --color-border:      var(--ink-10);
   --color-border-lt:   var(--ink-05);
-  --color-overlay:     rgba(114, 134, 73, 0.15); /* Soft olive overlay */
+  --color-overlay:     rgba(114, 134, 73, 0.15);
   --color-selection:   rgba(114, 134, 73, 0.25);
 
   /* White Alphas (for Hero contrast) */
@@ -86,7 +86,7 @@
 [data-theme="dark"] {
   --scroll-thumb: #95ae61;
   --scroll-track: #1a1814;
-  
+
   /* Primitives in Dark */
   --olive:        #8baa51;
   --olive-lt:     #95ae61;
@@ -104,7 +104,7 @@
   --color-border-lt:   var(--ink-05);
   --color-overlay:     rgba(139, 170, 81, 0.1);
   --color-selection:   rgba(139, 170, 81, 0.3);
-  
+
   --shadow-sm:     0 2px 12px rgba(0, 0, 0, 0.3);
   --shadow-md:     0 4px 24px rgba(0, 0, 0, 0.4);
   --shadow-lg:     0 12px 48px rgba(0, 0, 0, 0.5);
