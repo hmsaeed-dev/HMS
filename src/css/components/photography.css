@@ -202,7 +202,7 @@
 		rgba(13, 13, 11, 0.3) 45%,
 		transparent 70%
 	);
-	opacity: 1; /* Always show overlay on mobile */
+	opacity: 0; /* Hidden by default on all devices */
 	transition: var(--transition);
 	display: flex;
 	flex-direction: column;
@@ -210,13 +210,13 @@
 	padding: var(--space-md);
 }
 
+.pg-item:hover .pg-overlay {
+    opacity: 1;
+}
+
 @media (min-width: 769px) {
     .pg-overlay {
-        opacity: 0;
         padding: var(--space-lg);
-    }
-    .pg-item:hover .pg-overlay {
-        opacity: 1;
     }
 }
 
@@ -257,6 +257,13 @@
 	margin-top: var(--space-2xs);
 	line-height: 1.5;
 	font-style: italic;
+    display: none;
+}
+
+@media (min-width: 769px) {
+    .pg-overlay-desc {
+        display: block;
+    }
 }
 
 /* Zoom icon badge */
@@ -274,23 +281,22 @@
 	align-items: center;
 	justify-content: center;
 	color: var(--color-bg);
-	opacity: 1;
-	transform: scale(1);
+	opacity: 0; /* Hidden by default */
+	transform: scale(0.7); /* Scaled down by default */
 	transition: var(--transition);
+}
+
+.pg-item:hover .pg-zoom-badge {
+    opacity: 1;
+    transform: scale(1);
 }
 
 @media (min-width: 769px) {
     .pg-zoom-badge {
-        opacity: 0;
-        transform: scale(0.7);
         top: var(--space-md);
         right: var(--space-md);
         width: 36px;
         height: 36px;
-    }
-    .pg-item:hover .pg-zoom-badge {
-        opacity: 1;
-        transform: scale(1);
     }
 }
 

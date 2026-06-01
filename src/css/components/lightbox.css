@@ -89,12 +89,7 @@
 }
 
 .pg-lb-cat {
-    font-size: var(--fs-300);
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: var(--color-accent-lt);
-    margin-bottom: var(--space-sm);
-    font-weight: 600;
+    display: none;
 }
 
 .pg-lb-exif {
@@ -105,11 +100,7 @@
 }
 
 .pg-lb-desc {
-    font-size: var(--fs-400);
-    color: var(--white-60);
-    line-height: 1.6;
-    font-style: italic;
-    margin-top: var(--space-2xs);
+    display: none;
 }
 
 /* Controls & Navigation */
