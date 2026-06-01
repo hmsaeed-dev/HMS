@@ -1,4 +1,4 @@
-/* ── PHOTOGRAPHY PAGE JS ────────────────────────────────────────── */
+/* ── Photograph PAGE JS ────────────────────────────────────────── */
 
 import { photos } from "./data/index.js";
 import { initIcons } from "./components/Icons.js";
@@ -24,8 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	// ── Hero ──────────────────────────────────────────────────
 	const heroBg = document.getElementById("heroBg");
 	const heroBgPhoto = photos.find((p) => p.category === "Flora") || photos[0];
-	if (heroBgPhoto && heroBg)
-	{
+	if (heroBgPhoto && heroBg) {
 		heroBg.style.backgroundImage = `url('${heroBgPhoto.src}')`;
 		setTimeout(() => heroBg.classList.add("loaded"), 100);
 	}
@@ -55,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		localStorage.setItem("pgView", view);
 
 		// Update button states
-		viewSwitcher.querySelectorAll(".pg-view-btn").forEach(btn => {
+		viewSwitcher.querySelectorAll(".pg-view-btn").forEach((btn) => {
 			btn.classList.toggle("active", btn.dataset.view === view);
 		});
 	}
@@ -102,13 +101,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 			const photoData = photos[parseInt(item.dataset.index)];
 
-			openLightbox(
-				photoData.src,
-				photoData.caption,
-				index,
-				allItems,
-			);
-			updatePhotographyCaption(photoData);
+			openLightbox(photoData.src, photoData.caption, index, allItems);
+			updatePhotographCaption(photoData);
 		});
 	}
 
@@ -165,14 +159,13 @@ function renderGrid(grid, data) {
 	});
 }
 
-
 function updateVisibleCount(grid, visibleCountEl, pgEmpty) {
 	const visible = getVisibleItems(grid, ".pg-item").length;
 	if (visibleCountEl) visibleCountEl.textContent = visible;
 	if (pgEmpty) pgEmpty.classList.toggle("show", visible === 0);
 }
 
-function updatePhotographyCaption(photo) {
+function updatePhotographCaption(photo) {
 	const cap = document.getElementById("pgLbCaption");
 	if (!cap) return;
 

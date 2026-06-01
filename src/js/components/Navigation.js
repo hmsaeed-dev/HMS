@@ -17,7 +17,7 @@ export function initNavigation({ pathPrefix = "" } = {}) {
                 <a href="${pathPrefix}index.html#about">About</a>
                 <a href="${pathPrefix}projects/index.html">Projects</a>
                 <a href="${pathPrefix}index.html#academic">Academics</a>
-                <a href="${pathPrefix}photography/index.html">Photography</a>
+                <a href="${pathPrefix}Photograph/index.html">Photography</a>
                 <a href="${pathPrefix}index.html#contact">Contact</a>
 
                 <a class="theme-toggle" id="themeToggle">
@@ -44,7 +44,7 @@ export function initNavigation({ pathPrefix = "" } = {}) {
             <svg class="icon" viewBox="0 0 24 24"><path fill="#c3d59cb3" d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
             Academics
         </a>
-        <a href="${pathPrefix}photography/index.html" class="mobile-link">
+        <a href="${pathPrefix}Photography/index.html" class="mobile-link">
             <svg class="icon" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
             Photography
         </a>

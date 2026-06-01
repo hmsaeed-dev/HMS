@@ -2,10 +2,10 @@ export const projects = [
 	{
 		title: "Photography Portfolio",
 		tag: "Observance",
-		desc: "A narrative-driven gallery showcasing macro, flora, and landscape photography with technical insights.",
+		desc: "A narrative-driven gallery showcasing macro, flora, and landscape Photography with technical insights.",
 		img: "https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto/f_auto/v1779626952/logo_te0qiv.webp",
 		code: "https://github.com/HMSaeed101/",
-		demo: "photography/index.html",
+		demo: "Photograph/index.html",
 	},
 	{
 		title: "Finance Tracker",
