@@ -19,7 +19,7 @@ export function initFooter({ pathPrefix = "" } = {}) {
                     <a href="https://wa.me/923219798860?text=Hi%20Saeed%2C%20I%20saw%20your%20portfolio!" class="social-btn" aria-label="Whatsapp" target="_blank" rel="noopener noreferrer">
                         <svg class="icon"><use href="#icon-whatsapp"/></svg>
                     </a>
-                    <a href="https://github.com/HMSaeed101" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/hmsaeed-dev" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
                         <svg class="icon"><use href="#icon-github"/></svg>
                     </a>
                     <a href="https://www.linkedin.com/in/hmsaeed" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">

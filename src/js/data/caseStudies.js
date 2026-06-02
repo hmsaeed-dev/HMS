@@ -12,7 +12,7 @@ export const caseStudies = [
 			"Local Storage",
 		],
 		links: {
-			source: "https://github.com/HMSaeed101/E-Library",
+			source: "https://github.com/hmsaeed-dev/E-Library",
 			demo: "https://hmslibrary.netlify.app/",
 		},
 		sections: [
