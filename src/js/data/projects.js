@@ -5,7 +5,7 @@ export const projects = [
 		desc: "A narrative-driven gallery showcasing macro, flora, and landscape Photography with technical insights.",
 		img: "https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto/f_auto/v1779626952/logo_te0qiv.webp",
 		code: "https://github.com/HMSaeed101/",
-		demo: "Photograph/index.html",
+		demo: "Photography/index.html",
 	},
 	{
 		title: "Finance Tracker",

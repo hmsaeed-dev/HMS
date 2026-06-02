@@ -1,4 +1,4 @@
-/* ── Photograph PAGE JS ────────────────────────────────────────── */
+/* ── Photography PAGE JS ────────────────────────────────────────── */
 
 import { photos } from "./data/index.js";
 import { initIcons } from "./components/Icons.js";
@@ -165,7 +165,7 @@ function updateVisibleCount(grid, visibleCountEl, pgEmpty) {
 	if (pgEmpty) pgEmpty.classList.toggle("show", visible === 0);
 }
 
-function updatePhotographCaption(photo) {
+function updatePhotographyCaption(photo) {
 	const cap = document.getElementById("pgLbCaption");
 	if (!cap) return;
 

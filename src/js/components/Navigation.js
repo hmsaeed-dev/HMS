@@ -17,7 +17,7 @@ export function initNavigation({ pathPrefix = "" } = {}) {
                 <a href="${pathPrefix}index.html#about">About</a>
                 <a href="${pathPrefix}projects/index.html">Projects</a>
                 <a href="${pathPrefix}index.html#academic">Academics</a>
-                <a href="${pathPrefix}Photograph/index.html">Photography</a>
+                <a href="${pathPrefix}Photography/index.html">Photography</a>
                 <a href="${pathPrefix}index.html#contact">Contact</a>
 
                 <a class="theme-toggle" id="themeToggle">
