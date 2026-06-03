@@ -146,8 +146,15 @@ function renderGrid(grid, data) {
 		item.dataset.src = photo.src;
 		item.dataset.caption = photo.caption;
 
+		// Set aspect ratio to prevent layout shift
+		if (photo.width && photo.height) {
+			item.style.aspectRatio = `${photo.width} / ${photo.height}`;
+		}
+
 		item.innerHTML = `
-            <img src="${photo.src}" alt="${photo.caption}" loading="${i < 6 ? "eager" : "lazy"}" onload="this.classList.add('loaded')">
+            <img src="${photo.src}" alt="${photo.caption}" 
+				 loading="${i < 6 ? "eager" : "lazy"}" 
+				 onload="this.classList.add('loaded'); this.parentElement.classList.add('is-loaded'); this.parentElement.style.aspectRatio = 'auto';">
             <div class="pg-overlay">
                 <div class="pg-overlay-cat">${photo.category || ""}</div>
                 <div class="pg-overlay-caption">${photo.caption}</div>
