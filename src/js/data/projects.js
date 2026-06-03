@@ -4,7 +4,7 @@ export const projects = [
 		tag: "Observance",
 		desc: "A narrative-driven gallery showcasing macro, flora, and landscape Photography with technical insights.",
 		img: "https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto/f_auto/v1779626952/logo_te0qiv.webp",
-		code: "https://github.com/hmsaeed-dev/",
+		code: "https://hmsaeed-dev.github.io",
 		demo: "Photography/index.html",
 	},
 	{
@@ -13,7 +13,7 @@ export const projects = [
 		desc: "A progressive offline-first web app built with Vanilla JS, focusing on data privacy and speed.",
 		img: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=800",
 		code: "https://github.com/hmsaeed-dev/Finance-Tracker",
-		demo: "https://hmsaeed-dev.github.io/Finance-Tracker/",
+		demo: "https://hmsaeed.com/Finance-Tracker/",
 	},
 	{
 		title: "House of Wisdom",
