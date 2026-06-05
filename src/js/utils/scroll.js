@@ -28,12 +28,20 @@ export function initScrollSpy() {
 
 	if (sections.length === 0 && !progressBar) return;
 
+	let ticking = false;
+
 	function updateProgress() {
-		const scrollTop = window.scrollY;
-		const docHeight =
-			document.documentElement.scrollHeight - window.innerHeight;
-		const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-		if (progressBar) progressBar.style.width = progress + "%";
+		if (!ticking) {
+			window.requestAnimationFrame(() => {
+				const scrollTop = window.scrollY;
+				const docHeight =
+					document.documentElement.scrollHeight - window.innerHeight;
+				const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+				if (progressBar) progressBar.style.width = progress + "%";
+				ticking = false;
+			});
+			ticking = true;
+		}
 	}
 
 	if (sections.length > 0) {
