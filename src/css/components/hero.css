@@ -70,12 +70,6 @@
     order: -1; /* Mobile-First: Image first for better flow */
 }
 
-@media (min-width: 901px) {
-    .hero-img-wrap {
-        order: 0; /* Desktop: Back to natural grid order */
-    }
-}
-
 .hero-img-wrap img {
 	border-radius: var(--radius);
 	width: 80%;

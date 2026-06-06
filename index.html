@@ -49,7 +49,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap">
 
   <link rel="icon" type="image/svg+xml" href="src/icons/hms.svg">
-  
+
   <!-- LCP Image Preload -->
   <link rel="preload" fetchpriority="high" as="image" href="https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto/f_auto/w_800/v1779627924/Saeed_68_cewriq.jpg" type="image/webp">
 
@@ -70,15 +70,22 @@
     }
     [data-theme="dark"] { --warm-bg:#1a1814;--white:#24211c;--ink:#f5f2e8; }
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+
     body{background:var(--color-bg);color:var(--color-text);font-family:"DM Sans",sans-serif;line-height:1.6;overflow-x:hidden;}
+
+
     .container{max-width:1200px;margin-inline:auto;padding-inline:clamp(1.25rem, 5vw, 3rem);}
+
     #hero{min-height:92vh;display:flex;align-items:center;padding-top:var(--header-height);}
+
     .hero-inner{display:grid;grid-template-columns:1fr;gap:3rem;align-items:center;text-align:center;}
+
     @media (min-width:901px){.hero-inner{grid-template-columns:1fr 1fr;text-align:left;}}
+
     .hero-h1{font-family:"Cormorant Garamond",serif;font-size:var(--fs-h1);font-weight:700;line-height:1;}
-    .hero-img-wrap{order:-1;}
-    @media (min-width:901px){.hero-img-wrap{order:0;}}
+
     .hero-img-wrap img{border-radius:32px;width:80%;max-width:320px;margin:0 auto;aspect-ratio:3/4;object-fit:cover;}
+
     .reveal{opacity:0;transform:translateY(8px);}
   </style>
 
@@ -251,13 +258,13 @@
       </div>
 
       <div class="hero-img-wrap ">
-        <img 
-          src="https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto,f_auto,w_440/v1779627924/Saeed_68_cewriq.jpg" 
+        <img
+          src="https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto,f_auto,w_440/v1779627924/Saeed_68_cewriq.jpg"
           srcset="https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto,f_auto,w_320/v1779627924/Saeed_68_cewriq.jpg 320w,
                   https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto,f_auto,w_640/v1779627924/Saeed_68_cewriq.jpg 640w,
                   https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto,f_auto,w_880/v1779627924/Saeed_68_cewriq.jpg 880w"
           sizes="(min-width: 901px) 440px, 320px"
-          alt="Hafiz Muhammad Saeed" 
+          alt="Hafiz Muhammad Saeed"
           loading="eager"
           fetchpriority="high">
       </div>
