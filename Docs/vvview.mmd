@@ -1,0 +1,71 @@
+sequenceDiagram
+    actor User
+    participant Browser
+    participant ThemeScript as Theme Script
+    participant MainJS as Main JS
+    participant Components
+    participant DataLayer as Data Layer
+    participant DOMUtils as DOM Utils
+
+    rect rgb(200, 220, 255)
+    Note over Browser,ThemeScript: Phase 1: PRE-RENDER (Before Page Load)
+    Browser->>ThemeScript: Read localStorage for theme
+    activate ThemeScript
+    ThemeScript-->>Browser: Apply data-theme to HTML
+    deactivate ThemeScript
+    end
+
+    rect rgb(200, 255, 220)
+    Note over User,Browser: Phase 2: INITIALIZATION
+    User->>Browser: Request Page
+    Browser->>MainJS: Fire DOMContentLoaded event
+    activate MainJS
+    MainJS->>Components: Execute component scripts
+    activate Components
+    Components-->>Browser: Inject SVGs and Layout
+    deactivate Components
+    MainJS->>Components: Sync Navigation Active Links
+    activate Components
+    Components-->>MainJS: Links synchronized
+    deactivate Components
+    MainJS->>Components: Sync Theme Toggle Icon UI
+    activate Components
+    Components-->>MainJS: UI synchronized
+    deactivate Components
+    end
+
+    rect rgb(255, 240, 200)
+    Note over MainJS,DOMUtils: Phase 3: DATA AND RENDERING
+    MainJS->>DataLayer: Import dataset arrays
+    activate DataLayer
+    DataLayer-->>MainJS: Data loaded
+    deactivate DataLayer
+    MainJS->>DOMUtils: Pass Data and Template ID
+    activate DOMUtils
+    DOMUtils->>Browser: Locate template in DOM
+    DOMUtils->>DOMUtils: Clone node and map data
+    DOMUtils-->>Browser: Append elements to layout grid
+    deactivate DOMUtils
+    end
+
+    rect rgb(255, 220, 220)
+    Note over MainJS,Browser: Phase 4: BEHAVIOR AND INTERACTION
+    MainJS->>Browser: Bind Theme Switcher events
+    activate Browser
+    Browser-->>MainJS: Event listeners attached
+    deactivate Browser
+    MainJS->>Browser: Setup ScrollSpy Observers
+    activate Browser
+    Browser-->>MainJS: Observers configured
+    deactivate Browser
+    MainJS->>Browser: Trigger ScrollReveal animations
+    activate Browser
+    Browser-->>MainJS: Animations started
+    deactivate Browser
+    deactivate MainJS
+    end
+
+    rect rgb(220, 240, 220)
+    Note over User,Browser: Phase 5: READY STATE
+    Browser-->>User: Page Ready for Interaction
+    end

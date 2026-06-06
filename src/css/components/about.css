@@ -66,12 +66,6 @@
 	gap: var(--space-md);
 }
 
-@media (max-width: 480px) {
-    .about-imgs {
-        grid-template-columns: 1fr; /* Stack images on very small screens */
-    }
-}
-
 .about-imgs img {
 	border-radius: var(--radius);
 	width: 100%;

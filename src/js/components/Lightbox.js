@@ -20,16 +20,30 @@ export function initLightbox() {
 	let touchEndX = 0;
 	const SWIPE_THRESHOLD = 50;
 
-	// Centralized logic to update the title from various data sources
-	function updateTitle(item) {
-		if (!item) {
-			console.warn("Lightbox: No item provided to updateTitle");
-			return;
-		}
+	// Centralized logic to update all caption details (title, category, EXIF, description)
+	function updateCaptionDetails(item) {
+		if (!item) return;
 
-		const title =
-			item.caption || item.dataset?.caption || item.alt || "Untitled";
-		if (lbTitle) lbTitle.textContent = title;
+		const title = item.caption || item.dataset?.caption || item.alt || "Untitled";
+		const category = item.category || item.dataset?.category || "";
+		const exif = item.exif || item.dataset?.exif || "";
+		const desc = item.desc || item.dataset?.desc || "";
+
+		const lbTitle = document.getElementById("pgLbTitle");
+		const lbCat = document.getElementById("pgLbCat");
+		const lbExif = document.getElementById("pgLbExif");
+		const lbDesc = document.getElementById("pgLbDesc");
+		const lbCaption = document.getElementById("pgLbCaption");
+
+		if (lbCaption) lbCaption.classList.remove("show");
+
+		setTimeout(() => {
+			if (lbTitle) lbTitle.textContent = title;
+			if (lbCat) lbCat.textContent = category;
+			if (lbExif) lbExif.textContent = exif;
+			if (lbDesc) lbDesc.textContent = desc;
+			if (lbCaption) lbCaption.classList.add("show");
+		}, TRANSITION_SPEED);
 	}
 
 	// Helper to hide loader once image is ready
@@ -45,18 +59,16 @@ export function initLightbox() {
 		// Show loader before setting src
 		if (loader) loader.style.display = "block";
 
-		// Reset image state
-		lightboxImg.style.opacity = "0";
+		// Reset image state by adding the switching class
+		lightboxImg.classList.add("switching");
+		lightboxImg.style.opacity = ""; // Clear inline styles
 
 		// Use the centralized handler for everything
-		updateTitle(items[currentIndex] || { src, alt });
-		lightboxImg.src = src;
+		const currentItem = items[currentIndex] || { src, caption: alt };
+		lightboxImg.src = currentItem.src || currentItem.dataset?.src || src;
+		updateCaptionDetails(currentItem);
 
 		lightbox.classList.add("open");
-		setTimeout(() => {
-			lightboxImg.style.opacity = "1";
-		}, 50);
-
 		document.body.style.overflow = "hidden";
 		updateControls();
 	}
@@ -64,6 +76,8 @@ export function initLightbox() {
 	function closeLightbox() {
 		lightbox.classList.remove("open");
 		document.body.style.overflow = "";
+		lightboxImg.style.opacity = ""; // Reset inline opacity on close
+		lightboxImg.classList.remove("switching");
 	}
 
 	function navigate(dir) {
@@ -77,7 +91,7 @@ export function initLightbox() {
 
 		setTimeout(() => {
 			lightboxImg.src = item.src || item.dataset?.src;
-			updateTitle(item);
+			updateCaptionDetails(item);
 		}, TRANSITION_SPEED);
 		updateControls();
 	}

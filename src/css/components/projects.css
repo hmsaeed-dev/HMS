@@ -82,26 +82,6 @@
     margin-top: var(--space-2xs);
 }
 
-.cs-back {
-    position: absolute;
-    top: var(--space-md);
-    left: var(--space-md);
-    display: flex;
-    align-items: center;
-    gap: var(--space-xs);
-    font-size: var(--fs-300);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--white-60);
-    z-index: 10;
-    transition: var(--transition);
-}
-
-.cs-back:hover {
-    color: var(--color-accent-lt);
-}
-
 /* ── FILTER BAR ─────────────────────────────────────────── */
 
 .cs-filter-bar {

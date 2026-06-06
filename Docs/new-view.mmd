@@ -1,0 +1,35 @@
+sequenceDiagram
+    autonumber
+    actor User
+    participant Browser as Browser
+    participant Theme as Theme Script
+    participant Loader as Main JS
+    participant Comp as Components
+    participant Data as Data Layer
+    participant Render as DOM Utils
+
+    Note over Browser, Theme: 1. PRE-RENDER PHASE
+    Browser->>Theme: Read localStorage
+    Theme-->>Browser: Apply data-theme to HTML
+
+    Note over Browser, Loader: 2. INITIALIZATION PHASE
+    User->>Browser: Request Page
+    Browser->>Loader: Fire DOMContentLoaded
+    Loader->>Comp: Execute component scripts
+    Comp-->>Browser: Inject SVGs and Layout
+    Loader->>Comp: Sync Navigation Active Links
+    Loader->>Comp: Sync Theme Toggle Icon UI
+
+    Note over Browser, Data: 3. DATA AND RENDERING PHASE
+    Loader->>Data: Import dataset arrays
+    Loader->>Render: Pass Data and Template ID
+    Render->>Browser: Locate template in DOM
+    Render->>Render: Clone node and map data
+    Render-->>Browser: Append elements to layout grid
+
+    Note over Browser, Loader: 4. BEHAVIOR AND INTERACTION PHASE
+    Loader->>Browser: Bind Theme Switcher events
+    Loader->>Browser: Setup ScrollSpy Observers
+    Loader->>Browser: Trigger ScrollReveal animations
+
+    Note over User, Browser: 5. READY STATE
