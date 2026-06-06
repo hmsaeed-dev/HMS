@@ -36,13 +36,16 @@
   --white-20:      rgba(255, 255, 255, 0.20);
 
   /* 3. Spacing Scale (Vertical Rhythm) */
-  --space-2xs:    0.25rem;
-  --space-xs:     0.5rem;
-  --space-sm:     0.75rem;
-  --space-md:     1.5rem;
-  --space-lg:     3rem;
-  --space-xl:     5rem;
-  --space-2xl:    8rem;
+  --space-2xs:    0.25rem;  /* 4px  */
+  --space-xs:     0.5rem;   /* 8px  */
+  --space-sm:     0.75rem;  /* 12px */
+  --space-md:     1rem;     /* 16px - Classic standard base */
+  --space-lg:     1.5rem;   /* 24px */
+  --space-xl:     2rem;     /* 32px */
+  --space-2xl:    3rem;     /* 48px */
+  --space-3xl:    4rem;     /* 64px */
+  --space-4xl:    8rem;     /* 128px */
+
 
   /* 4. Elevation (Depth) */
   --shadow-sm:     0 2px 8px rgba(0, 0, 0, 0.05);
@@ -224,7 +227,7 @@ h4 { font-size: var(--fs-h4); }
 /* ── SVG Icons ────────────────────────────────────────────── */
 
 .icon {
-  width: 20px; height: 20px;
+  width: 25px; height: 25px;
   stroke: currentColor;
   fill: none;
   stroke-width: 2;

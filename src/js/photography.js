@@ -100,9 +100,9 @@ document.addEventListener("DOMContentLoaded", () => {
 			const index = allItems.indexOf(item);
 
 			const photoData = photos[parseInt(item.dataset.index)];
+			const visiblePhotos = allItems.map(el => photos[parseInt(el.dataset.index)]);
 
-			openLightbox(photoData.src, photoData.caption, index, allItems);
-			updatePhotographCaption(photoData);
+			openLightbox(photoData.src, photoData.caption, index, visiblePhotos);
 		});
 	}
 
@@ -170,18 +170,4 @@ function updateVisibleCount(grid, visibleCountEl, pgEmpty) {
 	const visible = getVisibleItems(grid, ".pg-item").length;
 	if (visibleCountEl) visibleCountEl.textContent = visible;
 	if (pgEmpty) pgEmpty.classList.toggle("show", visible === 0);
-}
-
-function updatePhotographyCaption(photo) {
-	const cap = document.getElementById("pgLbCaption");
-	if (!cap) return;
-
-	cap.classList.remove("show");
-	setTimeout(() => {
-		document.getElementById("pgLbCat").textContent = photo.category || "";
-		document.getElementById("pgLbTitle").textContent = photo.caption;
-		document.getElementById("pgLbExif").textContent = photo.exif || "";
-		document.getElementById("pgLbDesc").textContent = photo.desc || "";
-		cap.classList.add("show");
-	}, 200);
 }
