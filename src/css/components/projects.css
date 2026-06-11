@@ -36,7 +36,7 @@
 .cs-title {
     font-family: "Cormorant Garamond", serif;
     font-size: var(--fs-h1);
-    font-weight: 300;
+    font-weight: 700;
     line-height: 1;
     margin-bottom: var(--space-md);
 }
@@ -112,7 +112,7 @@
     font-weight: 500;
     color: var(--color-text-muted);
     cursor: pointer;
-    transition: var(--transition);
+    transition: var(--transition-lg);
 }
 
 .cs-filter-btn:hover,
@@ -120,6 +120,8 @@
     background: var(--color-accent);
     border-color: var(--color-accent);
     color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
 .cs-view-count {
@@ -301,7 +303,7 @@
 
 @media (min-width: 641px) {
     .projects-grid {
-        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
         gap: var(--space-lg);
     }
 }
@@ -348,16 +350,10 @@
 }
 
 .project-body {
-	padding: var(--space-md);
+	padding: clamp(var(--space-md), 4vw, var(--space-lg));
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-}
-
-@media (min-width: 769px) {
-    .project-body {
-        padding: var(--space-lg);
-    }
 }
 
 .project-title {

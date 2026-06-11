@@ -8,14 +8,6 @@ export const projects = [
 		demo: "Photography/index.html",
 	},
 	{
-		title: "Finance Tracker",
-		tag: "Productivity",
-		desc: "A progressive offline-first web app built with Vanilla JS, focusing on data privacy and speed.",
-		img: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=800",
-		code: "https://github.com/hmsaeed-dev/Finance-Tracker",
-		demo: "https://hmsaeed.com/Finance-Tracker/",
-	},
-	{
 		title: "House of Wisdom",
 		tag: "Web Dev",
 		desc: "A full-featured digital library built with vanilla JS ES modules, a modular CSS architecture, and a clean MVC data layer.",

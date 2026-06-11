@@ -430,16 +430,16 @@
 }
 
 .pg-filter-btn {
-	padding: var(--space-2xs) var(--space-md);
+	padding: var(--space-xs) var(--space-md);
 	border-radius: var(--radius-full);
 	border: 1.5px solid var(--color-border);
 	background: none;
-	font-family: "DM Sans", sans-serif;
+	font-family: inherit;
 	font-size: var(--fs-300);
 	font-weight: 500;
 	color: var(--color-text-muted);
 	cursor: pointer;
-	transition: var(--transition);
+	transition: var(--transition-lg);
 	display: flex;
 	align-items: center;
 	gap: var(--space-2xs);
@@ -450,6 +450,8 @@
 	background: var(--color-accent);
 	border-color: var(--color-accent);
 	color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
 .pg-filter-btn .count {
@@ -486,6 +488,11 @@
 	cursor: pointer;
 	border-radius: var(--space-2xs);
 	transition: var(--transition);
+}
+
+.pg-view-btn .icon {
+    width: 18px;
+    height: 18px;
 }
 
 @media (min-width: 769px) {

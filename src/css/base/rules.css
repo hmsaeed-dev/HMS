@@ -9,6 +9,8 @@
   /* 1. Primitive Colors */
   --olive:        #728649;
   --olive-lt:     #8a9e60;
+  --earth:        #a67c52; /* New: Earthy brown */
+  --sky:          #6b8e9e; /* New: Muted sky blue */
   --warm-bg:      #f7f4ef;
   --white:        #ffffff;
   --ink:          #2a2a22;
@@ -21,6 +23,8 @@
   /* 2. Semantic Colors (Intent-based) */
   --color-accent:      var(--olive);
   --color-accent-lt:   var(--olive-lt);
+  --color-earth:       var(--earth);
+  --color-sky:         var(--sky);
   --color-text:        var(--ink);
   --color-text-muted:  var(--ink-60);
   --color-bg:          var(--warm-bg);
@@ -46,6 +50,13 @@
   --space-3xl:    4rem;     /* 64px */
   --space-4xl:    8rem;     /* 128px */
 
+  /* Centralized Z-Index Scale */
+  --z-nav:         100;
+  --z-mobile-menu: 99;
+  --z-progress:    200;
+  --z-back-to-top: 300;
+  --z-lightbox:    1000;
+  --z-tooltip:     1100;
 
   /* 4. Elevation (Depth) */
   --shadow-sm:     0 2px 8px rgba(0, 0, 0, 0.05);
@@ -93,6 +104,8 @@
   /* Primitives in Dark */
   --olive:        #8baa51;
   --olive-lt:     #95ae61;
+  --earth:        #c69c72; /* Lighter brown for dark mode contrast */
+  --sky:          #8baebf; /* Lighter blue for dark mode contrast */
   --warm-bg:      #1a1814;
   --white:        #24211c;
   --ink:          #f5f2e8;
@@ -103,6 +116,10 @@
   --ink-05:       rgba(245, 242, 232, 0.05);
 
   /* Semantic Overrides */
+  --color-accent:      var(--olive);
+  --color-accent-lt:   var(--olive-lt);
+  --color-earth:       var(--earth);
+  --color-sky:         var(--sky);
   --color-border:      var(--ink-10);
   --color-border-lt:   var(--ink-05);
   --color-overlay:     rgba(139, 170, 81, 0.1);
@@ -205,6 +222,7 @@ h4 { font-size: var(--fs-h4); }
   font-weight: 600;
   line-height: 1;
   color: var(--color-text);
+  text-align: center;
 }
 
 .section-sub {
@@ -212,6 +230,7 @@ h4 { font-size: var(--fs-h4); }
   color: var(--color-text-muted);
   font-style: italic;
   margin-top: var(--space-sm);
+  text-align: center;
 }
 
 .serif { font-family: 'Cormorant Garamond', serif; }
@@ -222,6 +241,53 @@ h4 { font-size: var(--fs-h4); }
   background: var(--color-selection);
   border-radius: var(--radius-full);
   margin: var(--space-md) auto;
+}
+
+@media (min-width: 901px) {
+  .section-title, .section-sub { text-align: left; }
+  .divider { margin-inline: 0; }
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-xs) var(--space-lg);
+  border-radius: var(--radius-full);
+  font-family: "DM Sans", sans-serif;
+  font-size: var(--fs-300);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transition-lg);
+  border: 1.5px solid transparent;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-olive {
+  background: var(--color-accent);
+  color: var(--white);
+}
+
+.btn-olive:hover {
+  background: var(--color-accent-lt);
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: var(--color-border);
+  color: var(--color-text-muted);
+}
+
+.btn-outline:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
 }
 
 /* ── SVG Icons ────────────────────────────────────────────── */
@@ -259,7 +325,7 @@ h4 { font-size: var(--fs-h4); }
   height: 5px;
   width: 0%;
   background: var(--olive);
-  z-index: 200;
+  z-index: var(--z-progress);
   transition: width .1s linear;
   border-radius: 0 99px 99px 0;
 }
