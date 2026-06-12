@@ -44,9 +44,9 @@ export const caseStudies = [
 		],
 	},
 	{
-		id: "finance-tracker",
+		id: "e-library",
 		tag: "Productivity",
-		title: "Personal Finance Tracker",
+		title: "E-Library",
 		shortDesc:
 			"Case study coming soon. Focusing on Data Visualization and Offline Persistence.",
 		techStack: [],
