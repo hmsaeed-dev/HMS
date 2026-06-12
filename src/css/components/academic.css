@@ -41,6 +41,26 @@
     border-left: 4px solid var(--color-selection); /* Muted border for secondary items */
 	transition: var(--transition-lg);
 	position: relative;
+    overflow: hidden;
+}
+
+.academic-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../images/hobby-nature.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.08;
+    filter: grayscale(1) blur(4px);
+    z-index: 0;
+    pointer-events: none;
+    transition: var(--transition-lg);
+}
+
+.academic-item:hover::after {
+    opacity: 0.15;
+    filter: grayscale(0) blur(2px);
 }
 
 /* Timeline dot - Shown on desktop */

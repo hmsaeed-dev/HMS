@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	initNavigation({ pathPrefix: "../" });
 	initFooter({ pathPrefix: "../" });
 
-	// 2. UI Logic
+	// 2. UI Logic (Must run after injection)
 	initThemeToggle();
 	initMobileMenu();
 

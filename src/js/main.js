@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	initThemeToggle();
 	initMobileMenu();
 	initScrollSpy();
+    initAtmosphericMotion();
 
 	// Only initialize Lightbox if the container exists in DOM
 	if (document.getElementById("lightbox")) {
@@ -39,6 +40,13 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // ── Render Functions ────────────────────────────────────────
+
+function initAtmosphericMotion() {
+    window.addEventListener("scroll", () => {
+        const scrolled = window.pageYOffset;
+        document.body.style.setProperty("--scroll-y", scrolled + "px");
+    }, { passive: true });
+}
 
 function renderProjects(data) {
 	renderList("projects-grid", data, (p, i) => {

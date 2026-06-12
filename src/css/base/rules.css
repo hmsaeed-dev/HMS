@@ -161,6 +161,29 @@ body {
   overflow-x: hidden;
   background-image: radial-gradient(circle at center, var(--color-overlay) 1px, transparent 1px);
   background-size: var(--space-md) var(--space-md);
+  position: relative;
+}
+
+/* Atmospheric Discovery Layer */
+body::before {
+  content: "";
+  position: fixed;
+  inset: -10% -5%;
+  background-image: url("../images/texture-noise.jpg");
+  background-size: 300px 300px;
+  background-repeat: repeat;
+  opacity: 0.15; /* Elegant film grain */
+  pointer-events: none;
+  z-index: -1;
+  mix-blend-mode: overlay;
+  transform: translateY(calc(var(--scroll-y, 0px) * 0.05));
+  will-change: transform;
+}
+
+[data-theme="dark"] body::before {
+    opacity: 0.1;
+    mix-blend-mode: soft-light;
+    filter: invert(1);
 }
 
 /* Images & media */
@@ -236,11 +259,11 @@ h4 { font-size: var(--fs-h4); }
 .serif { font-family: 'Cormorant Garamond', serif; }
 
 .divider {
-  width: 140px;
-  height: 3px;
+  width: 120px;
+  height: 2px;
   background: var(--color-selection);
-  border-radius: var(--radius-full);
   margin: var(--space-md) auto;
+  border-radius: var(--radius-full);
 }
 
 @media (min-width: 901px) {
