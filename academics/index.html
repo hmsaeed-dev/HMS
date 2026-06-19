@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-T31PJSBQY8"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+
+			gtag("config", "G-T31PJSBQY8");
+		</script>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Primary Meta Tags -->
+		<title>Academics & Notion Notes | HMS</title>
+		<meta
+			name="title"
+			content="Academics & Notes | Hafiz Muhammad Saeed"
+		/>
+		<meta
+			name="description"
+			content="Explore the academic journey, record ledger, and published Notion notes of Hafiz Muhammad Saeed, a CS student at UET Taxila. Open-source exam preparation sheets."
+		/>
+		<meta
+			name="keywords"
+			content="Notion Notes, Academic Portfolio, UET Taxila, Hafiz Muhammad Saeed Academics, Computer Science Notes, Exam Prep"
+		/>
+		<link rel="canonical" href="https://hmsaeed.com/academics/" />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://hmsaeed.com/academics/" />
+		<meta
+			property="og:title"
+			content="Academics & Notion Notes | Hafiz Muhammad Saeed"
+		/>
+		<meta
+			property="og:description"
+			content="Academic journey, record ledger, and open-source study guides published from my personal Notion."
+		/>
+		<meta
+			property="og:image"
+			content="https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto/f_auto/v1779626952/logo_te0qiv.webp"
+		/>
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content="https://hmsaeed.com/academics/" />
+		<meta
+			property="twitter:title"
+			content="Academics & Notion Notes | Hafiz Muhammad Saeed"
+		/>
+		<meta
+			property="twitter:description"
+			content="Academic journey, record ledger, and open-source study guides published from my personal Notion."
+		/>
+		<meta
+			property="twitter:image"
+			content="https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto/f_auto/v1779626952/logo_te0qiv.webp"
+		/>
+
+		<!-- Structured Data -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "CollectionPage",
+				"name": "Academic Portfolio & Notion Notes - Hafiz Muhammad Saeed",
+				"description": "Academic records, university societies, and published Notion study notes by Hafiz Muhammad Saeed.",
+				"url": "https://hmsaeed.com/HMS/academics/",
+				"author": {
+					"@type": "Person",
+					"name": "Hafiz Muhammad Saeed"
+				}
+			}
+		</script>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="icon" href="../src/icons/hms.svg" type="image/svg+xml" />
+
+		<!-- Theme Detection (Prevents Flash) -->
+		<script>
+			(function () {
+				const theme =
+					localStorage.getItem("theme") ||
+					(window.matchMedia("(prefers-color-scheme: dark)").matches
+						? "dark"
+						: "light");
+				document.documentElement.setAttribute("data-theme", theme);
+			})();
+		</script>
+
+		<link rel="stylesheet" href="../src/css/main.css" />
+		<script type="module" src="../src/js/academics.js"></script>
+	</head>
+
+	<body>
+		<!-- SCROLL PROGRESS -->
+		<div class="scroll-progress" id="scrollProgress"></div>
+
+		<!-- Hero -->
+		<header class="cs-hero">
+			<div class="cs-hero-content">
+				<h1 class="cs-title">Academic Hub</h1>
+				<p class="cs-intro">
+					My educational pathway at UET Taxila, university societies,
+					and open-source study guides published from my personal Notion.
+				</p>
+
+				<div class="cs-hero-stats">
+					<div class="cs-stat">
+						<span class="cs-stat-num" id="statGPA">3.90</span>
+						<span class="cs-stat-label">CGPA</span>
+					</div>
+					<div class="cs-stat">
+						<span class="cs-stat-num" id="statNotes">0</span>
+						<span class="cs-stat-label">Notion Notes</span>
+					</div>
+					<div class="cs-stat">
+						<span class="cs-stat-num" id="statSocieties">0</span>
+						<span class="cs-stat-label">Societies</span>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="container">
+			<!-- LEDGER DESIGN - ACADEMIC RECORD -->
+			<section class="section reveal">
+				<div class="reveal">
+					<h2 class="section-title">Academic Ledger</h2>
+					<p class="section-sub">
+						A structured ledger detailing my formal qualifications and
+						academic records.
+					</p>
+					<div class="divider"></div>
+				</div>
+
+				<div class="ledger-container">
+					<table class="ledger-table">
+						<thead>
+							<tr>
+								<th>Period</th>
+								<th>Qualification</th>
+								<th>Institution</th>
+								<th>Status</th>
+								<th>Focus Areas</th>
+							</tr>
+						</thead>
+						<tbody id="ledger-body">
+							<!-- Dynamically Injected by JS -->
+						</tbody>
+					</table>
+				</div>
+			</section>
+
+			<!-- NOTION STUDY GUIDES HUB -->
+			<section class="section" id="notion-hub" style="margin-top: var(--space-2xl);">
+				<div class="reveal">
+					<h2 class="section-title">Published Notes</h2>
+					<p class="section-sub">
+						Study resources compiled directly from my Notion workspaces.
+					</p>
+					<div class="divider"></div>
+				</div>
+
+				<!-- Search & Filter Bar -->
+				<div class="notes-filter-bar reveal">
+					<div class="search-wrap">
+						<input
+							type="text"
+							id="notesSearch"
+							placeholder="Search by topic, tag, or keyword..."
+							aria-label="Search Notion notes"
+						/>
+					</div>
+					<div class="filter-pills" id="notesFilters">
+						<button class="filter-pill active" data-filter="all">
+							All Subjects
+						</button>
+						<!-- Dynamically Injected by JS -->
+					</div>
+				</div>
+
+				<div class="notes-hub-layout">
+					<!-- Main Grid content -->
+					<div class="notes-main-content">
+						<div class="notes-grid" id="notesGrid">
+							<!-- Dynamic Cards Injected by JS -->
+						</div>
+						<div id="notesEmpty" class="notes-empty hidden reveal">
+							<p>No study notes match your search criteria.</p>
+						</div>
+					</div>
+
+					<!-- Sidebar Widgets -->
+					<aside class="notes-sidebar">
+						<!-- Live Workspace Feed Card -->
+						<div class="sidebar-card live-card reveal">
+							<div class="card-header">
+								<span class="pulse-dot"></span>
+								<h3 style="margin-bottom: 0; border: none; padding: 0;">Workspace Feed</h3>
+							</div>
+							<div class="card-body" style="margin-top: var(--space-md);">
+								<div class="feed-item">
+									<span class="feed-time">CURRENTLY FOCUSED</span>
+									<p>Data Structures &amp; Algorithms</p>
+								</div>
+								<div class="feed-item">
+									<span class="feed-time">LATEST NOTE</span>
+									<p><strong>AVL Trees Rotations</strong> was updated to include LL, RR, LR, RL rotation case diagrams.</p>
+								</div>
+								<div class="feed-item">
+									<span class="feed-time">UPCOMING NOTE</span>
+									<p>Network Systems _ Information and Communication Technology</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Academic Profiles Widget -->
+						<div class="sidebar-card reveal">
+							<h3>Academic Profiles</h3>
+							<div class="profiles-grid">
+								<a
+									href="https://orcid.org/0009-0007-9947-5047"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="profile-link"
+								>
+									<img
+										src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
+										class="profile-logo"
+										alt="ORCID"
+									/>
+									<span>ORCID iD</span>
+								</a>
+								<a
+									href="https://linkedin.com/in/hmsaeed"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="profile-link"
+								>
+									<svg class="icon"><use href="#icon-linkedin" /></svg>
+									<span>LinkedIn</span>
+								</a>
+								<a
+									href="https://medium.com/@hms_blogs"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="profile-link"
+								>
+									<span class="profile-letter">M</span>
+									<span>Medium Blogs</span>
+								</a>
+								<a
+									href="https://github.com/hmsaeed-dev"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="profile-link"
+								>
+									<svg class="icon"><use href="#icon-github" /></svg>
+									<span>GitHub</span>
+								</a>
+								<a
+									href="https://www.chess.com/member/hms_aeed"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="profile-link"
+								>
+									<span class="profile-letter">♟</span>
+									<span>Chess.com</span>
+								</a>
+								<a
+									href="https://g.dev/hmsaeed"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="profile-link"
+								>
+									<span class="profile-letter">G</span>
+									<span>Google Dev</span>
+								</a>
+							</div>
+						</div>
+					</aside>
+				</div>
+			</section>
+
+			<!-- SOCIETIES & LEADERSHIP -->
+			<section class="section reveal bg-white" style="margin-top: var(--space-2xl); padding: var(--space-lg); border-radius: var(--radius);">
+				<div class="reveal">
+					<h2 class="section-title">Societies &amp; Activities</h2>
+					<p class="section-sub">
+						Volunteering, outreach initiatives, and collaborative groups.
+					</p>
+					<div class="divider"></div>
+				</div>
+
+				<div class="societies-grid" id="societiesGrid">
+					<!-- Dynamically Injected by JS -->
+				</div>
+			</section>
+		</main>
+
+		<!-- Interactive Preview Modal -->
+		<div
+			class="notes-modal"
+			id="notesModal"
+			aria-hidden="true"
+			role="dialog"
+		>
+			<div class="modal-backdrop" id="modalBackdrop"></div>
+			<div class="modal-content">
+				<button class="modal-close" id="modalClose" aria-label="Close Preview">
+					&times;
+				</button>
+				<div class="modal-header">
+					<span class="modal-tag" id="modalTag">SUBJECT</span>
+					<h2 id="modalTitle">Note Document Title</h2>
+					<div class="modal-meta">
+						<span id="modalDate">Updated recently</span> &bull;
+						<span id="modalReadingTime">5 min read</span>
+					</div>
+				</div>
+				<div class="modal-body" id="modalBody">
+					<!-- Simulated Notion Content Injected by JS -->
+				</div>
+				<div class="modal-footer">
+					<a
+						href="#"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="btn btn-olive"
+						id="modalNotionLink"
+					>
+						Open Full Note in Notion ↗
+					</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

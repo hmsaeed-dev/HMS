@@ -1,0 +1,750 @@
+/* ── ACADEMICS SUBPAGE STYLES ────────────────────────────────────────── */
+
+/* ── LEDGER SYSTEM ───────────────────────────────────────────────────── */
+.ledger-container {
+    width: 100%;
+    overflow-x: auto;
+    background: var(--color-surface);
+    border-radius: var(--radiusmd);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-sm);
+    margin-block: var(--space-lg);
+    -webkit-overflow-scrolling: touch;
+}
+
+.ledger-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    min-width: 800px; /* Force minimum size for scrolling on small screens */
+}
+
+.ledger-table th {
+    font-family: "Cormorant Garamond", serif;
+    font-size: var(--fs-500);
+    font-weight: 700;
+    color: var(--color-text);
+    background: var(--color-border-lt);
+    padding: var(--space-md) var(--space-lg);
+    border-bottom: 2px solid var(--color-border);
+    letter-spacing: 0.02em;
+}
+
+.ledger-table td {
+    padding: var(--space-md) var(--space-lg);
+    border-bottom: 1px solid var(--color-border-lt);
+    font-size: var(--fs-400);
+    color: var(--color-text-muted);
+    vertical-align: middle;
+}
+
+.ledger-table tr:last-child td {
+    border-bottom: none;
+}
+
+.ledger-table tbody tr {
+    transition: background-color var(--transition);
+}
+
+/* Ledger Year Column */
+.ledger-year {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    color: var(--color-accent);
+    letter-spacing: 0.05em;
+}
+
+/* Ledger Degree Column */
+.ledger-degree {
+    font-family: "Cormorant Garamond", serif;
+    font-size: var(--fs-600);
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+/* Ledger Status Badge */
+.ledger-badge {
+    display: inline-block;
+    font-size: var(--fs-300);
+    font-weight: 700;
+    padding: var(--space-2xs) var(--space-sm);
+    border-radius: var(--radius-full);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.ledger-badge.in-progress {
+    background: var(--color-overlay);
+    color: var(--color-accent);
+}
+
+.ledger-badge.distinction {
+    background: rgba(166, 124, 82, 0.15); /* Warm earth alpha */
+    color: var(--color-earth);
+}
+
+.ledger-badge.grade-a {
+    background: rgba(107, 142, 158, 0.15); /* Sky alpha */
+    color: var(--color-sky);
+}
+
+
+/* ── NOTION NOTES HUB LAYOUT ─────────────────────────────────────────── */
+.notes-filter-bar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid var(--color-border);
+}
+
+@media (min-width: 769px) {
+    .notes-filter-bar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.search-wrap {
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+}
+
+.search-wrap input {
+    width: 100%;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--radius-full);
+    font-family: "DM Sans", sans-serif;
+    font-size: var(--fs-400);
+    transition: var(--transition);
+}
+
+.search-wrap input:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px var(--color-overlay);
+}
+
+.filter-pills {
+    display: flex;
+    gap: var(--space-xs);
+    flex-wrap: wrap;
+}
+
+.filter-pill {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+    padding: var(--space-2xs) var(--space-md);
+    border-radius: var(--radius-full);
+    font-family: "DM Sans", sans-serif;
+    font-size: var(--fs-300);
+    cursor: pointer;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.filter-pill:hover,
+.filter-pill.active {
+    background: var(--color-accent);
+    color: var(--white);
+    border-color: var(--color-accent);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Two-column layout */
+.notes-hub-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+    align-items: start;
+}
+
+@media (min-width: 992px) {
+    .notes-hub-layout {
+        grid-template-columns: 1fr 350px;
+    }
+}
+
+.notes-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+}
+
+@media (min-width: 600px) {
+    .notes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .notes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Note Cards */
+.note-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border-lt);
+    border-radius: var(--radiusmd);
+    padding: var(--space-lg);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-lg);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.note-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--color-accent);
+}
+
+.note-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-sm);
+}
+
+.note-subject {
+    font-size: var(--fs-200);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: var(--space-2xs) var(--space-xs);
+    border-radius: var(--radiussm);
+    background: var(--color-border-lt);
+    color: var(--color-text-muted);
+}
+
+.note-meta {
+    font-size: var(--fs-300);
+    color: var(--color-text-muted);
+}
+
+.note-title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: var(--fs-600);
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: var(--space-xs);
+    line-height: 1.2;
+}
+
+.note-desc {
+    font-size: var(--fs-400);
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    margin-bottom: var(--space-md);
+    flex-grow: 1;
+}
+
+.note-actions {
+    display: flex;
+    gap: var(--space-xs);
+}
+
+.note-actions .btn {
+    padding: var(--space-2xs) var(--space-md);
+    flex: 1;
+    justify-content: center;
+    font-size: var(--fs-300);
+}
+
+.note-actions .btn-outline {
+    font-size: var(--fs-300);
+}
+
+.notes-empty {
+    text-align: center;
+    padding: var(--space-2xl);
+    background: var(--color-surface);
+    border-radius: var(--radiusmd);
+    border: 1px dashed var(--color-border);
+    color: var(--color-text-muted);
+}
+
+.notes-empty.hidden {
+    display: none;
+}
+
+
+/* ── SIDEBAR STICKY CARDS ────────────────────────────────────────────── */
+.notes-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-md));
+}
+
+.sidebar-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border-lt);
+    border-radius: var(--radiusmd);
+    padding: var(--space-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.sidebar-card h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: var(--fs-600);
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: var(--space-md);
+    border-bottom: 1px solid var(--color-border-lt);
+    padding-bottom: var(--space-xs);
+}
+
+/* Live Card Pulse */
+.live-card {
+    border-left: 4px solid var(--color-accent);
+}
+
+.live-card .card-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-md);
+}
+
+.live-card h3 {
+    margin-bottom: 0;
+    border: none;
+    padding: 0;
+}
+
+.pulse-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #4cd964; /* Active green */
+    border-radius: 50%;
+    position: relative;
+}
+
+.pulse-dot::after {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    border: 2px solid #4cd964;
+    animation: pulse 1.8s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.6); opacity: 1; }
+    100% { transform: scale(1.6); opacity: 0; }
+}
+
+.feed-item {
+    margin-bottom: var(--space-md);
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid var(--color-border-lt);
+}
+
+.feed-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border: none;
+}
+
+.feed-time {
+    display: inline-block;
+    font-size: var(--fs-300);
+    font-weight: 700;
+    color: var(--color-accent);
+    letter-spacing: 0.05em;
+    margin-bottom: 2px;
+}
+
+.feed-item p {
+    font-size: var(--fs-400);
+    color: var(--color-text-muted);
+    line-height: 1.4;
+}
+
+/* Profiles Grid */
+.profiles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+}
+
+.profile-link {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    background: var(--color-border-lt);
+    padding: var(--space-xs);
+    border-radius: var(--radiussm);
+    transition: var(--transition);
+    font-size: var(--fs-300);
+    font-weight: 500;
+    color: var(--color-text-muted);
+}
+
+.profile-link:hover {
+    background: var(--color-overlay);
+    color: var(--color-accent);
+}
+
+.profile-link svg {
+    width: 18px;
+    height: 18px;
+}
+
+.profile-logo {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+.profile-letter {
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-accent);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 11px;
+    border-radius: 4px;
+}
+
+
+/* ── SOCIETIES & VOLUNTEERING ────────────────────────────────────────── */
+.societies-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+@media (min-width: 769px) {
+    .societies-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.society-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border-lt);
+    border-radius: var(--radiusmd);
+    padding: var(--space-lg);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    gap: var(--space-md);
+    transition: var(--transition-lg);
+}
+
+.society-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--radiussm);
+    background: var(--color-overlay);
+    color: var(--color-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Cormorant Garamond", serif;
+    font-size: var(--fs-600);
+    font-weight: 700;
+    flex-shrink: 0;
+    border: 1px solid var(--color-accent-lt);
+}
+
+.society-body {
+    flex-grow: 1;
+}
+
+.society-role {
+    font-family: "Cormorant Garamond", serif;
+    font-size: var(--fs-600);
+    font-weight: 700;
+    color: var(--color-text);
+    line-height: 1.2;
+}
+
+.society-org {
+    font-size: var(--fs-400);
+    font-weight: 500;
+    color: var(--color-accent);
+    margin-bottom: var(--space-2xs);
+}
+
+.society-period {
+    font-size: var(--fs-300);
+    color: var(--color-text-muted);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-sm);
+}
+
+.society-desc {
+    font-size: var(--fs-400);
+    color: var(--color-text-muted);
+    line-height: 1.5;
+}
+
+
+/* ── INTERACTIVE PREVIEW MODAL ────────────────────────────────────────── */
+.notes-modal {
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-lightbox);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.notes-modal.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(42, 42, 34, 0.4);
+    backdrop-filter: blur(8px);
+}
+
+.modal-content {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    width: 90%;
+    max-width: 800px;
+    height: 85vh;
+    border-radius: var(--radiusmd);
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-lg);
+    transform: translateY(20px);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    overflow: hidden;
+}
+
+.notes-modal.active .modal-content {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: var(--space-sm);
+    right: var(--space-md);
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--color-text-muted);
+    transition: color var(--transition);
+    z-index: 10;
+}
+
+.modal-close:hover {
+    color: var(--color-text);
+}
+
+.modal-header {
+    background: var(--color-surface);
+    padding: var(--space-lg) var(--space-xl) var(--space-md);
+    border-bottom: 1px solid var(--color-border-lt);
+}
+
+.modal-tag {
+    display: inline-block;
+    font-size: var(--fs-300);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-accent);
+    margin-bottom: var(--space-2xs);
+}
+
+#modalTitle {
+    font-family: "Cormorant Garamond", serif;
+    font-size: var(--fs-800);
+    font-weight: 700;
+    color: var(--color-text);
+    line-height: 1.2;
+}
+
+.modal-meta {
+    font-size: var(--fs-300);
+    color: var(--color-text-muted);
+    margin-top: var(--space-2xs);
+}
+
+.modal-body {
+    flex-grow: 1;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+
+.modal-footer {
+    background: var(--color-surface);
+    padding: var(--space-md) var(--space-xl);
+    border-top: 1px solid var(--color-border-lt);
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Notion Simulated Page elements */
+.notion-page {
+    font-family: "DM Sans", sans-serif;
+    color: var(--color-text);
+    line-height: 1.7;
+}
+
+.notion-page h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: var(--fs-700);
+    font-weight: 700;
+    color: var(--color-text);
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-xs);
+    border-bottom: 1px solid var(--color-border-lt);
+    padding-bottom: 4px;
+}
+
+.notion-page h4 {
+    font-family: "DM Sans", sans-serif;
+    font-size: var(--fs-500);
+    font-weight: 700;
+    color: var(--color-text);
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-2xs);
+}
+
+.notion-page p {
+    margin-bottom: var(--space-md);
+}
+
+.notion-page ul, .notion-page ol {
+    margin-bottom: var(--space-md);
+    padding-left: var(--space-lg);
+}
+
+.notion-page ul {
+    list-style-type: disc;
+}
+
+.notion-page ol {
+    list-style-type: decimal;
+}
+
+.notion-page li {
+    margin-bottom: var(--space-2xs);
+}
+
+/* Callouts */
+.notion-callout {
+    display: flex;
+    gap: var(--space-sm);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border-lt);
+    border-left: 4px solid var(--color-accent);
+    padding: var(--space-md);
+    border-radius: var(--radiussm);
+    margin-bottom: var(--space-lg);
+}
+
+.notion-callout-emoji {
+    font-size: 1.3rem;
+    line-height: 1.2;
+}
+
+.notion-callout-text {
+    font-size: var(--fs-400);
+    color: var(--color-text);
+}
+
+.notion-callout.alert-info {
+    border-left-color: var(--color-accent);
+    background: var(--color-overlay);
+}
+
+.notion-callout.alert-warning {
+    border-left-color: var(--color-earth);
+    background: rgba(166, 124, 82, 0.08);
+}
+
+.notion-callout.alert-success {
+    border-left-color: #4cd964;
+    background: rgba(76, 217, 100, 0.08);
+}
+
+/* Code Blocks */
+.notion-code {
+    background: #1e1e19; /* Dark code block background */
+    color: #f5f2e8;
+    padding: var(--space-md);
+    border-radius: var(--radiussm);
+    font-family: "Courier New", Courier, monospace;
+    font-size: var(--fs-300);
+    line-height: 1.5;
+    overflow-x: auto;
+    margin-bottom: var(--space-lg);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .notion-code {
+    background: #0d0c0a;
+}
+
+.notion-code code {
+    font-family: inherit;
+}
+
+/* Syntax Highlighting */
+.code-keyword { color: #d68742; font-weight: 700; }
+.code-type { color: #4aa5b8; }
+.code-func { color: #a9b76c; }
+.code-str { color: #ca5757; }
+.code-comment { color: #7a7a6f; font-style: italic; }
+.code-number { color: #cf62be; }
+
+/* Tables in Notion Preview */
+.notion-page table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: var(--space-lg);
+}
+
+.notion-page th {
+    background: var(--color-border-lt);
+    font-weight: 700;
+    padding: var(--space-xs) var(--space-sm);
+    border: 1px solid var(--color-border);
+    font-size: var(--fs-300);
+}
+
+.notion-page td {
+    padding: var(--space-xs) var(--space-sm);
+    border: 1px solid var(--color-border);
+    font-size: var(--fs-300);
+}

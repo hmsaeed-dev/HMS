@@ -71,6 +71,7 @@
 
   /* Typography */
   --fs-base:      16px;
+  --fs-200:       0.50rem;
   --fs-300:       0.8125rem;   /* ~13px */
   --fs-400:       1rem;
   --fs-500:       1.125rem;
