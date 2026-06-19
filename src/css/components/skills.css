@@ -17,21 +17,6 @@
 	transition: var(--transition-lg);
 }
 
-/* Dynamic Color Theming */
-.skills-category[data-color="olive"] { border-left-color: var(--color-accent); }
-.skills-category[data-color="earth"] { border-left-color: var(--color-earth); }
-.skills-category[data-color="sky"]   { border-left-color: var(--color-sky); }
-
-.skills-category[data-color="olive"] .skills-category-title { color: var(--color-accent); }
-.skills-category[data-color="earth"] .skills-category-title { color: var(--color-earth); }
-.skills-category[data-color="sky"]   .skills-category-title { color: var(--color-sky); }
-
-.skills-category:hover {
-	transform: translateY(-5px);
-	box-shadow: var(--shadow-md);
-    border-color: var(--color-accent-lt);
-}
-
 .skills-category-title {
 	font-family: "DM Sans", sans-serif;
     font-size: var(--fs-300);
