@@ -171,11 +171,28 @@ function renderSocieties(data) {
 
 function initNotesSearch() {
 	const searchInput = document.getElementById("notesSearch");
+	const clearBtn = document.getElementById("searchClear");
 	if (!searchInput) return;
 
+	const toggleClearButton = () => {
+		if (clearBtn) {
+			clearBtn.style.display = searchInput.value.length > 0 ? "block" : "none";
+		}
+	};
+
 	searchInput.addEventListener("input", () => {
+		toggleClearButton();
 		filterAndSearchNotes();
 	});
+
+	if (clearBtn) {
+		clearBtn.addEventListener("click", () => {
+			searchInput.value = "";
+			clearBtn.style.display = "none";
+			filterAndSearchNotes();
+			searchInput.focus();
+		});
+	}
 }
 
 function filterAndSearchNotes() {
@@ -256,17 +273,28 @@ function openModal(note) {
 	document.getElementById("modalTitle").textContent = note.title;
 	document.getElementById("modalDate").textContent = note.updated;
 	document.getElementById("modalReadingTime").textContent = note.readTime;
-
-	// Inject iframe and loader
+	
+	// Inject iframe and modern skeleton loader
 	const modalBody = document.getElementById("modalBody");
 	modalBody.innerHTML = `
-		<div id="modalIframeLoader" style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 15px; background: var(--color-bg); z-index: 5; color: var(--color-text-muted); transition: opacity 0.3s ease;">
-			<div class="pulse-dot"></div>
-			<div style="font-family: 'DM Sans', sans-serif; font-size: var(--fs-300); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-accent);">
-				Loading Notion Note...
+		<div id="modalIframeLoader" style="position: absolute; inset: 0; display: flex; flex-direction: column; background: var(--color-bg); z-index: 5; transition: opacity 0.3s ease; padding: var(--space-xl); box-sizing: border-box;">
+			<div style="display: flex; align-items: center; gap: 15px; margin-bottom: var(--space-xl);">
+				<div class="skeleton-shimmer" style="width: 80px; height: 20px; border-radius: 4px;"></div>
+				<div class="skeleton-shimmer" style="width: 140px; height: 16px; border-radius: 4px;"></div>
+			</div>
+			<div class="skeleton-shimmer" style="width: 70%; height: 35px; border-radius: 6px; margin-bottom: var(--space-lg);"></div>
+			<div class="skeleton-shimmer" style="width: 40%; height: 14px; border-radius: 4px; margin-bottom: var(--space-2xl);"></div>
+			<div style="display: flex; flex-direction: column; gap: var(--space-md); flex-grow: 1;">
+				<div class="skeleton-shimmer" style="width: 100%; height: 16px; border-radius: 4px;"></div>
+				<div class="skeleton-shimmer" style="width: 95%; height: 16px; border-radius: 4px;"></div>
+				<div class="skeleton-shimmer" style="width: 90%; height: 16px; border-radius: 4px;"></div>
+				<div class="skeleton-shimmer" style="width: 60%; height: 16px; border-radius: 4px; margin-bottom: var(--space-md);"></div>
+				<div class="skeleton-shimmer" style="width: 100%; height: 16px; border-radius: 4px;"></div>
+				<div class="skeleton-shimmer" style="width: 98%; height: 16px; border-radius: 4px;"></div>
+				<div class="skeleton-shimmer" style="width: 85%; height: 16px; border-radius: 4px;"></div>
 			</div>
 		</div>
-		<iframe id="modalNoteIframe" src="${note.embedUrl}" width="100%" height="100%" style="border: none; width: 100%; height: 100%; display: block; opacity: 0; transition: opacity 0.3s ease; min-height: 500px;" allowfullscreen></iframe>
+		<iframe id="modalNoteIframe" src="${note.embedUrl}" width="100%" height="100%" style="border: none; width: 100%; height: 100%; display: block; opacity: 0; transition: opacity 0.3s ease; min-height: 500px; background: var(--color-surface);" allowfullscreen></iframe>
 	`;
 
 	const iframe = document.getElementById("modalNoteIframe");

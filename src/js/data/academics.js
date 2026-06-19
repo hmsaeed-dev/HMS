@@ -73,10 +73,10 @@ export const notionNotes = [
 export const societies = [
 	{
 		role: "CSP Coordinator",
-		organization: "Umeed e Subh (Welfare & Educational Org)",
+		organization: "Umeed e Subh Organization",
 		period: "2025 - Present",
 		desc: "Coordinating youth-led educational workshops, charity fund-raisers, and community services. Focused on digital literacy outreach.",
-		logoText: "US"
+		logoText: "CSP"
 	},
 	{
 		role: "Active Member / Coordinator",

@@ -169,7 +169,7 @@
 			<!-- NOTION STUDY GUIDES HUB -->
 			<section class="section" id="notion-hub" style="margin-top: var(--space-2xl);">
 				<div class="reveal">
-					<h2 class="section-title">Published Notes</h2>
+					<h2 class="section-title">Study Notes</h2>
 					<p class="section-sub">
 						Study resources compiled directly from my Notion workspaces.
 					</p>
@@ -182,9 +182,10 @@
 						<input
 							type="text"
 							id="notesSearch"
-							placeholder="Search by topic, tag, or keyword..."
+							placeholder="Search by topics ..."
 							aria-label="Search Notion notes"
 						/>
+						<button id="searchClear" class="search-clear-btn" aria-label="Clear search" style="display: none;">&times;</button>
 					</div>
 					<div class="filter-pills" id="notesFilters">
 						<button class="filter-pill active" data-filter="all">
@@ -210,7 +211,6 @@
 						<!-- Live Workspace Feed Card -->
 						<div class="sidebar-card live-card reveal">
 							<div class="card-header">
-								<span class="pulse-dot"></span>
 								<h3 style="margin-bottom: 0; border: none; padding: 0;">Workspace Feed</h3>
 							</div>
 							<div class="card-body" style="margin-top: var(--space-md);">

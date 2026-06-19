@@ -70,24 +70,10 @@
     padding: var(--space-2xs) var(--space-sm);
     border-radius: var(--radius-full);
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
-.ledger-badge.in-progress {
     background: var(--color-overlay);
     color: var(--color-accent);
+    letter-spacing: 0.05em;
 }
-
-.ledger-badge.distinction {
-    background: rgba(166, 124, 82, 0.15); /* Warm earth alpha */
-    color: var(--color-earth);
-}
-
-.ledger-badge.grade-a {
-    background: rgba(107, 142, 158, 0.15); /* Sky alpha */
-    color: var(--color-sky);
-}
-
 
 /* ── NOTION NOTES HUB LAYOUT ─────────────────────────────────────────── */
 .notes-filter-bar {
@@ -327,28 +313,6 @@
     margin-bottom: 0;
     border: none;
     padding: 0;
-}
-
-.pulse-dot {
-    width: 10px;
-    height: 10px;
-    background-color: #4cd964; /* Active green */
-    border-radius: 50%;
-    position: relative;
-}
-
-.pulse-dot::after {
-    content: "";
-    position: absolute;
-    inset: -4px;
-    border-radius: 50%;
-    border: 2px solid #4cd964;
-    animation: pulse 1.8s infinite ease-in-out;
-}
-
-@keyframes pulse {
-    0% { transform: scale(0.6); opacity: 1; }
-    100% { transform: scale(1.6); opacity: 0; }
 }
 
 .feed-item {
@@ -748,3 +712,87 @@
     border: 1px solid var(--color-border);
     font-size: var(--fs-300);
 }
+
+/* ── UI/UX REFINEMENT ADJUSTMENTS ────────────────────────────────────── */
+
+/* 1. Card Height Alignment */
+.note-actions {
+    margin-top: auto; /* Push buttons to the bottom of cards */
+}
+
+/* 2. Skeleton Shimmer Animations */
+.skeleton-shimmer {
+    background: linear-gradient(90deg,
+        var(--color-border-lt) 25%,
+        var(--color-border) 37%,
+        var(--color-border-lt) 63%
+    );
+    background-size: 400% 100%;
+    animation: skeleton-pulse 1.4s ease infinite;
+}
+
+@keyframes skeleton-pulse {
+    0% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* 3. Search Bar Clear Button Affordance */
+.search-wrap {
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.search-wrap input {
+    padding-right: var(--space-2xl) !important; /* Make room for the '×' button */
+}
+
+.search-clear-btn {
+    position: absolute;
+    right: var(--space-md);
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    padding: var(--space-2xs);
+    line-height: 1;
+    transition: color var(--transition), transform var(--transition);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-clear-btn:hover {
+    color: var(--color-text);
+    transform: scale(1.15);
+}
+
+/* 4. Micro-copy Contrast & Typography Spacing */
+.note-subject {
+    letter-spacing: 0.12em !important;
+}
+
+.ledger-badge {
+    letter-spacing: 0.12em !important;
+}
+
+.feed-time {
+    letter-spacing: 0.12em !important;
+}
+
+.society-period {
+    letter-spacing: 0.12em !important;
+}
+
+.modal-tag {
+    letter-spacing: 0.12em !important;
+}
+
