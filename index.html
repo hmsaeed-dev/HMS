@@ -61,34 +61,6 @@
     })();
   </script>
 
-  <!-- Critical CSS (Inlined for FCP) -->
-  <style>
-    :root {
-      --olive:#728649;--olive-lt:#8a9e60;--warm-bg:#f7f4ef;--white:#ffffff;--ink:#2a2a22;
-      --color-accent:var(--olive);--color-bg:var(--warm-bg);--color-text:var(--ink);
-      --fs-h1:clamp(3.2rem, 8vw + 1rem, 7rem);--header-height:80px;
-    }
-    [data-theme="dark"] { --warm-bg:#1a1814;--white:#24211c;--ink:#f5f2e8; }
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-
-    body{background:var(--color-bg);color:var(--color-text);font-family:"DM Sans",sans-serif;line-height:1.6;overflow-x:hidden;}
-
-
-    .container{max-width:1200px;margin-inline:auto;padding-inline:clamp(1.25rem, 5vw, 3rem);}
-
-    #hero{min-height:92vh;display:flex;align-items:center;padding-top:var(--header-height);}
-
-    .hero-inner{display:grid;grid-template-columns:1fr;gap:3rem;align-items:center;text-align:center;}
-
-    @media (min-width:901px){.hero-inner{grid-template-columns:1fr 1fr;text-align:left;}}
-
-    .hero-h1{font-family:"Cormorant Garamond",serif;font-size:var(--fs-h1);font-weight:700;line-height:1;}
-
-    .hero-img-wrap img{border-radius:32px;width:80%;max-width:320px;margin:0 auto;aspect-ratio:3/4;object-fit:cover;}
-
-    .reveal{opacity:0;transform:translateY(8px);}
-  </style>
-
   <!-- Non-critical CSS (Deferred) -->
   <link rel="stylesheet" href="src/css/main.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="src/css/main.css"></noscript>
@@ -195,7 +167,7 @@
 
           <a href="#projects" class="btn btn-outline">View Projects</a>
 
-          <a href="Docs/hms-cv.pdf" class="btn btn-outline" download>
+          <a href="Docs/CV.pdf" class="btn btn-outline" download>
               <svg class="icon icon-sm"><use href="#icon-download"/></svg>
           Download CV
           </a>
