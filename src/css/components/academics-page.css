@@ -240,20 +240,52 @@
     flex-grow: 1;
 }
 
-.note-actions {
+.clickable-card {
+    cursor: pointer;
+}
+
+.clickable-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-accent-lt);
+}
+
+.note-card-footer {
     display: flex;
-    gap: var(--space-xs);
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+    padding-top: var(--space-sm);
+    border-top: 1px dashed var(--color-border-lt);
 }
 
-.note-actions .btn {
-    padding: var(--space-2xs) var(--space-md);
-    flex: 1;
-    justify-content: center;
+.note-tap-hint {
     font-size: var(--fs-300);
+    color: var(--color-accent);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
-.note-actions .btn-outline {
+.note-external-link {
     font-size: var(--fs-300);
+    color: var(--color-text-muted);
+    font-weight: 600;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    padding: var(--space-2xs) var(--space-xs);
+    border-radius: var(--radiussm);
+    border: 1px solid var(--color-border);
+    background: var(--color-border-lt);
+}
+
+.note-external-link:hover {
+    color: var(--color-accent);
+    border-color: var(--color-accent-lt);
+    background: var(--color-overlay);
 }
 
 .notes-empty {
@@ -794,5 +826,283 @@
 
 .modal-tag {
     letter-spacing: 0.12em !important;
+}
+
+/* ── MOBILE RESPONSIVENESS OVERRIDES (<= 768px / <= 991px) ────────────── */
+
+/* Mobile Tab Switcher */
+.mobile-tabs-container {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-tabs-container {
+        display: block;
+        position: sticky;
+        top: var(--header-height);
+        z-index: 99; /* Below main nav (100) */
+        background: var(--color-bg);
+        border-bottom: 1px solid var(--color-border-lt);
+        padding: var(--space-xs) 0 var(--space-sm);
+        margin-bottom: var(--space-md);
+    }
+    
+    .mobile-tabs {
+        display: flex;
+        justify-content: center;
+        background: var(--color-border-lt);
+        padding: 4px;
+        border-radius: var(--radius-full);
+        margin: 0 auto;
+        max-width: 320px;
+        border: 1px solid var(--color-border);
+    }
+    
+    .mobile-tab-btn {
+        flex: 1;
+        background: transparent;
+        border: none;
+        color: var(--color-text-muted);
+        font-family: "DM Sans", sans-serif;
+        font-size: var(--fs-300);
+        font-weight: 600;
+        padding: var(--space-xs) var(--space-sm);
+        border-radius: var(--radius-full);
+        cursor: pointer;
+        transition: var(--transition-lg);
+        text-align: center;
+    }
+    
+    .mobile-tab-btn.active {
+        background: var(--color-accent);
+        color: var(--white);
+        box-shadow: var(--shadow-sm);
+    }
+}
+
+/* 1. Ledger Table Custom Timeline Grid Cards */
+@media (max-width: 768px) {
+    .ledger-container {
+        border: none;
+        background: transparent;
+        box-shadow: none;
+        margin-block: 0;
+    }
+
+    .ledger-table, 
+    .ledger-table thead, 
+    .ledger-table tbody, 
+    .ledger-table tr, 
+    .ledger-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .ledger-table thead {
+        display: none; /* Hide desktop table headers */
+    }
+
+    .ledger-table tbody {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+
+    .ledger-table tr {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: var(--space-2xs) var(--space-sm);
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radiusmd);
+        padding: var(--space-md);
+        box-shadow: var(--shadow-sm);
+        transition: transform var(--transition), box-shadow var(--transition);
+        margin-bottom: 0; /* Let flex gap manage spacing */
+    }
+
+    .ledger-table tr:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+    }
+
+    .ledger-table td {
+        padding: 0;
+        border: none !important;
+    }
+
+    /* Row 1: Period (Col 1) and Status (Col 2) */
+    .ledger-table td:nth-child(1) {
+        grid-column: 1;
+        align-self: center;
+    }
+
+    .ledger-table td:nth-child(4) {
+        grid-column: 2;
+        justify-self: end;
+        align-self: center;
+    }
+
+    /* Row 2: Qualification (Spans full width) */
+    .ledger-table td:nth-child(2) {
+        grid-column: 1 / span 2;
+        margin-top: var(--space-xs);
+    }
+
+    /* Row 3: Institution (Spans full width) */
+    .ledger-table td:nth-child(3) {
+        grid-column: 1 / span 2;
+        font-weight: 500;
+        color: var(--color-accent);
+        font-size: var(--fs-300);
+        margin-top: 2px;
+        font-style: italic;
+    }
+
+    /* Row 4: Focus Areas (Spans full width, muted timeline detail) */
+    .ledger-table td:nth-child(5) {
+        grid-column: 1 / span 2;
+        margin-top: var(--space-xs);
+        padding-top: var(--space-xs);
+        border-top: 1px dashed var(--color-border-lt) !important;
+        font-size: var(--fs-300);
+        color: var(--color-text-muted);
+    }
+
+    .ledger-table td:nth-child(5)::before {
+        content: "Focus Areas: ";
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.65rem;
+        color: var(--color-accent);
+        letter-spacing: 0.05em;
+        margin-right: 4px;
+    }
+
+    .ledger-year {
+        align-self: flex-start;
+        background: var(--color-overlay);
+        padding: var(--space-2xs) var(--space-sm);
+        border-radius: var(--radiussm);
+        font-size: var(--fs-300);
+        font-weight: 700;
+    }
+
+    .ledger-degree {
+        font-size: var(--fs-500);
+        font-weight: 700;
+        color: var(--color-text);
+        font-family: "Cormorant Garamond", serif;
+    }
+}
+
+/* 2. Horizontal Scrolling Filter Pills */
+@media (max-width: 768px) {
+    .notes-filter-bar {
+        gap: var(--space-sm);
+        margin-bottom: var(--space-lg);
+        padding-bottom: var(--space-sm);
+    }
+
+    .filter-pills {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: var(--space-xs);
+        width: 100%;
+        scrollbar-width: none; /* Firefox */
+        -webkit-overflow-scrolling: touch;
+        gap: var(--space-xs);
+    }
+
+    .filter-pills::-webkit-scrollbar {
+        display: none; /* Chrome/Safari */
+    }
+
+    .filter-pill {
+        white-space: nowrap;
+        flex-shrink: 0;
+        padding: var(--space-2xs) var(--space-sm);
+    }
+}
+
+/* 3. Re-order Live Workspace Feed and notes layout on mobile */
+@media (max-width: 991px) {
+    .notes-hub-layout {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+
+    .notes-sidebar {
+        display: contents; /* Allows individual ordering of sidebar widgets within grid */
+        position: static;
+    }
+
+    .live-card {
+        order: -2; /* Bring Live Workspace Feed to the top */
+        border-left: 4px solid var(--color-accent);
+        box-shadow: var(--shadow-sm);
+    }
+
+    .notes-main-content {
+        order: -1; /* Keep the notes list/grid below workspace feed */
+    }
+
+    .notes-sidebar > .sidebar-card:not(.live-card) {
+        order: 1; /* Send other widgets (e.g. academic profiles) to the bottom */
+    }
+    
+    .profiles-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 4. Full-Screen Native-feel Reading Modal */
+@media (max-width: 768px) {
+    .notes-modal {
+        align-items: flex-end; /* Align content to bottom for slide-up transition */
+    }
+
+    .modal-content {
+        width: 100%;
+        height: 100%;
+        max-height: 100vh;
+        border-radius: 0;
+        border: none;
+        transform: translateY(100%); /* Slide up animation anchor */
+    }
+
+    .notes-modal.active .modal-content {
+        transform: translateY(0);
+    }
+
+    .modal-header {
+        padding: var(--space-md) var(--space-lg);
+        background: var(--color-surface);
+    }
+
+    #modalTitle {
+        font-size: var(--fs-700);
+    }
+
+    .modal-body {
+        height: calc(100vh - 180px); /* Leave room for header/footer */
+    }
+
+    .modal-close {
+        top: var(--space-xs);
+        right: var(--space-sm);
+        font-size: 1.75rem;
+    }
+
+    .modal-footer {
+        padding: var(--space-sm) var(--space-lg);
+    }
+    
+    .modal-footer .btn {
+        width: 100%;
+        justify-content: center;
+    }
 }
 

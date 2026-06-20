@@ -136,9 +136,18 @@
 			</div>
 		</header>
 
+		<!-- Mobile Tab Switcher -->
+		<div class="mobile-tabs-container">
+			<div class="mobile-tabs" id="mobileTabs">
+				<button class="mobile-tab-btn active" data-target="ledger-section">Ledger</button>
+				<button class="mobile-tab-btn" data-target="notion-hub">Study Notes</button>
+				<button class="mobile-tab-btn" data-target="societies-section">Societies</button>
+			</div>
+		</div>
+
 		<main class="container">
 			<!-- LEDGER DESIGN - ACADEMIC RECORD -->
-			<section class="section reveal">
+			<section class="section reveal" id="ledger-section">
 				<div class="reveal">
 					<h2 class="section-title">Academic Ledger</h2>
 					<p class="section-sub">
@@ -298,7 +307,7 @@
 			</section>
 
 			<!-- SOCIETIES & LEADERSHIP -->
-			<section class="section reveal bg-white" style="margin-top: var(--space-2xl); padding: var(--space-lg); border-radius: var(--radius);">
+			<section class="section reveal bg-white" id="societies-section" style="margin-top: var(--space-2xl); padding: var(--space-lg); border-radius: var(--radius);">
 				<div class="reveal">
 					<h2 class="section-title">Societies &amp; Activities</h2>
 					<p class="section-sub">

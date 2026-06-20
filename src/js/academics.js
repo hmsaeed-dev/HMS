@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	// 4. Initialize Interactive Behaviors
 	initNotesSearch();
 	initNotesModal();
+	initMobileTabs();
 
 	// 5. Animate stats
 	animateGPA(document.getElementById("statGPA"), 3.90, 1000);
@@ -56,16 +57,16 @@ function renderLedger(data) {
 		else if (item.badge.includes("Grade A")) badgeClass = "grade-a";
 
 		tr.innerHTML = `
-			<td class="ledger-year">${item.year}</td>
-			<td>
+			<td class="ledger-year" data-label="Period">${item.year}</td>
+			<td data-label="Qualification">
 				<div class="ledger-degree">${item.degree}</div>
 				<div style="font-size: var(--fs-300); color: var(--color-text-muted); margin-top: 4px;">
 					${item.desc}
 				</div>
 			</td>
-			<td>${item.school}</td>
-			<td><span class="ledger-badge ${badgeClass}">${item.badge}</span></td>
-			<td style="font-style: italic; font-size: var(--fs-300); max-width: 250px;">${item.focus}</td>
+			<td data-label="Institution">${item.school}</td>
+			<td data-label="Status"><span class="ledger-badge ${badgeClass}">${item.badge}</span></td>
+			<td data-label="Focus Areas" style="font-style: italic; font-size: var(--fs-300); max-width: 250px;">${item.focus}</td>
 		`;
 		body.appendChild(tr);
 	});
@@ -86,11 +87,9 @@ function renderNotionNotes(data) {
 
 	data.forEach((note) => {
 		const card = document.createElement("div");
-		card.className = "note-card reveal";
+		card.className = "note-card clickable-card reveal";
 		card.dataset.subject = note.subjectKey;
 		card.dataset.id = note.id;
-
-		const tagsHtml = note.tags.map(tag => `<span class="note-tag">#${tag}</span>`).join("");
 
 		card.innerHTML = `
 			<div class="note-header">
@@ -99,9 +98,9 @@ function renderNotionNotes(data) {
 			</div>
 			<h3 class="note-title">${note.title}</h3>
 			<p class="note-desc">${note.desc}</p>
-			<div class="note-actions">
-				<button class="btn btn-olive btn-preview" data-id="${note.id}">Quick Preview</button>
-				<a href="${note.notionUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+			<div class="note-card-footer">
+				<span class="note-tap-hint">Quick Preview ⚡</span>
+				<a href="${note.notionUrl}" target="_blank" rel="noopener noreferrer" class="note-external-link" title="Open full note in Notion">
 					Notion ↗
 				</a>
 			</div>
@@ -243,12 +242,17 @@ function initNotesModal() {
 	const closeBtn = document.getElementById("modalClose");
 	const backdrop = document.getElementById("modalBackdrop");
 
-	// Open Modal Event Delegation
+	// Open Modal Event Delegation (clicking anywhere on the card, unless it is the external link)
 	document.addEventListener("click", (e) => {
-		const previewBtn = e.target.closest(".btn-preview");
-		if (!previewBtn) return;
+		if (e.target.closest(".note-external-link")) {
+			// Don't open preview modal if clicking direct link to Notion
+			return;
+		}
 
-		const noteId = previewBtn.dataset.id;
+		const card = e.target.closest(".note-card");
+		if (!card) return;
+
+		const noteId = card.dataset.id;
 		const note = notionNotes.find(n => n.id === noteId);
 		if (!note) return;
 
@@ -330,4 +334,61 @@ function closeModal() {
 		const modalBody = document.getElementById("modalBody");
 		if (modalBody) modalBody.innerHTML = "";
 	}, 400);
+}
+
+function initMobileTabs() {
+	const tabsContainer = document.getElementById("mobileTabs");
+	if (!tabsContainer) return;
+
+	const tabs = tabsContainer.querySelectorAll(".mobile-tab-btn");
+	const sections = {
+		"ledger-section": document.getElementById("ledger-section"),
+		"notion-hub": document.getElementById("notion-hub"),
+		"societies-section": document.getElementById("societies-section")
+	};
+
+	function switchTab(targetId) {
+		tabs.forEach(btn => {
+			btn.classList.toggle("active", btn.dataset.target === targetId);
+		});
+
+		Object.keys(sections).forEach(id => {
+			const section = sections[id];
+			if (!section) return;
+			
+			if (window.innerWidth <= 768) {
+				if (id === targetId) {
+					section.style.display = "block";
+				} else {
+					section.style.display = "none";
+				}
+			} else {
+				section.style.display = ""; // Reset display on desktop
+			}
+		});
+	}
+
+	tabsContainer.addEventListener("click", (e) => {
+		const btn = e.target.closest(".mobile-tab-btn");
+		if (!btn) return;
+		switchTab(btn.dataset.target);
+	});
+
+	// Handle window resize
+	window.addEventListener("resize", () => {
+		if (window.innerWidth > 768) {
+			Object.values(sections).forEach(section => {
+				if (section) section.style.display = "";
+			});
+		} else {
+			const activeBtn = tabsContainer.querySelector(".mobile-tab-btn.active");
+			if (activeBtn) switchTab(activeBtn.dataset.target);
+		}
+	});
+
+	// Set initial state for mobile view
+	if (window.innerWidth <= 768) {
+		const activeBtn = tabsContainer.querySelector(".mobile-tab-btn.active") || tabs[0];
+		if (activeBtn) switchTab(activeBtn.dataset.target);
+	}
 }
