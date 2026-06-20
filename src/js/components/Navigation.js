@@ -41,7 +41,7 @@ export function initNavigation({ pathPrefix = "" } = {}) {
             <svg class="icon"><use href="#icon-code"/></svg>
             Projects
         </a>
-        <a href="${pathPrefix}index.html#academic" class="mobile-link">
+        <a href="${pathPrefix}academics/index.html" class="mobile-link">
             <svg class="icon"><use href="#icon-academic"/></svg>
             Academics
         </a>

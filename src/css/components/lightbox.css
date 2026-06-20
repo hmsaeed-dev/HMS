@@ -83,7 +83,7 @@
 	font-family: "Cormorant Garamond", serif;
 	font-size: var(--fs-800);
 	font-weight: 500;
-	color: var(--color-bg);
+	color: var(--white-60);
 	line-height: 1.1;
 	margin-bottom: var(--space-2xs);
 }
@@ -110,7 +110,7 @@
 	right: var(--space-lg);
 	background: none;
 	border: none;
-	color: var(--white);
+	color: var(--white-60);
 	font-size: var(--fs-600);
 	cursor: pointer;
 	opacity: 0.5;
@@ -123,7 +123,7 @@
 	transform: translateY(-50%);
 	background: transparent;
 	border: none;
-	color: var(--white);
+	color: var(--white-60);
 	padding: var(--space-md);
 	cursor: pointer;
 	opacity: 0.4;

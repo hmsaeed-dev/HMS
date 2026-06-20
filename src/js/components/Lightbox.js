@@ -52,6 +52,11 @@ export function initLightbox() {
 		lightboxImg.classList.remove("switching");
 	};
 
+	lightboxImg.onerror = () => {
+		if (loader) loader.style.display = "none";
+		lightboxImg.classList.remove("switching");
+	};
+
 	function openLightbox(src, alt, index, allItems) {
 		items = allItems || [];
 		currentIndex = index ?? 0;
@@ -65,7 +70,14 @@ export function initLightbox() {
 
 		// Use the centralized handler for everything
 		const currentItem = items[currentIndex] || { src, caption: alt };
-		lightboxImg.src = currentItem.src || currentItem.dataset?.src || src;
+		const targetSrc = currentItem.src || currentItem.dataset?.src || src;
+
+		if (lightboxImg.src === targetSrc) {
+			if (loader) loader.style.display = "none";
+			lightboxImg.classList.remove("switching");
+		} else {
+			lightboxImg.src = targetSrc;
+		}
 		updateCaptionDetails(currentItem);
 
 		lightbox.classList.add("open");
@@ -90,7 +102,13 @@ export function initLightbox() {
 		lightboxImg.classList.add("switching");
 
 		setTimeout(() => {
-			lightboxImg.src = item.src || item.dataset?.src;
+			const targetSrc = item.src || item.dataset?.src;
+			if (lightboxImg.src === targetSrc) {
+				if (loader) loader.style.display = "none";
+				lightboxImg.classList.remove("switching");
+			} else {
+				lightboxImg.src = targetSrc;
+			}
 			updateCaptionDetails(item);
 		}, TRANSITION_SPEED);
 		updateControls();
