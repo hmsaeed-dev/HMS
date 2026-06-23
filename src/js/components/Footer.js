@@ -12,7 +12,7 @@ export function initFooter({ pathPrefix = "" } = {}) {
             <div class="footer-inner">
                 <div>
                     <div class="footer-name">Hafiz Muhammad Saeed</div>
-                    <div class="footer-tagline">Photographer · Builder · Perpetual Learner</div>
+                    <div class="footer-tagline">Builder · Photographer · Perpetual Learner</div>
                 </div>
 
                 <div class="footer-socials">

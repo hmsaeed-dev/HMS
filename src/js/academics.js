@@ -99,7 +99,7 @@ function renderNotionNotes(data) {
 			<h3 class="note-title">${note.title}</h3>
 			<p class="note-desc">${note.desc}</p>
 			<div class="note-card-footer">
-				<span class="note-tap-hint">Quick Preview ⚡</span>
+				<span class="note-tap-hint">Quick Preview</span>
 				<a href="${note.notionUrl}" target="_blank" rel="noopener noreferrer" class="note-external-link" title="Open full note in Notion">
 					Notion ↗
 				</a>
@@ -277,7 +277,7 @@ function openModal(note) {
 	document.getElementById("modalTitle").textContent = note.title;
 	document.getElementById("modalDate").textContent = note.updated;
 	document.getElementById("modalReadingTime").textContent = note.readTime;
-	
+
 	// Inject iframe and modern skeleton loader
 	const modalBody = document.getElementById("modalBody");
 	modalBody.innerHTML = `
@@ -355,7 +355,7 @@ function initMobileTabs() {
 		Object.keys(sections).forEach(id => {
 			const section = sections[id];
 			if (!section) return;
-			
+
 			if (window.innerWidth <= 768) {
 				if (id === targetId) {
 					section.style.display = "block";
