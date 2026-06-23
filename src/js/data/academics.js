@@ -53,7 +53,7 @@ export const notionNotes = [
 		notionUrl: "https://hmsaeed.notion.site/islamic-provisions",
 	},
 	{
-		id: "note-4",
+		id: "note-3",
 		title: "Amendments 1973 Constitution",
 		subject: "Constitution",
 		subjectKey: "constitution",
@@ -66,7 +66,7 @@ export const notionNotes = [
 		notionUrl: "https://hmsaeed.notion.site/amendments",
 	},
 	{
-		id: "note-5",
+		id: "note-4",
 		title: "Democracy in Pakistan",
 		subject: "Constitution",
 		subjectKey: "constitution",

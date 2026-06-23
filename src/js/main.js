@@ -9,14 +9,15 @@ import { initThemeToggle, initMobileMenu } from "./utils/ui.js";
 import { initScrollReveal, initScrollSpy } from "./utils/scroll.js";
 import { renderList, cloneTemplate } from "./utils/dom.js";
 import { initLightbox } from "./components/Lightbox.js";
+import { throttleRAF } from "./utils/throttle.js";
 
 // ── Initialization ──────────────────────────────────────────
 
 document.addEventListener("DOMContentLoaded", () => {
 	// 1. Inject Components
 	initIcons();
-	initNavigation();
-	initFooter();
+	initNavigation({ pathPrefix: "" });
+	initFooter({ pathPrefix: "" });
 
 	// 2. UI Logic (Must run after injection)
 	initThemeToggle();
@@ -42,10 +43,12 @@ document.addEventListener("DOMContentLoaded", () => {
 // ── Render Functions ────────────────────────────────────────
 
 function initAtmosphericMotion() {
-    window.addEventListener("scroll", () => {
-        const scrolled = window.pageYOffset;
-        document.body.style.setProperty("--scroll-y", scrolled + "px");
-    }, { passive: true });
+	const updateScroll = throttleRAF(() => {
+		const scrolled = window.pageYOffset;
+		document.body.style.setProperty("--scroll-y", scrolled + "px");
+	});
+
+	window.addEventListener("scroll", updateScroll, { passive: true });
 }
 
 function renderProjects(data) {

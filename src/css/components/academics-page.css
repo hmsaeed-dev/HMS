@@ -528,9 +528,9 @@
 .modal-content {
     background: var(--color-bg);
     border: 1px solid var(--color-border);
-    width: 90%;
+    width: 95%;
     max-width: 800px;
-    height: 85vh;
+    height: 90vh;
     border-radius: var(--radiusmd);
     position: relative;
     z-index: 1;
@@ -846,7 +846,7 @@
         padding: var(--space-xs) 0 var(--space-sm);
         margin-bottom: var(--space-md);
     }
-    
+
     .mobile-tabs {
         display: flex;
         justify-content: center;
@@ -857,7 +857,7 @@
         max-width: 320px;
         border: 1px solid var(--color-border);
     }
-    
+
     .mobile-tab-btn {
         flex: 1;
         background: transparent;
@@ -872,7 +872,7 @@
         transition: var(--transition-lg);
         text-align: center;
     }
-    
+
     .mobile-tab-btn.active {
         background: var(--color-accent);
         color: var(--white);
@@ -889,10 +889,10 @@
         margin-block: 0;
     }
 
-    .ledger-table, 
-    .ledger-table thead, 
-    .ledger-table tbody, 
-    .ledger-table tr, 
+    .ledger-table,
+    .ledger-table thead,
+    .ledger-table tbody,
+    .ledger-table tr,
     .ledger-table td {
         display: block;
         width: 100%;
@@ -1052,7 +1052,7 @@
     .notes-sidebar > .sidebar-card:not(.live-card) {
         order: 1; /* Send other widgets (e.g. academic profiles) to the bottom */
     }
-    
+
     .profiles-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1099,7 +1099,7 @@
     .modal-footer {
         padding: var(--space-sm) var(--space-lg);
     }
-    
+
     .modal-footer .btn {
         width: 100%;
         justify-content: center;
