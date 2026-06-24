@@ -1,7 +1,7 @@
 /* ── HERO ─────────────────────────────────────────────────── */
 
 #hero {
-	min-height: 92vh;
+	min-height: 82vh;
 	display: flex;
 	align-items: center;
 	padding-top: var(--header-height);
@@ -27,7 +27,7 @@
 .hero-h1 {
 	font-family: "Cormorant Garamond", serif;
 	font-size: var(--fs-h1);
-	font-weight: 700;
+	font-weight: 900;
 	line-height: 1;
 	margin-block: var(--space-xs) var(--space-md);
 }
@@ -72,7 +72,7 @@
 
 .hero-img-wrap img {
 	border-radius: var(--radius);
-	width: 80%;
+	width: 90%;
 	max-width: 320px; /* Mobile-First: Smaller base size */
 	margin: 0 auto;
 	position: relative;
@@ -85,29 +85,6 @@
 @media (min-width: 901px) {
     .hero-img-wrap img {
         max-width: 440px; /* Desktop: Larger image */
-        width: 80%;
+        width: 90%;
     }
-}
-
-.hero-blob {
-	position: absolute;
-	border-radius: var(--radius-full);
-	filter: blur(60px);
-	pointer-events: none;
-}
-
-.hero-blob-1 {
-	width: 260px;
-	height: 260px;
-	background: var(--color-overlay);
-	top: -40px;
-	right: -40px;
-}
-
-.hero-blob-2 {
-	width: 260px;
-	height: 260px;
-	background: var(--color-border-lt);
-	bottom: -40px;
-	left: -40px;
 }
