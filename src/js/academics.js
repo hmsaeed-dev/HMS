@@ -51,11 +51,6 @@ function renderLedger(data) {
 	data.forEach((item) => {
 		const tr = document.createElement("tr");
 
-		// Badge Class Map
-		let badgeClass = "in-progress";
-		if (item.badge.includes("Distinction")) badgeClass = "distinction";
-		else if (item.badge.includes("Grade A")) badgeClass = "grade-a";
-
 		tr.innerHTML = `
 			<td class="ledger-year" data-label="Period">${item.year}</td>
 			<td data-label="Qualification">
@@ -65,8 +60,7 @@ function renderLedger(data) {
 				</div>
 			</td>
 			<td data-label="Institution">${item.school}</td>
-			<td data-label="Status"><span class="ledger-badge ${badgeClass}">${item.badge}</span></td>
-			<td data-label="Focus Areas" style="font-style: italic; font-size: var(--fs-300); max-width: 250px;">${item.focus}</td>
+			<td data-label="Status"><span class="ledger-badge">${item.badge}</span></td>
 		`;
 		body.appendChild(tr);
 	});
@@ -275,7 +269,6 @@ function openModal(note) {
 
 	document.getElementById("modalTag").textContent = note.subject;
 	document.getElementById("modalTitle").textContent = note.title;
-	document.getElementById("modalDate").textContent = note.updated;
 	document.getElementById("modalReadingTime").textContent = note.readTime;
 
 	// Inject iframe and modern skeleton loader

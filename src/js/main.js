@@ -82,7 +82,6 @@ function renderAcademics(data) {
 		item.querySelector(".academic-year").textContent = a.year;
 		item.querySelector(".academic-degree").textContent = a.degree;
 		item.querySelector(".academic-school").textContent = a.school;
-		item.querySelector(".academic-desc").textContent = a.desc;
 		item.querySelector(".academic-badge").textContent = a.badge;
 
 		return item;

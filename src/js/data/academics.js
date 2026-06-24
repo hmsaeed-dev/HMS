@@ -4,24 +4,21 @@ export const academics = [
 		degree: "Bachelor of Science in Computer Science",
 		school: "University of Engineering and Technology, Taxila",
 		desc: "Second-year student focused on software engineering, web development, and the intersection of design and code.",
-		badge: "1st Year Completed",
-		focus: "OOP (C++), Probability and Stats, Digital Logic Design"
+		badge: "1st Year Completed"
 	},
 	{
 		year: "2022",
 		degree: "Intermediate (Pre-Medical)",
 		school: "Jinnah Education System, Taxila",
 		desc: "Completed with distinction. Awarded merit scholarship for consecutive academic years.",
-		badge: "Distinction (90%)",
-		focus: "Biology, Chemistry, Physics, English Literature"
+		badge: "Distinction (90%)"
 	},
 	{
 		year: "2020",
 		degree: "Matriculation (Science)",
 		school: "Jinnah Education System, Taxila",
 		desc: "Foundation in mathematics, physics and chemistry. Class representative and debate team captain.",
-		badge: "Grade A+",
-		focus: "Biology, Physics, Chemistry"
+		badge: "Grade A+"
 	},
 ];
 
@@ -32,7 +29,6 @@ export const notionNotes = [
 		subject: "Constitution",
 		subjectKey: "constitution",
 		desc: "Doctrine of Separation of Powers: Legislature, Executive, and Judiciary. Covers functions, checks & balances, key articles and interrelationships.",
-		updated: "Updated 3 days ago",
 		readTime: "8 min read",
 		tags: ["Constitution", "Separation of Powers", "Trichotomy"],
 		embedUrl:
@@ -45,7 +41,6 @@ export const notionNotes = [
 		subject: "Constitution",
 		subjectKey: "constitution",
 		desc: "Islamic provisions in Pakistan's 1973 Constitution with historical context",
-		updated: "Updated 4 days ago",
 		readTime: "10 min read",
 		tags: ["Constitution", "Islamic Provisions", "Pakistan"],
 		embedUrl:
@@ -58,7 +53,6 @@ export const notionNotes = [
 		subject: "Constitution",
 		subjectKey: "constitution",
 		desc: "Comprehensive overview of 27 amendments to the 1973 Constitution. Covers pre-1985, martial law era, major reforms, 26/27th Amendments, key articles, historical context.",
-		updated: "Updated 1 week ago",
 		readTime: "15 min read",
 		tags: ["Constitution", "Amendments", "Pakistan"],
 		embedUrl:
@@ -71,7 +65,6 @@ export const notionNotes = [
 		subject: "Constitution",
 		subjectKey: "constitution",
 		desc: "Democratic History, Challenges and Prospects for Democracy in Paksitan",
-		updated: "Updated 1 week ago",
 		readTime: "15 min read",
 		tags: ["Democracy", "Pakistan"],
 		embedUrl:

@@ -115,8 +115,7 @@
 			<div class="cs-hero-content">
 				<h1 class="cs-title">Academic Hub</h1>
 				<p class="cs-intro">
-					My educational pathway at UET Taxila, university societies,
-					and open-source study guides published from my personal Notion.
+					My educational pathway at UET Taxila and study notes published from my personal Notion.
 				</p>
 
 				<div class="cs-hero-stats">
@@ -128,10 +127,6 @@
 						<span class="cs-stat-num" id="statNotes">0</span>
 						<span class="cs-stat-label">Notion Notes</span>
 					</div>
-					<div class="cs-stat">
-						<span class="cs-stat-num" id="statSocieties">0</span>
-						<span class="cs-stat-label">Societies</span>
-					</div>
 				</div>
 			</div>
 		</header>
@@ -141,7 +136,6 @@
 			<div class="mobile-tabs" id="mobileTabs">
 				<button class="mobile-tab-btn active" data-target="ledger-section">Ledger</button>
 				<button class="mobile-tab-btn" data-target="notion-hub">Study Notes</button>
-				<button class="mobile-tab-btn" data-target="societies-section">Societies</button>
 			</div>
 		</div>
 
@@ -151,8 +145,7 @@
 				<div class="reveal">
 					<h2 class="section-title">Academic Ledger</h2>
 					<p class="section-sub">
-						A structured ledger detailing my formal qualifications and
-						academic records.
+						My formal qualifications and academic records.
 					</p>
 					<div class="divider"></div>
 				</div>
@@ -165,7 +158,6 @@
 								<th>Qualification</th>
 								<th>Institution</th>
 								<th>Status</th>
-								<th>Focus Areas</th>
 							</tr>
 						</thead>
 						<tbody id="ledger-body">
@@ -215,109 +207,6 @@
 						</div>
 					</div>
 
-					<!-- Sidebar Widgets -->
-					<aside class="notes-sidebar">
-						<!-- Live Workspace Feed Card -->
-						<div class="sidebar-card live-card reveal">
-							<div class="card-header">
-								<h3 style="margin-bottom: 0; border: none; padding: 0;">Workspace Feed</h3>
-							</div>
-							<div class="card-body" style="margin-top: var(--space-md);">
-								<div class="feed-item">
-									<span class="feed-time">CURRENTLY FOCUSED</span>
-									<p>Data Structures &amp; Algorithms</p>
-								</div>
-								<div class="feed-item">
-									<span class="feed-time">LATEST NOTE</span>
-									<p><strong>AVL Trees Rotations</strong> was updated to include LL, RR, LR, RL rotation case diagrams.</p>
-								</div>
-								<div class="feed-item">
-									<span class="feed-time">UPCOMING NOTE</span>
-									<p>Network Systems _ Information and Communication Technology</p>
-								</div>
-							</div>
-						</div>
-
-						<!-- Academic Profiles Widget -->
-						<div class="sidebar-card reveal">
-							<h3>Academic Profiles</h3>
-							<div class="profiles-grid">
-								<a
-									href="https://orcid.org/0009-0007-9947-5047"
-									target="_blank"
-									rel="noopener noreferrer"
-									class="profile-link"
-								>
-									<img
-										src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
-										class="profile-logo"
-										alt="ORCID"
-									/>
-									<span>ORCID iD</span>
-								</a>
-								<a
-									href="https://linkedin.com/in/hmsaeed"
-									target="_blank"
-									rel="noopener noreferrer"
-									class="profile-link"
-								>
-									<svg class="icon"><use href="#icon-linkedin" /></svg>
-									<span>LinkedIn</span>
-								</a>
-								<a
-									href="https://medium.com/@hms_blogs"
-									target="_blank"
-									rel="noopener noreferrer"
-									class="profile-link"
-								>
-									<span class="profile-letter">M</span>
-									<span>Medium Blogs</span>
-								</a>
-								<a
-									href="https://github.com/hmsaeed-dev"
-									target="_blank"
-									rel="noopener noreferrer"
-									class="profile-link"
-								>
-									<svg class="icon"><use href="#icon-github" /></svg>
-									<span>GitHub</span>
-								</a>
-								<a
-									href="https://www.chess.com/member/hms_aeed"
-									target="_blank"
-									rel="noopener noreferrer"
-									class="profile-link"
-								>
-									<span class="profile-letter">♟</span>
-									<span>Chess.com</span>
-								</a>
-								<a
-									href="https://g.dev/hmsaeed"
-									target="_blank"
-									rel="noopener noreferrer"
-									class="profile-link"
-								>
-									<span class="profile-letter">G</span>
-									<span>Google Dev</span>
-								</a>
-							</div>
-						</div>
-					</aside>
-				</div>
-			</section>
-
-			<!-- SOCIETIES & LEADERSHIP -->
-			<section class="section reveal bg-white" id="societies-section" style="margin-top: var(--space-2xl); padding: var(--space-lg); border-radius: var(--radius);">
-				<div class="reveal">
-					<h2 class="section-title">Societies &amp; Activities</h2>
-					<p class="section-sub">
-						Volunteering, outreach initiatives, and collaborative groups.
-					</p>
-					<div class="divider"></div>
-				</div>
-
-				<div class="societies-grid" id="societiesGrid">
-					<!-- Dynamically Injected by JS -->
 				</div>
 			</section>
 		</main>
@@ -338,7 +227,7 @@
 					<span class="modal-tag" id="modalTag">SUBJECT</span>
 					<h2 id="modalTitle"></h2>
 					<div class="modal-meta">
-						<span id="modalDate">Updated recently</span> &bull;
+						<!-- <span id="modalDate">Updated recently</span> &bull; -->
 						<span id="modalReadingTime"></span>
 					</div>
 				</div>

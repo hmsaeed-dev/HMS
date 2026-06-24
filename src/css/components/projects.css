@@ -8,7 +8,7 @@
     background-size: cover;
     color: var(--white);
     margin-top: var(--space-2xl);
-    padding: clamp(var(--space-xl), 15vh, var(--space-2xl)) 0 var(--space-lg);
+    padding: clamp(var(--space-4xl), 15vh, var(--space-2xl)) 0 var(--space-lg);
     text-align: center;
     position: relative;
     overflow: hidden;
