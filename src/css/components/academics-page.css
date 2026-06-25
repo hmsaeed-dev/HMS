@@ -204,10 +204,7 @@
 
     .ledger-year {
         background: transparent;
-        padding: 0;
         border-radius: 0;
-        font-size: var(--fs-900);
-        letter-spacing: 0.05em;
     }
 
     .ledger-degree {

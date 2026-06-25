@@ -9,6 +9,14 @@ export const photos = [
 		height: 1200,
 	},
 	{
+		src: "https://res.cloudinary.com/dkpehrpdm/image/upload/v1782409486/monkeys_kvtuuo.jpg",
+		caption: "Perception",
+		category: "Animals",
+		desc: "One saw Everything, One saw Nothing, One existed.",
+		width: 900,
+		height: 1200,
+	},
+	{
 		src: "https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto/f_auto/v1779626953/spider_plompb.jpg",
 		caption: "Silent Weaver",
 		category: "Macro",
@@ -95,7 +103,7 @@ export const photos = [
 	{
 		src: "https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto/f_auto/v1779626951/koyle_ge3dqj.jpg",
 		caption: "The Asian Koel",
-		category: "Birds",
+		category: "Animals",
 		desc: "A secretive bird known for its distinctive and haunting call.",
 		width: 1200,
 		height: 900,
@@ -103,7 +111,7 @@ export const photos = [
 	{
 		src: "https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto/f_auto/v1779626972/peacock_zwlezi.jpg",
 		caption: "Regal Display",
-		category: "Birds",
+		category: "Animals",
 		desc: "A magnificent peacock showcasing the vibrant 'eyes' of its plumage.",
 		width: 1200,
 		height: 900,

@@ -151,7 +151,7 @@
 	position: relative;
 	cursor: pointer;
 	transition: opacity var(--transition);
-	background: var(--color-border-lt); /* Fallback base color */
+	background: var(--color-border-lt);
 }
 
 /* Skeleton Shimmer Effect */
@@ -214,8 +214,8 @@
 	inset: 0;
 	background: linear-gradient(
 		to top,
-		rgba(13, 13, 11, 0.82) 0%,
-		rgba(13, 13, 11, 0.3) 45%,
+		rgba(13, 13, 11, 0.72) 0%,
+		rgba(13, 13, 11, 0.30) 55%,
 		transparent 80%
 	);
 	opacity: 1;
@@ -224,6 +224,10 @@
 	flex-direction: column;
 	justify-content: flex-end;
 	padding: var(--space-md);
+}
+
+.pg-item:hover{
+	transform: scale(1.02);
 }
 
 .pg-item:hover .pg-overlay {
@@ -246,7 +250,7 @@
 
 @media (min-width: 769px) {
 	.pg-overlay-caption {
-		font-size: var(--fs-500);
+		font-size: var(--fs-600);
 	}
 }
 
@@ -514,15 +518,11 @@
 	}
 }
 
-.pg-grid[data-view="focus"] .pg-item {
-	cursor: zoom-in;
-}
-
 .pg-grid[data-view="focus"] .pg-overlay {
 	position: static;
 	opacity: 1;
 	background: none;
-	padding: var(--space-md) 0 0;
+	padding: var(--space-md);
 }
 
 .pg-grid[data-view="focus"] .pg-overlay-caption {
