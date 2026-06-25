@@ -292,51 +292,75 @@
     box-shadow: var(--shadow-lg);
 }
 
-/* ── HOME PAGE PROJECTS GRID ─────────────────────────────── */
 
+/* ── HOME PAGE PROJECTS GRID ── */
 .projects-grid {
-	display: grid;
-	grid-template-columns: 1fr;
-	gap: var(--space-md);
-	margin-top: var(--space-xl);
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+    padding: var(--space-lg);
+    align-items: stretch;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Optional: Optional minimal custom styling for the scrollbar */
+.projects-grid::-webkit-scrollbar {
+    height: 6px;
+}
+.projects-grid::-webkit-scrollbar-track {
+    background: transparent;
+}
+.projects-grid::-webkit-scrollbar-thumb {
+    background-color: var(--color-border-lt);
+    border-radius: 10px;
 }
 
 @media (min-width: 641px) {
     .projects-grid {
-        grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
         gap: var(--space-lg);
     }
 }
 
 .project-card {
-	background: var(--color-surface);
-	border-radius: var(--radius);
-	overflow: hidden;
-	box-shadow: var(--shadow-sm);
+    flex: 0 0 360px;                /* Prevents cards from shrinking; sets width on small devices */
+    scroll-snap-align: start;       /* Card snapping alignment point */
+    background: var(--color-surface);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
     border: 1px solid var(--color-border-lt);
-	transition: var(--transition-lg);
-	transition-delay: var(--delay, 10s);
+    transition: var(--transition-lg);
+    transition-delay: var(--delay, 10s);
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+@media (min-width: 641px) {
+    .project-card {
+        flex: 0 0 360px;
+    }
 }
 
 .project-card:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
-    border-color: var(--color-accent-lt);
 }
 
 .project-img-wrap {
-	position: relative;
-	overflow: hidden;
+    position: relative;
+    overflow: hidden;
 }
 
 .project-img-wrap img {
-	width: 100%;
-	height: 220px;
-	object-fit: cover;
-	transition: var(--transition-lg);
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: var(--transition-lg);
 }
 
 @media (min-width: 769px) {
@@ -346,7 +370,7 @@
 }
 
 .project-body {
-	padding: clamp(var(--space-md), 4vw, var(--space-lg));
+    padding: clamp(var(--space-md), 4vw, var(--space-lg));
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -371,11 +395,11 @@
 }
 
 .project-title {
-	font-family: "Cormorant Garamond", serif;
-	font-size: var(--fs-600);
-	font-weight: 700;
-	margin-bottom: var(--space-2xs);
-	color: var(--color-text);
+    font-family: "Cormorant Garamond", serif;
+    font-size: var(--fs-700);
+    font-weight: 600;
+    margin-bottom: var(--space-2xs);
+    color: var(--color-text);
     line-height: 1.2;
 }
 
@@ -386,15 +410,15 @@
 }
 
 .project-desc {
-	font-size: var(--fs-400);
-	color: var(--color-text-muted);
-	line-height: 1.6;
+    font-size: var(--fs-400);
+    color: var(--color-text-muted);
+    line-height: 1.6;
     margin-bottom: var(--space-md);
 }
 
 .project-links {
-	display: flex;
-	gap: var(--space-md);
+    display: flex;
+    gap: var(--space-lg);
     align-items: center;
     margin-top: auto;
     padding-top: var(--space-md);
@@ -402,13 +426,13 @@
 }
 
 .project-link {
-	font-size: var(--fs-300);
-	font-weight: 600;
-	color: var(--color-accent);
-	display: flex;
-	align-items: center;
-	gap: var(--space-xs);
-	transition: var(--transition);
+    font-size: var(--fs-300);
+    font-weight: 600;
+    color: var(--color-accent);
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    transition: var(--transition);
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }

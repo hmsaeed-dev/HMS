@@ -47,6 +47,7 @@
   --space-2xl:    3rem;     /* 48px */
   --space-3xl:    4rem;     /* 64px */
   --space-4xl:    8rem;     /* 128px */
+  --space-5xl:    10rem;    /* 160px */
 
   /* Centralized Z-Index Scale */
   --z-nav:         100;
@@ -258,7 +259,7 @@ h4 { font-size: var(--fs-h4); }
 .serif { font-family: 'Cormorant Garamond', serif; }
 
 .divider {
-  width: 120px;
+  width: var(--space-5xl);
   height: 2px;
   background: var(--color-selection);
   margin: var(--space-md) auto;

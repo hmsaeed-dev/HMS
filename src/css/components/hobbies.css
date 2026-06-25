@@ -22,7 +22,8 @@
 	transition: var(--transition-lg);
 	position: relative;
 	overflow: hidden;
-    min-height: 180px; /* Reduced for better mobile stacking */
+    min-height: 180px;
+	cursor: pointer;
 }
 
 .hobby-bg-wrap {
@@ -47,13 +48,6 @@
     z-index: 1;
 }
 
-/* 3. Visual Identity (Universal) */
-
-/* Photography Card - Override for legacy bento-photo if needed */
-.bento-photo {
-    min-height: 260px; /* Taller on mobile to stand out */
-}
-
 /* 4. Progressive Enhancements (Desktop/Tablet) */
 @media (min-width: 769px) {
     .hobbies-grid {
@@ -63,14 +57,6 @@
 
     .hobby-card {
         min-height: auto; /* Reset mobile height */
-    }
-
-    /* Bento Spans */
-    .bento-photo {
-        grid-row: span 2;
-    }
-    .bento-wide {
-        grid-column: span 2;
     }
 }
 

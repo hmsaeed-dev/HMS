@@ -149,6 +149,7 @@
 <body>
 
 <!-- ── SCROLL PROGRESS ─────────────────────────────────────── -->
+<div class="scroll-progress" id="scrollProgress"></div>
 
 <main>
 <!-- ── HERO ────────────────────────────────────────────────── -->
@@ -198,10 +199,6 @@
       <h2 class="section-title">Projects</h2>
       <p class="section-sub">A collection of digital artifacts and experiments.</p>
 
-      <a href="projects/" class="btn btn-outline" style="margin-top:1.25rem;">
-      Case Studies
-      </a>
-
       <div class="divider"></div>
     </div>
 
@@ -223,11 +220,11 @@
 
       <div class="project-links">
 
-        <a class="project-link code-link" href="#">
-        <svg class="icon icon-sm"><use href="#icon-code"/></svg>Source Code</a>
+        <a class="project-link code-link" href="#" title="">
+        <svg class="icon icon-md"><use href="#icon-code"/></svg>Source Code</a>
 
-        <a class="project-link demo-link" href="#">
-        <svg class="icon icon-sm"><use href="#icon-external"/></svg>Live Demo</a>
+        <a class="project-link demo-link" href="#" title="Click to view Live Site">
+        <svg class="icon icon-md"><use href="#icon-external"/></svg>Live Demo</a>
 
       </div>
     </div>
@@ -273,17 +270,6 @@
 
     <div class="hobbies-grid">
 
-      <!-- Chess -->
-      <div class="hobby-card bento-chess reveal">
-        <div class="hobby-bg-wrap">
-          <img src="src/images/hobby-chess.jpg" alt="Chess">
-        </div>
-        <div class="hobby-info">
-          <h4>Chess</h4>
-          <span>Strategic Logic</span>
-        </div>
-      </div>
-
       <!-- Reading -->
       <div class="hobby-card reveal reveal-delay-1">
         <div class="hobby-bg-wrap">
@@ -296,7 +282,7 @@
       </div>
 
       <!-- Photography -->
-      <a href="Photography/index.html" class="hobby-card bento-photo reveal reveal-delay-2">
+      <a href="Photography/index.html" class="hobby-card reveal reveal-delay-1">
         <div class="hobby-bg-wrap">
           <img src="src/images/hobby-nature.jpg" alt="Photography">
         </div>
@@ -317,27 +303,6 @@
         </div>
       </div>
 
-      <!-- Woodworking / Walking -->
-      <div class="hobby-card bento-wide reveal reveal-delay-2">
-        <div class="hobby-bg-wrap">
-          <img src="src/images/hobby-woodwork.jpg" alt="Nature">
-        </div>
-        <div class="hobby-info">
-          <h4>Craft & Nature</h4>
-          <span>Woodworking & Walking</span>
-        </div>
-      </div>
-
-      <!-- Football / Table Tennis -->
-      <div class="hobby-card reveal reveal-delay-3">
-        <div class="hobby-bg-wrap">
-          <img src="src/images/hobby-sports.jpg" alt="Sports">
-        </div>
-        <div class="hobby-info">
-          <h4>Football & TT</h4>
-          <span>Agility & Teamwork</span>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -386,7 +351,7 @@
       <div class="contact-info reveal reveal-delay-1">
 
       <div class="contact-row">
-        <a href="mailto:hms.builds@gmail.com">
+        <a href="mailto:hms.builds@gmail.com" title="Mail Us">
           <div class="contact-icon">
             <svg class="icon"><use href="#icon-mail"/></svg>
           </div>
@@ -398,7 +363,7 @@
       </div>
 
     <div class="contact-row">
-      <a href="tel:+923219798860">
+      <a href="tel:+923219798860" title="Contact Us">
           <div class="contact-icon">
             <svg class="icon"><use href="#icon-phone"/></svg>
           </div>
@@ -410,7 +375,7 @@
     </div>
 
     <div class="contact-row">
-      <a href="https://www.google.com/maps/search/?api=1&query=Taxila%2C+Pakistan" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.google.com/maps/search/?api=1&query=Taxila%2C+Pakistan" title="Find Me" target="_blank" rel="noopener noreferrer">
         <div class="contact-icon">
             <svg class="icon"><use href="#icon-map"/></svg>
         </div>
@@ -426,19 +391,19 @@
 
         <div class="socials">
 
-          <a class="contact-icon" href="https://wa.me/923219798860?text=Hi%20Saeed%2C%20I%20saw%20your%20portfolio!" aria-label="Whatsapp" target="_blank" rel="noopener noreferrer">
+          <a class="contact-icon" href="https://wa.me/923219798860?text=Hi%20Saeed%2C%20I%20saw%20your%20portfolio!" aria-label="Whatsapp" title="Whatsapp Contact" target="_blank" rel="noopener noreferrer">
             <svg class="icon"><use href="#icon-whatsapp"/></svg>
           </a>
 
-          <a class="contact-icon" href="https://github.com/hmsaeed-dev" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+          <a class="contact-icon" href="https://github.com/hmsaeed-dev" aria-label="GitHub" title="View my Github" target="_blank" rel="noopener noreferrer">
             <svg class="icon"><use href="#icon-github"/></svg>
           </a>
 
-          <a class="contact-icon" href="https://www.linkedin.com/in/hmsaeed" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+          <a class="contact-icon" href="https://www.linkedin.com/in/hmsaeed" aria-label="LinkedIn" title="Connect on LinkedIn" target="_blank" rel="noopener noreferrer">
             <svg class="icon"><use href="#icon-linkedin"/></svg>
           </a>
 
-          <a class="contact-icon" href="https://www.instagram.com/hms_aeed" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+          <a class="contact-icon" href="https://www.instagram.com/hms_aeed" aria-label="Instagram" title="View my Insta Profile" target="_blank" rel="noopener noreferrer">
             <svg class="icon"><use href="#icon-instagram"/></svg>
           </a>
 

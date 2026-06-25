@@ -3,7 +3,7 @@
 export function initBackToTop() {
 	// 1. Inject the HTML into the bottom of the body
 	const btnHTML = `
-	<button id="backToTop" class="back-to-top" aria-label="Back to top">
+	<button id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to Top" >
 	<svg class="icon"><use href="#icon-arrow-up"/></svg>
 	</button>
 	`;
