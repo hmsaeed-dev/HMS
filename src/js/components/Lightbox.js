@@ -20,18 +20,16 @@ export function initLightbox() {
 	let touchEndX = 0;
 	const SWIPE_THRESHOLD = 50;
 
-	// Centralized logic to update all caption details (title, category, EXIF, description)
+	// Centralized logic to update all caption details (title, category, description)
 	function updateCaptionDetails(item) {
 		if (!item) return;
 
 		const title = item.caption || item.dataset?.caption || item.alt || "Untitled";
 		const category = item.category || item.dataset?.category || "";
-		const exif = item.exif || item.dataset?.exif || "";
 		const desc = item.desc || item.dataset?.desc || "";
 
 		const lbTitle = document.getElementById("pgLbTitle");
 		const lbCat = document.getElementById("pgLbCat");
-		const lbExif = document.getElementById("pgLbExif");
 		const lbDesc = document.getElementById("pgLbDesc");
 		const lbCaption = document.getElementById("pgLbCaption");
 
@@ -40,7 +38,6 @@ export function initLightbox() {
 		setTimeout(() => {
 			if (lbTitle) lbTitle.textContent = title;
 			if (lbCat) lbCat.textContent = category;
-			if (lbExif) lbExif.textContent = exif;
 			if (lbDesc) lbDesc.textContent = desc;
 			if (lbCaption) lbCaption.classList.add("show");
 		}, TRANSITION_SPEED);

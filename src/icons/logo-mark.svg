@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="90 80 320 190"
+   width="100%"
+   height="100%"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="dragonfly3.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#ffffff"
+     inkscape:zoom="0.9155172"
+     inkscape:cx="293.82299"
+     inkscape:cy="110.32016"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <g
+     fill="currentColor"
+     id="g1">
+    <path
+       id="hms-spine"
+       d="M 250,95               C 256,95 261,99 261,105               C 261,110 257,113 259,118               C 261,123 263,128 261,137               C 259,147 256,158 253,175              L 253,243              C 252.5,250 250.5,253 250,253              C 249.5,253 247.5,250 247,243              L 247,175              C 244,158 241,147 239,137              C 237,128 239,123 241,118              C 243,113 239,110 239,105              C 239,99 244,95 250,95 Z" />
+    <path
+       id="wing-upper-left"
+       d="M 248,132 L 135,102 L 110,118 L 125,138 L 185,153 L 248,142 Z" />
+    <path
+       id="wing-upper-right"
+       d="M 252,132 L 365,102 L 390,118 L 375,138 L 315,153 L 252,142 Z" />
+    <path
+       id="wing-lower-left"
+       d="M 247,152 L 158,168 L 140,180 L 150,191 L 202,187 L 247,162 Z" />
+    <path
+       id="wing-lower-right"
+       d="M 253,152 L 342,168 L 360,180 L 350,191 L 298,187 L 253,162 Z" />
+  </g>
+</svg>

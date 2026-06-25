@@ -152,13 +152,11 @@ function renderGrid(grid, data) {
 		}
 
 		item.innerHTML = `
-            <img src="${photo.src}" alt="${photo.caption}" 
-				 loading="${i < 6 ? "eager" : "lazy"}" 
+            <img src="${photo.src}" alt="${photo.caption}"
+				 loading="${i < 6 ? "eager" : "lazy"}"
 				 onload="this.classList.add('loaded'); this.parentElement.classList.add('is-loaded'); this.parentElement.style.aspectRatio = 'auto';">
             <div class="pg-overlay">
-                <div class="pg-overlay-cat">${photo.category || ""}</div>
                 <div class="pg-overlay-caption">${photo.caption}</div>
-                ${photo.exif ? `<div class="pg-overlay-exif">${photo.exif}</div>` : ""}
                 ${photo.desc ? `<div class="pg-overlay-desc">${photo.desc}</div>` : ""}
             </div>
         `;
