@@ -9,7 +9,6 @@ export const caseStudies = [
 			"ES Modules",
 			"MVC Pattern",
 			"Modular CSS",
-			"Local Storage",
 		],
 		links: {
 			source: "https://github.com/hmsaeed-dev/E-Library",
