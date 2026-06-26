@@ -1,6 +1,6 @@
 /* ── ACADEMICS PAGE JS ────────────────────────────────────────── */
 
-import { academics, notionNotes, societies } from "./data/index.js";
+import { academics, notionNotes } from "./data/index.js";
 import { initIcons } from "./components/Icons.js";
 import { initNavigation } from "./components/Navigation.js";
 import { initFooter } from "./components/Footer.js";
@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	renderLedger(academics);
 	renderNotionNotes(notionNotes);
 	renderFilters(notionNotes);
-	renderSocieties(societies);
 
 	// 4. Initialize Interactive Behaviors
 	initNotesSearch();
@@ -34,9 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	initMobileTabs();
 
 	// 5. Animate stats
-	animateGPA(document.getElementById("statGPA"), 3.90, 1000);
-	animateCount(document.getElementById("statNotes"), notionNotes.length, 800);
-	animateCount(document.getElementById("statSocieties"), societies.length, 800);
+	animateGPA(document.getElementById("statGPA"), 3.90, 800);
+	animateCount(document.getElementById("statNotes"), notionNotes.length, 700);
 
 	// 6. Initialize scroll reveal
 	initScrollReveal();
@@ -81,7 +79,7 @@ function renderNotionNotes(data) {
 
 	data.forEach((note) => {
 		const card = document.createElement("div");
-		card.className = "note-card clickable-card reveal";
+		card.className = "note-card reveal";
 		card.dataset.subject = note.subjectKey;
 		card.dataset.id = note.id;
 
@@ -92,12 +90,7 @@ function renderNotionNotes(data) {
 			</div>
 			<h3 class="note-title">${note.title}</h3>
 			<p class="note-desc">${note.desc}</p>
-			<div class="note-card-footer">
-				<span class="note-tap-hint">Quick Preview</span>
-				<a href="${note.notionUrl}" target="_blank" rel="noopener noreferrer" class="note-external-link" title="Open full note in Notion">
-					Notion ↗
-				</a>
-			</div>
+			<span class="note-view">View</span>
 		`;
 		grid.appendChild(card);
 	});
@@ -135,28 +128,6 @@ function renderFilters(data) {
 		btn.classList.add("active");
 
 		filterAndSearchNotes();
-	});
-}
-
-function renderSocieties(data) {
-	const grid = document.getElementById("societiesGrid");
-	if (!grid) return;
-
-	grid.innerHTML = "";
-	data.forEach((soc) => {
-		const card = document.createElement("div");
-		card.className = "society-card reveal";
-
-		card.innerHTML = `
-			<div class="society-logo">${soc.logoText}</div>
-			<div class="society-body">
-				<h3 class="society-role">${soc.role}</h3>
-				<div class="society-org">${soc.organization}</div>
-				<div class="society-period">${soc.period}</div>
-				<p class="society-desc">${soc.desc}</p>
-			</div>
-		`;
-		grid.appendChild(card);
 	});
 }
 
@@ -336,8 +307,7 @@ function initMobileTabs() {
 	const tabs = tabsContainer.querySelectorAll(".mobile-tab-btn");
 	const sections = {
 		"ledger-section": document.getElementById("ledger-section"),
-		"notion-hub": document.getElementById("notion-hub"),
-		"societies-section": document.getElementById("societies-section")
+		"notion-hub": document.getElementById("notion-hub")
 	};
 
 	function switchTab(targetId) {

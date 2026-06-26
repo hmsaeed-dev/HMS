@@ -43,7 +43,7 @@
 
 .cs-intro {
     font-size: var(--fs-500);
-    color: var(--white-60);
+    color: var(--fs-text);
     max-width: 550px;
     margin: 0 auto var(--space-lg);
     line-height: 1.7;
@@ -52,7 +52,7 @@
 .cs-hero-stats {
     display: flex;
     justify-content: center;
-    gap: var(--space-md);
+    gap: var(--space-2xl);
     flex-wrap: wrap;
 }
 
@@ -78,7 +78,7 @@
     font-size: var(--fs-300);
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    color: var(--white-40);
+    color: var(--fs-text);
     margin-top: var(--space-2xs);
 }
 

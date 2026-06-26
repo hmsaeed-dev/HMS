@@ -313,6 +313,7 @@
     flex-direction: column;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .note-card::before {
@@ -336,7 +337,7 @@
     font-size: var(--fs-200);
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.12em !important; /* Micro-copy contrast adjustment */
+    letter-spacing: 0.12em !important;
     padding: var(--space-2xs) var(--space-xs);
     border-radius: var(--radiussm);
     background: var(--color-border-lt);
@@ -365,56 +366,21 @@
     flex-grow: 1;
 }
 
-.clickable-card {
-    cursor: pointer;
-}
-
-.clickable-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
-    border-color: var(--color-accent-lt);
-}
-
 .note-actions {
     margin-top: auto; /* Push buttons to the bottom of cards */
 }
 
-.note-card-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: auto;
-    padding-top: var(--space-sm);
-    border-top: 1px dashed var(--color-border-lt);
-}
-
-.note-tap-hint {
+.note-view {
     font-size: var(--fs-300);
     color: var(--color-accent);
-    font-weight: 600;
-    letter-spacing: 0.02em;
+    font-weight: 500;
+    letter-spacing: 0.04em;
     display: flex;
-    align-items: center;
-    gap: 4px;
 }
 
-.note-external-link {
-    font-size: var(--fs-300);
-    color: var(--color-text-muted);
-    font-weight: 600;
-    transition: var(--transition);
-    display: inline-flex;
-    align-items: center;
-    padding: var(--space-2xs) var(--space-xs);
-    border-radius: var(--radiussm);
-    border: 1px solid var(--color-border);
-    background: var(--color-border-lt);
-}
-
-.note-external-link:hover {
-    color: var(--color-accent);
-    border-color: var(--color-accent-lt);
-    background: var(--color-overlay);
+.note-view :hover{
+    color: var(--color-border-lt);
+    font-weight: 700;
 }
 
 .notes-empty {
@@ -800,12 +766,12 @@
 .mobile-tabs-container {
     display: block;
     position: sticky;
-    top: var(--header-height);
     z-index: 99; /* Below navigation layer */
     background: var(--color-bg);
     border-bottom: 1px solid var(--color-border-lt);
     padding: var(--space-xs) 0 var(--space-sm);
     margin-bottom: var(--space-md);
+    cursor: pointer;
 }
 
 .mobile-tabs {
