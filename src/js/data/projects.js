@@ -11,7 +11,7 @@ export const projects = [
 		title: "Vehicle Management System",
 		tag: "C++ OOP",
 		desc: "A console-based fleet operations and rental tracker implementing advanced Object-Oriented paradigms. (Demo Coming Soon)",
-		img: "src/images/vms-pic.jpg",
+		img: "../src/images/vms-pic.jpg",
 		code: "https://github.com/hmsaeed-dev/Vehicle-Management-System",
 		demo: "",
 	},

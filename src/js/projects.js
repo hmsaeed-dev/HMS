@@ -226,7 +226,7 @@ function renderGridShowcaseView(data) {
         card.dataset.category = category;
 
         card.querySelector(".project-img-wrap img").src =
-			proj.img || "../src/images/vms-pic.jpg";
+			proj.img || "src/images/vms-pic.jpg";
         card.querySelector('.project-img-wrap img').alt = proj.title;
         card.querySelector('.project-card-kicker').textContent = proj.tag;
         card.querySelector('.project-title').textContent = proj.title;
