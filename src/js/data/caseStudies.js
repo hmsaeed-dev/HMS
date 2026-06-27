@@ -5,7 +5,7 @@ export const caseStudies = [
 		category: "web",
 		title: "Digital Library",
 		shortDesc:
-			"A personal first-semester web project — a fully functional digital library built from scratch using HTML, CSS, and JavaScript.",
+			"A personal first-semester web project, a fully functional digital library built from scratch using HTML, CSS, and JavaScript.",
 		techStack: ["ES Modules", "MVC Pattern", "Modular CSS"],
 		links: {
 			source: "https://github.com/hmsaeed-dev/E-Library",
@@ -69,7 +69,7 @@ export const caseStudies = [
 			},
 			{
 				heading: "Technical Retrospective",
-				content: `Working at this level — without the safety net of a browser or a framework — forces you to think carefully about every detail. This project sharpened my understanding of how programs manage memory and handle data at a low level.`,
+				content: `Working at this level without the safety net of a browser or a framework, forces you to think carefully about every detail. This project sharpened my understanding of how programs manage memory and handle data at a low level.`,
 			},
 		],
 	},
@@ -80,7 +80,7 @@ export const caseStudies = [
 		title: "Photography",
 		shortDesc:
 			"A collection of nature photography — landscapes, clouds, insects, and animals — captured and displayed in a fast-loading, carefully designed gallery.",
-		techStack: ["Observer", "Cloudinary API", "Responsive CSS Grid"],
+		techStack: ["Observer", "API", "Responsive CSS Grid"],
 		links: {
 			source: "https://github.com/hmsaeed-dev",
 			demo: "../Photography/index.html",

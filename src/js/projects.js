@@ -225,7 +225,8 @@ function renderGridShowcaseView(data) {
         if (proj.tag === 'Observance') category = 'creative';
         card.dataset.category = category;
 
-        card.querySelector('.project-img-wrap img').src = proj.img || 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800';
+        card.querySelector(".project-img-wrap img").src =
+			proj.img || "../src/images/vms-pic.jpg";
         card.querySelector('.project-img-wrap img').alt = proj.title;
         card.querySelector('.project-card-kicker').textContent = proj.tag;
         card.querySelector('.project-title').textContent = proj.title;
