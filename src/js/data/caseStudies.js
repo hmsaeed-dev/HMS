@@ -3,15 +3,10 @@ export const caseStudies = [
 		id: "e-library",
 		tag: "Web Dev",
 		category: "web",
-		title: "E Library",
+		title: "Digital Library",
 		shortDesc:
-			"A digital library infrastructure built with Vanilla JavaScript, engineered for modularity and maintainability.",
-		techStack: [
-			"ES Modules",
-			"MVC Pattern",
-			"Modular CSS",
-			"LocalStorage API",
-		],
+			"A personal first-semester web project — a fully functional digital library built from scratch using HTML, CSS, and JavaScript.",
+		techStack: ["ES Modules", "MVC Pattern", "Modular CSS"],
 		links: {
 			source: "https://github.com/hmsaeed-dev/E-Library",
 			demo: "https://hmslibrary.netlify.app/",
@@ -24,19 +19,19 @@ export const caseStudies = [
 		sections: [
 			{
 				heading: "The Challenge",
-				content: `Standard imperative codebases frequently result in highly coupled logic and fragile dependency chains, complicating long-term maintenance. The objective was to design a predictable, decoupled application layout using architectural patterns natively supported by modern browsers.`,
+				content: `Building a web app without any structure quickly turns messy — one change breaks something else, and the whole thing becomes hard to maintain. The goal was to organize the code in a way that keeps everything predictable and easy to work with, even as the project grows`,
 			},
 			{
-				heading: "Architecture",
-				content: `To ensure strict separation of concerns, I implemented a Model-View-Controller (MVC) design pattern. The Model encapsulates business logic and state persistence via LocalStorage; the View abstracts DOM mutations and component UI rendering; and the Controller acts as the sole orchestrator handling event lifecycle propagation.`,
+				heading: "How it's Structured",
+				content: `The library is organized so that each part of the app has one clear job. The data layer handles what gets saved and loaded; the display layer handles what you see on screen; and the control layer manages what happens when you interact with it. This separation keeps the code clean and easy to build on.`,
 			},
 			{
-				heading: "Style Management",
-				content: `To mitigate global namespace collisions and avoid styling technical debt, I bypassed global stylesheets in favor of a component-scoped architecture. Layouts, navigation primitives, and modal elements maintain dedicated sheets, compiled cleanly using a central manifest entry point.`,
+				heading: "How the Styling Works",
+				content: `Instead of one large stylesheet controlling everything, each section of the interface has its own dedicated style file. This keeps things organized and prevents one part of the design from accidentally breaking another.`,
 			},
 			{
 				heading: "Architectural Retrospective",
-				content: `This project reinforced that software engineering is ultimately about structural clarity. Code performance is critical, but system maintainability relies entirely on a coherent, self-documenting data workflow.`,
+				content: `This project taught me that good code isn't just about making something work — it's about making it easy to understand and change later. A clear structure from the start saves a lot of time down the road.`,
 			},
 		],
 	},
@@ -46,7 +41,7 @@ export const caseStudies = [
 		category: "systems",
 		title: "Vehicle Management System",
 		shortDesc:
-			"A robust, console-based fleet operations and rental tracker implementing advanced Object-Oriented paradigms.",
+			"A console-based management tool built for rental service companies — covering vehicle registration, customer rentals, returns, and fleet buying and selling, all from a single interface.",
 		techStack: [
 			"C++17",
 			"OOP Principles",
@@ -65,35 +60,30 @@ export const caseStudies = [
 		sections: [
 			{
 				heading: "The Challenge",
-				content: `Command Line Interfaces (CLIs) in low-level languages are notorious for input crashes and data corruption due to incorrect buffer handling. The objective was to create a highly robust fleet management terminal application in C++ that guarantees continuous operation and reliable data persistence.`,
+				content: `Console applications are easy to crash — one unexpected input from a user can corrupt data or freeze the program entirely. The goal was to build something that keeps running reliably no matter what a user types, while keeping all records accurate and intact.`,
 			},
 			{
 				heading: "OOP Architecture",
-				content: `The system utilizes class hierarchy trees. A base abstract class \`Vehicle\` declares pure virtual methods like \`calculateRental()\` and \`displayFleetDetails()\`. Derived classes \`Car\`, \`Truck\`, and \`Motorcycle\` override these methods to account for class-specific attributes (e.g. storage capacity, engine displacement) and custom pricing algorithms.`,
+				content: `The system is built around a family of vehicle types. A shared base defines the common behavior — like calculating rental costs and displaying vehicle details — while each specific type (car, truck, motorcycle) handles its own rules around pricing and specifications.`,
 			},
 			{
 				heading: "Persistence & Validation",
-				content: `Vehicle logs and booking agreements are persisted using C++ \`std::fstream\` operations. Input streams are protected using validation utilities: clearing error flags (\`cin.clear()\`), ignoring trailing characters (\`cin.ignore()\`), and applying custom matching to enforce structural integrity on registration numbers and contact detail fields.`,
+				content: `All vehicle records and booking history are saved to files, so nothing is lost when the program closes. Every input a user enters is checked before it's accepted — invalid formats for things like registration numbers or contact details are caught and rejected before they can cause problems.`,
 			},
 			{
 				heading: "Technical Retrospective",
-				content: `Engineering the console system deepens the understanding of object layouts in memory, vtables, and stream state safety. A CLI program does not benefit from browser safety layers; handling inputs at the byte level enforces a higher degree of structural foresight.`,
+				content: `Working at this level — without the safety net of a browser or a framework — forces you to think carefully about every detail. This project sharpened my understanding of how programs manage memory and handle data at a low level.`,
 			},
 		],
 	},
 	{
-		id: "photography-portfolio",
+		id: "photography",
 		tag: "Observance",
 		category: "creative",
-		title: "Photography Portfolio",
+		title: "Photography",
 		shortDesc:
-			"A narrative-driven photography gallery showcasing macro, flora, and landscape captures with custom-designed visual layouts.",
-		techStack: [
-			"Intersection Observer",
-			"Cloudinary API",
-			"Responsive CSS Grid",
-			"A11y Accordance",
-		],
+			"A collection of nature photography — landscapes, clouds, insects, and animals — captured and displayed in a fast-loading, carefully designed gallery.",
+		techStack: ["Observer", "Cloudinary API", "Responsive CSS Grid"],
 		links: {
 			source: "https://github.com/hmsaeed-dev",
 			demo: "../Photography/index.html",
@@ -105,20 +95,20 @@ export const caseStudies = [
 		],
 		sections: [
 			{
-				heading: "The Challenge",
-				content: `Visual portals that showcase high-resolution photography often suffer from high load latencies and layout shifts, leading to suboptimal visitor retention. The goal was to build a visually striking, narrative-driven media gallery that remains exceptionally fast and responsive.`,
+				heading: "The Problem I was Solving",
+				content: `Photography galleries tend to be slow. High-resolution images take time to load, and that wait drives visitors away before they've seen a single shot. The goal here was to build something visually rich that still feels instant — no lag, no layout jumping around as images load.`,
 			},
 			{
 				heading: "Asset Optimization",
-				content: `Using the Cloudinary API, images are dynamically resized, optimized, and converted to modern formats like WebP or AVIF based on the user's browser capabilities. Standard placeholders prevent layout shift (CLS) by hardcoding aspect ratios until files load.`,
+				content: `Images are automatically resized and converted to the most efficient format based on the visitor's browser. Placeholder dimensions are set in advance so the page layout doesn't jump around while photos are still loading.`,
 			},
 			{
 				heading: "Interactive Gallery Layout",
-				content: `The images are arranged in a CSS Grid masonry container. As the visitor scrolls, an \`IntersectionObserver\` lazy-loads assets to conserve bandwidth. Clicking a thumbnail expands a fullscreen lightbox overlay, enabling fluid swipes and keyboard traversal.`,
+				content: `Photos are arranged in a fluid grid that adjusts to any screen size. As you scroll, images load only when they're about to appear — keeping the page fast. Clicking any photo opens a fullscreen view with support for swiping and keyboard navigation.`,
 			},
 			{
-				heading: "Technical Retrospective",
-				content: `Combining heavy media presentation with optimal performance requires a strict focus on front-end mechanics. By minimizing script frameworks and using native web standard features, the portfolio delivers an immersive experience that loads instantly.`,
+				heading: "How I approached It",
+				content: `The gallery avoids heavy libraries and frameworks, relying instead on built-in browser features to handle image loading and layout. The result is a portfolio that looks carefully crafted but performs like a lightweight site — images appear smoothly as you scroll, and nothing feels sluggish.`,
 			},
 		],
 	},

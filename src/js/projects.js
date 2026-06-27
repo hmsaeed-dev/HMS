@@ -262,7 +262,7 @@ function initializeInteractiveWidget(id, container) {
         renderMVCDiagram(container);
     } else if (id === 'vehicle-manag-sys') {
         renderRetroConsole(container);
-    } else if (id === 'photography-portfolio') {
+    } else if (id === 'photography') {
         renderLensGallery(container);
     }
 }
