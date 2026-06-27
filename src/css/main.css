@@ -3,13 +3,14 @@
 @import "./components/nav-behavior.css";
 @import "./layouts/sections.css";
 @import "./components/hero.css";
-@import "./components/hobbies.css";
+@import "./components/home-sections.css";
+@import "./components/story.css";
 @import "./components/projects.css";
 @import "./components/photography.css";
-@import "./components/academic.css";
 @import "./components/academics-page.css";
 @import "./components/lightbox.css";
 @import "./components/contact.css";
 @import "./components/footer.css";
 @import "./components/back-to-top.css";
+@import "./components/now-writing.css";
 @import "./base/responsiveness.css";

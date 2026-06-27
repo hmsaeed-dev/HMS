@@ -1,76 +1,141 @@
-/* ── CONTACT ──────────────────────────────────────────*/
+/* ── CONNECT / CONTACT PAGE STYLES ──────────────────────────────── */
 
-.contact-grid {
-	display: grid;
-	grid-template-columns: 1fr; /* Mobile-First: Single column base */
-	gap: var(--space-lg);
-	margin-top: var(--space-lg);
-	align-items: start;
+.connect-container {
+	max-width: 680px;
+	margin-inline: auto;
+	padding-inline: clamp(1.25rem, 5vw, 3rem);
+	padding-block: var(--space-2xl);
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-2xl);
 }
 
-@media (min-width: 901px) {
-    .contact-grid {
-        grid-template-columns: 1fr auto; /* Desktop: Info and Socials side by side */
-        gap: clamp(var(--space-md), 3vw, var(--space-2xl));
-        align-items: center;
-    }
-}
-
-.contact-info {
+/* ── 1. Connect Intro ─────────────────────────────────────────── */
+.connect-intro {
 	display: flex;
 	flex-direction: column;
 	gap: var(--space-md);
 }
 
-.contact-row {
-	display: flex;
-	align-items: center;
-	gap: var(--space-md);
+.connect-intro p {
+	font-size: var(--fs-500);
+	color: var(--color-text-muted);
+	line-height: 1.7;
 }
 
-.contact-icon {
-	width: 52px;
-	height: 52px;
-	border-radius: var(--radius-full);
-	background: var(--color-overlay);
-	display: flex;
+/* ── 2. Direct Channels (Buttons) ──────────────────────────────── */
+.connect-methods {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: var(--space-sm);
+}
+
+@media (min-width: 500px) {
+	.connect-methods {
+		grid-template-columns: repeat(3, 1fr);
+		gap: var(--space-md);
+	}
+}
+
+.connect-btn {
+	display: inline-flex;
 	align-items: center;
 	justify-content: center;
+	gap: var(--space-xs);
+	padding: var(--space-md) var(--space-md);
+	border: 1.5px solid var(--color-border);
+	border-radius: var(--radiusmd);
+	background: var(--color-surface);
+	color: var(--color-text);
+	font-weight: 500;
+	font-size: var(--fs-400);
+	transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+	box-shadow: var(--shadow-sm);
+}
+
+.connect-btn:hover {
+	transform: translateY(-2px);
+	border-color: var(--color-accent);
+	box-shadow: var(--shadow-md);
 	color: var(--color-accent);
-	flex-shrink: 0;
-	transition: var(--transition);
 }
 
-.contact-icon:hover {
-	background: var(--color-accent);
-	color: var(--white);
-	transform: scale(1.10);
+.connect-btn svg {
+	width: 20px;
+	height: 20px;
 }
 
-.contact-meta p:first-child {
+/* ── 3. Contact Form Card ────────────────────────────────────── */
+.connect-card {
+	background: var(--color-surface);
+	border: 1px solid var(--color-border-lt);
+	border-radius: var(--radiusmd);
+	padding: var(--space-xl) clamp(1.25rem, 5vw, var(--space-2xl));
+	box-shadow: var(--shadow-sm);
+}
+
+.connect-form {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-lg);
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-xs);
+}
+
+.form-label {
+	font-family: "DM Sans", sans-serif;
 	font-size: var(--fs-300);
-	letter-spacing: 0.12em;
+	font-weight: 600;
 	text-transform: uppercase;
+	letter-spacing: 0.05em;
 	color: var(--color-text-muted);
 }
 
-.contact-meta p:last-child {
-	font-weight: 500;
+.form-input,
+.form-textarea {
+	font-family: "DM Sans", sans-serif;
 	font-size: var(--fs-400);
 	color: var(--color-text);
+	background: var(--color-bg);
+	border: 1.5px solid var(--color-border);
+	border-radius: var(--radiussm);
+	padding: var(--space-sm) var(--space-md);
+	outline: none;
+	transition: border-color var(--transition), box-shadow var(--transition);
 }
 
-.socials {
-	display: flex;
-	gap: var(--space-sm);
-    flex-wrap: wrap;
-    justify-content: center; /* Mobile-First: Center socials on small screens */
+.form-input:focus,
+.form-textarea:focus {
+	border-color: var(--color-accent);
+	box-shadow: 0 0 0 3px var(--color-overlay);
 }
 
-@media (min-width: 901px) {
-    .socials {
-        justify-content: flex-start;
-        flex-direction: column; /* Vertical list of social icons on desktop */
-        gap: var(--space-md);
-    }
+.form-textarea {
+	resize: vertical;
+	min-height: 150px;
+}
+
+.form-submit-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: var(--space-xs);
+	padding: var(--space-sm) var(--space-xl);
+	font-size: var(--fs-400);
+	font-weight: 500;
+	border-radius: var(--radiussm);
+	cursor: pointer;
+	border: none;
+	width: 100%;
+	align-self: flex-start;
+}
+
+@media (min-width: 500px) {
+	.form-submit-btn {
+		width: auto;
+	}
 }

@@ -12,18 +12,18 @@ export function initFooter({ pathPrefix = "" } = {}) {
             <div class="footer-inner">
                 <div>
                     <div class="footer-name">Hafiz Muhammad Saeed</div>
-                    <div class="footer-tagline">Builder · Photographer · Perpetual Learner</div>
+                    <div class="footer-tagline">Builder · Reader · Perpetual Learner</div>
                 </div>
 
                 <div class="footer-socials">
-                    <a href="https://wa.me/923219798860?text=Hi%20Saeed%2C%20I%20saw%20your%20portfolio!" class="social-btn" aria-label="Whatsapp" target="_blank" rel="noopener noreferrer">
-                        <svg class="icon"><use href="#icon-whatsapp"/></svg>
-                    </a>
                     <a href="https://github.com/hmsaeed-dev" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
                         <svg class="icon"><use href="#icon-github"/></svg>
                     </a>
                     <a href="https://www.linkedin.com/in/hmsaeed" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
                         <svg class="icon"><use href="#icon-linkedin"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/hms_aeed" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                        <svg class="icon"><use href="#icon-instagram"/></svg>
                     </a>
                 </div>
                 <p class="footer-copy">© 2026 Hafiz Muhammad Saeed. Built with care.</p>

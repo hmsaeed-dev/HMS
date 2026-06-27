@@ -11,13 +11,14 @@ export function initNavigation({ pathPrefix = "" } = {}) {
 	const navHTML = `
     <nav aria-label="Main">
         <div class="container nav-inner">
-            <a href="${pathPrefix}index.html" class="nav-logo">HMS.</a>
+            <a href="${pathPrefix}index.html" class="nav-logo">HMS</a>
 
             <div class="nav-links">
-                <a href="${pathPrefix}index.html">Home</a>
-                <a href="${pathPrefix}projects/index.html">Projects</a>
-                <a href="${pathPrefix}academics/index.html">Academics</a>
-                <a href="${pathPrefix}Photography/index.html">Photography</a>
+                <a href="${pathPrefix}story/index.html">Story</a>
+                <a href="${pathPrefix}work/index.html">Work</a>
+                <a href="${pathPrefix}writing/index.html">Writing</a>
+                <a href="${pathPrefix}photography/index.html">Photography</a>
+                <a href="${pathPrefix}now/index.html">Now</a>
                 <a href="${pathPrefix}connect/index.html">Connect</a>
 
                 <a class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
@@ -33,21 +34,25 @@ export function initNavigation({ pathPrefix = "" } = {}) {
     </nav>
 
     <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile Navigation">
-        <a href="${pathPrefix}index.html" class="mobile-link">
+        <a href="${pathPrefix}story/index.html" class="mobile-link">
             <svg class="icon"><use href="#icon-user"/></svg>
-            Home
+            Story
         </a>
-        <a href="${pathPrefix}projects/index.html" class="mobile-link">
+        <a href="${pathPrefix}work/index.html" class="mobile-link">
             <svg class="icon"><use href="#icon-code"/></svg>
-            Projects
+            Work
         </a>
-        <a href="${pathPrefix}academics/index.html" class="mobile-link">
-            <svg class="icon"><use href="#icon-academic"/></svg>
-            Academics
+        <a href="${pathPrefix}writing/index.html" class="mobile-link">
+            <svg class="icon"><use href="#icon-book"/></svg>
+            Writing
         </a>
-        <a href="${pathPrefix}Photography/index.html" class="mobile-link">
+        <a href="${pathPrefix}photography/index.html" class="mobile-link">
             <svg class="icon"><use href="#icon-camera"/></svg>
             Photography
+        </a>
+        <a href="${pathPrefix}now/index.html" class="mobile-link">
+            <svg class="icon"><use href="#icon-clock"/></svg>
+            Now
         </a>
         <a href="${pathPrefix}connect/index.html" class="mobile-link">
             <svg class="icon"><use href="#icon-mail"/></svg>

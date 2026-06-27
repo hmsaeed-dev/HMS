@@ -1,11 +1,8 @@
-/* ── MODERN RESPONSIVE OVERRIDES ───────────────────────────── */
+/* ── MODERN RESPONSIVE OVERRIDES (MOBILE-FIRST) ───────────────── */
 
 /* 
-   Note: This project has been refactored to a Mobile-First architecture.
-   Most responsive logic now lives directly within the component CSS files 
-   using min-width media queries. 
+   Note: This project strictly adheres to a Mobile Display First architecture.
+   All responsive layout logic and enhancements live directly within individual 
+   component CSS files using progressive `@media (min-width: ...)` queries.
 */
 
-@media (max-width: 600px) {
-    /* Add screen-specific emergency overrides here if needed */
-}

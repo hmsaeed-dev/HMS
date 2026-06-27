@@ -17,10 +17,9 @@
   <meta name="robots" content="index, follow, max-image-preview:large">
 
   <!-- Primary Meta Tags -->
-  <title>Hafiz Muhammad Saeed | Builder & Thinker</title>
-  <meta name="title" content="Hafiz Muhammad Saeed | Builder & Thinker">
-  <meta name="description" content="Personal site of Hafiz Muhammad Saeed, a BS Computer Science Student ,Builder and thinker from Taxila, Paksitan. Work, Writing and Story.">
-  <meta name="keywords" content="Hafiz Muhammad Saeed, HMSaeed, Web Developer Taxila, Photographer Pakistan, Full Stack Developer Portfolio, Macro Photography">
+  <title>Hafiz Muhammad Saeed — Builder & Thinker</title>
+  <meta name="title" content="Hafiz Muhammad Saeed — Builder & Thinker">
+  <meta name="description" content="Personal site of Hafiz Muhammad Saeed — CS student, builder, and thinker from Taxila, Pakistan. Work, writing, and story.">
   <meta name="author" content="Hafiz Muhammad Saeed">
   <meta name="geo.region" content="PK-PB" />
   <meta name="geo.placename" content="Taxila" />
@@ -60,9 +59,8 @@
     })();
   </script>
 
-  <!-- Non-critical CSS (Deferred) -->
-  <link rel="stylesheet" href="src/css/main.css" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="src/css/main.css"></noscript>
+  <!-- Critical CSS -->
+  <link rel="stylesheet" href="src/css/main.css?v=1.0.1" />
 
   <script type="module" src="src/js/main.js" defer></script>
 
@@ -72,7 +70,7 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Hafiz Muhammad Saeed",
-      "alternateName": ["HMSaeed", "Hafiz Muhammad Saeed Portfolio", "HMS"],
+      "alternateName": ["HMSaeed", "Hafiz Muhammad Saeed", "HMS"],
       "url": "https://hmsaeed.com",
       "image": "https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto/f_auto/v1779627924/Saeed_68_cewriq.jpg",
       "sameAs": [
@@ -93,7 +91,7 @@
         "https://codepen.io/hms_aeed",
         "https://www.chess.com/member/hms_aeed"
       ],
-      "jobTitle": "Full-Stack Developer",
+      "jobTitle": "Web Developer",
       "worksFor": {
         "@type": "Organization",
         "name": "Freelance"
@@ -161,18 +159,10 @@
       <div class="hero-text">
 
         <h1 class="hero-h1">I'm <span>Saeed</span>.</h1>
-        <p class="hero-sub">Builder, Photographer &amp; Perpetual Learner</p>
+        <p class="hero-sub">Builder, Reader &amp; Perpetual Beginner</p>
 
         <div class="hero-ctas reveal">
-          <!-- <a href="#about" class="btn btn-olive">My Story → </a> -->
-
-          <a href="#projects" class="btn btn-outline">View Projects</a>
-
-          <a href="Docs/CV.pdf" class="btn btn-outline" download="My_CV.pdf">
-              <svg class="icon icon-sm"><use href="#icon-download"/></svg>
-          Download CV
-          </a>
-
+          <a href="story/index.html" class="btn btn-olive">Read My Story</a>
         </div>
       </div>
 
@@ -192,180 +182,55 @@
   </div>
 </section>
 
-<!-- ── PROJECTS ────────────────────────────────────────────── -->
-<section id="projects" class="section">
-  <div class="container">
-
-    <div class="reveal">
-      <h2 class="section-title">Projects</h2>
-      <p class="section-sub">A collection of digital artifacts and experiments.</p>
-
-      <div class="divider"></div>
-    </div>
-
-    <div class="projects-grid" id="projects-grid"></div>
-
-    <div class="projects-more-cta reveal" style="text-align: center; margin-top: var(--space-xl);">
-      <a href="projects/index.html" class="btn btn-outline">
-        <span>Explore Detailed Case Studies</span>
-        <svg class="icon icon-sm" style="width:1.2em; height:1.2em; stroke-width:2;"><use href="#icon-external"/></svg>
-      </a>
-    </div>
-
-  </div>
-</section>
-
-<template id="tpl-project-card">
-
-  <div class="project-card reveal">
-
-    <div class="project-img-wrap"><img src="" alt="" loading="lazy"></div>
-
-    <div class="project-body">
-      <h3 class="project-title"></h3>
-
-      <p class="project-desc"></p>
-
-      <div class="project-links">
-
-        <a class="project-link code-link" href="#" title="">
-        <svg class="icon icon-md"><use href="#icon-code"/></svg>Source Code</a>
-
-        <a class="project-link demo-link" href="#" title="Click to view Live Site">
-        <svg class="icon icon-md"><use href="#icon-external"/></svg>Demo</a>
-
-      </div>
-    </div>
-  </div>
-
-</template>
-
-<!-- ── ACADEMIC ────────────────────────────────────────────── -->
-<section id="academic" class="section bg-white">
-  <div class="container">
-
-    <div class="reveal">
-      <h2 class="section-title">Academic Journey</h2>
-
-      <div class="divider"></div>
-    </div>
-
-    <div class="academic-list reveal reveal-delay-1" id="academic-list"></div>
-
-  </div>
-</section>
-
-<template id="tpl-academic-item">
-  <div class="academic-item">
-    <div class="academic-year"></div>
-    <div class="academic-body">
-      <div class="academic-degree"></div>
-      <div class="academic-school"></div>
-      <span class="academic-badge"></span>
-    </div>
-  </div>
-</template>
-
-
-<!-- ── HOBBIES ────────────────────────────────────────────── -->
-<section id="hobbies" class="section">
-  <div class="container">
-    <div class="reveal">
-      <h2 class="section-title">Beyond the Terminal</h2>
-      <p class="section-sub">Personal interests that fuel my professional curiosity.</p>
-      <div class="divider"></div>
-    </div>
-
-    <div class="hobbies-grid">
-
-      <!-- Reading -->
-      <div class="hobby-card reveal reveal-delay-1" title="Coming Soon">
-        <div class="hobby-bg-wrap">
-          <img src="src/images/hobby-reading.jpg" alt="Reading">
-        </div>
-        <div class="hobby-info">
-          <h4>Reading</h4>
-          <span>World Building</span>
-        </div>
-      </div>
-
-      <!-- Photography -->
-      <a href="Photography/index.html" class="hobby-card reveal reveal-delay-1">
-        <div class="hobby-bg-wrap">
-          <img src="src/images/hobby-nature.jpg" alt="Photography">
-        </div>
-        <div class="hobby-info">
-          <h4>Photography</h4>
-          <span>View Gallery →</span>
-        </div>
-      </a>
-
-      <!-- Travelling -->
-      <div class="hobby-card reveal reveal-delay-1" title="Coming Soon">
-        <div class="hobby-bg-wrap">
-          <img src="src/images/hobby-travel.jpg" alt="Travelling">
-        </div>
-        <div class="hobby-info">
-          <h4>Travelling</h4>
-          <span>Expanding Horizons</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ── CONTACT ─────────────────────────────────────────────── -->
-<!-- <section id="contact" class="section">
-  <div class="container">
-
-    <div class="reveal">
-      <h2 class="section-title">Let's Connect</h2>
-      <p class="section-sub">I'd love to hear from you.</p>
-      <div class="divider"></div>
-    </div>
-
-    <div class="contact-grid">
-
-      <div class="contact-info reveal reveal-delay-1">
-
-      <div class="contact-row">
-        <a href="mailto:hms.builds@gmail.com" title="Mail Us">
-          <div class="contact-icon">
-            <svg class="icon"><use href="#icon-mail"/></svg>
-          </div>
-        </a>
-        <div class="contact-meta">
-          <p>Email</p>
-          <p>hms.builds@gmail.com</p>
-        </div>
-      </div>
-
-  </div>
-
-        <div class="socials">
-
-          <a class="contact-icon" href="https://wa.me/923219798860?text=Hi%20Saeed%2C%20I%20saw%20your%20portfolio!" aria-label="Whatsapp" title="Whatsapp Contact" target="_blank" rel="noopener noreferrer">
-            <svg class="icon"><use href="#icon-whatsapp"/></svg>
-          </a>
-
-          <a class="contact-icon" href="https://github.com/hmsaeed-dev" aria-label="GitHub" title="View my Github" target="_blank" rel="noopener noreferrer">
-            <svg class="icon"><use href="#icon-github"/></svg>
-          </a>
-
-          <a class="contact-icon" href="https://www.linkedin.com/in/hmsaeed" aria-label="LinkedIn" title="Connect on LinkedIn" target="_blank" rel="noopener noreferrer">
-            <svg class="icon"><use href="#icon-linkedin"/></svg>
-          </a>
-
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section> -->
 </main>
 
+<!-- Orientation Grid -->
+<main class="orientation-grid">
+
+        <div class="grid-block">
+            <h2><a href="work/index.html">What I'm building →</a></h2>
+            <p>Crafting custom digital architecture, from a modular PHP MVC library platform to a high-performance systems project. I focus on clean code written from the ground up without relying on heavy frameworks.</p>
+        </div>
+
+        <div class="grid-block">
+            <h2><a href="story/index.html">Who I am →</a></h2>
+            <p>A Computer Science student and technical generalist who values the power of synthesis. My perspective is shaped by software engineering patterns, the strategy of chess, and the precise optics of macro photography.</p>
+        </div>
+
+        <div class="grid-block">
+            <h2><a href="writing/index.html">What I'm thinking →</a></h2>
+            <p>Documenting my deep dives into software architecture, technical writing methodologies, and the balance between production speed and structural accuracy in development.</p>
+        </div>
+
+        <div class="grid-block">
+            <h2><a href="now/index.html">What's happening now →</a></h2>
+            <p>Fresh off launching my custom portfolio domain, I am currently architecting a high-performance, UCI-compliant chess engine in C++ and refining backend data structures.</p>
+        </div>
+
+    </main>
+
+    <hr>
+
+    <section class="featured-project">
+        <h2>Featured Project</h2>
+        <h3>Digital Library</h3>
+        <p>A robust digital library application built completely from scratch using a custom, modular PHP Model-View-Controller (MVC) architectural pattern. Designed to eliminate framework overhead, prioritizing strict routing, security, and separation of concerns.</p>
+        <a href="work/index.html">See all work →</a>
+    </section>
+
+    <hr>
+
+    <section class="testimonial">
+        <blockquote>"Saeed’s approach to backend architecture is incredibly disciplined. The modular MVC structure he designed logic-by-logic handles data flow beautifully and reads like a masterclass in clean, foundational development."</blockquote>
+        <cite>— <strong>Academic Project Reviewer</strong>, UET Taxila</cite>
+    </section>
+
+    <hr>
+
+    <section class="connect-cta">
+        <p>Want to work together or just say hello?</p>
+        <a href="connect/index.html" class="btn btn-outline">Say Hello</a>
+    </section>
 
 </body>
 </html>
