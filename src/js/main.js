@@ -1,6 +1,6 @@
 /* ── MAIN ENTRY POINT (HOME PAGE) ────────────────────────── */
 
-import { projects, academics, skills } from "./data/index.js";
+import { projects, academics} from "./data/index.js";
 import { initIcons } from "./components/Icons.js";
 import { initNavigation } from "./components/Navigation.js";
 import { initFooter } from "./components/Footer.js";
@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	// Render dynamic content first
 	renderProjects(projects);
 	renderAcademics(academics);
-	renderSkills(skills);
 
 	// 4. Initialize scroll reveal AFTER all content is rendered
 	initScrollReveal();
@@ -85,28 +84,5 @@ function renderAcademics(data) {
 		item.querySelector(".academic-badge").textContent = a.badge;
 
 		return item;
-	});
-}
-
-function renderSkills(data) {
-	renderList("skills-grid", data, (cat) => {
-		const section = cloneTemplate("tpl-skills-category");
-		if (!section) return null;
-
-		section.querySelector(".skills-category-title").textContent =
-			cat.category;
-		section.dataset.color = cat.colorKey;
-
-		const pills = section.querySelector(".skills-pills");
-
-		cat.items.forEach((name) => {
-			const pill = cloneTemplate("tpl-skill-pill");
-			if (pill) {
-				pill.append(document.createTextNode(name));
-				pills.appendChild(pill);
-			}
-		});
-
-		return section;
 	});
 }

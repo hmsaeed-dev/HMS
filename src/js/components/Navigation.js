@@ -18,7 +18,7 @@ export function initNavigation({ pathPrefix = "" } = {}) {
                 <a href="${pathPrefix}projects/index.html">Projects</a>
                 <a href="${pathPrefix}academics/index.html">Academics</a>
                 <a href="${pathPrefix}Photography/index.html">Photography</a>
-                <a href="${pathPrefix}index.html#contact">Contact</a>
+                <a href="${pathPrefix}connect/index.html">Connect</a>
 
                 <a class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
                     <svg class="icon sun-icon"><use href="#icon-sun"/></svg>
@@ -49,9 +49,9 @@ export function initNavigation({ pathPrefix = "" } = {}) {
             <svg class="icon"><use href="#icon-camera"/></svg>
             Photography
         </a>
-        <a href="${pathPrefix}index.html#contact" class="mobile-link">
+        <a href="${pathPrefix}connect/index.html" class="mobile-link">
             <svg class="icon"><use href="#icon-mail"/></svg>
-            Contact
+            Connect
         </a>
         <a class="mobile-link theme-toggle" id="themeToggleMobile">
             <div class="theme-icon-container">

@@ -172,7 +172,7 @@ function renderCaseStudiesView(data) {
             linksWrap.innerHTML += `
                 <a href="${study.links.demo}" class="btn btn-olive" target="_blank" rel="noopener noreferrer">
                     <svg class="icon icon-sm"><use href="#icon-external"/></svg>
-                    <span>Live Demo</span>
+                    <span>Demo</span>
                 </a>
             `;
         }
@@ -246,7 +246,7 @@ function renderGridShowcaseView(data) {
             linksBox.innerHTML += `
                 <a class="project-link demo-link" href="${proj.demo}" target="_blank" rel="noopener noreferrer">
                     <svg class="icon icon-md"><use href="#icon-external"/></svg>
-                    <span>View Demo</span>
+                    <span>Demo</span>
                 </a>
             `;
         }
