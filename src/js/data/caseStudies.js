@@ -74,7 +74,7 @@ export const caseStudies = [
 		],
 	},
 	{
-		id: "photography",
+		id: "photography-portfolio",
 		tag: "Observance",
 		category: "creative",
 		title: "Photography",
