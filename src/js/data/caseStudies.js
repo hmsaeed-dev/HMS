@@ -12,7 +12,6 @@ export const caseStudies = [
 			demo: "https://hmslibrary.netlify.app/",
 		},
 		metrics: [
-			{ label: "Lighthouse Score", value: "100" },
 			{ label: "Zero Dependencies", value: "Pure JS" },
 			{ label: "Data Architecture", value: "Strict MVC" },
 		],
@@ -43,7 +42,6 @@ export const caseStudies = [
 		shortDesc:
 			"A console-based management tool built for rental service companies — covering vehicle registration, customer rentals, returns, and fleet buying and selling, all from a single interface.",
 		techStack: [
-			"C++17",
 			"OOP Principles",
 			"File I/O Streams",
 			"Data Validation",
@@ -55,7 +53,6 @@ export const caseStudies = [
 		metrics: [
 			{ label: "OOP Paradigms", value: "Full Stack" },
 			{ label: "Storage", value: "File Stream" },
-			{ label: "Robustness", value: "Input Regex" },
 		],
 		sections: [
 			{
@@ -91,7 +88,6 @@ export const caseStudies = [
 		metrics: [
 			{ label: "Lighthouse Performance", value: "99+" },
 			{ label: "Image Formats", value: "WebP / AVIF" },
-			{ label: "A11y Grade", value: "WCAG AA" },
 		],
 		sections: [
 			{
