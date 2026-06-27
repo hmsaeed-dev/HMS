@@ -19,18 +19,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<!-- Primary Meta Tags -->
-		<title>Projects & Case Studies | HMS</title>
+		<title>Projects Case Studies | Hafiz Muhammad Saeed</title>
 		<meta
 			name="title"
 			content="Projects & Case Studies | Hafiz Muhammad Saeed"
 		/>
 		<meta
 			name="description"
-			content="A deep dive into the architecture, logic, and philosophy behind the digital builds of Hafiz Muhammad Saeed. Explore technical case studies and software projects."
+			content="Explore the engineering architecture, low-level logic, and design workflows behind selected digital builds by Hafiz Muhammad Saeed, including Web Applications and C++ Systems."
 		/>
 		<meta
 			name="keywords"
-			content="Software Projects, Web Development Case Studies, Portfolio Projects, Hafiz Muhammad Saeed Projects, Full Stack Development"
+			content="Software Projects, Web Development Case Studies, Portfolio Projects, Hafiz Muhammad Saeed Projects, Full Stack Development, C++ OOP"
 		/>
 		<link rel="canonical" href="https://hmsaeed.com/projects/" />
 
@@ -81,87 +81,181 @@
 			}
 		</script>
 
+		<!-- Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Fira+Code:wght@400;500&display=swap"
 			rel="stylesheet"
 		/>
 
-		<link rel="icon" href="../src/icons/hms.svg" type="image/svg+xml" />
+		<link rel="icon" href="../src/icons/logo-mark.svg" type="image/svg+xml" />
 
+		<!-- Stylesheets -->
 		<link rel="stylesheet" href="../src/css/main.css" />
 		<script type="module" src="../src/js/projects.js"></script>
 	</head>
 
 	<body>
-
 		<!-- SCROLL PROGRESS -->
 		<div class="scroll-progress" id="scrollProgress"></div>
 
-		<!-- Hero -->
+		<!-- Hero Section -->
 		<header class="cs-hero">
 			<div class="cs-hero-content">
 				<h1 class="cs-title">Selected Works</h1>
 				<p class="cs-intro">
-					A deep dive into the architecture, logic, and philosophy
-					behind my digital builds.
+					A detailed retrospective on the systems design, low-level mechanics and creative execution behind my builds.
 				</p>
 
 				<div class="cs-hero-stats">
 					<div class="cs-stat">
 						<span class="cs-stat-num" id="statProjects">0</span>
-						<span class="cs-stat-label">Projects</span>
+						<span class="cs-stat-label">Builds</span>
 					</div>
 					<div class="cs-stat">
 						<span class="cs-stat-num" id="statTech">0</span>
 						<span class="cs-stat-label">Technologies</span>
 					</div>
+					<div class="cs-stat">
+						<span class="cs-stat-num" id="statMetrics">100%</span>
+						<span class="cs-stat-label">Open Source</span>
+					</div>
 				</div>
 			</div>
 		</header>
 
+		<!-- Main Workspace -->
 		<main class="container">
-			<!-- Filter Bar -->
-			<div class="cs-filter-bar">
-				<div class="cs-filter-left">
-					<span class="cs-filter-label">Filter by</span>
-					<!-- Buttons injected by JS -->
-				</div>
-				<div class="cs-view-count">
-					Showing <span id="visibleCount">0</span> works
+			<!-- Filter & Layout Switcher Bar -->
+			<div class="cs-filter-bar" id="projectFilterBar">
+				<!-- <div class="cs-filter-left" id="categoryFilters">
+					Injected by JavaScript
+				</div> -->
+
+				<div class="cs-filter-right">
+					<div class="cs-view-switcher" id="viewSwitcher">
+						<button class="cs-switch-btn active" data-view="case-studies" aria-label="Detailed Case Studies Mode">
+							<svg class="icon icon-btn-svg" style="width:1.2em; height:1.2em; stroke-width:2;"><use href="#icon-academic"/></svg>
+							<span>Case Studies</span>
+						</button>
+						<button class="cs-switch-btn" data-view="grid-showcase" aria-label="Visual Grid Showcase Mode">
+							<svg class="icon icon-btn-svg" style="width:1.2em; height:1.2em; stroke-width:2;"><use href="#icon-grid"/></svg>
+							<span>Showcase</span>
+						</button>
+					</div>
 				</div>
 			</div>
 
-			<div id="case-studies-container">
-				<!-- Dynamic content injected by JS -->
+			<!-- Dynamic Content Wrappers -->
+			<div id="case-studies-container" class="cs-section-view">
+				<!-- Ingested dynamically by JS -->
 			</div>
+
+			<div id="projects-grid-container" class="cs-section-view hidden">
+				<div class="projects-grid" id="projects-grid">
+					<!-- Ingested dynamically by JS -->
+				</div>
+			</div>
+
+			<!-- Collaboration CTA -->
+			<section class="projects-cta reveal">
+				<div class="projects-cta-box">
+					<h3 class="cta-heading">Interested in collaborating?</h3>
+					<p class="cta-text">
+						Let's create something meaningful.
+					</p>
+					<div class="cta-actions">
+						<a href="../index.html#contact" class="btn btn-olive">
+							<span>Get In Touch</span>
+							<svg class="icon icon-md"><use href="#icon-mail"/></svg>
+						</a>
+					</div>
+				</div>
+			</section>
 		</main>
 
+		<!-- Template for Case Study Editorial Row -->
 		<template id="tpl-case-study">
 			<section class="case-study reveal">
 				<div class="cs-grid">
+					<!-- Left Meta Sticky Panel -->
 					<aside class="cs-meta">
-						<span class="cs-tag"></span>
 						<h2 class="cs-sidebar-title"></h2>
 						<p class="cs-sidebar-desc"></p>
 
-						<div class="cs-tech-list">
-							<!-- Injected -->
+						<!-- Specs and Tech for DESKTOP (hidden on mobile) -->
+						<div class="cs-desktop-specs">
+							<div class="cs-tech-list d-tech">
+								<!-- Injected tech tags -->
+							</div>
 						</div>
 
-						<div class="project-links">
-							<a href="#" class="btn btn-outline btn-source"
-								>Source Code</a
-							>
+						<div class="cs-links-wrap">
+							<!-- Action links -->
 						</div>
 					</aside>
 
+					<!-- Right Narrative & Interactive Panel -->
 					<article class="cs-content">
-						<!-- Injected -->
+						<!-- Case Study Tab Bar (Visible on mobile, hidden on desktop) -->
+						<div class="cs-tab-bar" role="tablist">
+							<button class="cs-tab-btn active" role="tab" data-tab="brief" aria-selected="true">Brief</button>
+							<button class="cs-tab-btn" role="tab" data-tab="architecture" aria-selected="false">Architecture</button>
+							<button class="cs-tab-btn" role="tab" data-tab="sandbox" aria-selected="false">Interactive Sandbox</button>
+						</div>
+
+						<!-- Tab Content: Brief -->
+						<div class="cs-tab-content active" data-tab="brief" role="tabpanel">
+							<div class="cs-brief-sections">
+								<!-- Injected challenge & retrospective sections -->
+							</div>
+						</div>
+
+						<!-- Tab Content: Architecture -->
+						<div class="cs-tab-content" data-tab="architecture" role="tabpanel">
+							<!-- Specs and Tech for MOBILE (hidden on desktop) -->
+							<div class="cs-mobile-specs">
+								<div class="cs-spec-grid m-specs">
+									<!-- Injected spec badges on mobile -->
+								</div>
+								<div class="cs-tech-list m-tech">
+									<!-- Injected tech tags on mobile -->
+								</div>
+							</div>
+							<div class="cs-architecture-sections">
+								<!-- Injected architecture sections -->
+							</div>
+						</div>
+
+						<!-- Tab Content: Sandbox -->
+						<div class="cs-tab-content" data-tab="sandbox" role="tabpanel">
+							<div class="cs-interactive-widget" id="widget-container">
+								<!-- Injected dynamically -->
+							</div>
+						</div>
 					</article>
 				</div>
 			</section>
+		</template>
+
+		<!-- Template for Project Grid Card -->
+		<template id="tpl-project-card">
+			<article class="project-card reveal">
+				<div class="project-img-wrap">
+					<img src="" alt="" loading="lazy" />
+					<div class="project-card-overlay">
+						<span class="project-card-kicker"></span>
+					</div>
+				</div>
+				<div class="project-body">
+					<h3 class="project-title"></h3>
+					<p class="project-desc"></p>
+					<div class="project-links">
+						<!-- Injected links -->
+					</div>
+				</div>
+			</article>
 		</template>
 	</body>
 </html>
