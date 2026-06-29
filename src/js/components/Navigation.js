@@ -11,7 +11,7 @@ export function initNavigation({ pathPrefix = "" } = {}) {
 	const navHTML = `
     <nav aria-label="Main">
         <div class="container nav-inner">
-            <a href="${pathPrefix}index.html" class="nav-logo">HMS</a>
+            <a href="${pathPrefix}index.html" class="nav-logo">HMS.</a>
 
             <div class="nav-links">
                 <a href="${pathPrefix}story/index.html">Story</a>

@@ -118,18 +118,13 @@ function renderFilters(data) {
 		"all",
 		...new Set(data.map((p) => p.category).filter(Boolean)),
 	];
-	filterLeft.innerHTML = '<span class="pg-filter-label">Filter by</span>';
 
 	cats.forEach((cat) => {
 		const btn = document.createElement("button");
 		btn.className = "pg-filter-btn" + (cat === "all" ? " active" : "");
 		btn.dataset.filter = cat;
 		const label = cat === "all" ? "All" : cat;
-		const count =
-			cat === "all"
-				? data.length
-				: data.filter((p) => p.category === cat).length;
-		btn.innerHTML = `${label} <span class="count">${count}</span>`;
+		btn.innerHTML = label;
 		filterLeft.appendChild(btn);
 	});
 }

@@ -1145,3 +1145,403 @@
         line-height: 1.7;
     }
 }
+
+/* ── MINIMAL WORK INDEX LAYOUT (MOBILE-FIRST) ─────────────────── */
+.work-header-minimal {
+	padding: clamp(var(--space-2xl), 8vh, var(--space-4xl)) 0 var(--space-xl);
+	border-bottom: none;
+}
+
+.work-container {
+	max-width: 900px;
+	margin-inline: auto;
+	padding-bottom: var(--space-4xl);
+}
+
+.work-filter-bar {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: var(--space-md);
+	margin-bottom: var(--space-lg);
+	padding-bottom: var(--space-md);
+	border-bottom: 1px solid var(--color-border);
+}
+
+.filter-pills {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--space-xs);
+	padding-right: var(--space-md);
+    cursor: pointer;
+	border-radius: var(--radius-full);
+}
+
+.filter-pill {
+	padding: var(--space-xs) var(--space-md);
+	border-radius: var(--radius-full);
+	border: 1.5px solid var(--color-border);
+	background: none;
+	font-family: inherit;
+	font-size: var(--fs-300);
+	font-weight: 500;
+	color: var(--color-text-muted);
+	cursor: pointer;
+	transition: var(--transition-lg);
+	display: flex;
+	align-items: center;
+	gap: var(--space-2xs);
+}
+
+.filter-pill.active {
+	background: var(--color-surface);
+	color: var(--color-accent);
+	box-shadow: var(--shadow-sm);
+}
+
+/* ── WORK PROJECT CARDS LIST ─────────────────────────────────── */
+.work-cards-list {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-xl);
+}
+
+.work-card {
+	background: var(--color-surface);
+	border: 1px solid var(--color-border-lt);
+	border-radius: var(--radiusmd);
+	padding: clamp(1.25rem, 3vw, 2rem);
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-md);
+	box-shadow: var(--shadow-sm);
+	transition: transform var(--transition-lg), box-shadow var(--transition-lg), border-color var(--transition-lg);
+}
+
+.work-card:hover {
+	transform: translateY(-4px);
+	box-shadow: var(--shadow-md);
+	border-color: var(--color-border);
+}
+
+.work-card-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	gap: var(--space-xs);
+}
+
+.work-card-title {
+	font-family: "Cormorant Garamond", serif;
+	font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+	font-weight: 700;
+	color: var(--color-text);
+	margin: 0;
+	line-height: 1.2;
+}
+
+.work-status-badge {
+	font-size: var(--fs-200);
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	padding: 3px 10px;
+	border-radius: var(--radiussm);
+	font-weight: 700;
+}
+
+.status {
+	background: rgba(114, 134, 73, 0.15);
+	color: var(--color-accent);
+	border: 1px solid rgba(114, 134, 73, 0.3);
+}
+
+.work-card-oneliner {
+	font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+	color: var(--color-text-muted);
+	line-height: 1.6;
+	margin: 0;
+}
+
+.work-card-footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: var(--space-md);
+	padding-top: var(--space-sm);
+	border-top: 1px dashed var(--color-border-lt);
+	margin-top: var(--space-xs);
+}
+
+.work-tech-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--space-2xs);
+}
+
+.work-tech-tag {
+	font-size: var(--fs-200);
+	font-weight: 600;
+	color: var(--color-text-muted);
+	background: var(--ink-05);
+	padding: 3px 10px;
+	border-radius: var(--radiussm);
+}
+
+.work-casestudy-link {
+	display: inline-flex;
+	align-items: center;
+	gap: var(--space-2xs);
+	font-size: var(--fs-300);
+	font-weight: 600;
+	color: var(--color-accent);
+	transition: gap var(--transition), color var(--transition);
+}
+
+.work-casestudy-link:hover {
+	gap: var(--space-xs);
+	color: var(--color-accent-lt);
+}
+
+/* ── CASE STUDY ARTICLE LAYOUT (MOBILE-FIRST) ──────────────────── */
+.cs-article-container {
+	max-width: 840px;
+	margin-inline: auto;
+	padding-inline: clamp(1.25rem, 5vw, 3rem);
+	padding-block: clamp(var(--space-xl), 6vh, var(--space-3xl)) var(--space-4xl);
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-3xl);
+}
+
+.cs-back-bar {
+	margin-bottom: calc(var(--space-md) * -1);
+}
+
+.cs-back-link {
+	display: inline-flex;
+	align-items: center;
+	gap: var(--space-2xs);
+	font-size: var(--fs-300);
+	font-weight: 600;
+	color: var(--color-text-muted);
+	transition: color var(--transition), transform var(--transition);
+}
+
+.cs-back-link:hover {
+	color: var(--color-accent);
+	transform: translateX(-3px);
+}
+
+.cs-header-block {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-md);
+}
+
+.cs-header-meta {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: var(--space-sm);
+}
+
+.cs-year-badge {
+	font-size: var(--fs-200);
+	font-weight: 600;
+	color: var(--color-text-muted);
+	background: var(--ink-05);
+	padding: 3px 10px;
+	border-radius: var(--radiussm);
+}
+
+.cs-header-tech-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--space-2xs);
+}
+
+.cs-header-title {
+	font-family: "Cormorant Garamond", serif;
+	font-size: clamp(2.5rem, 6vw, 4.5rem);
+	font-weight: 700;
+	line-height: 1.1;
+	color: var(--color-text);
+	margin: 0;
+}
+
+.cs-header-oneliner {
+	font-size: clamp(1.15rem, 2vw, 1.35rem);
+	color: var(--color-text-muted);
+	line-height: 1.6;
+	margin: 0;
+}
+
+.cs-header-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--space-sm);
+	margin-top: var(--space-xs);
+}
+
+.cs-hero-image-wrap {
+	margin-top: var(--space-md);
+	border-radius: var(--radiusmd);
+	overflow: hidden;
+	border: 1px solid var(--color-border);
+	box-shadow: var(--shadow-md);
+}
+
+.cs-hero-image {
+	width: 100%;
+	height: auto;
+	max-height: 480px;
+	object-fit: cover;
+	display: block;
+}
+
+.cs-article-body {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-3xl);
+}
+
+.cs-anatomy-section {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-xs);
+}
+
+.cs-anatomy-heading {
+	font-family: "DM Sans", sans-serif;
+	font-size: var(--fs-300);
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: var(--color-accent);
+	margin: 0 0 var(--space-2xs) 0;
+}
+
+.cs-anatomy-text {
+	font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+	line-height: 1.75;
+	color: var(--color-text);
+	margin: 0;
+}
+
+/* Demo Housing */
+.cs-built-demo-housing {
+	margin-top: var(--space-md);
+}
+
+.demo-mockup-frame {
+	background: var(--color-surface);
+	border: 1px solid var(--color-border);
+	border-radius: var(--radiusmd);
+	overflow: hidden;
+	box-shadow: var(--shadow-sm);
+}
+
+.mockup-header {
+	background: var(--ink-05);
+	padding: var(--space-xs) var(--space-md);
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	border-bottom: 1px solid var(--color-border-lt);
+}
+
+.mockup-dot {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+}
+.mockup-dot.red { background: #ff5f56; }
+.mockup-dot.yellow { background: #ffbd2e; }
+.mockup-dot.green { background: #27c93f; }
+
+.mockup-title {
+	font-size: var(--fs-200);
+	font-weight: 600;
+	color: var(--color-text-muted);
+	margin-left: var(--space-xs);
+}
+
+.mockup-body {
+	padding: var(--space-lg);
+}
+
+.visual-spec-box {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+	gap: var(--space-md);
+}
+
+.spec-item {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.spec-label {
+	font-size: var(--fs-200);
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	color: var(--color-text-muted);
+	font-weight: 600;
+}
+
+.spec-val {
+	font-size: var(--fs-400);
+	font-weight: 700;
+	color: var(--color-accent);
+}
+
+/* Footer Quiet Navigation */
+.cs-footer-nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: var(--space-md);
+	padding-top: var(--space-2xl);
+	border-top: 1px solid var(--color-border);
+}
+
+.cs-nav-link {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	transition: transform var(--transition);
+}
+
+.cs-nav-link.prev {
+	align-items: flex-start;
+}
+
+.cs-nav-link.next {
+	align-items: flex-end;
+	margin-left: auto;
+}
+
+.cs-nav-link:hover {
+	transform: translateY(-2px);
+}
+
+.cs-nav-label {
+	font-size: var(--fs-200);
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	color: var(--color-accent);
+	font-weight: 700;
+}
+
+.cs-nav-title {
+	font-family: "Cormorant Garamond", serif;
+	font-size: var(--fs-600);
+	font-weight: 700;
+	color: var(--color-text);
+}
+

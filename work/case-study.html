@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T31PJSBQY8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T31PJSBQY8');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Primary Meta Tags -->
+  <title id="csPageTitle">Case Study — Hafiz Muhammad Saeed</title>
+  <meta name="title" content="Case Study — Hafiz Muhammad Saeed">
+  <meta name="description" id="csMetaDesc" content="A technical deep dive into architecture, architectural decisions, and honest reflections.">
+
+  <!-- Fonts & Favicon -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Fira+Code:wght@400;500&display=swap">
+  <link rel="icon" type="image/svg+xml" href="../src/icons/logo-mark.svg">
+
+  <!-- Theme Detection -->
+  <script>
+    (function() {
+      const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../src/css/main.css?v=1.2.0" />
+  <script type="module" src="../src/js/caseStudy.js" defer></script>
+</head>
+
+<body>
+  <!-- SCROLL PROGRESS -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Main Container -->
+  <main class="cs-article-container" id="csArticleContainer">
+    <!-- Content injected dynamically by caseStudy.js -->
+  </main>
+</body>
+</html>

@@ -11,7 +11,7 @@ export function initFooter({ pathPrefix = "" } = {}) {
         <div class="container">
             <div class="footer-inner">
                 <div>
-                    <div class="footer-name">Hafiz Muhammad Saeed</div>
+                    <a href="${pathPrefix}index.html" class="footer-name">Hafiz Muhammad Saeed</a>
                     <div class="footer-tagline">Builder · Reader · Perpetual Learner</div>
                 </div>
 

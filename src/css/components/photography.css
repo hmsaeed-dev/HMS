@@ -354,15 +354,6 @@
 	}
 }
 
-.pg-filter-label {
-	font-size: var(--fs-300);
-	letter-spacing: 0.15em;
-	text-transform: uppercase;
-	color: var(--ink-40);
-	font-weight: 500;
-	margin-right: var(--space-xs);
-}
-
 .pg-filter-btn {
 	padding: var(--space-xs) var(--space-md);
 	border-radius: var(--radius-full);
@@ -388,24 +379,11 @@
     box-shadow: var(--shadow-md);
 }
 
-.pg-filter-btn .count {
-	font-size: var(--fs-300);
-	opacity: 0.75;
-	background: var(--white-20);
-	border-radius: var(--radius-full);
-	padding: 0 var(--space-2xs);
-}
-
-.pg-filter-btn:not(.active) .count {
-	background: var(--color-border);
-	color: var(--ink-40);
-}
-
 /* View Switcher */
 .pg-view-switcher {
 	display: flex;
 	background: var(--color-border-lt);
-	padding: 3px;
+	padding: 5px;
 	border-radius: var(--radiussm);
 	border: 1px solid var(--color-border);
 }
@@ -458,48 +436,6 @@
 	color: var(--color-accent);
 	font-style: normal;
 	font-weight: 600;
-}
-
-/* 2. Order (Uniform Grid - Horizontal Swipe on Mobile) */
-.pg-grid[data-view="order"] {
-	display: flex;
-	overflow-x: auto;
-	scroll-snap-type: x mandatory;
-	gap: var(--space-md);
-	columns: auto;
-	padding: 0 0 var(--space-md);
-	scrollbar-width: none;
-}
-.pg-grid[data-view="order"]::-webkit-scrollbar {
-	display: none;
-}
-
-.pg-grid[data-view="order"] .pg-item {
-	flex: 0 0 85%;
-	height: 400px;
-	scroll-snap-align: center;
-	margin-bottom: 0;
-}
-
-@media (min-width: 601px) {
-	.pg-grid[data-view="order"] {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-		gap: var(--space-md);
-		overflow-x: visible;
-		scroll-snap-type: none;
-		padding: 0;
-	}
-	.pg-grid[data-view="order"] .pg-item {
-		flex: none;
-		height: auto;
-		aspect-ratio: 1/1;
-	}
-}
-
-.pg-grid[data-view="order"] .pg-item img {
-	height: 100%;
-	object-fit: cover;
 }
 
 /* 3. Focus (Cinematic) */
