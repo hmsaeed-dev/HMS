@@ -169,7 +169,6 @@ body::before {
   content: "";
   position: fixed;
   inset: -10% -5%;
-  background-image: url("../images/texture-noise.jpg");
   background-size: 300px 300px;
   background-repeat: repeat;
   opacity: 0.15; /* Elegant film grain */

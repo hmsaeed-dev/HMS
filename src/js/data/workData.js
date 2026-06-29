@@ -2,8 +2,6 @@ export const workProjects = [
 	{
 		id: "iqbaliat",
 		name: "Digital Library",
-		oneLiner: "Electronic Library",
-		status: "In Progress",
 		category: "web",
 		year: "2026",
 		techTags: ["Vanilla JS", "HTML/CSS", "Public Corpus"],
@@ -28,8 +26,6 @@ export const workProjects = [
 	{
 		id: "hms-tracker",
 		name: "HMS Tracker",
-		oneLiner: "Personal finance PWA with net worth tracking.",
-		status: "Live",
 		category: "web",
 		year: "2026",
 		techTags: ["Vanilla JS", "MVC Architecture", "PWA", "LocalStorage"],
