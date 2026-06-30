@@ -107,88 +107,7 @@
 
 		<!-- Critical CSS -->
 		<link rel="stylesheet" href="src/css/main.css" />
-		<style>
-			#page-loader {
-				position: fixed;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100vh;
-				background-color: #c1d59586;
-				color: #1c1b1a;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				z-index: 999999;
-				transition:
-					opacity 0.6s cubic-bezier(0.215, 0.61, 0.355, 1),
-					transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-			}
-
-			/* Native browser theme routing */
-			@media (prefers-color-scheme: dark) {
-				#page-loader {
-					background-color: #272924;
-					color: var(--text-color, #f4f3f0);
-				}
-				.loader-logo {
-					filter: invert(0.95) brightness(0.95);
-				}
-			}
-
-			/* Script-driven theme toggle synchronization */
-			[data-theme="dark"] #page-loader {
-				background-color: var(--bg-color, #121110);
-				color: var(--text-color, #f4f3f0);
-			}
-			[data-theme="dark"] .loader-logo {
-				filter: invert(0.95) brightness(0.95);
-			}
-
-			.loader-content {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 0.75rem;
-				text-align: center;
-			}
-
-			.loader-logo {
-				width: 140px;
-				height: 160px;
-				opacity: 0;
-				transform: scale(0.95);
-				animation: editorialReveal 1.2s cubic-bezier(0.25, 1, 0.5, 1)
-					forwards;
-			}
-
-			.loader-brand-text {
-				font-family: var(--font-serif, "Cormorant Garamond", serif);
-				font-size: var(--fs-800);
-				font-style: italic;
-				font-weight: 1000;
-				letter-spacing: 0.04em;
-				opacity: 0;
-				transform: translateY(8px);
-				animation: editorialReveal 1s cubic-bezier(0.25, 1, 0.5, 1)
-					forwards 0.3s;
-			}
-
-			@keyframes editorialReveal {
-				to {
-					opacity: 1;
-					transform: scale(1) translateY(0);
-				}
-			}
-
-			/* Invisible physics exit transition */
-			.loader-hidden {
-				opacity: 0;
-				transform: translateY(-24px);
-				pointer-events: none;
-			}
-		</style>
-
+		<link rel="stylesheet" href="src/css/components/404-error.css" />
 		<script type="module" src="src/js/main.js" defer></script>
 
 		<!-- Structured Data -->
@@ -368,7 +287,7 @@
 
 		<hr />
 
-		<section class="featured-project">
+		<!-- <section class="featured-project">
 			<h2>Featured Project</h2>
 			<h3>Digital Library</h3>
 			<p>
@@ -379,7 +298,38 @@
 				concerns.
 			</p>
 			<a href="work/index.html">See all work →</a>
-		</section>
+		</section> -->
+
+<section class="featured-project">
+  <div class="project-meta">
+    <h2>Featured Project</h2>
+    <h3>Digital Library</h3>
+    <p>
+      A robust digital library application built completely from
+      scratch using a custom, modular PHP Model-View-Controller (MVC)
+      architectural pattern. Designed to eliminate framework overhead,
+      prioritizing strict routing, security, and separation of concerns.
+    </p>
+  </div>
+
+  <div class="project-spec">
+    <span class="spec-label">Architecture & Tech</span>
+    <div class="tech-tags">
+      <span>Custom MVC</span>
+      <span>PHP 8.x</span>
+      <span>Vanilla JS</span>
+      <span>SQL</span>
+    </div>
+  </div>
+
+  <a href="work/index.html" class="project-link">
+    <span>See all work</span>
+    <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M5 12h14M12 5l7 7-7 7"/>
+    </svg>
+  </a>
+</section>
+
 
 		<hr />
 

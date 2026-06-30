@@ -14,7 +14,7 @@ export function initNavigation({ pathPrefix = "" } = {}) {
             <a href="${pathPrefix}index.html" class="nav-logo">HMS.</a>
 
             <div class="nav-links">
-                <a href="${pathPrefix}story/index.html">Story</a>
+                <a href="${pathPrefix}404-error.html">Story</a>
                 <a href="${pathPrefix}work/index.html">Work</a>
                 <a href="${pathPrefix}writing/index.html">Writing</a>
                 <a href="${pathPrefix}photography/index.html">Photography</a>

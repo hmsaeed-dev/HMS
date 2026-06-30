@@ -2,7 +2,6 @@
 
 /* Common Layout Constraints */
 .orientation-grid,
-.featured-project,
 .testimonial {
 	max-width: var(--container-max);
 	margin-inline: auto;
@@ -69,18 +68,22 @@
 }
 
 /* ── 2. Featured Project Section ─────────────────────────────── */
-.featured-project {
+/* .featured-project {
 	background: var(--color-surface);
 	border: 1px solid var(--color-border-lt);
 	border-left: 4px solid var(--color-accent);
 	border-radius: var(--radiussm);
 	padding: var(--space-xl) clamp(1.5rem, 5vw, var(--space-2xl));
 	margin-block: var(--space-2xl);
+	margin-inline: var(--space-2xl);
 	display: flex;
 	flex-direction: column;
 	gap: var(--space-sm);
 	box-shadow: var(--shadow-sm);
 	transition: transform var(--transition-lg), box-shadow var(--transition-lg);
+
+	max-width: var(--container-max);
+	width: 100%;
 }
 
 .featured-project:hover {
@@ -132,8 +135,252 @@
 
 .featured-project a:hover {
 	color: var(--color-accent-lt);
-	gap: var(--space-md);
+	gap: var(--space-lg);
+} */
+
+/* ── 2. Featured Project Section ─────────────────────────────── */
+
+/* BASE STYLES: Mobile First (< 768px)
+   Optimized for vertical scanning, thumb reach, and fluid margins.
+*/
+.featured-project {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border-lt);
+    border-left: 4px solid var(--color-accent);
+    border-radius: var(--radiussm);
+    padding: var(--space-lg) var(--space-md);
+    margin: var(--space-lg) var(--space-lg);
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-lg), box-shadow var(--transition-lg), border-color var(--transition);
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
 }
+
+.project-meta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.featured-project h2 {
+    font-family: "DM Sans", sans-serif;
+    font-size: var(--fs-300);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-accent);
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.featured-project h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(var(--fs-600), 6vw, var(--fs-800)); /* Responsive scaling title */
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 0;
+    line-height: 1.15;
+}
+
+.featured-project p {
+    font-size: var(--fs-400);
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-top: var(--space-xs);
+}
+
+/* Mobile Spec Separator Rule */
+.project-spec {
+    border-top: 1px solid var(--color-border-lt);
+    padding-top: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.spec-label {
+    font-family: "DM Sans", sans-serif;
+    font-size: calc(var(--fs-300) * 0.85);
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    letter-spacing: 0.05em;
+    font-weight: 500;
+}
+
+/* Flex tags that wrap smoothly on small devices without spilling over */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+}
+
+.tech-tags span {
+    font-family: "DM Sans", sans-serif;
+    font-size: calc(var(--fs-300) * 0.85);
+    background: rgba(var(--color-accent), 0.04);
+    color: var(--color-text);
+    border: 1px solid var(--color-border-lt);
+    padding: 6px 12px; /* Marginally larger padding for easy mobile finger targets */
+    border-radius: 4px;
+}
+
+/* Call to Action: Positioned intentionally at the base on mobile */
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--color-accent);
+    font-weight: 600;
+    font-size: var(--fs-300);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    gap: var(--space-xs);
+    padding-block: var(--space-xs); /* Increases interactive touch surface area */
+    align-self: flex-start;
+}
+
+.project-link .arrow-icon {
+    width: 16px;
+    height: 16px;
+    transition: transform var(--transition);
+}
+
+
+/* TABLET & DESKTOP ENHANCEMENTS (>= 768px)
+   As screen size grows, restructure into side-by-side components.
+*/
+@media (min-width: 768px) {
+    .featured-project {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto auto; /* Two row tracks to position elements beautifully */
+        gap: var(--space-xl);
+        padding: var(--space-xl) clamp(1.5rem, 5vw, var(--space-2xl));
+        margin: var(--space-2xl) auto;
+        max-width: var(--container-max);
+        width: calc(100% - (var(--space-2xl) * 2));
+    }
+
+    .featured-project:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-md);
+        border-color: var(--color-accent);
+    }
+
+    .project-meta {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3; /* Extends depth cleanly */
+        gap: var(--space-sm);
+    }
+
+    .featured-project p {
+        max-width: 65ch;
+    }
+
+    /* Restructures divider rule from top border to left border */
+    .project-spec {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        border-top: none;
+        border-left: 1px solid var(--color-border-lt);
+        padding-top: 0;
+        padding-left: var(--space-lg);
+        justify-content: flex-start;
+        align-self: start;
+    }
+
+    .project-link {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        align-self: end;
+        margin-left: var(--space-lg); /* Aligns nicely under the specs block */
+    }
+
+    .project-link:hover {
+        color: var(--color-accent-lt);
+    }
+
+    .project-link:hover .arrow-icon {
+        transform: translateX(6px);
+    }
+}
+/* Modernized SVG Link Wrapper */
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    margin-top: var(--space-md);
+    color: var(--color-accent);
+    font-weight: 600;
+    font-size: var(--fs-300);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    gap: var(--space-xs);
+    align-self: flex-start;
+}
+
+.project-link .arrow-icon {
+    width: 16px;
+    height: 16px;
+    transition: transform var(--transition);
+}
+
+.project-link:hover {
+    color: var(--color-accent-lt);
+}
+
+.project-link:hover .arrow-icon {
+    transform: translateX(6px); /* Clean CSS hardware-accelerated movement instead of padding shifting */
+}
+
+/* --- Right Column: Tech Metadata Specs --- */
+.project-spec {
+    border-left: 1px solid var(--color-border-lt);
+    padding-left: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    height: 100%;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .project-spec {
+        border-left: none;
+        border-top: 1px solid var(--color-border-lt);
+        padding-left: 0;
+        padding-top: var(--space-md);
+    }
+}
+
+.spec-label {
+    font-family: "DM Sans", sans-serif;
+    font-size: calc(var(--fs-300) * 0.9);
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    letter-spacing: 0.05em;
+    font-weight: 500;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+}
+
+.tech-tags span {
+    font-family: "DM Sans", sans-serif;
+    font-size: calc(var(--fs-300) * 0.9);
+    background: rgba(var(--color-accent), 0.06); /* Very pale hint of accent color */
+    color: var(--color-text);
+    border: 1px solid var(--color-border-lt);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: 400;
+}
+
 
 /* ── 3. Testimonial Section ──────────────────────────────────── */
 .testimonial {

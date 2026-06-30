@@ -1,79 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Coming Soon</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+	<head>
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-T31PJSBQY8"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+			gtag("config", "G-T31PJSBQY8");
+		</script>
 
-    body {
-      font-family: 'Georgia', serif;
-      background: #c4da9533;
-      color: black;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="robots" content="noindex, follow" />
+		<title>Coming Soon — Hafiz Muhammad Saeed</title>
 
-    .container {
-      text-align: center;
-      padding: 2rem;
-    }
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+		/>
 
-    .label {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 0.75rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: black;
-      margin-bottom: 1.5rem;
-    }
+		<script>
+			(function () {
+				const theme =
+					localStorage.getItem("theme") ||
+					(window.matchMedia("(prefers-color-scheme: dark)").matches
+						? "dark"
+						: "light");
+				document.documentElement.setAttribute("data-theme", theme);
+			})();
+		</script>
 
-    h1 {
-      font-size: clamp(2rem, 6vw, 3.5rem);
-      font-weight: 400;
-      color: black;
-      margin-bottom: 1rem;
-      line-height: 1.2;
-    }
+		<link rel="stylesheet" href="../src/css/main.css" />
+		<link rel="stylesheet" href="../src/css/components/404-error.css" />
+	</head>
 
-    p {
-      font-size: 1rem;
-      color: black;
-      margin-bottom: 2.5rem;
-      font-style: italic;
-    }
+	<body>
+		<main class="error-page-parent-container">
+		<div class = "error-page-container">
+			<img
+				src="../src/icons/logo-mark.svg"
+				alt="HMS Logo"
+				class="brand-logo"
+			/>
 
-    .back-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-family: "Cormorant Garamond", serif;
-      font-size: 0.8rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: black;
-      text-decoration: none;
-      border: 2px solid rgb(58, 48, 48);
-      border-radius: 20px;
-      font-weight: 900;
-      padding: 0.6rem 1.2rem;
-      transition: all 0.2s ease;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="label">HMS · Work</div>
-    <h1>Coming Soon</h1>
-    <p>This piece is still being written.</p>
-    <a class="back-btn" onclick="history.back(); return false;" href="#">Go Back</a>
-  </div>
-</body>
+			<h1>Coming Soon</h1>
+
+			<div class="back-action-wrap">
+				<a
+					class="back-link"
+					onclick="
+						history.back();
+						return false;
+					"
+					href="#"
+				>
+					<span>Go Back</span>
+				</a>
+			</div>
+		</div>
+		</main>
+	</body>
 </html>
