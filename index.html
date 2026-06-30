@@ -1,337 +1,428 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-T31PJSBQY8"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+			gtag("config", "G-T31PJSBQY8");
+		</script>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="google-site-verification"
+			content="FDjh9zBREo6ji-5i-X_pi9Tu9mQvFMKXH647cvHG4Tc"
+		/>
+		<meta name="robots" content="index, follow, max-image-preview:large" />
 
-<head>
+		<!-- Primary Meta Tags -->
+		<title>Hafiz Muhammad Saeed — Builder & Thinker</title>
+		<meta name="title" content="Hafiz Muhammad Saeed — Builder & Thinker" />
+		<meta
+			name="description"
+			content="Personal site of Hafiz Muhammad Saeed — CS student, builder, and thinker from Taxila, Pakistan. Work, writing, and story."
+		/>
+		<meta name="author" content="Hafiz Muhammad Saeed" />
+		<meta name="geo.region" content="PK-PB" />
+		<meta name="geo.placename" content="Taxila" />
+		<link rel="canonical" href="https://hmsaeed.com" />
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T31PJSBQY8"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-T31PJSBQY8');
-  </script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="google-site-verification" content="FDjh9zBREo6ji-5i-X_pi9Tu9mQvFMKXH647cvHG4Tc" />
-  <meta name="robots" content="index, follow, max-image-preview:large">
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://hmsaeed.com" />
+		<meta property="og:site_name" content="Hafiz Muhammad Saeed" />
+		<meta
+			property="og:title"
+			content="Hafiz Muhammad Saeed | Developer & Photographer"
+		/>
+		<meta
+			property="og:description"
+			content="Explore the digital works and photographic captures of Hafiz Muhammad Saeed."
+		/>
+		<meta
+			property="og:image"
+			content="https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto/f_auto/v1779627924/Saeed_68_cewriq.jpg"
+		/>
 
-  <!-- Primary Meta Tags -->
-  <title>Hafiz Muhammad Saeed — Builder & Thinker</title>
-  <meta name="title" content="Hafiz Muhammad Saeed — Builder & Thinker">
-  <meta name="description" content="Personal site of Hafiz Muhammad Saeed — CS student, builder, and thinker from Taxila, Pakistan. Work, writing, and story.">
-  <meta name="author" content="Hafiz Muhammad Saeed">
-  <meta name="geo.region" content="PK-PB" />
-  <meta name="geo.placename" content="Taxila" />
-  <link rel="canonical" href="https://hmsaeed.com">
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content="https://hmsaeed.com" />
+		<meta
+			property="twitter:title"
+			content="Hafiz Muhammad Saeed | Developer & Photographer"
+		/>
+		<meta
+			property="twitter:description"
+			content="Explore the digital works and photographic captures of Hafiz Muhammad Saeed."
+		/>
+		<meta
+			property="twitter:image"
+			content="https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto/f_auto/v1779627924/Saeed_68_cewriq.jpg"
+		/>
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://hmsaeed.com">
-  <meta property="og:site_name" content="Hafiz Muhammad Saeed" />
-  <meta property="og:title" content="Hafiz Muhammad Saeed | Developer & Photographer">
-  <meta property="og:description" content="Explore the digital works and photographic captures of Hafiz Muhammad Saeed.">
-  <meta property="og:image" content="https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto/f_auto/v1779627924/Saeed_68_cewriq.jpg">
+		<!-- Favicon & Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			rel="preload"
+			as="font"
+			type="font/woff2"
+			href="https://fonts.gstatic.com/s/dmsans/v15/rP2Fp2K8zQ2C3BFGPgc707SPhA.woff2"
+			crossorigin
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap"
+		/>
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://hmsaeed.com">
-  <meta property="twitter:title" content="Hafiz Muhammad Saeed | Developer & Photographer">
-  <meta property="twitter:description" content="Explore the digital works and photographic captures of Hafiz Muhammad Saeed.">
-  <meta property="twitter:image" content="https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto/f_auto/v1779627924/Saeed_68_cewriq.jpg">
+		<link rel="icon" type="image/svg+xml" href="src/icons/logo-mark.svg" />
 
-  <!-- Favicon & Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/dmsans/v15/rP2Fp2K8zQ2C3BFGPgc707SPhA.woff2" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap">
+		<!-- LCP Image Preload -->
+		<link
+			rel="preload"
+			fetchpriority="high"
+			as="image"
+			href="https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto/f_auto/w_800/v1779627924/Saeed_68_cewriq.jpg"
+			type="image/webp"
+		/>
 
-  <link rel="icon" type="image/svg+xml" href="src/icons/logo-mark.svg">
+		<!-- Theme Detection (Prevents Flash) -->
+		<script>
+			(function () {
+				const theme =
+					localStorage.getItem("theme") ||
+					(window.matchMedia("(prefers-color-scheme: dark)").matches
+						? "dark"
+						: "light");
+				document.documentElement.setAttribute("data-theme", theme);
+			})();
+		</script>
 
-  <!-- LCP Image Preload -->
-  <link rel="preload" fetchpriority="high" as="image" href="https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto/f_auto/w_800/v1779627924/Saeed_68_cewriq.jpg" type="image/webp">
+		<!-- Critical CSS -->
+		<link rel="stylesheet" href="src/css/main.css" />
+		<style>
+			#page-loader {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100vh;
+				background-color: #c1d59586;
+				color: #1c1b1a;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				z-index: 999999;
+				transition:
+					opacity 0.6s cubic-bezier(0.215, 0.61, 0.355, 1),
+					transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+			}
 
-  <!-- Theme Detection (Prevents Flash) -->
-  <script>
-    (function() {
-      const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-      document.documentElement.setAttribute('data-theme', theme);
-    })();
-  </script>
+			/* Native browser theme routing */
+			@media (prefers-color-scheme: dark) {
+				#page-loader {
+					background-color: #272924;
+					color: var(--text-color, #f4f3f0);
+				}
+				.loader-logo {
+					filter: invert(0.95) brightness(0.95);
+				}
+			}
 
-  <!-- Critical CSS -->
-  <link rel="stylesheet" href="src/css/main.css" />
-  <style>
-    #page-loader {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: var(--bg-color, #fcfbf9);
-        color: var(--text-color, #1c1b1a);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 999999;
-        transition: opacity 0.6s cubic-bezier(0.215, 0.61, 0.355, 1),
-                    transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
+			/* Script-driven theme toggle synchronization */
+			[data-theme="dark"] #page-loader {
+				background-color: var(--bg-color, #121110);
+				color: var(--text-color, #f4f3f0);
+			}
+			[data-theme="dark"] .loader-logo {
+				filter: invert(0.95) brightness(0.95);
+			}
 
-    /* Native browser theme routing */
-    @media (prefers-color-scheme: dark) {
-        #page-loader {
-            background-color: var(--bg-color, #121110);
-            color: var(--text-color, #f4f3f0);
-        }
-        .loader-logo { filter: invert(0.95) brightness(0.95); }
-    }
+			.loader-content {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 0.75rem;
+				text-align: center;
+			}
 
-    /* Script-driven theme toggle synchronization */
-    [data-theme="dark"] #page-loader {
-        background-color: var(--bg-color, #121110);
-        color: var(--text-color, #f4f3f0);
-    }
-    [data-theme="dark"] .loader-logo {
-        filter: invert(0.95) brightness(0.95);
-    }
+			.loader-logo {
+				width: 140px;
+				height: 160px;
+				opacity: 0;
+				transform: scale(0.95);
+				animation: editorialReveal 1.2s cubic-bezier(0.25, 1, 0.5, 1)
+					forwards;
+			}
 
-    .loader-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.75rem;
-        text-align: center;
-    }
+			.loader-brand-text {
+				font-family: var(--font-serif, "Cormorant Garamond", serif);
+				font-size: var(--fs-800);
+				font-style: italic;
+				font-weight: 1000;
+				letter-spacing: 0.04em;
+				opacity: 0;
+				transform: translateY(8px);
+				animation: editorialReveal 1s cubic-bezier(0.25, 1, 0.5, 1)
+					forwards 0.3s;
+			}
 
-    .loader-logo {
-        width: 140px;
-        height: 160px;
-        opacity: 0;
-        transform: scale(0.95);
-        animation: editorialReveal 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-    }
+			@keyframes editorialReveal {
+				to {
+					opacity: 1;
+					transform: scale(1) translateY(0);
+				}
+			}
 
-    .loader-brand-text {
-        font-family: var(--font-serif, "Cormorant Garamond", serif);
-        font-size: var(--fs-800);
-        font-style: italic;
-        font-weight: 1000;
-        letter-spacing: 0.04em;
-        opacity: 0;
-        transform: translateY(8px);
-        animation: editorialReveal 1s cubic-bezier(0.25, 1, 0.5, 1) forwards 0.3s;
-    }
+			/* Invisible physics exit transition */
+			.loader-hidden {
+				opacity: 0;
+				transform: translateY(-24px);
+				pointer-events: none;
+			}
+		</style>
 
-    @keyframes editorialReveal {
-        to {
-            opacity: 1;
-            transform: scale(1) translateY(0);
-        }
-    }
+		<script type="module" src="src/js/main.js" defer></script>
 
-    /* Invisible physics exit transition */
-    .loader-hidden {
-        opacity: 0;
-        transform: translateY(-24px);
-        pointer-events: none;
-    }
-</style>
+		<!-- Structured Data -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Person",
+				"name": "Hafiz Muhammad Saeed",
+				"alternateName": ["HMSaeed", "Hafiz Muhammad Saeed", "HMS"],
+				"url": "https://hmsaeed.com",
+				"image": "https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto/f_auto/v1779627924/Saeed_68_cewriq.jpg",
+				"sameAs": [
+					"https://orcid.org/0009-0007-9947-5047",
+					"https://github.com/hmsaeed-dev",
+					"https://www.linkedin.com/in/hmsaeed",
+					"https://www.instagram.com/hms_aeed",
+					"https://www.facebook.com/hmsaeed-dev/",
+					"https://x.com/hms_aeed",
+					"https://medium.com/@hms_blogs",
+					"https://leetcode.com/u/hms_aeed/",
+					"https://g.dev/hmsaeed",
+					"https://www.pinterest.com/HMS_Clicks/",
+					"https://www.youtube.com/@HMS_aeed",
+					"https://wakatime.com/@hmsaeed",
+					"https://replit.com/@hmsaeed",
+					"https://www.behance.net/hms_aeed",
+					"https://codepen.io/hms_aeed",
+					"https://www.chess.com/member/hms_aeed"
+				],
+				"jobTitle": "Web Developer",
+				"worksFor": {
+					"@type": "Organization",
+					"name": "Freelance"
+				},
+				"alumniOf": {
+					"@type": "EducationalOrganization",
+					"name": "UET Taxila",
+					"url": "https://www.uettaxila.edu.pk/",
+					"department": {
+						"@type": "Organization",
+						"name": "Department of Computer Science"
+					}
+				},
+				"memberOf": {
+					"@type": "OrganizationRole",
+					"roleName": "CSP Coordinator",
+					"memberOf": {
+						"@type": "Organization",
+						"name": "Umeed e Subh",
+						"url": "https://www.linkedin.com/company/umeed-e-subh-uet-taxila",
+						"description": "A youth-led welfare and educational organization."
+					}
+				},
+				"knowsAbout": [
+					"HTML5",
+					"CSS3",
+					"Python",
+					"Vanilla JavaScript",
+					"C++",
+					"Object-Oriented Programming (OOP)",
+					"Data Structures",
+					"Web Development",
+					"Nature Photography"
+				],
+				"hasCredential": {
+					"@type": "EducationalOccupationalCredential",
+					"credentialCategory": "degree",
+					"name": "Bachelor of Science in Computer Science",
+					"abstract": "Currently in second semester."
+				},
+				"description": "Second-semester Bachelor of Science in Computer Science (BSCS) student at UET Taxila. Full-Stack Developer specializing in Vanilla JS and C++ OOP alongside creative macro Photography storytelling.",
+				"address": {
+					"@type": "PostalAddress",
+					"addressLocality": "Taxila",
+					"addressRegion": "Punjab",
+					"addressCountry": "Pakistan"
+				}
+			}
+		</script>
+	</head>
 
+	<body>
+		<!-- 2. The Minimalist Splash Screen Overlay -->
+		<div id="page-loader">
+			<div class="loader-content">
+				<img
+					src="../src/icons/logo-mark.svg"
+					alt="HMS"
+					class="loader-logo"
+				/>
+				<div class="loader-status">
+					<span class="loader-brand-text">Hafiz Muhammad Saeed</span>
+				</div>
+			</div>
+		</div>
 
-  <script type="module" src="src/js/main.js" defer></script>
+		<!-- ── SCROLL PROGRESS ─────────────────────────────────────── -->
+		<div class="scroll-progress" id="scrollProgress"></div>
 
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Hafiz Muhammad Saeed",
-      "alternateName": ["HMSaeed", "Hafiz Muhammad Saeed", "HMS"],
-      "url": "https://hmsaeed.com",
-      "image": "https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto/f_auto/v1779627924/Saeed_68_cewriq.jpg",
-      "sameAs": [
-        "https://orcid.org/0009-0007-9947-5047",
-        "https://github.com/hmsaeed-dev",
-        "https://www.linkedin.com/in/hmsaeed",
-        "https://www.instagram.com/hms_aeed",
-        "https://www.facebook.com/hmsaeed-dev/",
-        "https://x.com/hms_aeed",
-        "https://medium.com/@hms_blogs",
-        "https://leetcode.com/u/hms_aeed/",
-        "https://g.dev/hmsaeed",
-        "https://www.pinterest.com/HMS_Clicks/",
-        "https://www.youtube.com/@HMS_aeed",
-        "https://wakatime.com/@hmsaeed",
-        "https://replit.com/@hmsaeed",
-        "https://www.behance.net/hms_aeed",
-        "https://codepen.io/hms_aeed",
-        "https://www.chess.com/member/hms_aeed"
-      ],
-      "jobTitle": "Web Developer",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Freelance"
-      },
-      "alumniOf": {
-      "@type": "EducationalOrganization",
-      "name": "UET Taxila",
-      "url": "https://www.uettaxila.edu.pk/",
-      "department": {
-        "@type": "Organization",
-        "name": "Department of Computer Science"
-      }
-    },
-      "memberOf": {
-      "@type": "OrganizationRole",
-      "roleName": "CSP Coordinator",
-      "memberOf": {
-        "@type": "Organization",
-        "name": "Umeed e Subh",
-        "url": "https://www.linkedin.com/company/umeed-e-subh-uet-taxila",
-        "description": "A youth-led welfare and educational organization."
-      }
-    },
-    "knowsAbout": [
-      "HTML5",
-      "CSS3",
-      "Python",
-      "Vanilla JavaScript",
-      "C++",
-      "Object-Oriented Programming (OOP)",
-      "Data Structures",
-      "Web Development",
-      "Nature Photography"
-    ],
-    "hasCredential": {
-      "@type": "EducationalOccupationalCredential",
-      "credentialCategory": "degree",
-      "name": "Bachelor of Science in Computer Science",
-      "abstract": "Currently in second semester."
-    },
-    "description": "Second-semester Bachelor of Science in Computer Science (BSCS) student at UET Taxila. Full-Stack Developer specializing in Vanilla JS and C++ OOP alongside creative macro Photography storytelling.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Taxila",
-      "addressRegion": "Punjab",
-      "addressCountry": "Pakistan"
-    }
-    }
-  </script>
-</head>
+		<main>
+			<!-- ── HERO ────────────────────────────────────────────────── -->
+			<section id="hero" class="section">
+				<div class="container">
+					<div class="hero-inner">
+						<div class="hero-text">
+							<h1 class="hero-h1">I'm <span>Saeed</span>.</h1>
+							<p class="hero-sub">
+								Builder, Reader &amp; Perpetual Learner
+							</p>
 
+							<div class="hero-ctas reveal">
+								<a href="404-error.html" class="btn btn-olive"
+									>My Story</a
+								>
+							</div>
+						</div>
 
-<body>
+						<div class="hero-img-wrap">
+							<img
+								src="https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto,f_auto,w_440/v1779627924/Saeed_68_cewriq.jpg"
+								srcset="
+									https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto,f_auto,w_320/v1779627924/Saeed_68_cewriq.jpg 320w,
+									https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto,f_auto,w_640/v1779627924/Saeed_68_cewriq.jpg 640w,
+									https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto,f_auto,w_880/v1779627924/Saeed_68_cewriq.jpg 880w
+								"
+								sizes="(min-width: 901px) 440px, 320px"
+								alt="Hafiz Muhammad Saeed, HMSaeed, Taxila Photographer, HMS"
+								loading="eager"
+								fetchpriority="high"
+							/>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
 
-<!-- 2. The Minimalist Splash Screen Overlay -->
-<div id="page-loader">
-    <div class="loader-content">
-        <img src="../src/icons/logo-mark.svg" alt="HMS" class="loader-logo" />
-        <div class="loader-status">
-            <span class="loader-brand-text">Hafiz Muhammad Saeed</span>
-        </div>
-    </div>
-</div>
+		<!-- Orientation Grid -->
+		<main class="orientation-grid">
+			<div class="grid-block">
+				<h2><a href="work/index.html">What I'm building →</a></h2>
+				<p>
+					Crafting custom digital architecture, from a modular PHP MVC
+					library platform to a high-performance systems project. I
+					focus on clean code written from the ground up without
+					relying on heavy frameworks.
+				</p>
+			</div>
 
+			<div class="grid-block">
+				<h2><a href="story/index.html">Who I am →</a></h2>
+				<p>
+					A Computer Science student and technical generalist who
+					values the power of synthesis. My perspective is shaped by
+					software engineering patterns, the strategy of chess, and
+					the precise optics of macro photography.
+				</p>
+			</div>
 
-<!-- ── SCROLL PROGRESS ─────────────────────────────────────── -->
-<div class="scroll-progress" id="scrollProgress"></div>
+			<div class="grid-block">
+				<h2><a href="writing/index.html">What I'm thinking →</a></h2>
+				<p>
+					Documenting my deep dives into software architecture,
+					technical writing methodologies, and the balance between
+					production speed and structural accuracy in development.
+				</p>
+			</div>
 
-<main>
-<!-- ── HERO ────────────────────────────────────────────────── -->
-<section id="hero" class="section">
-  <div class="container">
-    <div class="hero-inner">
+			<div class="grid-block">
+				<h2><a href="now/index.html">What's happening now →</a></h2>
+				<p>
+					Fresh off launching my custom portfolio domain, I am
+					currently architecting a high-performance, UCI-compliant
+					chess engine in C++ and refining backend data structures.
+				</p>
+			</div>
+		</main>
 
-      <div class="hero-text">
+		<hr />
 
-        <h1 class="hero-h1">I'm <span>Saeed</span>.</h1>
-        <p class="hero-sub">Builder, Reader &amp; Perpetual Learner</p>
+		<section class="featured-project">
+			<h2>Featured Project</h2>
+			<h3>Digital Library</h3>
+			<p>
+				A robust digital library application built completely from
+				scratch using a custom, modular PHP Model-View-Controller (MVC)
+				architectural pattern. Designed to eliminate framework overhead,
+				prioritizing strict routing, security, and separation of
+				concerns.
+			</p>
+			<a href="work/index.html">See all work →</a>
+		</section>
 
-        <div class="hero-ctas reveal">
-          <a href="coming-soon.html" class="btn btn-olive">My Story</a>
-        </div>
-      </div>
+		<hr />
 
-      <div class="hero-img-wrap">
-        <img
-          src="https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto,f_auto,w_440/v1779627924/Saeed_68_cewriq.jpg"
-          srcset="https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto,f_auto,w_320/v1779627924/Saeed_68_cewriq.jpg 320w,
-                  https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto,f_auto,w_640/v1779627924/Saeed_68_cewriq.jpg 640w,
-                  https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto,f_auto,w_880/v1779627924/Saeed_68_cewriq.jpg 880w"
-          sizes="(min-width: 901px) 440px, 320px"
-          alt="Hafiz Muhammad Saeed, HMSaeed, Taxila Photographer, HMS"
-          loading="eager"
-          fetchpriority="high">
-      </div>
+		<section class="testimonial">
+			<blockquote>
+				"Saeed’s approach to backend architecture is incredibly
+				disciplined. The modular MVC structure he designed
+				logic-by-logic handles data flow beautifully and reads like a
+				masterclass in clean, foundational development."
+			</blockquote>
+			<cite
+				>— <strong>Academic Project Reviewer</strong>, UET Taxila</cite
+			>
+		</section>
 
-    </div>
-  </div>
-</section>
+		<hr />
 
-</main>
-
-<!-- Orientation Grid -->
-<main class="orientation-grid">
-
-        <div class="grid-block">
-            <h2><a href="work/index.html">What I'm building →</a></h2>
-            <p>Crafting custom digital architecture, from a modular PHP MVC library platform to a high-performance systems project. I focus on clean code written from the ground up without relying on heavy frameworks.</p>
-        </div>
-
-        <div class="grid-block">
-            <h2><a href="story/index.html">Who I am →</a></h2>
-            <p>A Computer Science student and technical generalist who values the power of synthesis. My perspective is shaped by software engineering patterns, the strategy of chess, and the precise optics of macro photography.</p>
-        </div>
-
-        <div class="grid-block">
-            <h2><a href="writing/index.html">What I'm thinking →</a></h2>
-            <p>Documenting my deep dives into software architecture, technical writing methodologies, and the balance between production speed and structural accuracy in development.</p>
-        </div>
-
-        <div class="grid-block">
-            <h2><a href="now/index.html">What's happening now →</a></h2>
-            <p>Fresh off launching my custom portfolio domain, I am currently architecting a high-performance, UCI-compliant chess engine in C++ and refining backend data structures.</p>
-        </div>
-
-    </main>
-
-    <hr>
-
-    <section class="featured-project">
-        <h2>Featured Project</h2>
-        <h3>Digital Library</h3>
-        <p>A robust digital library application built completely from scratch using a custom, modular PHP Model-View-Controller (MVC) architectural pattern. Designed to eliminate framework overhead, prioritizing strict routing, security, and separation of concerns.</p>
-        <a href="work/index.html">See all work →</a>
-    </section>
-
-    <hr>
-
-    <section class="testimonial">
-        <blockquote>"Saeed’s approach to backend architecture is incredibly disciplined. The modular MVC structure he designed logic-by-logic handles data flow beautifully and reads like a masterclass in clean, foundational development."</blockquote>
-        <cite>— <strong>Academic Project Reviewer</strong>, UET Taxila</cite>
-    </section>
-
-    <hr>
-
-    <section class="connect-cta">
-        <p>Want to work together or just say hello?</p>
-        <a href="connect/index.html" class="btn btn-outline">Say Hello</a>
-    </section>
-
-
+		<section class="connect-cta">
+			<p>Want to work together or just say hello?</p>
+			<a href="connect/index.html" class="btn btn-outline">Say Hello</a>
+		</section>
 
 <script>
-    window.addEventListener("load", function () {
-        const loader = document.getElementById("page-loader");
-        if (loader) {
-            loader.classList.add("loader-hidden");
-            setTimeout(() => loader.remove(), 600);
-        }
-    });
+  const startTime = Date.now();
+  const MINIMUM_TIME = 2000; // Time in milliseconds (e.g., 2 seconds)
+
+  window.addEventListener("load", function () {
+    const loader = document.getElementById("page-loader");
+    if (!loader) return;
+
+    // 2. Calculate how much time has already passed since the user hit the page
+    const elapsedTime = Date.now() - startTime;
+
+    // 3. Subtract elapsedTime from your minimum time to see how much delay is left
+    // (If the page took longer than 2s to load, remainingDelay will be 0)
+    const remainingDelay = Math.max(0, MINIMUM_TIME - elapsedTime);
+
+    // 4. Wait out the remaining time before hiding it
+    setTimeout(() => {
+      loader.classList.add("loader-hidden");
+      setTimeout(() => loader.remove(), 600); // Your existing fade-out cleanup
+    }, remainingDelay);
+  });
 </script>
-
-</body>
-
-
+	</body>
 </html>

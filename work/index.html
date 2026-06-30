@@ -61,10 +61,7 @@
 				"name": "Work — Hafiz Muhammad Saeed",
 				"description": "A collection of projects built, broken, and learned from by Hafiz Muhammad Saeed.",
 				"url": "https://hmsaeed.com/work/",
-				"author": {
-					"@type": "Person",
-					"name": "Hafiz Muhammad Saeed"
-				}
+				"author": { "@type": "Person", "name": "Hafiz Muhammad Saeed" }
 			}
 		</script>
 
@@ -81,32 +78,26 @@
 			href="../src/icons/logo-mark.svg"
 		/>
 
+		<!-- Theme Detection -->
+		<script>
+			(function () {
+				const theme =
+					localStorage.getItem("theme") ||
+					(window.matchMedia("(prefers-color-scheme: dark)").matches
+						? "dark"
+						: "light");
+				document.documentElement.setAttribute("data-theme", theme);
+			})();
+		</script>
+
 		<!-- Stylesheets -->
 		<link rel="stylesheet" href="../src/css/main.css" />
 		<script type="module" src="../src/js/page.js" defer></script>
 	</head>
 
 	<body>
-		<!-- PURE CSS FILTER RADIOS -->
-		<input
-			type="radio"
-			name="work-filter"
-			id="filter-all"
-			class="work-filter-radio"
-			checked
-		/>
-		<input
-			type="radio"
-			name="work-filter"
-			id="filter-web"
-			class="work-filter-radio"
-		/>
-		<input
-			type="radio"
-			name="work-filter"
-			id="filter-hardware"
-			class="work-filter-radio"
-		/>
+		<!-- SCROLL PROGRESS -->
+		<div class="scroll-progress" id="scrollProgress"></div>
 
 		<!-- WORK HERO SECTION -->
 		<header class="cs-hero work-hero">
@@ -135,22 +126,25 @@
 					role="tablist"
 					aria-label="Filter projects by category"
 				>
-					<label for="filter-all" class="work-filter-btn btn-all">
+					<button
+						class="work-filter-btn btn-all active"
+						data-filter="all"
+					>
 						All
-					</label>
-					<label for="filter-web" class="work-filter-btn btn-web">
+					</button>
+					<button class="work-filter-btn btn-web" data-filter="web">
 						<svg class="icon icon-md">
 							<use href="#icon-code" />
 						</svg>
 						Web
-					</label>
-					<label
-						for="filter-hardware"
+					</button>
+					<button
 						class="work-filter-btn btn-hardware"
+						data-filter="hardware"
 					>
 						<svg class="icon icon-md"><use href="#icon-cpu" /></svg>
 						Hardware
-					</label>
+					</button>
 				</div>
 			</div>
 		</header>
@@ -159,7 +153,7 @@
 		<main class="container work-container">
 			<div class="work-cards-grid">
 				<!-- PROJECT 1: DIGITAL LIBRARY -->
-				<article class="work-card" data-category="web">
+				<article class="work-card reveal" data-category="web">
 					<div class="work-card-visual">
 						<img
 							src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&q=80&w=1200"
@@ -180,10 +174,7 @@
 							cross-text search.
 						</p>
 						<div class="work-card-actions">
-							<a
-								href="library.html"
-								class="btn-work-primary"
-							>
+							<a href="library.html" class="btn-work-primary">
 								<span>Case Study</span>
 								<svg class="icon icon-md">
 									<use href="#icon-arrow-right" />
@@ -218,7 +209,7 @@
 				</article>
 
 				<!-- PROJECT 2: HMS TRACKER -->
-				<article class="work-card" data-category="web">
+				<article class="work-card reveal" data-category="web">
 					<div class="work-card-visual">
 						<img
 							src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1200"
@@ -250,7 +241,7 @@
 							</a>
 							<div class="work-external-links">
 								<a
-									href="coming-soon.html"
+									href="404-error.html"
 									class="btn-work-icon"
 									title="Live Demo"
 								>
@@ -275,7 +266,7 @@
 				</article>
 
 				<!-- PROJECT 3: BINARY PALINDROME DETECTOR -->
-				<article class="work-card" data-category="hardware">
+				<article class="work-card reveal" data-category="hardware">
 					<div class="work-card-visual">
 						<img
 							src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200"
@@ -327,7 +318,7 @@
 				</article>
 
 				<!-- PROJECT 4: FIRE FIGHTING CAR -->
-				<article class="work-card" data-category="hardware">
+				<article class="work-card reveal" data-category="hardware">
 					<div class="work-card-visual">
 						<img
 							src="https://images.unsplash.com/photo-1608564697071-ddf911d81370?auto=format&fit=crop&q=80&w=1200"
