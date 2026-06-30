@@ -1,7 +1,6 @@
 /* ── PROJECTS PAGE REDESIGN JS ────────────────────────────────────────── */
 
 import { caseStudies } from './data/caseStudies.js';
-import { projects } from './data/projects.js';
 import { photos } from './data/photos.js';
 
 import { initIcons } from './components/Icons.js';

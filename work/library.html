@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-T31PJSBQY8"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+			gtag("config", "G-T31PJSBQY8");
+		</script>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="robots" content="index, follow" />
+
+		<!-- Primary Meta Tags -->
+		<title id="csPageTitle">Case Study — Hafiz Muhammad Saeed</title>
+		<meta name="title" content="Case Study — Hafiz Muhammad Saeed" />
+		<meta
+			name="description"
+			id="csMetaDesc"
+			content="A technical deep dive into architecture, architectural decisions, and honest reflections."
+		/>
+
+		<!-- Fonts & Favicon -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Fira+Code:wght@400;500&display=swap"
+		/>
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href="../src/icons/logo-mark.svg"
+		/>
+
+		<!-- Theme Detection -->
+		<script>
+			(function () {
+				const theme =
+					localStorage.getItem("theme") ||
+					(window.matchMedia("(prefers-color-scheme: dark)").matches
+						? "dark"
+						: "light");
+				document.documentElement.setAttribute("data-theme", theme);
+			})();
+		</script>
+
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="../src/css/main.css" />
+		<script type="module" src="../src/js/caseStudy.js" defer></script>
+	</head>
+
+	<body>
+		<!-- SCROLL PROGRESS -->
+		<div class="scroll-progress" id="scrollProgress"></div>
+
+		<!-- Main Container -->
+		<main class="cs-article-container" id="csArticleContainer">
+			<div class="cs-back-bar reveal">
+				<a href="index.html" class="cs-back-link">
+					<svg class="icon icon-md">
+						<use href="#icon-arrow-left" />
+					</svg>
+					<span>Back</span>
+				</a>
+			</div>
+
+			<header class="cs-header-block reveal">
+				<h1 class="cs-header-title">Digital Library</h1>
+				<p class="cs-header-oneliner">
+					A one-liner description of the architecture and project
+					mission.
+				</p>
+
+				<div class="cs-header-actions">
+					<a
+						href="https://example.com"
+						class="btn btn-olive"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<span>Site ↗</span>
+					</a>
+					<a
+						href="https://github.com/username/repo"
+						class="btn btn-outline"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<svg class="icon icon-md">
+							<use href="#icon-github" />
+						</svg>
+						<span>Source Code</span>
+					</a>
+				</div>
+
+				<div class="cs-hero-image-wrap">
+					<img
+						src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&q=80&w=1200"
+						alt="Project Visual Overview"
+						class="cs-hero-image"
+						loading="eager"
+					/>
+				</div>
+			</header>
+
+			<article class="cs-article-body">
+				<section class="cs-anatomy-section reveal">
+					<h2 class="cs-anatomy-heading">01. The Problem</h2>
+					<p class="cs-anatomy-text">
+						Iqbal's texts are scattered across poorly maintained
+						government sites, scanned PDFs, and academic
+						repositories that assume you already know what you're
+						looking for. There's no place designed for a student to
+						sit with a single work, read it deeply, and understand
+						it — not just find it.
+					</p>
+				</section>
+
+				<section class="cs-anatomy-section reveal">
+					<h2 class="cs-anatomy-heading">02. The Approach</h2>
+					<p class="cs-anatomy-text">
+						The competitor analysis of iap.gov.pk and
+						allamaiqbal.com confirmed the moat: both have the texts,
+						neither has the reading layer. The decision to focus
+						only on public domain Iqbal works narrowed the scope in
+						a way that made the project actually finishable — rather
+						than an endless library cataloguing problem.
+					</p>
+				</section>
+
+				<section class="cs-anatomy-section reveal">
+					<h2 class="cs-anatomy-heading">03. What I Built</h2>
+					<p class="cs-anatomy-text">
+						A distraction-free reading interface featuring
+						synchronized commentary layers, custom typography
+						tailored for Urdu script readability, and instant
+						cross-text search across classical poetry collections.
+					</p>
+
+					<div class="cs-built-demo-housing">
+						<div class="demo-mockup-frame">
+							<div class="mockup-header">
+								<span class="mockup-dot red"></span>
+								<span class="mockup-dot yellow"></span>
+								<span class="mockup-dot green"></span>
+								<span class="mockup-title"
+									>Project Name — Architecture System</span
+								>
+							</div>
+							<div class="mockup-body" id="csDemoBody">
+								<div class="visual-spec-box">
+									<div class="spec-item">
+										<span class="spec-label"
+											>System State</span
+										>
+										<span class="spec-val"
+											>In Progress</span
+										>
+									</div>
+									<div class="spec-item">
+										<span class="spec-label"
+											>Architecture</span
+										>
+										<span class="spec-val"
+											>MVC / Modular</span
+										>
+									</div>
+									<div class="spec-item">
+										<span class="spec-label"
+											>Deployment</span
+										>
+										<span class="spec-val"
+											>DEVELOPMENT Module</span
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="cs-anatomy-section reveal">
+					<h2 class="cs-anatomy-heading">04. What I Learned</h2>
+					<p class="cs-anatomy-text">
+						I underestimated how much the content problem dwarfs the
+						engineering problem. Building the reading interface is
+						tractable. Curating, structuring, and annotating Iqbal's
+						corpus in a way that's actually useful to a scholar —
+						that's a years-long project, not a semester one. The
+						pitch to a scholarly collaborator was the right move; I
+						can't do this alone.
+					</p>
+				</section>
+
+				<section class="cs-anatomy-section reveal">
+					<h2 class="cs-anatomy-heading">
+						05. What I'd Do Differently
+					</h2>
+					<p class="cs-anatomy-text">
+						I would focus on perfecting a single poem's full
+						interactive annotation experience before building out
+						the wider library container. Prototyping the depth of
+						the reading experience first would have validated user
+						interest much faster.
+					</p>
+				</section>
+			</article>
+
+			<footer class="cs-footer-nav reveal">
+				<a href="detector.html" class="cs-nav-link prev">
+					<span class="cs-nav-label">← Previous</span>
+					<span class="cs-nav-title">Binary Detector</span>
+				</a>
+				<a href="fire-car.html" class="cs-nav-link next">
+					<span class="cs-nav-label">Next →</span>
+					<span class="cs-nav-title">Fire Fighter Car</span>
+				</a>
+			</footer>
+		</main>
+	</body>
+</html>

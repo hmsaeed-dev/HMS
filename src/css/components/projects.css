@@ -1282,7 +1282,7 @@
 .work-card-visual {
 	position: relative;
 	width: 100%;
-	height: 220px;
+	height: 100%;
 	overflow: hidden;
 	background: var(--ink-05);
 }
@@ -1446,28 +1446,6 @@
 	display: flex;
 	flex-direction: column;
 	gap: var(--space-md);
-}
-
-.cs-header-meta {
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-	gap: var(--space-sm);
-}
-
-.cs-year-badge {
-	font-size: var(--fs-200);
-	font-weight: 600;
-	color: var(--color-text-muted);
-	background: var(--ink-05);
-	padding: 3px 10px;
-	border-radius: var(--radiussm);
-}
-
-.cs-header-tech-tags {
-	display: flex;
-	flex-wrap: wrap;
-	gap: var(--space-2xs);
 }
 
 .cs-header-title {

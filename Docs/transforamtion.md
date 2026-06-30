@@ -1,4 +1,3 @@
-
 # hmsaeed.com — Full Redesign System
 
 ## I. The Core Mental Model First
@@ -7,13 +6,13 @@ Before touching a single page, you need to resolve one question: **who visits th
 
 For a presence system (not a portfolio), you have roughly four visitor types:
 
-**The Stranger** — found you via Google, LinkedIn, or a link. Knows nothing. Needs: *who is this person, should I care?*
+**The Stranger** — found you via Google, LinkedIn, or a link. Knows nothing. Needs: _who is this person, should I care?_
 
-**The Collaborator** — a potential project partner, client, or fellow builder. Needs: *can this person actually build things, and are they worth working with?*
+**The Collaborator** — a potential project partner, client, or fellow builder. Needs: _can this person actually build things, and are they worth working with?_
 
-**The Recruiter/Opportunity** — an internship, freelance, or early-stage startup contact. Needs: *quick proof of competence + how to reach you.*
+**The Recruiter/Opportunity** — an internship, freelance, or early-stage startup contact. Needs: _quick proof of competence + how to reach you._
 
-**The Like-minded** — someone who shares your intellectual interests (Iqbal, polymathy, Islamic thought, startups). Needs: *is there more depth here? can I follow this person's thinking?*
+**The Like-minded** — someone who shares your intellectual interests (Iqbal, polymathy, Islamic thought, startups). Needs: _is there more depth here? can I follow this person's thinking?_
 
 Right now, hmsaeed.com is optimised for none of these four. It tries to be a portfolio for type 2 and 3, while your actual ambition is to attract type 4 — and eventually make type 1 become type 4.
 
@@ -31,19 +30,19 @@ Three different self-descriptions, none of them fully true, none of them interes
 
 Settle on one line that is actually you, used everywhere — meta title, hero, LinkedIn bio, GitHub bio, all of it. Something like:
 
-> *"Builder of things digital. Thinker across disciplines."*
+> _"Builder of things digital. Thinker across disciplines."_
 
 or simply:
 
-> *"I build software, read widely, and think out loud."*
+> _"I build software, read widely, and think out loud."_
 
 or, if you want the HMS brand weight:
 
-> *"Hafiz Muhammad Saeed — Builder, Reader, Perpetual Beginner."*
+> _"Hafiz Muhammad Saeed — Builder, Reader, Perpetual Beginner."_
 
 "Perpetual Learner" is the most honest part of your current tagline. Lead with that energy, not "Developer & Photographer" which sounds like a Fiverr profile.
 
-The meta description should become something like: *"Personal site of Hafiz Muhammad Saeed — CS student, builder, and thinker based in Taxila, Pakistan."* Drop "showcasing software and photography" entirely. That's a portfolio description.
+The meta description should become something like: _"Personal site of Hafiz Muhammad Saeed — CS student, builder, and thinker based in Taxila, Pakistan."_ Drop "showcasing software and photography" entirely. That's a portfolio description.
 
 ---
 
@@ -66,7 +65,7 @@ hmsaeed.com/
 └── /connect
 ```
 
-No more flat homepage with everything stacked. The homepage becomes a *gateway*, not a dump. Each page has a clear job.
+No more flat homepage with everything stacked. The homepage becomes a _gateway_, not a dump. Each page has a clear job.
 
 ---
 
@@ -80,9 +79,10 @@ No more flat homepage with everything stacked. The homepage becomes a *gateway*,
 
 **Structure:**
 
-**Hero** — Name, one-line identity, and *one* CTA. Not two. The CTA should be "Read My Story" not "View Projects" or "Download CV." Projects and CV are for people who already want to hire you. The homepage hero is for people who just arrived.
+**Hero** — Name, one-line identity, and _one_ CTA. Not two. The CTA should be "Read My Story" not "View Projects" or "Download CV." Projects and CV are for people who already want to hire you. The homepage hero is for people who just arrived.
 
 **Quick Orientation Block** — Four short links in a grid, like a quiet menu:
+
 - What I'm building → /work
 - Who I am → /story
 - What I'm thinking → /writing
@@ -94,9 +94,10 @@ This replaces the current wall-of-sections scroll. Each block is 2–3 sentences
 
 **One Testimonial** — A single quote, attributed, real. More powerful than a "testimonials section" with five generic ones.
 
-**Closing line + connect link** — Not a full contact section. Just one sentence like *"Want to work together or just say hello?"* with a link to /connect.
+**Closing line + connect link** — Not a full contact section. Just one sentence like _"Want to work together or just say hello?"_ with a link to /connect.
 
 **What to remove from the homepage:**
+
 - Skills & Tools section (move into individual project pages)
 - Beyond the Terminal hobby cards (move into /story)
 - Academic Journey section (move into /story)
@@ -106,23 +107,24 @@ This replaces the current wall-of-sections scroll. Each block is 2–3 sentences
 
 #### `/story` — Who You Are (The Soul of the Site)
 
-**Its job:** Make a stranger understand you as a *person*, not a credential list.
+**Its job:** Make a stranger understand you as a _person_, not a credential list.
 
 **Structure — a flowing narrative page, not a resume:**
 
 **Opening paragraph** — Written in first person, honest voice. Not "I am a passionate developer." Something real. Your Lahore origin, the move to Taxila, what kind of kid you were.
 
 **The Timeline** — Visual, scrollable, chronological. Key points:
+
 - Early life, Lahore → Taxila
 - FSC Pre-Medical (and why you chose it at the time)
 - The gap year — this section deserves real depth. The crochet, clay, wood carving, origami, the Python self-teaching, the language attempts. This is your most interesting period and most people skip it entirely in their "about" pages.
 - The decision to switch to CS
 - UET Taxila, Semester 1 → now
-- The HMS brand / Iqbaliat direction
+- The HMS brand / library direction
 
 Each point is 2–4 sentences. Not bullet points. Prose that reads like a person wrote it.
 
-**Interests block** — The hobbies that currently float orphaned on the homepage (reading, table tennis, chess, photography, walks in nature) belong here, with a sentence or two of actual context each. Not just "Reading — World Building." *What* do you read? Why does it matter to you?
+**Interests block** — The hobbies that currently float orphaned on the homepage (reading, table tennis, chess, photography, walks in nature) belong here, with a sentence or two of actual context each. Not just "Reading — World Building." _What_ do you read? Why does it matter to you?
 
 **Intellectual influences** — A short list of thinkers, books, or ideas that have shaped your thinking. Iqbal. Sowell. Islamic intellectual tradition. This is signal for the like-minded visitor.
 
@@ -137,9 +139,9 @@ Each point is 2–4 sentences. Not bullet points. Prose that reads like a person
 **Structure:** Dead simple. No design complexity needed.
 
 - One paragraph: what you're focused on this month/season
-- 3–5 bullet points of active things: Iqbaliat build, Semester 3 prep, HMS brand system, etc.
+- 3–5 bullet points of active things: library build, Semester 3 prep, HMS brand system, etc.
 - Date stamp: "Last updated: June 2026"
-- Link at the bottom: *inspired by nownownow.com*
+- Link at the bottom: _inspired by nownownow.com_
 
 Update this every 4–6 weeks. Even a small update signals you're alive. This page also ranks well in Google for your name over time.
 
@@ -171,11 +173,11 @@ Update this every 4–6 weeks. Even a small update signals you're alive. This pa
 
 #### `/connect` — Contact (Earned, Not Dumped)
 
-**Its job:** Make it easy to reach you *after* someone has understood you.
+**Its job:** Make it easy to reach you _after_ someone has understood you.
 
 **Replace the current contact dump with:**
 
-- One opening sentence about what kinds of conversations you welcome. e.g., *"I'm open to collaborations, interesting projects, or just a good conversation."*
+- One opening sentence about what kinds of conversations you welcome. e.g., _"I'm open to collaborations, interesting projects, or just a good conversation."_
 - Email address (linked)
 - WhatsApp link (but not the raw phone number)
 - LinkedIn link
@@ -191,9 +193,9 @@ Right now `/Photography/` exists inside hmsaeed.com but shows 0 photos. It's bra
 
 **The decision you need to make:**
 
-Option A — Photography stays inside hmsaeed.com as a genuine section, populated with real photos, accessible from /story or the homepage. It's part of *you*, not a separate entity.
+Option A — Photography stays inside hmsaeed.com as a genuine section, populated with real photos, accessible from /story or the homepage. It's part of _you_, not a separate entity.
 
-Option B — Photography becomes its own subdomain or brand (hmscaptures.com, hmsclicks.com), and hmsaeed.com simply links out to it with a sentence: *"I also shoot — see HMS Clicks."*
+Option B — Photography becomes its own subdomain or brand (hmscaptures.com, hmsclicks.com), and hmsaeed.com simply links out to it with a sentence: _"I also shoot — see HMS Clicks."_
 
 **My read:** Given the HMS brand system you're building, Option B is the cleaner long-term play. It lets each entity be fully itself. hmsaeed.com becomes the person. HMS Clicks becomes the photography brand. The personal site links to it but doesn't try to contain it.
 
@@ -204,6 +206,7 @@ Until you decide and populate it, **remove the Photography page from the navigat
 ### V. Navigation Hierarchy
 
 **Primary nav (always visible, minimal):**
+
 ```
 Saeed    Story    Work    Writing    Now    Connect
 ```
@@ -254,21 +257,26 @@ Notice: every path ends at /connect. That page is the conversion point of the en
 If you try to fix everything at once you'll fix nothing. Here is the sequence:
 
 **Week 1 — Stop the bleeding:**
+
 - Remove or replace the dead Projects and Photography pages with placeholder text
 - Remove phone number from contact
 - Fix the tagline inconsistency everywhere
 
 **Week 2-3 — Add the soul:**
+
 - Write and publish /story. This is the highest-leverage page you can add. Even a rough version is better than none.
 
 **Week 4 — Make it alive:**
+
 - Publish /now. Takes 30 minutes to write.
 
 **Month 2 — Add depth:**
+
 - Write the first case study for one real project (Bayt al-Hikma or HMS Tracker)
 - Write the first /writing note on anything
 
 **Month 3+ — Fill the system:**
+
 - Add testimonials as a homepage section once you have 1–2 real ones
 - Restructure the homepage away from the current section-dump layout
 - Decide on photography identity and act on it
@@ -279,6 +287,6 @@ If you try to fix everything at once you'll fix nothing. Here is the sequence:
 
 ### IX. One Design Principle to Hold Onto
 
-You have an aesthetic sensibility that's already right — dark tones, restraint, organic minimalism, things that accumulate meaning quietly. The design problem isn't the visual style. It's that the *structure* contradicts the *aesthetic*. A restrained visual style with a chaotic content architecture sends mixed signals.
+You have an aesthetic sensibility that's already right — dark tones, restraint, organic minimalism, things that accumulate meaning quietly. The design problem isn't the visual style. It's that the _structure_ contradicts the _aesthetic_. A restrained visual style with a chaotic content architecture sends mixed signals.
 
 The fix is alignment: quiet design + quiet structure + content that earns its depth slowly. Every page should feel like it has more behind it than it shows on the surface. That's the iceberg model applied to a website — and it fits you specifically.
