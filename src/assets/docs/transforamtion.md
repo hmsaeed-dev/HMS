@@ -155,7 +155,7 @@ Update this every 4–6 weeks. Even a small update signals you're alive. This pa
 
 **Individual Case Study pages `/work/[slug]`** — This is where the real value is. Each case study should cover: the problem it solved, the decisions made during building, what you'd do differently, and a link to the live site or GitHub. The case study format is what separates a presence system from a portfolio. It shows how you think, not just what you made.
 
-**Bayt al-Hikma, HMS Tracker, the UET projects** — all have real case studies in them if you write them. Start with one.
+**Bayt al-Hikma, Finance Tracker, the UET projects** — all have real case studies in them if you write them. Start with one.
 
 ---
 
@@ -272,7 +272,7 @@ If you try to fix everything at once you'll fix nothing. Here is the sequence:
 
 **Month 2 — Add depth:**
 
-- Write the first case study for one real project (Bayt al-Hikma or HMS Tracker)
+- Write the first case study for one real project (Bayt al-Hikma or Finance Tracker)
 - Write the first /writing note on anything
 
 **Month 3+ — Fill the system:**
