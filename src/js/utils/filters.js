@@ -1,5 +1,7 @@
 /* ── PAGE FILTER UTILITIES ──────────────────────────────────── */
 
+import { applyWritingFilters } from './notionModal.js';
+
 export function initWorkFilters() {
 	const filterBar = document.querySelector('.work-filter-bar');
 	if (!filterBar) return;
@@ -30,12 +32,9 @@ export function initWritingFilters() {
 	if (!toolbar) return;
 
 	const chips = toolbar.querySelectorAll('.archive-chip');
-	const entries = document.querySelectorAll('.post-entry');
 
 	chips.forEach((chip) => {
 		chip.addEventListener('click', () => {
-			const filter = chip.dataset.filter;
-
 			chips.forEach((c) => {
 				c.classList.remove('active');
 				c.setAttribute('aria-selected', 'false');
@@ -43,13 +42,7 @@ export function initWritingFilters() {
 			chip.classList.add('active');
 			chip.setAttribute('aria-selected', 'true');
 
-			entries.forEach((entry) => {
-				if (filter === 'all' || entry.dataset.category === filter) {
-					entry.removeAttribute('style');
-				} else {
-					entry.style.display = 'none';
-				}
-			});
+			applyWritingFilters();
 		});
 	});
 }

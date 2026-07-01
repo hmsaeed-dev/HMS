@@ -19,18 +19,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<!-- Primary Meta Tags -->
-		<title>Academics & Notion Notes | HMS</title>
+		<title>Academics — Hafiz Muhammad Saeed</title>
 		<meta
 			name="title"
-			content="Academics & Notes | Hafiz Muhammad Saeed"
+			content="Academics | Hafiz Muhammad Saeed"
 		/>
 		<meta
 			name="description"
-			content="Explore the academic journey, record ledger, and published Notion notes of Hafiz Muhammad Saeed, a CS student at UET Taxila. Open-source exam preparation sheets."
+			content="Academic record and qualifications of Hafiz Muhammad Saeed, a CS student at UET Taxila."
 		/>
 		<meta
 			name="keywords"
-			content="Notion Notes, Academic Portfolio, UET Taxila, Hafiz Muhammad Saeed Academics, Computer Science Notes, Exam Prep"
+			content="Academic Portfolio, UET Taxila, Hafiz Muhammad Saeed Academics, Computer Science"
 		/>
 		<link rel="canonical" href="https://hmsaeed.com/academics/" />
 
@@ -43,7 +43,7 @@
 		/>
 		<meta
 			property="og:description"
-			content="Academic journey, record ledger, and open-source study guides published from my personal Notion."
+			content="Academic journey and record ledger of Hafiz Muhammad Saeed."
 		/>
 		<meta
 			property="og:image"
@@ -55,11 +55,11 @@
 		<meta property="twitter:url" content="https://hmsaeed.com/academics/" />
 		<meta
 			property="twitter:title"
-			content="Academics & Notion Notes | Hafiz Muhammad Saeed"
+			content="Academics | Hafiz Muhammad Saeed"
 		/>
 		<meta
 			property="twitter:description"
-			content="Academic journey, record ledger, and open-source study guides published from my personal Notion."
+			content="Academic journey and record ledger of Hafiz Muhammad Saeed."
 		/>
 		<meta
 			property="twitter:image"
@@ -71,8 +71,8 @@
 			{
 				"@context": "https://schema.org",
 				"@type": "CollectionPage",
-				"name": "Academic Portfolio & Notion Notes - Hafiz Muhammad Saeed",
-				"description": "Academic records and published Notion study notes by Hafiz Muhammad Saeed.",
+				"name": "Academics - Hafiz Muhammad Saeed",
+				"description": "Academic records and qualifications of Hafiz Muhammad Saeed.",
 				"url": "https://hmsaeed.com/academics/",
 				"author": {
 					"@type": "Person",
@@ -113,7 +113,7 @@
 			<div class="cs-hero-content">
 				<h1 class="cs-title">Academic Hub</h1>
 				<p class="cs-intro">
-					My educational pathway at UET Taxila and study notes published from my personal Notion.
+					My educational pathway at UET Taxila and formal qualifications.
 				</p>
 
 				<div class="cs-hero-stats">
@@ -121,21 +121,9 @@
 						<span class="cs-stat-num" id="statGPA">3.90</span>
 						<span class="cs-stat-label">CGPA</span>
 					</div>
-					<div class="cs-stat">
-						<span class="cs-stat-num" id="statNotes">0</span>
-						<span class="cs-stat-label">Notes</span>
-					</div>
 				</div>
 			</div>
 		</header>
-
-		<!-- Mobile Tab Switcher -->
-		<div class="mobile-tabs-container">
-			<div class="mobile-tabs" id="mobileTabs">
-				<button class="mobile-tab-btn active" data-target="ledger-section">Ledger</button>
-				<button class="mobile-tab-btn" data-target="notion-hub">Study Notes</button>
-			</div>
-		</div>
 
 		<main class="container">
 			<!-- LEDGER DESIGN - ACADEMIC RECORD -->
@@ -159,91 +147,44 @@
 							</tr>
 						</thead>
 						<tbody id="ledger-body">
-							<!-- Dynamically Injected by JS -->
+							<tr>
+								<td class="ledger-year" data-label="Period">2025</td>
+								<td data-label="Qualification">
+									<div class="ledger-degree">BSc in Computer Science</div>
+									<div style="font-size: var(--fs-300); color: var(--color-text-muted); margin-top: 4px;">
+										Second-year student focused on software engineering, web development, and the intersection of design and code.
+									</div>
+								</td>
+								<td data-label="Institution">University of Engineering and Technology, Taxila</td>
+								<td data-label="Status"><span class="ledger-badge">1st Year Completed</span></td>
+							</tr>
+							<tr>
+								<td class="ledger-year" data-label="Period">2022</td>
+								<td data-label="Qualification">
+									<div class="ledger-degree">Intermediate</div>
+									<div style="font-size: var(--fs-300); color: var(--color-text-muted); margin-top: 4px;">
+										Completed with distinction. Awarded merit scholarship for consecutive academic years.
+									</div>
+								</td>
+								<td data-label="Institution">Jinnah Education System, Taxila</td>
+								<td data-label="Status"><span class="ledger-badge">Distinction (90%)</span></td>
+							</tr>
+							<tr>
+								<td class="ledger-year" data-label="Period">2020</td>
+								<td data-label="Qualification">
+									<div class="ledger-degree">Matriculation</div>
+									<div style="font-size: var(--fs-300); color: var(--color-text-muted); margin-top: 4px;">
+										Foundation in mathematics, physics and chemistry. Class representative and debate team captain.
+									</div>
+								</td>
+								<td data-label="Institution">Jinnah Education System, Taxila</td>
+								<td data-label="Status"><span class="ledger-badge">Grade A+</span></td>
+							</tr>
 						</tbody>
 					</table>
 				</div>
 			</section>
 
-			<!-- NOTION STUDY GUIDES HUB -->
-			<section class="section" id="notion-hub" style="margin-top: var(--space-2xl);">
-				<div class="reveal">
-					<h2 class="section-title">Study Notes</h2>
-					<p class="section-sub">
-						Study resources compiled directly from my Notion workspaces.
-					</p>
-					<div class="divider"></div>
-				</div>
-
-				<!-- Search & Filter Bar -->
-				<div class="notes-filter-bar reveal">
-					<div class="search-wrap">
-						<input
-							type="text"
-							id="notesSearch"
-							placeholder="Search by topics . . ."
-							aria-label="Search Notion notes"
-						/>
-						<button id="searchClear" class="search-clear-btn" aria-label="Clear search" style="display: none;">&times;</button>
-					</div>
-					<div class="filter-pills" id="notesFilters">
-						<button class="filter-pill active" data-filter="all">
-							All
-						</button>
-						<!-- Dynamically Injected by JS -->
-					</div>
-				</div>
-
-				<div class="notes-hub-layout">
-					<!-- Main Grid content -->
-					<div class="notes-main-content">
-						<div class="notes-grid" id="notesGrid">
-							<!-- Dynamic Cards Injected by JS -->
-						</div>
-						<div id="notesEmpty" class="notes-empty hidden reveal">
-							<p>Working on it...</p>
-						</div>
-					</div>
-
-				</div>
-			</section>
 		</main>
-
-		<!-- Interactive Preview Modal -->
-		<div
-			class="notes-modal"
-			id="notesModal"
-			aria-hidden="true"
-			role="dialog"
-		>
-			<div class="modal-backdrop" id="modalBackdrop"></div>
-			<div class="modal-content">
-				<button class="modal-close" id="modalClose" aria-label="Close Preview">
-					&times;
-				</button>
-				<div class="modal-header">
-					<span class="modal-tag" id="modalTag">SUBJECT</span>
-					<h2 id="modalTitle"></h2>
-					<div class="modal-meta">
-						<!-- <span id="modalDate">Updated recently</span> &bull; -->
-						<span id="modalReadingTime"></span>
-					</div>
-				</div>
-				<div class="modal-body" id="modalBody">
-					<!-- Simulated Notion Content Injected by JS -->
-				</div>
-				<div class="modal-footer">
-					<a
-						href="#"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="btn btn-olive"
-						id="modalNotionLink"
-					>
-						Open in Notion ↗
-					</a>
-				</div>
-			</div>
-		</div>
 	</body>
 </html>

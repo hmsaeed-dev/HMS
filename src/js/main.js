@@ -1,6 +1,6 @@
 /* ── MAIN ENTRY POINT (HOME PAGE) ────────────────────────── */
 
-import { projects, academics} from "./data/index.js";
+import { projects } from "./data/index.js";
 import { initNavigation } from "./components/Navigation.js";
 import { initFooter } from "./components/Footer.js";
 
@@ -29,9 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	// 3. Rendering Data
-	// Render dynamic content first
 	renderProjects(projects);
-	renderAcademics(academics);
 
 	// 4. Initialize scroll reveal AFTER all content is rendered
 	initScrollReveal();
@@ -71,16 +69,4 @@ function renderProjects(data) {
 	});
 }
 
-function renderAcademics(data) {
-	renderList("academic-list", data, (a) => {
-		const item = cloneTemplate("tpl-academic-item");
-		if (!item) return null;
 
-		item.querySelector(".academic-year").textContent = a.year;
-		item.querySelector(".academic-degree").textContent = a.degree;
-		item.querySelector(".academic-school").textContent = a.school;
-		item.querySelector(".academic-badge").textContent = a.badge;
-
-		return item;
-	});
-}
