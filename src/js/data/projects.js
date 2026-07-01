@@ -21,6 +21,6 @@ export const projects = [
 		desc: "A narrative-driven gallery showcasing macro, flora and landscape Photography.",
 		img: "https://res.cloudinary.com/dkpehrpdm/image/upload/f_auto,q_auto/rose-1_nyur4f",
 		code: "https://hmsaeed-dev.github.io",
-		demo: "Photography/index.html",
+		demo: "photography/index.html",
 	},
 ];

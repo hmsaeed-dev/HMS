@@ -41,11 +41,7 @@ export const caseStudies = [
 		title: "Vehicle Management System",
 		shortDesc:
 			"A console-based management tool built for rental service companies — covering vehicle registration, customer rentals, returns, and fleet buying and selling, all from a single interface.",
-		techStack: [
-			"OOP Principles",
-			"File I/O Streams",
-			"Data Validation",
-		],
+		techStack: ["OOP Principles", "File I/O Streams", "Data Validation"],
 		links: {
 			source: "https://github.com/hmsaeed-dev/Vehicle-Management-System",
 			demo: "../projects/index.html",
@@ -83,7 +79,7 @@ export const caseStudies = [
 		techStack: ["Observer", "API", "Responsive CSS Grid"],
 		links: {
 			source: "https://github.com/hmsaeed-dev",
-			demo: "../Photography/index.html",
+			demo: "../photography/index.html",
 		},
 		metrics: [
 			{ label: "Lighthouse Performance", value: "99+" },
@@ -109,4 +105,3 @@ export const caseStudies = [
 		],
 	},
 ];
-

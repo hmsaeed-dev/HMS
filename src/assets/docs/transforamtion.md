@@ -189,7 +189,7 @@ Update this every 4–6 weeks. Even a small update signals you're alive. This pa
 
 #### Photography — Resolve the Identity Question
 
-Right now `/Photography/` exists inside hmsaeed.com but shows 0 photos. It's branded separately in your mind as HMS Clicks.
+Right now `/photography/` exists inside hmsaeed.com but shows 0 photos. It's branded separately in your mind as HMS Clicks.
 
 **The decision you need to make:**
 

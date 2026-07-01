@@ -1,0 +1,117 @@
+================================================================================
+HAFIZ MUHAMMAD SAEED | PROFESSIONAL PROFILE
+================================================================================
+
+--------------------------------------------------------------------------------
+1. PERSONAL INFORMATION
+--------------------------------------------------------------------------------
+Full Name: Hafiz Muhammad Saeed
+Alias: HMSaeed
+Location: Taxila, Punjab, Pakistan
+Email: hms.builds@gmail.com
+Phone: +92 321 9798860
+Website: https://hmsaeed-dev.github.io/HMS/
+ORCID: 0009-0007-9947-5047
+
+--------------------------------------------------------------------------------
+2. PROFESSIONAL SUMMARY
+--------------------------------------------------------------------------------
+Full-Stack Developer and Photographer specializing in Vanilla JavaScript, C++, and
+creative macro photography storytelling. Currently a second-semester Computer
+Science student at UET Taxila, passionate about engineering scalable systems and
+bridging the gap between design and code. Driven by the philosophy that "the
+most profound truths aren't found within a single discipline, but in the
+threads that tie them together."
+
+--------------------------------------------------------------------------------
+3. EDUCATION
+--------------------------------------------------------------------------------
+Bachelor of Science in Computer Science (BSCS)
+University of Engineering and Technology (UET), Taxila
+2024 - Present (Currently in 2nd Semester)
+Focus: Software engineering, web development, and OOP.
+
+Intermediate (Pre-Medical)
+Jinnah Education System, Taxila
+Completed: 2022
+Achievement: Distinction (90%)
+
+Matriculation (Science)
+Jinnah Education System, Taxila
+Completed: 2020
+Achievement: Grade A+, Class Representative, Debate Team Captain
+
+--------------------------------------------------------------------------------
+4. TECHNICAL SKILLS
+--------------------------------------------------------------------------------
+Languages:
+- C++ (OOP & Data Structures)
+- JavaScript (ES Modules, Vanilla JS)
+- Python
+- HTML5 & CSS3 (Modular CSS architecture)
+
+Frameworks & Libraries:
+- Node.js
+- React
+- Express.js
+
+Tools & Platforms:
+- Git & GitHub
+- VS Code
+- Figma
+- XAMPP
+- Local Storage & Web APIs
+
+--------------------------------------------------------------------------------
+5. KEY PROJECTS
+--------------------------------------------------------------------------------
+House of Wisdom (Digital Library System)
+- Role: Lead Developer
+- Tech: Vanilla JS (ES Modules), MVC Pattern, Modular CSS.
+- Description: A scalable digital library system designed with a strict
+  separation of concerns (Model-View-Controller).
+- Demo: https://hmslibrary.netlify.app/
+
+Personal Finance Tracker
+- Tech: Vanilla JS, Offline Persistence.
+- Description: A progressive offline-first web app focusing on data privacy,
+  speed, and data visualization.
+- Demo: https://hmsaeed-dev.github.io/Finance-Tracker/
+
+Photography Portfolio
+- Description: A narrative-driven gallery showcasing macro, flora, and
+  landscape photography with technical EXIF insights.
+- URL: https://hmsaeed/photography/
+
+--------------------------------------------------------------------------------
+6. LEADERSHIP & INVOLVEMENT
+--------------------------------------------------------------------------------
+CSP Coordinator | Umeed e Subh (UET Taxila)
+- A youth-led welfare and educational organization.
+- Involved in coordinating community service programs and welfare initiatives.
+
+--------------------------------------------------------------------------------
+7. HOBBIES & INTERESTS
+--------------------------------------------------------------------------------
+- Macro Photography: Capturing the intricate details of small life and nature.
+- Strategic Logic: Avid Chess player.
+- World Building: Passionate about reading and narrative structures.
+- Craft & Nature: Woodworking and walking.
+- Physical Agility: Football and Table Tennis.
+- Travelling: Interested in expanding horizons through exploration.
+
+--------------------------------------------------------------------------------
+8. SOCIAL & PROFESSIONAL LINKS
+--------------------------------------------------------------------------------
+GitHub:    https://github.com/hmsaeed-dev
+LinkedIn:  https://www.linkedin.com/in/hmsaeed
+Instagram: https://www.instagram.com/hms_aeed
+Facebook:  https://www.facebook.com/hmsaeed101/
+X (Twitter): https://x.com/hms_aeed
+Medium:    https://medium.com/@hms_blogs
+LeetCode:  https://leetcode.com/u/hms_aeed/
+Google Dev: https://g.dev/hmsaeed
+Behance:   https://www.behance.net/hms_aeed
+CodePen:   https://codepen.io/hms_aeed
+WakaTime:  https://wakatime.com/@hmsaeed
+Chess.com: https://www.chess.com/member/hms_aeed
