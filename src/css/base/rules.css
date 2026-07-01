@@ -19,6 +19,8 @@
   --ink-05:       rgba(42, 42, 34, 0.04);
 
   /* 2. Semantic Colors (Intent-based) */
+  --earth:             #8b6b4d;
+  --sky:               #5a8aa8;
   --color-accent:      var(--olive);
   --color-accent-lt:   var(--olive-lt);
   --color-earth:       var(--earth);

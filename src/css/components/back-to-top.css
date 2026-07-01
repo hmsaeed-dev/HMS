@@ -14,7 +14,7 @@
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
-	z-index: 150;
+	z-index: var(--z-back-to-top);
 	opacity: 0;
 	visibility: hidden;
 	transform: translateY(var(--space-md));
