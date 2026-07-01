@@ -15,7 +15,6 @@ export function initNavigation({ pathPrefix = "" } = {}) {
 
             <div class="nav-links">
                 <a href="${pathPrefix}story/index.html">Story</a>
-                <a href="${pathPrefix}now/index.html">Now</a>
                 <a href="${pathPrefix}work/index.html">Builds</a>
                 <a href="${pathPrefix}writing/index.html">Writings</a>
                 <a href="${pathPrefix}photography/index.html">Photography</a>
@@ -37,10 +36,6 @@ export function initNavigation({ pathPrefix = "" } = {}) {
         <a href="${pathPrefix}story/index.html" class="mobile-link">
             <svg class="icon"><use href="/src/icons/sprite.svg#icon-user"/></svg>
             Story
-        </a>
-        <a href="${pathPrefix}now/index.html" class="mobile-link">
-            <svg class="icon"><use href="/src/icons/sprite.svg#icon-clock"/></svg>
-            Now
         </a>
         <a href="${pathPrefix}work/index.html" class="mobile-link">
             <svg class="icon"><use href="/src/icons/sprite.svg#icon-code"/></svg>

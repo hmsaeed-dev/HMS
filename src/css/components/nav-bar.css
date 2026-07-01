@@ -23,12 +23,12 @@ nav {
 	font-family: "Cormorant Garamond", serif;
 	font-size: var(--fs-700);
 	font-weight: 700;
-	color: var(--color-accent);
+	color: var(--ink);
 	letter-spacing: -0.02em;
 }
 
 .nav-logo:hover {
-	color: var(--color-accent-lt);
+	color: var(--color-accent);
 }
 
 .nav-links {

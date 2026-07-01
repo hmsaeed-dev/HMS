@@ -2,9 +2,7 @@
 
 .directory-index,
 .featured-project,
-.secondary-projects,
-.testimonial,
-.connect-cta {
+.secondary-projects {
 	max-width: var(--container-max);
 	margin-inline: auto;
 	padding-inline: clamp(1.25rem, 5vw, 3rem);
@@ -373,21 +371,145 @@
 	}
 }
 
-.connect-cta {
-	padding-bottom: var(--space-3xl);
-	display: flex;
-    flex-direction: column;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: space-between;
-	gap: var(--space-md);
-	border-top: 1px solid var(--color-border-lt);
-	padding-top: var(--space-xl);
+/* ── FIELD NOTE ──────────────────────────────────────────── */
+.field-note {
+	max-width: var(--container-max);
+	margin-inline: auto;
+	padding-inline: clamp(1.25rem, 5vw, 3rem);
+	padding-block: var(--space-2xl) var(--space-2xl);
+	text-align: center;
 }
 
-.connect-cta p {
-	font-size: 1rem;
-	color: var(--color-text-muted);
+.field-note__dash {
+	display: inline-block;
+	width: 2rem;
+	height: 1.5px;
+	background: var(--color-accent);
+	border-radius: var(--radius-full);
+	margin-bottom: var(--space-lg);
+}
+
+.field-note__text {
+	font-family: "Cormorant Garamond", serif;
+	font-style: italic;
+	font-size: clamp(1.125rem, 2vw, 1.625rem);
+	line-height: 1.6;
+	color: var(--color-text);
+	max-width: 600px;
+	margin-inline: auto;
+}
+
+/* ── PHOTOGRAPHY INTERLUDE ────────────────────────────────── */
+.photography-interlude {
+	max-width: var(--container-max);
+	margin-inline: auto;
+	padding-inline: clamp(1.25rem, 5vw, 3rem);
+	padding-block: var(--space-xl) var(--space-xl);
+}
+
+.photography-interlude__image-wrap {
+	border-radius: var(--radiusmd);
+	overflow: hidden;
+	aspect-ratio: 1/1;
+	background: var(--color-border-lt);
+}
+
+.photography-interlude__image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+    object-position: center 25%;
+    object-position: center 75%;
+}
+
+.photography-interlude__caption {
+	margin-top: var(--space-sm);
+	font-size: 0.875rem;
+	color: var(--color-accent);
+	letter-spacing: 0.04em;
+	text-align: center;
+}
+
+@media (min-width: 768px) {
+	.photography-interlude {
+		max-width: none;
+		padding-inline: 0;
+		padding-block: var(--space-2xl) var(--space-2xl);
+		position: relative;
+	}
+
+	.photography-interlude__image-wrap {
+		border-radius: 0;
+		aspect-ratio: auto;
+		height: 85vh;
+		max-height: 800px;
+		width: 80vw;
+	}
+
+    .photography-interlude__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        object-position: center 35%;
+        object-position: center 50%;
+    }
+
+	.photography-interlude__caption {
+		position: absolute;
+		bottom: var(--space-lg);
+		left: clamp(1.25rem, 5vw, 3rem);
+		margin-top: 0;
+		color: var(--white-60);
+	}
+}
+
+/* ── CLOSING + CONNECT ────────────────────────────────────── */
+.closing-connect {
+    display: flex;
+    flex-direction: column;
+	max-width: var(--container-max);
+	margin-inline: auto;
+	padding-inline: clamp(1.25rem, 5vw, 3rem);
+	padding-block: var(--space-xl) var(--space-xl);
+}
+
+.closing-connect__inner {
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	gap: var(--space-md);
+}
+
+.closing-connect__rule {
+	width: 100%;
+	height: 1px;
+	background: var(--color-border);
+}
+
+.closing-connect__text {
+	font-family: "Cormorant Garamond", serif;
+	font-size: clamp(1rem, 1.6vw, 1.25rem);
+	color: var(--color-text);
+	line-height: 1.5;
+}
+
+.closing-connect__link {
+	display: inline-flex;
+	align-items: center;
+	gap: var(--space-xs);
+	color: var(--color-text);
+	font-size: 0.8rem;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	transition: color var(--transition), gap var(--transition);
+}
+
+.closing-connect__link:hover {
+	color: var(--color-accent);
+	gap: 0.65rem;
 }
 
 @media (min-width: 768px) {
