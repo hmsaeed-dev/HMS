@@ -1,468 +1,277 @@
 /* ── HOMEPAGE SECTIONS ────────────────────────────────────────── */
 
-/* Common Layout Constraints */
-.orientation-grid,
-.testimonial {
+.directory-index,
+.featured-project,
+.secondary-projects,
+.testimonial,
+.connect-cta {
 	max-width: var(--container-max);
 	margin-inline: auto;
 	padding-inline: clamp(1.25rem, 5vw, 3rem);
 	width: 100%;
 }
 
-/* ── 1. Orientation Grid ──────────────────────────────────────── */
-.orientation-grid {
+.directory-index {
+	padding-top: var(--space-xl);
+	padding-bottom: var(--space-xl);
+}
+
+.index-row {
 	display: grid;
-	grid-template-columns: 1fr;
-	gap: var(--space-lg);
-	margin-block: var(--space-xl);
+	grid-template-columns: 56px minmax(0, 1fr) 24px;
+	align-items: center;
+	gap: var(--space-md);
+	padding: 1rem 0;
+	border-bottom: 1px solid var(--color-border-lt);
+	transition:
+		border-color var(--transition),
+		color var(--transition);
 }
 
-@media (min-width: 768px) {
-	.orientation-grid {
-		grid-template-columns: repeat(2, 1fr);
-		gap: var(--space-xl);
-	}
+.index-row.compact {
+	padding: 0.85rem 0;
 }
 
-.grid-block {
-	background: var(--color-surface);
-	border: 1px solid var(--color-border-lt);
-	border-radius: var(--radiusmd);
-	padding: var(--space-xl);
-	display: flex;
-	flex-direction: column;
-	gap: var(--space-sm);
-	box-shadow: var(--shadow-sm);
-	transition: transform var(--transition-lg), box-shadow var(--transition-lg), border-color var(--transition-lg);
+.index-row:last-child {
+	border-bottom: 0;
 }
 
-.grid-block:hover {
-	transform: translateY(-4px);
-	box-shadow: var(--shadow-md);
-	border-color: var(--color-border);
+.index-number {
+	font-family: "DM Sans", monospace;
+	font-size: 0.8rem;
+	letter-spacing: 0.18em;
+	color: var(--color-accent);
+	text-transform: uppercase;
 }
 
-.grid-block h2 {
+.index-main {
+	min-width: 0;
+}
+
+.index-title {
 	font-family: "Cormorant Garamond", serif;
-	font-size: var(--fs-700);
-	font-weight: 600;
-	margin: 0;
-	line-height: 1.2;
-}
-
-.grid-block h2 a {
+	font-size: clamp(1.3rem, 2.2vw, 1.75rem);
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
 	display: inline-block;
-	color: var(--color-text);
-	transition: color var(--transition);
+	margin-bottom: 0.2rem;
 }
 
-.grid-block h2 a:hover {
+.index-desc,
+.index-desc-hover {
+	font-size: 0.95rem;
+	line-height: 1.5;
+	color: var(--color-text-muted);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.index-desc-hover {
+	display: none;
+}
+
+.index-arrow {
+	font-size: 1rem;
+	color: var(--color-text-muted);
+	transition:
+		transform var(--transition),
+		color var(--transition);
+}
+
+.index-row:hover {
+	border-color: var(--color-accent);
+}
+
+.index-row:hover .index-number,
+.index-row:hover .index-arrow {
 	color: var(--color-accent);
 }
 
-.grid-block p {
-	font-size: var(--fs-400);
-	color: var(--color-text-muted);
-	margin: 0;
-	line-height: 1.6;
+.index-row:hover .index-arrow {
+	transform: translateX(4px);
 }
 
-/* ── 2. Featured Project Section ─────────────────────────────── */
-/* .featured-project {
-	background: var(--color-surface);
-	border: 1px solid var(--color-border-lt);
-	border-left: 4px solid var(--color-accent);
-	border-radius: var(--radiussm);
-	padding: var(--space-xl) clamp(1.5rem, 5vw, var(--space-2xl));
-	margin-block: var(--space-2xl);
-	margin-inline: var(--space-2xl);
-	display: flex;
-	flex-direction: column;
-	gap: var(--space-sm);
-	box-shadow: var(--shadow-sm);
-	transition: transform var(--transition-lg), box-shadow var(--transition-lg);
-
-	max-width: var(--container-max);
-	width: 100%;
+.index-row:hover .index-desc {
+	display: none;
 }
 
-.featured-project:hover {
-	transform: translateY(-2px);
-	box-shadow: var(--shadow-md);
+.index-row:hover .index-desc-hover {
+	display: block;
+	color: var(--color-text);
+}
+
+.featured-project {
+	display: grid;
+	gap: var(--space-xl);
+	padding-top: var(--space-xl);
+	padding-bottom: var(--space-2xl);
+	align-items: center;
+}
+
+.featured-project__panel {
+	max-width: 640px;
+}
+
+.featured-project__eyebrow {
+	font-size: 0.72rem;
+	letter-spacing: 0.22em;
+	text-transform: uppercase;
+	color: var(--color-accent);
+	font-weight: 600;
+	margin-bottom: var(--space-sm);
 }
 
 .featured-project h2 {
-	font-family: "DM Sans", sans-serif;
-	font-size: var(--fs-300);
-	text-transform: uppercase;
-	letter-spacing: 0.1em;
-	color: var(--color-accent);
-	font-weight: 600;
-	margin: 0;
-	line-height: 1.2;
-}
-
-.featured-project h3 {
 	font-family: "Cormorant Garamond", serif;
-	font-size: var(--fs-800);
+	font-size: clamp(2rem, 3.4vw, 3rem);
 	font-weight: 700;
-	color: var(--color-text);
-	margin: 0;
-	line-height: 1.15;
+	line-height: 1.05;
+	margin: 0 0 var(--space-sm);
 }
 
-.featured-project p {
-	font-size: var(--fs-400);
+.featured-project__lead,
+.featured-project__intent,
+.featured-project__stack p {
+	font-size: 1rem;
+	line-height: 1.7;
 	color: var(--color-text-muted);
-	line-height: 1.65;
-	margin: 0;
-	max-width: 80ch;
 }
 
-.featured-project a {
+.featured-project__intent {
+	margin-top: var(--space-sm);
+	max-width: 56ch;
+}
+
+.featured-project__stack {
+	margin-top: var(--space-lg);
+}
+
+.featured-project__stack .spec-label {
+	display: inline-block;
+	margin-bottom: 0.35rem;
+	font-size: 0.72rem;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--color-accent);
+}
+
+.project-link {
 	display: inline-flex;
 	align-items: center;
-	margin-top: var(--space-sm);
-	color: var(--color-accent);
-	font-weight: 600;
-	font-size: var(--fs-300);
-	text-transform: uppercase;
-	letter-spacing: 0.05em;
-	transition: color var(--transition), gap var(--transition);
 	gap: var(--space-xs);
-	align-self: flex-start;
-}
-
-.featured-project a:hover {
-	color: var(--color-accent-lt);
-	gap: var(--space-lg);
-} */
-
-/* ── 2. Featured Project Section ─────────────────────────────── */
-
-/* BASE STYLES: Mobile First (< 768px)
-   Optimized for vertical scanning, thumb reach, and fluid margins.
-*/
-.featured-project {
-    background: var(--color-surface);
-    border: 1px solid var(--color-border-lt);
-    border-left: 4px solid var(--color-accent);
-    border-radius: var(--radiussm);
-    padding: var(--space-lg) var(--space-md);
-    margin: var(--space-lg) var(--space-lg);
-    box-shadow: var(--shadow-sm);
-    transition: transform var(--transition-lg), box-shadow var(--transition-lg), border-color var(--transition);
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-md);
-}
-
-.project-meta {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-xs);
-}
-
-.featured-project h2 {
-    font-family: "DM Sans", sans-serif;
-    font-size: var(--fs-300);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--color-accent);
-    font-weight: 600;
-    margin: 0;
-    line-height: 1.2;
-}
-
-.featured-project h3 {
-    font-family: "Cormorant Garamond", serif;
-    font-size: clamp(var(--fs-600), 6vw, var(--fs-800)); /* Responsive scaling title */
-    font-weight: 700;
-    color: var(--color-text);
-    margin: 0;
-    line-height: 1.15;
-}
-
-.featured-project p {
-    font-size: var(--fs-400);
-    color: var(--color-text-muted);
-    line-height: 1.6;
-    margin-top: var(--space-xs);
-}
-
-/* Mobile Spec Separator Rule */
-.project-spec {
-    border-top: 1px solid var(--color-border-lt);
-    padding-top: var(--space-md);
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-xs);
-}
-
-.spec-label {
-    font-family: "DM Sans", sans-serif;
-    font-size: calc(var(--fs-300) * 0.85);
-    text-transform: uppercase;
-    color: var(--color-text-muted);
-    letter-spacing: 0.05em;
-    font-weight: 500;
-}
-
-/* Flex tags that wrap smoothly on small devices without spilling over */
-.tech-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-xs);
-}
-
-.tech-tags span {
-    font-family: "DM Sans", sans-serif;
-    font-size: calc(var(--fs-300) * 0.85);
-    background: rgba(var(--color-accent), 0.04);
-    color: var(--color-text);
-    border: 1px solid var(--color-border-lt);
-    padding: 6px 12px; /* Marginally larger padding for easy mobile finger targets */
-    border-radius: 4px;
-}
-
-/* Call to Action: Positioned intentionally at the base on mobile */
-.project-link {
-    display: inline-flex;
-    align-items: center;
-    color: var(--color-accent);
-    font-weight: 600;
-    font-size: var(--fs-300);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    text-decoration: none;
-    gap: var(--space-xs);
-    padding-block: var(--space-xs); /* Increases interactive touch surface area */
-    align-self: flex-start;
-}
-
-.project-link .arrow-icon {
-    width: 16px;
-    height: 16px;
-    transition: transform var(--transition);
-}
-
-
-/* TABLET & DESKTOP ENHANCEMENTS (>= 768px)
-   As screen size grows, restructure into side-by-side components.
-*/
-@media (min-width: 768px) {
-    .featured-project {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        grid-template-rows: auto auto; /* Two row tracks to position elements beautifully */
-        gap: var(--space-xl);
-        padding: var(--space-xl) clamp(1.5rem, 5vw, var(--space-2xl));
-        margin: var(--space-2xl) auto;
-        max-width: var(--container-max);
-        width: calc(100% - (var(--space-2xl) * 2));
-    }
-
-    .featured-project:hover {
-        transform: translateY(-4px);
-        box-shadow: var(--shadow-md);
-        border-color: var(--color-accent);
-    }
-
-    .project-meta {
-        grid-column: 1 / 2;
-        grid-row: 1 / 3; /* Extends depth cleanly */
-        gap: var(--space-sm);
-    }
-
-    .featured-project p {
-        max-width: 65ch;
-    }
-
-    /* Restructures divider rule from top border to left border */
-    .project-spec {
-        grid-column: 2 / 3;
-        grid-row: 1 / 2;
-        border-top: none;
-        border-left: 1px solid var(--color-border-lt);
-        padding-top: 0;
-        padding-left: var(--space-lg);
-        justify-content: flex-start;
-        align-self: start;
-    }
-
-    .project-link {
-        grid-column: 2 / 3;
-        grid-row: 2 / 3;
-        align-self: end;
-        margin-left: var(--space-lg); /* Aligns nicely under the specs block */
-    }
-
-    .project-link:hover {
-        color: var(--color-accent-lt);
-    }
-
-    .project-link:hover .arrow-icon {
-        transform: translateX(6px);
-    }
-}
-/* Modernized SVG Link Wrapper */
-.project-link {
-    display: inline-flex;
-    align-items: center;
-    margin-top: var(--space-md);
-    color: var(--color-accent);
-    font-weight: 600;
-    font-size: var(--fs-300);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    text-decoration: none;
-    gap: var(--space-xs);
-    align-self: flex-start;
-}
-
-.project-link .arrow-icon {
-    width: 16px;
-    height: 16px;
-    transition: transform var(--transition);
+	margin-top: var(--space-md);
+	color: var(--color-text);
+	font-size: 0.8rem;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	transition:
+		color var(--transition),
+		gap var(--transition);
 }
 
 .project-link:hover {
-    color: var(--color-accent-lt);
+	color: var(--color-accent);
+	gap: 0.65rem;
 }
 
-.project-link:hover .arrow-icon {
-    transform: translateX(6px); /* Clean CSS hardware-accelerated movement instead of padding shifting */
+.featured-project__visual {
+	border: 1px solid var(--color-border-lt);
+	padding: 1rem;
+	background: rgba(255, 255, 255, 0.25);
 }
 
-/* --- Right Column: Tech Metadata Specs --- */
-.project-spec {
-    border-left: 1px solid var(--color-border-lt);
-    padding-left: var(--space-lg);
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-sm);
-    height: 100%;
-    justify-content: center;
+.visual-frame {
+	border: 1px solid var(--color-border-lt);
+	padding: 0.8rem;
+	background: var(--color-surface);
 }
 
-@media (max-width: 768px) {
-    .project-spec {
-        border-left: none;
-        border-top: 1px solid var(--color-border-lt);
-        padding-left: 0;
-        padding-top: var(--space-md);
-    }
+.visual-toolbar {
+	display: flex;
+	gap: 0.35rem;
+	margin-bottom: 0.8rem;
 }
 
-.spec-label {
-    font-family: "DM Sans", sans-serif;
-    font-size: calc(var(--fs-300) * 0.9);
-    text-transform: uppercase;
-    color: var(--color-text-muted);
-    letter-spacing: 0.05em;
-    font-weight: 500;
+.visual-toolbar span {
+	display: block;
+	width: 0.55rem;
+	height: 0.55rem;
+	border-radius: 50%;
+	background: var(--color-border);
 }
 
-.tech-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-xs);
+.visual-body {
+	display: grid;
+	grid-template-columns: 1fr 1.5fr;
+	gap: 0.8rem;
 }
 
-.tech-tags span {
-    font-family: "DM Sans", sans-serif;
-    font-size: calc(var(--fs-300) * 0.9);
-    background: rgba(var(--color-accent), 0.06); /* Very pale hint of accent color */
-    color: var(--color-text);
-    border: 1px solid var(--color-border-lt);
-    padding: 4px 10px;
-    border-radius: 4px;
-    font-weight: 400;
+.visual-column {
+	min-height: 220px;
+	background: linear-gradient(
+		135deg,
+		rgba(114, 134, 73, 0.14),
+		rgba(42, 42, 34, 0.08)
+	);
+	border: 1px solid var(--color-border-lt);
 }
 
+.visual-column.wide {
+	background: linear-gradient(
+		135deg,
+		rgba(42, 42, 34, 0.08),
+		rgba(114, 134, 73, 0.18)
+	);
+}
 
-/* ── 3. Testimonial Section ──────────────────────────────────── */
+.secondary-projects {
+	padding-bottom: var(--space-xl);
+}
+
 .testimonial {
-	text-align: center;
-	max-width: 720px;
-	margin-inline: auto;
-	margin-block: var(--space-3xl);
-	padding-inline: var(--space-xl);
-	position: relative;
-}
-
-.testimonial::before {
-	content: "“";
-	position: absolute;
-	top: -55px;
-	left: 50%;
-	transform: translateX(-50%);
-	font-family: "Cormorant Garamond", serif;
-	font-size: 9rem;
-	color: var(--color-overlay);
-	line-height: 1;
-	z-index: 0;
-	pointer-events: none;
+	padding-block: var(--space-2xl);
+	border-top: 1px solid var(--color-border-lt);
 }
 
 .testimonial blockquote {
 	font-family: "Cormorant Garamond", serif;
-	font-size: var(--fs-700);
-	font-style: italic;
-	line-height: 1.5;
+	font-size: clamp(1.2rem, 2vw, 1.6rem);
+	line-height: 1.6;
+	max-width: 72ch;
 	color: var(--color-text);
-	position: relative;
-	z-index: 1;
-	margin-bottom: var(--space-lg);
 }
 
 .testimonial cite {
 	display: block;
-	font-family: "DM Sans", sans-serif;
-	font-style: normal;
-	font-size: var(--fs-300);
+	margin-top: var(--space-md);
 	color: var(--color-text-muted);
-	position: relative;
-	z-index: 1;
-	letter-spacing: 0.05em;
-	text-transform: uppercase;
+	font-style: normal;
 }
 
-.testimonial cite strong {
-	color: var(--color-text);
-	font-weight: 600;
-}
-
-/* ── 4. Elegant Horizontal Rules ──────────────────────────────── */
-hr {
-	border: none;
-	height: 1px;
-	background: linear-gradient(
-		to right,
-		transparent,
-		var(--color-border),
-		transparent
-	);
-	margin-block: var(--space-2xl);
-	width: 100%;
-}
-
-/* ── 5. Connect CTA ────────────────────────────────────────── */
 .connect-cta {
-	text-align: center;
-	margin-block: var(--space-3xl);
+	padding-bottom: var(--space-3xl);
 	display: flex;
-	flex-direction: column;
+	flex-wrap: wrap;
 	align-items: center;
+	justify-content: space-between;
 	gap: var(--space-md);
+	border-top: 1px solid var(--color-border-lt);
+	padding-top: var(--space-xl);
 }
 
 .connect-cta p {
-	font-family: "Cormorant Garamond", serif;
-	font-size: var(--fs-600);
-	font-style: italic;
+	font-size: 1rem;
 	color: var(--color-text-muted);
-	margin: 0;
 }
 
+@media (min-width: 768px) {
+	.featured-project {
+		grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
+	}
+
+	.featured-project__visual {
+		padding: 1.25rem;
+	}
+}
