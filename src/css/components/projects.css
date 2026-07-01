@@ -1225,6 +1225,17 @@
 	background: var(--ink-05);
 }
 
+.work-filter-btn.active {
+	background: var(--color-accent);
+	color: #ffffff;
+	box-shadow: 0 4px 14px rgba(114, 134, 73, 0.35);
+}
+
+.work-filter-btn.active .filter-count {
+	background: rgba(255, 255, 255, 0.25);
+	color: #ffffff;
+}
+
 /* Pure CSS Active States for Filter Radio Buttons */
 #filter-all:checked ~ .cs-hero .btn-all,
 #filter-web:checked ~ .cs-hero .btn-web,

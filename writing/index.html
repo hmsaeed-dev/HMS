@@ -59,22 +59,42 @@
 	</head>
 
 	<body>
-		<header class="cs-hero">
+		<header class="cs-hero writing-hero">
 			<div class="cs-hero-content">
-				<p class="writing-eyebrow">WRITING</p>
+				<p class="writing-eyebrow">
+					<span class="eyebrow-dash" aria-hidden="true"></span>
+					Writing
+				</p>
 				<h1 class="cs-title">Notes and essays</h1>
 				<p class="cs-intro">
 					Selected reflections on systems, craft, and the long arc of
 					thinking.
 				</p>
+				<div class="writing-stats">
+					<span class="writing-stat">
+						<span class="writing-stat-num">3</span>
+						Pieces
+					</span>
+					<span class="writing-stat-divider" aria-hidden="true"></span>
+					<span class="writing-stat">
+						<span class="writing-stat-num">3</span>
+						Categories
+					</span>
+					<span class="writing-stat-divider" aria-hidden="true"></span>
+					<span class="writing-stat">
+						<span class="writing-stat-num">~12</span>
+						Min read
+					</span>
+				</div>
 			</div>
 		</header>
 
 		<main class="writing-container">
 			<section class="featured-post" aria-label="Featured writing">
-				<div class="featured-post__meta">Featured essay · May 2026</div>
+				<span class="featured-badge">Featured</span>
+				<div class="featured-post__meta">May 2026 · 6 min read</div>
 				<h2 class="featured-post__title">
-					<a href="gap-year.html"
+					<a href="../404-error.html"
 						>On building slowly, and with intent</a
 					>
 				</h2>
@@ -83,42 +103,45 @@
 					outperform momentum when the work is meant to last.
 				</p>
 				<div class="featured-post__footer">
-					<span>Essay</span>
-					<span>6 min read</span>
+					<span class="post-cat-badge cat-essay">Essay</span>
+					<a href="../404-error.html" class="featured-read-link"
+						>Read essay <span aria-hidden="true">→</span></a
+					>
 				</div>
 			</section>
 
 			<section class="archive-toolbar" aria-label="Writing filters">
-				<div class="archive-toolbar__group">
+				<div class="archive-toolbar__inner">
 					<span class="archive-toolbar__label">Filter</span>
-					<button class="archive-chip active">All</button>
-					<button class="archive-chip">Essays</button>
-					<button class="archive-chip">Notes</button>
-					<button class="archive-chip">Field notes</button>
+					<div class="archive-chips" role="tablist">
+						<button class="archive-chip active" data-filter="all" role="tab" aria-selected="true">
+							All
+							<span class="chip-count">3</span>
+						</button>
+						<button class="archive-chip" data-filter="essay" role="tab" aria-selected="false">
+							Essays
+							<span class="chip-count">1</span>
+						</button>
+						<button class="archive-chip" data-filter="note" role="tab" aria-selected="false">
+							Notes
+							<span class="chip-count">1</span>
+						</button>
+						<button class="archive-chip" data-filter="field-note" role="tab" aria-selected="false">
+							Field notes
+							<span class="chip-count">1</span>
+						</button>
+					</div>
 				</div>
 			</section>
 
-			<section class="recent-posts" aria-label="Recently added writing">
-				<h3 class="recent-posts__title">Recently added</h3>
-				<ul class="recent-posts__list">
-					<li>
-						<a href="gap-year.html"
-							>The shape of a personal system</a
-						>
-					</li>
-					<li>
-						<a href="gap-year.html"
-							>Why the quiet interface lasts</a
-						>
-					</li>
-				</ul>
-			</section>
-
 			<div class="writing-list" aria-label="Writing archive">
-				<article class="post-entry">
-					<div class="post-meta">May 2026 · Essay · 4 min read</div>
+				<article class="post-entry" data-category="essay">
+					<div class="post-entry-top">
+						<span class="post-cat-badge cat-essay">Essay</span>
+						<span class="post-meta">May 2026 · 4 min read</span>
+					</div>
 					<h2 class="post-title">
-						<a href="gap-year.html"
+						<a href="../404-error.html"
 							>The shape of a personal system</a
 						>
 					</h2>
@@ -128,14 +151,17 @@
 						curiosity.
 					</p>
 					<div class="post-footer">
-						<a href="gap-year.html">Read more →</a>
+						<a href="../404-error.html">Read more <span aria-hidden="true">→</span></a>
 					</div>
 				</article>
 
-				<article class="post-entry">
-					<div class="post-meta">April 2026 · Note · 3 min read</div>
+				<article class="post-entry" data-category="note">
+					<div class="post-entry-top">
+						<span class="post-cat-badge cat-note">Note</span>
+						<span class="post-meta">April 2026 · 3 min read</span>
+					</div>
 					<h2 class="post-title">
-						<a href="gap-year.html"
+						<a href="../404-error.html"
 							>Why the quiet interface lasts</a
 						>
 					</h2>
@@ -144,16 +170,17 @@
 						why some work feels more durable when it does less.
 					</p>
 					<div class="post-footer">
-						<a href="gap-year.html">Read more →</a>
+						<a href="../404-error.html">Read more <span aria-hidden="true">→</span></a>
 					</div>
 				</article>
 
-				<article class="post-entry">
-					<div class="post-meta">
-						March 2026 · Field note · 5 min read
+				<article class="post-entry" data-category="field-note">
+					<div class="post-entry-top">
+						<span class="post-cat-badge cat-field">Field note</span>
+						<span class="post-meta">March 2026 · 5 min read</span>
 					</div>
 					<h2 class="post-title">
-						<a href="gap-year.html"
+						<a href="../404-error.html"
 							>Reading for direction, not velocity</a
 						>
 					</h2>
@@ -162,10 +189,14 @@
 						how to separate usefulness from noise.
 					</p>
 					<div class="post-footer">
-						<a href="gap-year.html">Read more →</a>
+						<a href="../404-error.html">Read more <span aria-hidden="true">→</span></a>
 					</div>
 				</article>
 			</div>
+
+			<aside class="writing-empty-note">
+				<p>More essays, notes, and field notes are in progress. Each piece will appear here as it's finished.</p>
+			</aside>
 		</main>
 	</body>
 </html>
