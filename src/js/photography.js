@@ -1,7 +1,6 @@
 /* ── Photography PAGE JS ────────────────────────────────────────── */
 
 import { photos } from "./data/index.js";
-import { initIcons } from "./components/Icons.js";
 import { initNavigation } from "./components/Navigation.js";
 import { initFooter } from "./components/Footer.js";
 
@@ -13,7 +12,6 @@ import { initLightbox } from "./components/Lightbox.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 	// 1. Inject Components
-	initIcons();
 	initNavigation({ pathPrefix: "../" });
 	initFooter({ pathPrefix: "../" });
 

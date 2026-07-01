@@ -17,13 +17,13 @@ export function initFooter({ pathPrefix = "" } = {}) {
 
                 <div class="footer-socials">
                     <a href="https://github.com/hmsaeed-dev" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
-                        <svg class="icon"><use href="#icon-github"/></svg>
+                        <svg class="icon"><use href="/src/icons/sprite.svg#icon-github"/></svg>
                     </a>
                     <a href="https://www.linkedin.com/in/hmsaeed" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-                        <svg class="icon"><use href="#icon-linkedin"/></svg>
+                        <svg class="icon"><use href="/src/icons/sprite.svg#icon-linkedin"/></svg>
                     </a>
                     <a href="https://www.instagram.com/hms_aeed" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-                        <svg class="icon"><use href="#icon-instagram"/></svg>
+                        <svg class="icon"><use href="/src/icons/sprite.svg#icon-instagram"/></svg>
                     </a>
                 </div>
                 <p class="footer-copy">© 2026 Hafiz Muhammad Saeed. Built with care.</p>

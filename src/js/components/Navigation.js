@@ -22,8 +22,8 @@ export function initNavigation({ pathPrefix = "" } = {}) {
                 <a href="${pathPrefix}connect/index.html">Connect</a>
 
                 <a class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                    <svg class="icon sun-icon"><use href="#icon-sun"/></svg>
-                    <svg class="icon moon-icon"><use href="#icon-moon"/></svg>
+                    <svg class="icon sun-icon"><use href="/src/icons/sprite.svg#icon-sun"/></svg>
+                    <svg class="icon moon-icon"><use href="/src/icons/sprite.svg#icon-moon"/></svg>
                 </a>
             </div>
 
@@ -35,33 +35,33 @@ export function initNavigation({ pathPrefix = "" } = {}) {
 
     <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile Navigation">
         <a href="${pathPrefix}story/index.html" class="mobile-link">
-            <svg class="icon"><use href="#icon-user"/></svg>
+            <svg class="icon"><use href="/src/icons/sprite.svg#icon-user"/></svg>
             Story
         </a>
         <a href="${pathPrefix}now/index.html" class="mobile-link">
-            <svg class="icon"><use href="#icon-clock"/></svg>
+            <svg class="icon"><use href="/src/icons/sprite.svg#icon-clock"/></svg>
             Now
         </a>
         <a href="${pathPrefix}work/index.html" class="mobile-link">
-            <svg class="icon"><use href="#icon-code"/></svg>
+            <svg class="icon"><use href="/src/icons/sprite.svg#icon-code"/></svg>
             Builds
         </a>
         <a href="${pathPrefix}writing/index.html" class="mobile-link">
-            <svg class="icon"><use href="#icon-book"/></svg>
+            <svg class="icon"><use href="/src/icons/sprite.svg#icon-book"/></svg>
             Writings
         </a>
         <a href="${pathPrefix}photography/index.html" class="mobile-link">
-            <svg class="icon"><use href="#icon-camera"/></svg>
+            <svg class="icon"><use href="/src/icons/sprite.svg#icon-camera"/></svg>
             Photography
         </a>
         <a href="${pathPrefix}connect/index.html" class="mobile-link">
-            <svg class="icon"><use href="#icon-mail"/></svg>
+            <svg class="icon"><use href="/src/icons/sprite.svg#icon-mail"/></svg>
             Connect
         </a>
         <a class="mobile-link theme-toggle" id="themeToggleMobile">
             <div class="theme-icon-container">
-                <svg class="icon sun-icon"><use href="#icon-sun"/></svg>
-                <svg class="icon moon-icon"><use href="#icon-moon"/></svg>
+                <svg class="icon sun-icon"><use href="/src/icons/sprite.svg#icon-sun"/></svg>
+                <svg class="icon moon-icon"><use href="/src/icons/sprite.svg#icon-moon"/></svg>
             </div>
             Theme
         </a>

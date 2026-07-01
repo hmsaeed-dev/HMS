@@ -1,7 +1,6 @@
 /* ── MAIN ENTRY POINT (HOME PAGE) ────────────────────────── */
 
 import { projects, academics} from "./data/index.js";
-import { initIcons } from "./components/Icons.js";
 import { initNavigation } from "./components/Navigation.js";
 import { initFooter } from "./components/Footer.js";
 
@@ -15,7 +14,6 @@ import { throttleRAF } from "./utils/throttle.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 	// 1. Inject Components
-	initIcons();
 	initNavigation({ pathPrefix: "" });
 	initFooter({ pathPrefix: "" });
 

@@ -1,7 +1,6 @@
 /* ── ACADEMICS PAGE JS ────────────────────────────────────────── */
 
 import { academics, notionNotes } from "./data/index.js";
-import { initIcons } from "./components/Icons.js";
 import { initNavigation } from "./components/Navigation.js";
 import { initFooter } from "./components/Footer.js";
 
@@ -14,7 +13,6 @@ import { animateGPA } from "./utils/animations.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 	// 1. Inject components (header/footer)
-	initIcons();
 	initNavigation({ pathPrefix: "../" });
 	initFooter({ pathPrefix: "../" });
 

@@ -3,7 +3,6 @@
 import { caseStudies } from './data/caseStudies.js';
 import { photos } from './data/photos.js';
 
-import { initIcons } from './components/Icons.js';
 import { initNavigation } from './components/Navigation.js';
 import { initFooter } from './components/Footer.js';
 
@@ -13,8 +12,7 @@ import { renderList, cloneTemplate } from './utils/dom.js';
 import { animateCount } from './utils/animations.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Inject Sprite & Layout Components
-    initIcons();
+    // 1. Inject Layout Components
     initNavigation({ pathPrefix: '../' });
     initFooter({ pathPrefix: '../' });
 
@@ -162,7 +160,7 @@ function renderCaseStudiesView(data) {
         if (study.links?.source) {
             linksWrap.innerHTML += `
                 <a href="${study.links.source}" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
-                    <svg class="icon icon-sm"><use href="#icon-github"/></svg>
+                    <svg class="icon icon-sm"><use href="/src/icons/sprite.svg#icon-github"/></svg>
                     <span>Source Code</span>
                 </a>
             `;
@@ -170,7 +168,7 @@ function renderCaseStudiesView(data) {
         if (study.links?.demo) {
             linksWrap.innerHTML += `
                 <a href="${study.links.demo}" class="btn btn-olive" target="_blank" rel="noopener noreferrer">
-                    <svg class="icon icon-sm"><use href="#icon-external"/></svg>
+                    <svg class="icon icon-sm"><use href="/src/icons/sprite.svg#icon-external"/></svg>
                     <span>Demo</span>
                 </a>
             `;
@@ -236,7 +234,7 @@ function renderGridShowcaseView(data) {
         if (proj.code) {
             linksBox.innerHTML += `
                 <a class="project-link code-link" href="${proj.code}" target="_blank" rel="noopener noreferrer">
-                    <svg class="icon icon-md"><use href="#icon-code"/></svg>
+                    <svg class="icon icon-md"><use href="/src/icons/sprite.svg#icon-code"/></svg>
                     <span>Code</span>
                 </a>
             `;
@@ -244,7 +242,7 @@ function renderGridShowcaseView(data) {
         if (proj.demo) {
             linksBox.innerHTML += `
                 <a class="project-link demo-link" href="${proj.demo}" target="_blank" rel="noopener noreferrer">
-                    <svg class="icon icon-md"><use href="#icon-external"/></svg>
+                    <svg class="icon icon-md"><use href="/src/icons/sprite.svg#icon-external"/></svg>
                     <span>Demo</span>
                 </a>
             `;
@@ -287,19 +285,19 @@ function renderMVCDiagram(container) {
 
                 <div class="mvc-flow-nodes">
                     <button class="mvc-node active" data-node="model" id="node-model">
-                        <div class="node-icon-circle"><svg class="icon"><use href="#icon-user"/></svg></div>
+                        <div class="node-icon-circle"><svg class="icon"><use href="/src/icons/sprite.svg#icon-user"/></svg></div>
                         <span class="node-name">Model</span>
                         <span class="node-sub">State &amp; Persistence</span>
                     </button>
 
                     <button class="mvc-node" data-node="controller" id="node-controller">
-                        <div class="node-icon-circle"><svg class="icon"><use href="#icon-code"/></svg></div>
+                        <div class="node-icon-circle"><svg class="icon"><use href="/src/icons/sprite.svg#icon-code"/></svg></div>
                         <span class="node-name">Controller</span>
                         <span class="node-sub">Lifecycle &amp; Events</span>
                     </button>
 
                     <button class="mvc-node" data-node="view" id="node-view">
-                        <div class="node-icon-circle"><svg class="icon"><use href="#icon-grid"/></svg></div>
+                        <div class="node-icon-circle"><svg class="icon"><use href="/src/icons/sprite.svg#icon-grid"/></svg></div>
                         <span class="node-name">View</span>
                         <span class="node-sub">DOM Render &amp; Templates</span>
                     </button>
