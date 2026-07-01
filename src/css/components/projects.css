@@ -1198,42 +1198,13 @@
 }
 
 .work-filter-btn {
-	display: inline-flex;
-	align-items: center;
-	gap: var(--space-2xs);
-	padding: 8px 18px;
-	border-radius: var(--radius-full);
-	font-size: var(--fs-300);
-	font-weight: 600;
-	color: var(--color-text-muted);
-	cursor: pointer;
-	transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 	user-select: none;
-}
-
-.work-filter-btn .filter-count {
-	font-size: 0.75rem;
-	padding: 1px 7px;
-	border-radius: 10px;
-	background: var(--ink-10);
-	color: var(--color-text-muted);
-	transition: all 0.3s ease;
-}
-
-.work-filter-btn:hover {
-	color: var(--color-text);
-	background: var(--ink-05);
 }
 
 .work-filter-btn.active {
 	background: var(--color-accent);
 	color: #ffffff;
 	box-shadow: 0 4px 14px rgba(114, 134, 73, 0.35);
-}
-
-.work-filter-btn.active .filter-count {
-	background: rgba(255, 255, 255, 0.25);
-	color: #ffffff;
 }
 
 /* Pure CSS Active States for Filter Radio Buttons */
@@ -1435,7 +1406,9 @@
 }
 
 .cs-back-bar {
-	margin-bottom: calc(var(--space-md) * -1);
+	margin-top: var(--space-xl);
+	margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .cs-back-link {
@@ -1443,7 +1416,7 @@
 	align-items: center;
 	gap: var(--space-2xs);
 	font-size: var(--fs-300);
-	font-weight: 600;
+	font-weight: 500;
 	color: var(--color-text-muted);
 	transition: color var(--transition), transform var(--transition);
 }

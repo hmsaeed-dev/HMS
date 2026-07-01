@@ -201,14 +201,6 @@
 	flex-wrap: wrap;
 }
 
-.archive-toolbar__label {
-	font-size: 0.74rem;
-	letter-spacing: 0.16em;
-	text-transform: uppercase;
-	color: var(--color-text-muted);
-	flex-shrink: 0;
-}
-
 .archive-chips {
 	display: flex;
 	flex-wrap: wrap;
@@ -245,32 +237,6 @@
 	color: #ffffff;
 	border-color: var(--color-accent);
 	box-shadow: 0 2px 8px rgba(114, 134, 73, 0.25);
-}
-
-.chip-count {
-	font-size: 0.65rem;
-	font-weight: 600;
-	padding: 1px 6px;
-	border-radius: 10px;
-	background: var(--ink-10);
-	color: var(--color-text-muted);
-	transition: background var(--transition), color var(--transition);
-	line-height: 1.3;
-}
-
-.archive-chip.active .chip-count {
-	background: rgba(255, 255, 255, 0.2);
-	color: #ffffff;
-}
-
-.archive-chip:hover .chip-count {
-	background: var(--color-overlay);
-	color: var(--color-accent);
-}
-
-.archive-chip.active:hover .chip-count {
-	background: rgba(255, 255, 255, 0.2);
-	color: #ffffff;
 }
 
 /* ── Writing Search ─────────────────────────────────────────── */
@@ -375,7 +341,7 @@
 	flex-direction: column;
 	gap: var(--space-xs);
 	padding: var(--space-lg) 0;
-	border-bottom: 1px solid var(--color-border-lt);
+	border-bottom: 4px solid var(--color-border-lt);
 	transition:
 		background var(--transition),
 		border-color var(--transition),
@@ -399,13 +365,14 @@
 
 .post-entry-top {
 	display: flex;
-	align-items: center;
 	gap: var(--space-sm);
 	flex-wrap: wrap;
 }
 
 .post-meta {
-	font-size: 0.75rem;
+	display: flex;
+	justify-content: right;
+	font-size: var(--fs-300);
 	letter-spacing: 0.12em;
 	color: var(--color-text-muted);
 }
@@ -413,7 +380,7 @@
 .post-title {
 	font-family: "Cormorant Garamond", serif;
 	font-size: clamp(1.2rem, 2.2vw, 1.45rem);
-	font-weight: 700;
+	font-weight: 800;
 	margin: 0;
 	line-height: 1.25;
 }
@@ -436,7 +403,10 @@
 }
 
 .post-footer {
+	display: flex;
 	margin-top: 0.1rem;
+	align-items: center;
+	justify-content: right;
 }
 
 .post-footer a {
@@ -457,8 +427,9 @@
 /* ── Empty State Note ───────────────────────────────────────── */
 .writing-empty-note {
 	text-align: center;
-	padding: var(--space-2xl) 0;
-	border-top: 1px solid var(--color-border-lt);
+	padding: var(--space-xl) 0;
+	border-top: 4px solid var(--color-border-lt);
+	border-bottom: 4px solid var(--color-border-lt);
 	margin-top: var(--space-md);
 }
 
@@ -466,8 +437,8 @@
 	font-family: "Cormorant Garamond", serif;
 	font-size: 1.05rem;
 	font-style: italic;
-	color: var(--color-text-muted);
-	max-width: 40ch;
+	color: var(--color-text);
+	max-width: 45ch;
 	margin: 0 auto;
 	line-height: 1.6;
 }
