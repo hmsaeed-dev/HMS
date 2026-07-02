@@ -1,0 +1,186 @@
+/* ==========================================================================
+   HMS Presence System — Coherent Transition & Placeholder Architecture
+   Handles: Page entry overlay, Coming Soon layout, and Theme-sync Filters
+   ========================================================================== */
+
+/* 1. Global Performance Optimizations */
+#page-loader,
+.error-page-container,
+.reveal-item {
+	will-change: transform, opacity;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================================================
+   Layer A: The Immediate Splash Loader Overlay
+   ========================================================================== */
+#page-loader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	/* Uses your system canvas tones, falling back to clean organic swatches */
+	background-color: var(--bg-color, #fcfbf9);
+	color: var(--text-color, #1c1b1a);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 999999;
+	/* Invisible Physics: Deliberate deceleration curve */
+	transition:
+		opacity 0.6s cubic-bezier(0.215, 0.61, 0.355, 1),
+		transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* Hard unmount hook triggered via background asset listener */
+#page-loader.loader-hidden {
+	opacity: 0;
+	transform: translateY(-24px);
+	pointer-events: none;
+}
+
+/* ==========================================================================
+   Layer B: Shared Structural Content Grid
+   ========================================================================== */
+.loader-content,
+.waiting-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center; /* Adds vertical centering */
+	text-align: center;
+	gap: var(--space-md, 1.5rem);
+
+	/* Force the container to take up the full screen real estate */
+	width: 100vw;
+	height: 100vh;
+	max-width: 100%; /* Overrides the previous strict narrow limit */
+	padding: var(--space-xl, 2rem);
+}
+
+/* The Dragonfly Asset Box (Matches your calculated system scale) */
+.brand-logo,
+.loader-logo {
+	width: var(--space-5xl, 64px);
+	height: var(--space-5xl, 64px);
+	margin-bottom: var(--space-xs, 0.5rem);
+	opacity: 0;
+	transform: scale(0.95);
+	animation: editorialReveal 1.2s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+}
+
+/* ==========================================================================
+   Layer C: Typographic Hierarchy & Branding
+   ========================================================================== */
+
+.error-page-parent-container{
+	display: grid;
+	place-items: center;
+	min-height: 100vh;
+}
+
+.error-page-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.loader-brand-text,
+.error-page-container h1 {
+	font-family: var(--font-serif, "Cormorant Garamond", serif);
+	color: inherit;
+	font-weight: 400;
+	line-height: 1.15;
+}
+
+.loader-brand-text {
+	font-size: var(--text-xl, 1.5rem);
+	font-style: italic;
+	letter-spacing: 0.02em;
+	opacity: 0;
+	transform: translateY(8px);
+	animation: editorialReveal 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards
+		0.3s;
+}
+
+.error-page-container h1 {
+	font-size: clamp(2rem, 5vw, 2.75rem);
+	letter-spacing: -0.01em;
+	opacity: 0;
+	transform: translateY(12px);
+	animation: editorialReveal 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards
+		0.15s;
+}
+
+.editorial-label {
+	font-family: var(--font-serif, "Cormorant Garamond", serif);
+	font-size: var(--text-sm, 0.9rem);
+	font-style: italic;
+	letter-spacing: 0.05em;
+	opacity: 0.5;
+}
+
+/* ==========================================================================
+   Layer D: Asymmetric Micro-Interactions (Links & Layout Actions)
+   ========================================================================== */
+.back-action-wrap {
+	margin-top: var(--space-sm, 1rem);
+	opacity: 0;
+	transform: translateY(8px);
+	animation: editorialReveal 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards
+		0.35s;
+}
+
+.back-link {
+	font-family: var(--font-serif, "Cormorant Garamond", serif);
+	font-size: var(--text-sm, 0.95rem);
+	font-style: italic;
+	text-decoration: none;
+	color: inherit;
+	position: relative;
+	padding: 0.2rem 0;
+	display: inline-flex;
+	align-items: center;
+}
+
+/* Architectural custom baseline slide rule */
+.back-link::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background-color: currentColor;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.back-link:hover::after {
+	transform: scaleX(1);
+}
+
+/* ==========================================================================
+   Layer E: Core Physics & Theme Synchronization
+   ========================================================================== */
+@keyframes editorialReveal {
+	to {
+		opacity: 1;
+		transform: scale(1) translateY(0);
+	}
+}
+
+/* 1. Manual toggle state monitoring */
+[data-theme="dark"] #page-loader {
+	background-color: var(--bg-color, #121110);
+	color: var(--text-color, #f4f3f0);
+}
+
+[data-theme="dark"] .brand-logo,
+[data-theme="dark"] .loader-logo {
+	filter: invert(0.95) brightness(0.95);
+}

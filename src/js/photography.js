@@ -1,7 +1,6 @@
 /* ── Photography PAGE JS ────────────────────────────────────────── */
 
 import { photos } from "./data/index.js";
-import { initIcons } from "./components/Icons.js";
 import { initNavigation } from "./components/Navigation.js";
 import { initFooter } from "./components/Footer.js";
 
@@ -13,7 +12,6 @@ import { initLightbox } from "./components/Lightbox.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 	// 1. Inject Components
-	initIcons();
 	initNavigation({ pathPrefix: "../" });
 	initFooter({ pathPrefix: "../" });
 
@@ -118,18 +116,13 @@ function renderFilters(data) {
 		"all",
 		...new Set(data.map((p) => p.category).filter(Boolean)),
 	];
-	filterLeft.innerHTML = '<span class="pg-filter-label">Filter by</span>';
 
 	cats.forEach((cat) => {
 		const btn = document.createElement("button");
 		btn.className = "pg-filter-btn" + (cat === "all" ? " active" : "");
 		btn.dataset.filter = cat;
 		const label = cat === "all" ? "All" : cat;
-		const count =
-			cat === "all"
-				? data.length
-				: data.filter((p) => p.category === cat).length;
-		btn.innerHTML = `${label} <span class="count">${count}</span>`;
+		btn.innerHTML = label;
 		filterLeft.appendChild(btn);
 	});
 }

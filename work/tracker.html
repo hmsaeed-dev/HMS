@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-T31PJSBQY8"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+			gtag("config", "G-T31PJSBQY8");
+		</script>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="robots" content="index, follow" />
+
+		<title id="csPageTitle">
+			Finance Tracker — Case Study | Hafiz Muhammad Saeed
+		</title>
+		<meta
+			name="title"
+			content="Finance Tracker — Case Study | Hafiz Muhammad Saeed"
+		/>
+		<meta
+			name="description"
+			id="csMetaDesc"
+			content="A lightweight, offline-first Progressive Web App that tracks accounts, calculates net worth in real-time, and automatically computes Zakat thresholds."
+		/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Fira+Code:wght@400;500&display=swap"
+		/>
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href="../src/icons/logo-mark.svg"
+		/>
+
+		<script>
+			(function () {
+				const theme =
+					localStorage.getItem("theme") ||
+					(window.matchMedia("(prefers-color-scheme: dark)").matches
+						? "dark"
+						: "light");
+				document.documentElement.setAttribute("data-theme", theme);
+			})();
+		</script>
+
+		<link rel="stylesheet" href="../src/css/main.css" />
+		<script type="module" src="../src/js/page.js" defer></script>
+	</head>
+
+	<body>
+		<main class="cs-article-container" id="csArticleContainer">
+			<div class="cs-back-bar reveal">
+				<a href="index.html" class="cs-back-link">
+					<svg class="icon icon-md">
+						<use href="/src/icons/sprite.svg#icon-arrow-left" />
+					</svg>
+					<span>Works</span>
+				</a>
+			</div>
+
+			<header class="cs-header-block reveal">
+				<h1 class="cs-header-title">Finance Tracker</h1>
+				<p class="cs-header-oneliner">
+					Offline-first personal financial engine with automated Zakat
+					calculations.
+				</p>
+
+				<div class="cs-header-actions">
+					<a
+						href="https://hmsaeed.com"
+						class="btn btn-olive"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<span>Live Demo ↗</span>
+					</a>
+					<a
+						href="https://github.com/hmsaeed-dev/Finance-Tracker"
+						class="btn btn-outline"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<svg class="icon icon-md">
+							<use href="/src/icons/sprite.svg#icon-github" />
+						</svg>
+						<span>Source Code</span>
+					</a>
+				</div>
+
+				<div class="cs-hero-image-wrap">
+					<img
+						src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1200"
+						alt="Finance Tracker Visual Overview"
+						class="cs-hero-image"
+						loading="eager"
+					/>
+				</div>
+			</header>
+
+			<article class="cs-article-body">
+				<section class="cs-anatomy-section reveal">
+					<h2 class="cs-anatomy-heading">01. The Problem</h2>
+					<p class="cs-anatomy-text">
+						I had no clear picture of where my money was going or
+						what I actually owned at any given time. Existing apps
+						were either too complex, required subscriptions, or
+						didn't account for Zakat calculation — which is a
+						non-negotiable part of how I think about money. I needed
+						something minimal, offline-capable, and built around my
+						actual financial logic.
+					</p>
+				</section>
+
+				<section class="cs-anatomy-section reveal">
+					<h2 class="cs-anatomy-heading">02. The Approach</h2>
+					<p class="cs-anatomy-text">
+						The core architectural decision was MVC in vanilla JS —
+						no framework. The reason was deliberate constraint: I
+						wanted to understand the patterns before abstracting
+						them. The 38-stage build specification I wrote before
+						touching code forced every feature decision upfront,
+						which meant almost no rework mid-build.
+					</p>
+				</section>
+
+				<section class="cs-anatomy-section reveal">
+					<h2 class="cs-anatomy-heading">03. What I Built</h2>
+					<p class="cs-anatomy-text">
+						A lightweight, offline-first Progressive Web App that
+						tracks accounts, calculates net worth in real-time, and
+						automatically computes Zakat thresholds based on active
+						assets. It operates with zero external server
+						dependencies, storing all encrypted state directly in
+						browser storage.
+					</p>
+
+					<div class="cs-built-demo-housing">
+						<div class="demo-mockup-frame">
+							<div class="mockup-header">
+								<span class="mockup-dot red"></span>
+								<span class="mockup-dot yellow"></span>
+								<span class="mockup-dot green"></span>
+								<span class="mockup-title"
+									>Finance Tracker — Architecture System</span
+								>
+							</div>
+							<div class="mockup-body" id="csDemoBody">
+								<div class="visual-spec-box">
+									<div class="spec-item">
+										<span class="spec-label"
+											>System State</span
+										>
+										<span class="spec-val"
+											>In Progress</span
+										>
+									</div>
+									<div class="spec-item">
+										<span class="spec-label"
+											>Architecture</span
+										>
+										<span class="spec-val"
+											>Vanilla MVC</span
+										>
+									</div>
+									<div class="spec-item">
+										<span class="spec-label"
+											>Deployment</span
+										>
+										<span class="spec-val"
+											>PWA / Local Storage</span
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="cs-anatomy-section reveal">
+					<h2 class="cs-anatomy-heading">04. What I Learned</h2>
+					<p class="cs-anatomy-text">
+						The 38-stage spec was both the project's biggest
+						strength and its biggest constraint. It forced clarity
+						upfront but made mid-build pivots expensive. I'd use a
+						lighter spec next time — enough to prevent scope creep,
+						not so rigid it prevents good ideas from entering late.
+					</p>
+				</section>
+
+				<section class="cs-anatomy-section reveal">
+					<h2 class="cs-anatomy-heading">
+						05. What I'd Do Differently
+					</h2>
+					<p class="cs-anatomy-text">
+						If I were starting over today, I would separate out the
+						financial calculation engine into pure mathematical
+						helper functions earlier in the process. While the MVC
+						model handles state well, decoupling the Zakat logic
+						from state listeners would have made unit testing much
+						cleaner.
+					</p>
+				</section>
+			</article>
+
+			<footer class="cs-footer-nav reveal">
+				<a href="library.html" class="cs-nav-link prev">
+					<span class="cs-nav-label">← Previous</span>
+					<span class="cs-nav-title">Digital Library</span>
+				</a>
+				<a href="binary-palindrome.html" class="cs-nav-link next">
+					<span class="cs-nav-label">Next →</span>
+					<span class="cs-nav-title">Binary Palindrome Detector</span>
+				</a>
+			</footer>
+		</main>
+	</body>
+</html>

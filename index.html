@@ -1,371 +1,534 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T31PJSBQY8"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-T31PJSBQY8');
-  </script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="google-site-verification" content="FDjh9zBREo6ji-5i-X_pi9Tu9mQvFMKXH647cvHG4Tc" />
-  <meta name="robots" content="index, follow, max-image-preview:large">
-
-  <!-- Primary Meta Tags -->
-  <title>Hafiz Muhammad Saeed | Builder & Thinker</title>
-  <meta name="title" content="Hafiz Muhammad Saeed | Builder & Thinker">
-  <meta name="description" content="Personal site of Hafiz Muhammad Saeed, a BS Computer Science Student ,Builder and thinker from Taxila, Paksitan. Work, Writing and Story.">
-  <meta name="keywords" content="Hafiz Muhammad Saeed, HMSaeed, Web Developer Taxila, Photographer Pakistan, Full Stack Developer Portfolio, Macro Photography">
-  <meta name="author" content="Hafiz Muhammad Saeed">
-  <meta name="geo.region" content="PK-PB" />
-  <meta name="geo.placename" content="Taxila" />
-  <link rel="canonical" href="https://hmsaeed.com">
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://hmsaeed.com">
-  <meta property="og:site_name" content="Hafiz Muhammad Saeed" />
-  <meta property="og:title" content="Hafiz Muhammad Saeed | Developer & Photographer">
-  <meta property="og:description" content="Explore the digital works and photographic captures of Hafiz Muhammad Saeed.">
-  <meta property="og:image" content="https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto/f_auto/v1779627924/Saeed_68_cewriq.jpg">
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://hmsaeed.com">
-  <meta property="twitter:title" content="Hafiz Muhammad Saeed | Developer & Photographer">
-  <meta property="twitter:description" content="Explore the digital works and photographic captures of Hafiz Muhammad Saeed.">
-  <meta property="twitter:image" content="https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto/f_auto/v1779627924/Saeed_68_cewriq.jpg">
-
-  <!-- Favicon & Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/dmsans/v15/rP2Fp2K8zQ2C3BFGPgc707SPhA.woff2" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap">
-
-  <link rel="icon" type="image/svg+xml" href="src/icons/logo-mark.svg">
-
-  <!-- LCP Image Preload -->
-  <link rel="preload" fetchpriority="high" as="image" href="https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto/f_auto/w_800/v1779627924/Saeed_68_cewriq.jpg" type="image/webp">
-
-  <!-- Theme Detection (Prevents Flash) -->
-  <script>
-    (function() {
-      const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-      document.documentElement.setAttribute('data-theme', theme);
-    })();
-  </script>
-
-  <!-- Non-critical CSS (Deferred) -->
-  <link rel="stylesheet" href="src/css/main.css" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="src/css/main.css"></noscript>
-
-  <script type="module" src="src/js/main.js" defer></script>
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Hafiz Muhammad Saeed",
-      "alternateName": ["HMSaeed", "Hafiz Muhammad Saeed Portfolio", "HMS"],
-      "url": "https://hmsaeed.com",
-      "image": "https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto/f_auto/v1779627924/Saeed_68_cewriq.jpg",
-      "sameAs": [
-        "https://orcid.org/0009-0007-9947-5047",
-        "https://github.com/hmsaeed-dev",
-        "https://www.linkedin.com/in/hmsaeed",
-        "https://www.instagram.com/hms_aeed",
-        "https://www.facebook.com/hmsaeed-dev/",
-        "https://x.com/hms_aeed",
-        "https://medium.com/@hms_blogs",
-        "https://leetcode.com/u/hms_aeed/",
-        "https://g.dev/hmsaeed",
-        "https://www.pinterest.com/HMS_Clicks/",
-        "https://www.youtube.com/@HMS_aeed",
-        "https://wakatime.com/@hmsaeed",
-        "https://replit.com/@hmsaeed",
-        "https://www.behance.net/hms_aeed",
-        "https://codepen.io/hms_aeed",
-        "https://www.chess.com/member/hms_aeed"
-      ],
-      "jobTitle": "Full-Stack Developer",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Freelance"
-      },
-      "alumniOf": {
-      "@type": "EducationalOrganization",
-      "name": "UET Taxila",
-      "url": "https://www.uettaxila.edu.pk/",
-      "department": {
-        "@type": "Organization",
-        "name": "Department of Computer Science"
-      }
-    },
-      "memberOf": {
-      "@type": "OrganizationRole",
-      "roleName": "CSP Coordinator",
-      "memberOf": {
-        "@type": "Organization",
-        "name": "Umeed e Subh",
-        "url": "https://www.linkedin.com/company/umeed-e-subh-uet-taxila",
-        "description": "A youth-led welfare and educational organization."
-      }
-    },
-    "knowsAbout": [
-      "HTML5",
-      "CSS3",
-      "Python",
-      "Vanilla JavaScript",
-      "C++",
-      "Object-Oriented Programming (OOP)",
-      "Data Structures",
-      "Web Development",
-      "Nature Photography"
-    ],
-    "hasCredential": {
-      "@type": "EducationalOccupationalCredential",
-      "credentialCategory": "degree",
-      "name": "Bachelor of Science in Computer Science",
-      "abstract": "Currently in second semester."
-    },
-    "description": "Second-semester Bachelor of Science in Computer Science (BSCS) student at UET Taxila. Full-Stack Developer specializing in Vanilla JS and C++ OOP alongside creative macro Photography storytelling.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Taxila",
-      "addressRegion": "Punjab",
-      "addressCountry": "Pakistan"
-    }
-    }
-  </script>
-</head>
-
-
-
-<body>
-
-<!-- ── SCROLL PROGRESS ─────────────────────────────────────── -->
-<div class="scroll-progress" id="scrollProgress"></div>
-
-<main>
-<!-- ── HERO ────────────────────────────────────────────────── -->
-<section id="hero" class="section">
-  <div class="container">
-    <div class="hero-inner">
-
-      <div class="hero-text">
-
-        <h1 class="hero-h1">I'm <span>Saeed</span>.</h1>
-        <p class="hero-sub">Builder, Photographer &amp; Perpetual Learner</p>
-
-        <div class="hero-ctas reveal">
-          <!-- <a href="#about" class="btn btn-olive">My Story → </a> -->
-
-          <a href="#projects" class="btn btn-outline">View Projects</a>
-
-          <a href="Docs/CV.pdf" class="btn btn-outline" download="My_CV.pdf">
-              <svg class="icon icon-sm"><use href="#icon-download"/></svg>
-          Download CV
-          </a>
-
-        </div>
-      </div>
-
-      <div class="hero-img-wrap">
-        <img
-          src="https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto,f_auto,w_440/v1779627924/Saeed_68_cewriq.jpg"
-          srcset="https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto,f_auto,w_320/v1779627924/Saeed_68_cewriq.jpg 320w,
-                  https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto,f_auto,w_640/v1779627924/Saeed_68_cewriq.jpg 640w,
-                  https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto,f_auto,w_880/v1779627924/Saeed_68_cewriq.jpg 880w"
-          sizes="(min-width: 901px) 440px, 320px"
-          alt="Hafiz Muhammad Saeed, HMSaeed, Taxila Photographer, HMS"
-          loading="eager"
-          fetchpriority="high">
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ── PROJECTS ────────────────────────────────────────────── -->
-<section id="projects" class="section">
-  <div class="container">
-
-    <div class="reveal">
-      <h2 class="section-title">Projects</h2>
-      <p class="section-sub">A collection of digital artifacts and experiments.</p>
-
-      <div class="divider"></div>
-    </div>
-
-    <div class="projects-grid" id="projects-grid"></div>
-
-    <div class="projects-more-cta reveal" style="text-align: center; margin-top: var(--space-xl);">
-      <a href="projects/index.html" class="btn btn-outline">
-        <span>Explore Detailed Case Studies</span>
-        <svg class="icon icon-sm" style="width:1.2em; height:1.2em; stroke-width:2;"><use href="#icon-external"/></svg>
-      </a>
-    </div>
-
-  </div>
-</section>
-
-<template id="tpl-project-card">
-
-  <div class="project-card reveal">
-
-    <div class="project-img-wrap"><img src="" alt="" loading="lazy"></div>
-
-    <div class="project-body">
-      <h3 class="project-title"></h3>
-
-      <p class="project-desc"></p>
-
-      <div class="project-links">
-
-        <a class="project-link code-link" href="#" title="">
-        <svg class="icon icon-md"><use href="#icon-code"/></svg>Source Code</a>
-
-        <a class="project-link demo-link" href="#" title="Click to view Live Site">
-        <svg class="icon icon-md"><use href="#icon-external"/></svg>Demo</a>
-
-      </div>
-    </div>
-  </div>
-
-</template>
-
-<!-- ── ACADEMIC ────────────────────────────────────────────── -->
-<section id="academic" class="section bg-white">
-  <div class="container">
-
-    <div class="reveal">
-      <h2 class="section-title">Academic Journey</h2>
-
-      <div class="divider"></div>
-    </div>
-
-    <div class="academic-list reveal reveal-delay-1" id="academic-list"></div>
-
-  </div>
-</section>
-
-<template id="tpl-academic-item">
-  <div class="academic-item">
-    <div class="academic-year"></div>
-    <div class="academic-body">
-      <div class="academic-degree"></div>
-      <div class="academic-school"></div>
-      <span class="academic-badge"></span>
-    </div>
-  </div>
-</template>
-
-
-<!-- ── HOBBIES ────────────────────────────────────────────── -->
-<section id="hobbies" class="section">
-  <div class="container">
-    <div class="reveal">
-      <h2 class="section-title">Beyond the Terminal</h2>
-      <p class="section-sub">Personal interests that fuel my professional curiosity.</p>
-      <div class="divider"></div>
-    </div>
-
-    <div class="hobbies-grid">
-
-      <!-- Reading -->
-      <div class="hobby-card reveal reveal-delay-1" title="Coming Soon">
-        <div class="hobby-bg-wrap">
-          <img src="src/images/hobby-reading.jpg" alt="Reading">
-        </div>
-        <div class="hobby-info">
-          <h4>Reading</h4>
-          <span>World Building</span>
-        </div>
-      </div>
-
-      <!-- Photography -->
-      <a href="Photography/index.html" class="hobby-card reveal reveal-delay-1">
-        <div class="hobby-bg-wrap">
-          <img src="src/images/hobby-nature.jpg" alt="Photography">
-        </div>
-        <div class="hobby-info">
-          <h4>Photography</h4>
-          <span>View Gallery →</span>
-        </div>
-      </a>
-
-      <!-- Travelling -->
-      <div class="hobby-card reveal reveal-delay-1" title="Coming Soon">
-        <div class="hobby-bg-wrap">
-          <img src="src/images/hobby-travel.jpg" alt="Travelling">
-        </div>
-        <div class="hobby-info">
-          <h4>Travelling</h4>
-          <span>Expanding Horizons</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ── CONTACT ─────────────────────────────────────────────── -->
-<!-- <section id="contact" class="section">
-  <div class="container">
-
-    <div class="reveal">
-      <h2 class="section-title">Let's Connect</h2>
-      <p class="section-sub">I'd love to hear from you.</p>
-      <div class="divider"></div>
-    </div>
-
-    <div class="contact-grid">
-
-      <div class="contact-info reveal reveal-delay-1">
-
-      <div class="contact-row">
-        <a href="mailto:hms.builds@gmail.com" title="Mail Us">
-          <div class="contact-icon">
-            <svg class="icon"><use href="#icon-mail"/></svg>
-          </div>
-        </a>
-        <div class="contact-meta">
-          <p>Email</p>
-          <p>hms.builds@gmail.com</p>
-        </div>
-      </div>
-
-  </div>
-
-        <div class="socials">
-
-          <a class="contact-icon" href="https://wa.me/923219798860?text=Hi%20Saeed%2C%20I%20saw%20your%20portfolio!" aria-label="Whatsapp" title="Whatsapp Contact" target="_blank" rel="noopener noreferrer">
-            <svg class="icon"><use href="#icon-whatsapp"/></svg>
-          </a>
-
-          <a class="contact-icon" href="https://github.com/hmsaeed-dev" aria-label="GitHub" title="View my Github" target="_blank" rel="noopener noreferrer">
-            <svg class="icon"><use href="#icon-github"/></svg>
-          </a>
-
-          <a class="contact-icon" href="https://www.linkedin.com/in/hmsaeed" aria-label="LinkedIn" title="Connect on LinkedIn" target="_blank" rel="noopener noreferrer">
-            <svg class="icon"><use href="#icon-linkedin"/></svg>
-          </a>
-
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section> -->
-</main>
-
-
-</body>
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-T31PJSBQY8"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+			gtag("config", "G-T31PJSBQY8");
+		</script>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="google-site-verification"
+			content="FDjh9zBREo6ji-5i-X_pi9Tu9mQvFMKXH647cvHG4Tc"
+		/>
+		<meta name="robots" content="index, follow, max-image-preview:large" />
+
+		<!-- Primary Meta Tags -->
+		<title>Hafiz Muhammad Saeed — Builder & Thinker</title>
+		<meta name="title" content="Hafiz Muhammad Saeed — Builder & Thinker" />
+		<meta
+			name="description"
+			content="Personal site of Hafiz Muhammad Saeed — CS student, builder, and thinker from Taxila, Pakistan. Work, writing, and story."
+		/>
+		<meta name="author" content="Hafiz Muhammad Saeed" />
+		<meta name="geo.region" content="PK-PB" />
+		<meta name="geo.placename" content="Taxila" />
+		<link rel="canonical" href="https://hmsaeed.com" />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://hmsaeed.com" />
+		<meta property="og:site_name" content="Hafiz Muhammad Saeed" />
+		<meta
+			property="og:title"
+			content="Hafiz Muhammad Saeed | Developer & Photographer"
+		/>
+		<meta
+			property="og:description"
+			content="Explore the digital works and photographic captures of Hafiz Muhammad Saeed."
+		/>
+		<meta
+			property="og:image"
+			content="https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto/f_auto/v1779627924/Saeed_68_cewriq.jpg"
+		/>
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content="https://hmsaeed.com" />
+		<meta
+			property="twitter:title"
+			content="Hafiz Muhammad Saeed | Developer & Photographer"
+		/>
+		<meta
+			property="twitter:description"
+			content="Explore the digital works and photographic captures of Hafiz Muhammad Saeed."
+		/>
+		<meta
+			property="twitter:image"
+			content="https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto/f_auto/v1779627924/Saeed_68_cewriq.jpg"
+		/>
+
+		<!-- Favicon & Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			rel="preload"
+			as="font"
+			type="font/woff2"
+			href="https://fonts.gstatic.com/s/dmsans/v15/rP2Fp2K8zQ2C3BFGPgc707SPhA.woff2"
+			crossorigin
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap"
+		/>
+
+		<link rel="icon" type="image/svg+xml" href="src/icons/logo-mark.svg" />
+
+		<!-- LCP Image Preload -->
+		<link
+			rel="preload"
+			fetchpriority="high"
+			as="image"
+			href="https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto/f_auto/w_800/v1779627924/Saeed_68_cewriq.jpg"
+			type="image/webp"
+		/>
+
+		<!-- Theme Detection (Prevents Flash) -->
+		<script>
+			(function () {
+				const theme =
+					localStorage.getItem("theme") ||
+					(window.matchMedia("(prefers-color-scheme: dark)").matches
+						? "dark"
+						: "light");
+				document.documentElement.setAttribute("data-theme", theme);
+			})();
+		</script>
+
+		<!-- Critical CSS -->
+		<link rel="stylesheet" href="src/css/main.css" />
+		<link rel="stylesheet" href="src/css/pages/error.css" />
+		<script type="module" src="src/js/main.js" defer></script>
+
+		<!-- Structured Data -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Person",
+				"name": "Hafiz Muhammad Saeed",
+				"alternateName": ["HMSaeed", "Hafiz Muhammad Saeed", "HMS"],
+				"url": "https://hmsaeed.com",
+				"image": "https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto/f_auto/v1779627924/Saeed_68_cewriq.jpg",
+				"sameAs": [
+					"https://orcid.org/0009-0007-9947-5047",
+					"https://github.com/hmsaeed-dev",
+					"https://www.linkedin.com/in/hmsaeed",
+					"https://www.instagram.com/hms_aeed",
+					"https://www.facebook.com/hmsaeed-dev/",
+					"https://x.com/hms_aeed",
+					"https://medium.com/@hms_blogs",
+					"https://leetcode.com/u/hms_aeed/",
+					"https://g.dev/hmsaeed",
+					"https://www.pinterest.com/HMS_Clicks/",
+					"https://www.youtube.com/@HMS_aeed",
+					"https://wakatime.com/@hmsaeed",
+					"https://replit.com/@hmsaeed",
+					"https://www.behance.net/hms_aeed",
+					"https://codepen.io/hms_aeed",
+					"https://www.chess.com/member/hms_aeed"
+				],
+				"jobTitle": "Web Developer",
+				"worksFor": {
+					"@type": "Organization",
+					"name": "Freelance"
+				},
+				"alumniOf": {
+					"@type": "EducationalOrganization",
+					"name": "UET Taxila",
+					"url": "https://www.uettaxila.edu.pk/",
+					"department": {
+						"@type": "Organization",
+						"name": "Department of Computer Science"
+					}
+				},
+				"memberOf": {
+					"@type": "OrganizationRole",
+					"roleName": "CSP Coordinator",
+					"memberOf": {
+						"@type": "Organization",
+						"name": "Umeed e Subh",
+						"url": "https://www.linkedin.com/company/umeed-e-subh-uet-taxila",
+						"description": "A youth-led welfare and educational organization."
+					}
+				},
+				"knowsAbout": [
+					"HTML5",
+					"CSS3",
+					"Python",
+					"Vanilla JavaScript",
+					"C++",
+					"Object-Oriented Programming (OOP)",
+					"Data Structures",
+					"Web Development",
+					"Nature Photography"
+				],
+				"hasCredential": {
+					"@type": "EducationalOccupationalCredential",
+					"credentialCategory": "degree",
+					"name": "Bachelor of Science in Computer Science",
+					"abstract": "Currently in second semester."
+				},
+				"description": "Second-semester Bachelor of Science in Computer Science (BSCS) student at UET Taxila. Full-Stack Developer specializing in Vanilla JS and C++ OOP alongside creative macro Photography storytelling.",
+				"address": {
+					"@type": "PostalAddress",
+					"addressLocality": "Taxila",
+					"addressRegion": "Punjab",
+					"addressCountry": "Pakistan"
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<!-- 2. The Minimalist Splash Screen Overlay -->
+		<div id="page-loader">
+			<div class="loader-content">
+				<img
+					src="src/icons/logo-mark.svg"
+					alt="HMS"
+					class="loader-logo"
+				/>
+				<div class="loader-status">
+					<span class="loader-brand-text">Hafiz Muhammad Saeed</span>
+				</div>
+			</div>
+		</div>
+
+		<main>
+			<!-- ── HERO ────────────────────────────────────────────────── -->
+			<section id="hero" class="section">
+				<div class="container">
+					<div class="hero-inner">
+						<div class="hero-text">
+							<h1 class="hero-h1">I'm Saeed.</h1>
+							<p class="hero-sub">
+								Builder, Reader and Perpetual Learner
+							</p>
+						</div>
+
+						<div class="hero-img-wrap">
+							<img
+								src="https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto,f_auto,w_440/v1779627924/Saeed_68_cewriq.jpg"
+								srcset="
+									https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto,f_auto,w_320/v1779627924/Saeed_68_cewriq.jpg 320w,
+									https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto,f_auto,w_640/v1779627924/Saeed_68_cewriq.jpg 640w,
+									https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto,f_auto,w_880/v1779627924/Saeed_68_cewriq.jpg 880w
+								"
+								sizes="(min-width: 901px) 440px, 320px"
+								alt="Hafiz Muhammad Saeed, HMSaeed, Taxila Photographer, HMS"
+								loading="eager"
+								fetchpriority="high"
+							/>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<section class="directory-index" aria-label="Site sections">
+			<div class="container">
+				<div class="index-row">
+					<span class="index-number">01</span>
+					<div class="index-main">
+						<a href="story/index.html" class="index-title">STORY</a>
+						<p class="index-desc">
+							The long version of myself. (Coming Soon)
+						</p>
+						<p class="index-desc-hover">
+							A fuller account of the path that led to this work. (Coming Soon)
+						</p>
+					</div>
+				</div>
+
+				<div class="index-row">
+					<span class="index-number">02</span>
+					<div class="index-main">
+						<a href="now/index.html" class="index-title">NOW</a>
+						<p class="index-desc">
+							What I'm actually working on this season.
+						</p>
+						<p class="index-desc-hover">
+							An account of the current build, study, and practice
+							loop.
+						</p>
+					</div>
+				</div>
+
+				<div class="index-row">
+					<span class="index-number">03</span>
+					<div class="index-main">
+						<a href="work/index.html" class="index-title">WORK</a>
+						<p class="index-desc">
+							Collection of things I have built, broken and learned from.
+						</p>
+						<p class="index-desc-hover">
+							An in-browser study of Iqbal across Urdu, Farsi, and
+							English.
+						</p>
+					</div>
+				</div>
+
+				<div class="index-row">
+					<span class="index-number">04</span>
+					<div class="index-main">
+						<a href="writing/index.html" class="index-title"
+							>WRITING</a
+						>
+						<p class="index-desc">
+							Essays, notes, and open-source study guides.
+						</p>
+						<p class="index-desc-hover">
+							Fragments on systems, craft, and the long arc of
+							thinking.
+						</p>
+					</div>
+				</div>
+
+				<div class="index-row">
+					<span class="index-number">05</span>
+					<div class="index-main">
+						<a href="academics/index.html" class="index-title"
+							>Academics</a
+						>
+						<p class="index-desc">
+							Course notes, ledgers, and semester artifacts.
+						</p>
+						<p class="index-desc-hover">
+							A structured log of the CS curriculum at UET Taxila.
+						</p>
+					</div>
+				</div>
+
+				<div class="index-row">
+					<span class="index-number">06</span>
+					<div class="index-main">
+						<a href="photography/index.html" class="index-title"
+							>PHOTOGRAPHY</a
+						>
+						<p class="index-desc">
+							HMS Clicks — what the macro lens finds.
+						</p>
+						<p class="index-desc-hover">
+							Quiet observations that reward attention over
+							spectacle.
+						</p>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<section class="field-note" aria-label="Personal note">
+			<div class="field-note__inner">
+				<span class="field-note__dash" aria-hidden="true"></span>
+				<p class="field-note__text">
+					Before UET, I took a year to learn things I had no plan for. Crochet. Wood working. Enough Arabic to understand the context. Chess, from nothing. None of it was strategic. I think that year is the reason I build systems instead of features now — I'd rather understand the whole shape of a thing than get fast at one corner of it.
+				</p>
+			</div>
+		</section>
+
+		<section class="featured-project">
+			<div class="featured-project__panel">
+				<p class="featured-project__eyebrow">Featured Project</p>
+				<h2>IQBALIAT</h2>
+				<p class="featured-project__lead">
+					An in-browser study platform of Iqbal's intellectual transformation across Urdu, Farsi, and English.
+				</p>
+				<p class="featured-project__intent">
+					Built for readers who want to trace an idea across three
+					languages without losing the thread.
+				</p>
+				<div class="featured-project__stack">
+					<span class="spec-label">STACK</span>
+					<p>Vanilla JS · custom MVC</p>
+				</div>
+				<a href="work/library.html" class="project-link">View →</a>
+			</div>
+			<div class="featured-project__visual" aria-hidden="true">
+				<div class="visual-frame">
+					<div class="visual-toolbar">
+						<span></span><span></span><span></span>
+					</div>
+					<div class="visual-body">
+						<div class="visual-column"></div>
+						<div class="visual-column wide"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="secondary-projects" aria-label="Additional projects">
+			<div class="container">
+				<div class="index-row compact">
+					<span class="index-number">02</span>
+					<div class="index-main">
+						<a href="404-error.html" class="index-title"
+							>UET PAST PAPERS</a
+						>
+						<p class="index-desc">
+							A compact archive of all departments semester exams.
+						</p>
+						<p class="index-desc-hover">
+							Structured to feel like a reference rather than an
+							archive dump.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="photography-interlude" aria-label="Photography">
+			<div class="photography-interlude__image-wrap">
+			<a href="photography/index.html" title="Go to Photography Page" >
+				<img
+					src="https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto/f_auto/v1779626938/Fruitfly-1_v1gfga.jpg"
+					alt="Macro photograph of a spiderweb"
+					class="photography-interlude__image"
+					loading="lazy"
+				/>
+			</a>
+			</div>
+			<p class="photography-interlude__caption">most of what's interesting is easy to walk past.</p>
+		</section>
+
+		<section
+			class="testimonial-section"
+			aria-labelledby="testimonials-heading"
+		>
+			<div class="testimonial-intro">
+                <h2 id="testimonials-heading">Testimonials</h2>
+                <p>Short notes from people who met me.</p>
+            </div>
+
+            <div class="testimonial-marquee" tabindex="0">
+                <div class="testimonial-track">
+                    <article class="testimonial-card">
+                        <img
+                            src="https://i.pravatar.cc/100?img=1"
+                            alt="Portrait of Ali Raza"
+                            class="testimonial-avatar"
+                        />
+                        <div class="testimonial-copy">
+                            <p>
+                                “He was one of the few students who'd come to office hours with a working prototype instead of just questions. The data structures project he built went past the assignment brief by a mile.”
+                            </p>
+                            <span>Ali Raza · Course Instructor, UET</span>
+                        </div>
+                    </article>
+                    <article class="testimonial-card">
+                        <img
+                            src="https://i.pravatar.cc/100?img=2"
+                            alt="Portrait of Zara Naveed"
+                            class="testimonial-avatar"
+                        />
+                        <div class="testimonial-copy">
+                            <p>
+                                “We were stuck on the routing logic at 2am and he just quietly rewrote the whole module while the rest of us argued. Calm under pressure, and the code was cleaner than what we started with.”
+                            </p>
+                            <span>Zara Naveed · Collaborator, Hackathon team</span>
+                        </div>
+                    </article>
+                    <article class="testimonial-card">
+                        <img
+                            src="https://i.pravatar.cc/100?img=3"
+                            alt="Portrait of Bilal Chaudhry"
+                            class="testimonial-avatar"
+                        />
+                        <div class="testimonial-copy">
+                            <p>
+                                “Asked him to review my thesis code and he came back with actual architecture suggestions, not just style nitpicks. Rare for someone two years behind me.”
+                            </p>
+                            <span>Bilal Chaudhry · Senior peer</span>
+                        </div>
+                    </article>
+                    <article class="testimonial-card">
+                        <img
+                            src="https://i.pravatar.cc/100?img=4"
+                            alt="Portrait of Areeba Khan"
+                            class="testimonial-avatar"
+                        />
+                        <div class="testimonial-copy">
+                            <p>
+                                “Booked him for an event shoot expecting standard coverage — got a set that actually told a story. He noticed moments most photographers would've missed.”
+                            </p>
+                            <span>Areeba Khan · Client</span>
+                        </div>
+                    </article>
+                    <article class="testimonial-card">
+                        <img
+                            src="https://i.pravatar.cc/100?img=5"
+                            alt="Portrait of Talha Mirza"
+                            class="testimonial-avatar"
+                        />
+                        <div class="testimonial-copy">
+                            <p>
+                                “Explains proofs better than half our TAs. He'd break induction arguments down until they actually clicked, not just recite the textbook steps.”
+                            </p>
+                            <span>Talha Mirza · Study group partner</span>
+                        </div>
+                    </article>
+                    <article class="testimonial-card">
+                        <img
+                            src="https://i.pravatar.cc/100?img=6"
+                            alt="Portrait of Sadia Yousuf"
+                            class="testimonial-avatar"
+                        />
+                        <div class="testimonial-copy">
+                            <p>
+                                “Handles the unglamorous parts of a project — docs, edge cases, testing — as seriously as the fun parts. That's why his stuff doesn't break in demos.”
+                            </p>
+                            <span>Sadia Yousuf · Project teammate</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+		</section>
+
+		<section class="closing-connect" aria-label="Closing">
+			<div class="closing-connect__inner">
+				<div class="closing-connect__rule" aria-hidden="true"></div>
+				<p class="closing-connect__text">
+					Nothing here is finished on purpose.<br />
+					Check back when the season changes.
+				</p>
+				<a href="connect/index.html" class="closing-connect__link">
+					Say hello <span aria-hidden="true">→</span>
+				</a>
+				<div class="closing-connect__rule" aria-hidden="true"></div>
+			</div>
+		</section>
+
+		<script>
+			const startTime = Date.now();
+			const MINIMUM_TIME = 2000; // Time in milliseconds (e.g., 2 seconds)
+
+			window.addEventListener("load", function () {
+				const loader = document.getElementById("page-loader");
+				if (!loader) return;
+
+				// 2. Calculate how much time has already passed since the user hit the page
+				const elapsedTime = Date.now() - startTime;
+
+				// 3. Subtract elapsedTime from your minimum time to see how much delay is left
+				// (If the page took longer than 2s to load, remainingDelay will be 0)
+				const remainingDelay = Math.max(0, MINIMUM_TIME - elapsedTime);
+
+				// 4. Wait out the remaining time before hiding it
+				setTimeout(() => {
+					loader.classList.add("loader-hidden");
+					setTimeout(() => loader.remove(), 600); // Your existing fade-out cleanup
+				}, remainingDelay);
+			});
+		</script>
+	</body>
 </html>

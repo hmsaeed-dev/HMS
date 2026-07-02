@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-T31PJSBQY8"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+			gtag("config", "G-T31PJSBQY8");
+		</script>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="robots" content="index, follow" />
+
+		<!-- Primary Meta Tags -->
+		<title>Writing — Hafiz Muhammad Saeed</title>
+		<meta name="title" content="Writing — Hafiz Muhammad Saeed" />
+		<meta
+			name="description"
+			content="Essays, notes, and open-source study guides on software engineering, polymathy, craft, and philosophy by Hafiz Muhammad Saeed."
+		/>
+
+		<!-- Fonts & Favicon -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap"
+		/>
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href="../src/icons/logo-mark.svg"
+		/>
+
+		<!-- Theme Detection -->
+		<script>
+			(function () {
+				const theme =
+					localStorage.getItem("theme") ||
+					(window.matchMedia("(prefers-color-scheme: dark)").matches
+						? "dark"
+						: "light");
+				document.documentElement.setAttribute("data-theme", theme);
+			})();
+		</script>
+
+		<!-- Stylesheet -->
+		<link rel="stylesheet" href="../src/css/main.css" />
+
+		<!-- Entry Script -->
+		<script type="module" src="../src/js/page.js" defer></script>
+	</head>
+
+	<body>
+		<header class="cs-hero writing-hero">
+			<div class="cs-hero-content">
+				<h1 class="cs-title">Writing</h1>
+				<p class="cs-intro">
+					Personal Reflections and study guides.
+				</p>
+					<div class="cs-hero-stats">
+					<div class="cs-stat">
+						<span class="cs-stat-num">09</span>
+						<span class="cs-stat-label">Pieces</span>
+					</div>
+					<div class="cs-stat">
+						<span class="cs-stat-num">~ 67</span>
+						<span class="cs-stat-label">Min Read</span>
+					</div>
+
+				</div>
+			</div>
+		</header>
+
+		<main class="writing-container">
+			<section class="featured-post" aria-label="Featured writing">
+				<span class="featured-badge">Featured</span>
+				<div class="featured-post__meta">6 min read</div>
+				<h2 class="featured-post__title">
+					<a href="../404-error.html"
+						>On building slowly, and with intent</a
+					>
+				</h2>
+				<p class="featured-post__summary">
+					A short note on why clarity, restraint, and patience often
+					outperform momentum when the work is meant to last.
+				</p>
+				<div class="featured-post__footer">
+					<a href="../404-error.html" class="featured-read-link"
+						>Read more <span aria-hidden="true">→</span></a
+					>
+				</div>
+			</section>
+
+			<section class="archive-toolbar" aria-label="Writing filters">
+				<div class="archive-toolbar__inner">
+					<div class="archive-chips" role="tablist">
+						<button class="archive-chip active" data-filter="all" role="tab" aria-selected="true">
+							All
+						</button>
+						<button class="archive-chip" data-filter="essay" role="tab" aria-selected="false">
+							Essays
+						</button>
+						<button class="archive-chip" data-filter="note" role="tab" aria-selected="false">
+							Notes
+						</button>
+						<button class="archive-chip" data-filter="field-note" role="tab" aria-selected="false">
+							Field notes
+						</button>
+						<button class="archive-chip" data-filter="study-guide" role="tab" aria-selected="false">
+							Study
+						</button>
+					</div>
+				</div>
+				<div class="writing-search-wrap">
+					<input type="text" id="writingSearch" placeholder="Search pieces and study guides…" aria-label="Search writing" />
+				</div>
+			</section>
+
+			<div class="writing-list" aria-label="Writing archive">
+				<article class="post-entry" data-category="essay">
+					<div class="post-entry-top">
+						<span class="post-cat-badge cat-essay">Essay</span>
+						<span class="post-meta">4 min read</span>
+					</div>
+					<h2 class="post-title">
+						<a href="../404-error.html"
+							>The shape of a personal system</a
+						>
+					</h2>
+					<p class="post-summary">
+						A reflection on turning scattered interests into a
+						coherent practice, without losing the texture of
+						curiosity.
+					</p>
+					<div class="post-footer">
+						<a href="../404-error.html">Read more <span aria-hidden="true">→</span></a>
+					</div>
+				</article>
+
+				<article class="post-entry" data-category="note">
+					<div class="post-entry-top">
+						<span class="post-cat-badge cat-note">Note</span>
+						<span class="post-meta">3 min read</span>
+					</div>
+					<h2 class="post-title">
+						<a href="../404-error.html"
+							>Why the quiet interface lasts</a
+						>
+					</h2>
+					<p class="post-summary">
+						On restraint in design, the value of negative space, and
+						why some work feels more durable when it does less.
+					</p>
+					<div class="post-footer">
+						<a href="../404-error.html">Read more <span aria-hidden="true">→</span></a>
+					</div>
+				</article>
+
+				<article class="post-entry" data-category="field-note">
+					<div class="post-entry-top">
+						<span class="post-cat-badge cat-field">Field note</span>
+						<span class="post-meta">5 min read</span>
+					</div>
+					<h2 class="post-title">
+						<a href="../404-error.html"
+							>Reading for direction, not velocity</a
+						>
+					</h2>
+					<p class="post-summary">
+						Notes from a season of reading, thinking, and learning
+						how to separate usefulness from noise.
+					</p>
+					<div class="post-footer">
+						<a href="../404-error.html">Read more <span aria-hidden="true">→</span></a>
+					</div>
+				</article>
+
+			<article class="post-entry" data-category="study-guide" data-id="note-1" data-title="Trichotomy of Power" data-subject="Constitution" data-readtime="10 min read" data-embed="https://hmsaeed.notion.site/ebd//894a0e117cd48237a7df8116c422cae4" data-notion="https://hmsaeed.notion.site/trichotomy-of-power">
+				<div class="post-entry-top">
+					<span class="post-cat-badge cat-study">Study Guide</span>
+					<span class="post-meta">10 min read</span>
+				</div>
+				<h2 class="post-title">
+					<button type="button" class="study-trigger">Trichotomy of Power</button>
+				</h2>
+				<p class="post-summary">
+					Doctrine of Separation of Powers: Legislature, Executive, and Judiciary. Covers functions, checks &amp; balances, key articles and interrelationships.
+				</p>
+				<div class="post-footer">
+					<button type="button" class="study-preview-btn">Preview <span aria-hidden="true">↗</span></button>
+					<a href="https://hmsaeed.notion.site/trichotomy-of-power" target="_blank" rel="noopener noreferrer" class="study-notion-link">Open in Notion ↗</a>
+				</div>
+			</article>
+
+			<article class="post-entry" data-category="study-guide" data-id="note-2" data-title="Islamic Provisions" data-subject="Constitution" data-readtime="8 min read" data-embed="https://hmsaeed.notion.site/ebd//16ca0e117cd483f49f1181fbafc87d19" data-notion="https://hmsaeed.notion.site/islamic-provisions">
+				<div class="post-entry-top">
+					<span class="post-cat-badge cat-study">Study Guide</span>
+					<span class="post-meta">Constitution · 8 min read</span>
+				</div>
+				<h2 class="post-title">
+					<button type="button" class="study-trigger">Islamic Provisions</button>
+				</h2>
+				<p class="post-summary">
+					Islamic provisions in Pakistan's 1973 Constitution with historical context, Objectives Resolution, and key constitutional articles.
+				</p>
+				<div class="post-footer">
+					<button type="button" class="study-preview-btn">Preview <span aria-hidden="true">↗</span></button>
+					<a href="https://hmsaeed.notion.site/islamic-provisions" target="_blank" rel="noopener noreferrer" class="study-notion-link">Open in Notion ↗</a>
+				</div>
+			</article>
+
+			<article class="post-entry" data-category="study-guide" data-id="note-3" data-title="Amendments 1973 Constitution" data-subject="Constitution" data-readtime="10 min read" data-embed="https://hmsaeed.notion.site/ebd//a33a0e117cd48279b019017c8156dfa8" data-notion="https://hmsaeed.notion.site/amendments">
+				<div class="post-entry-top">
+					<span class="post-cat-badge cat-study">Study Guide</span>
+					<span class="post-meta">Constitution · 10 min read</span>
+				</div>
+				<h2 class="post-title">
+					<button type="button" class="study-trigger">Amendments 1973 Constitution</button>
+				</h2>
+				<p class="post-summary">
+					Comprehensive overview of amendments in the 1973 Constitution. Covers pre-1985, major reforms, 26th and 27th Amendments, and historical context.
+				</p>
+				<div class="post-footer">
+					<button type="button" class="study-preview-btn">Preview <span aria-hidden="true">↗</span></button>
+					<a href="https://hmsaeed.notion.site/amendments" target="_blank" rel="noopener noreferrer" class="study-notion-link">Open in Notion ↗</a>
+				</div>
+			</article>
+
+			<article class="post-entry" data-category="study-guide" data-id="note-4" data-title="Democracy in Pakistan" data-subject="Constitution" data-readtime="5 min read" data-embed="https://hmsaeed.notion.site/ebd//8d7a0e117cd483669b320188d5a744ae" data-notion="https://hmsaeed.notion.site/democracy-in-pakistan">
+				<div class="post-entry-top">
+					<span class="post-cat-badge cat-study">Study Guide</span>
+					<span class="post-meta">Constitution · 5 min read</span>
+				</div>
+				<h2 class="post-title">
+					<button type="button" class="study-trigger">Democracy in Pakistan</button>
+				</h2>
+				<p class="post-summary">
+					Democratic history, challenges and prospects for democracy in Pakistan — a structured overview of political transitions.
+				</p>
+				<div class="post-footer">
+					<button type="button" class="study-preview-btn">Preview <span aria-hidden="true">↗</span></button>
+					<a href="https://hmsaeed.notion.site/democracy-in-pakistan" target="_blank" rel="noopener noreferrer" class="study-notion-link">Open in Notion ↗</a>
+				</div>
+			</article>
+
+			<article class="post-entry" data-category="study-guide" data-id="note-5" data-title="Hardware &amp; Computer Systems" data-subject="ICT" data-readtime="15 min read" data-embed="https://hmsaeed.notion.site/ebd//615a0e117cd48207876101884df6bc07" data-notion="https://hmsaeed.notion.site/hardware-and-systems">
+				<div class="post-entry-top">
+					<span class="post-cat-badge cat-study">Study Guide</span>
+					<span class="post-meta">ICT · 15 min read</span>
+				</div>
+				<h2 class="post-title">
+					<button type="button" class="study-trigger">Hardware &amp; Computer Systems</button>
+				</h2>
+				<p class="post-summary">
+					Computer hardware, software, networking and systems — a comprehensive study guide covering architecture, components, and configurations.
+				</p>
+				<div class="post-footer">
+					<button type="button" class="study-preview-btn">Preview <span aria-hidden="true">↗</span></button>
+					<a href="https://hmsaeed.notion.site/hardware-and-systems" target="_blank" rel="noopener noreferrer" class="study-notion-link">Open in Notion ↗</a>
+				</div>
+			</article>
+
+			<article class="post-entry" data-category="study-guide" data-id="note-6" data-title="Storage Media and Devices" data-subject="ICT" data-readtime="10 min read" data-embed="https://hmsaeed.notion.site/ebd//46fa0e117cd48376acb3810b821a3a3d" data-notion="https://hmsaeed.notion.site/storage-media-devices">
+				<div class="post-entry-top">
+					<span class="post-cat-badge cat-study">Study Guide</span>
+					<span class="post-meta">ICT · 10 min read</span>
+				</div>
+				<h2 class="post-title">
+					<button type="button" class="study-trigger">Storage Media and Devices</button>
+				</h2>
+				<p class="post-summary">
+					All types of storage media and devices — their functions, types, pros and cons, with comparisons and real-world applications.
+				</p>
+				<div class="post-footer">
+					<button type="button" class="study-preview-btn">Preview <span aria-hidden="true">↗</span></button>
+					<a href="https://hmsaeed.notion.site/storage-media-devices" target="_blank" rel="noopener noreferrer" class="study-notion-link">Open in Notion ↗</a>
+				</div>
+			</article>
+
+			</div>
+
+			<aside class="writing-empty-note">
+				<p>More essays, notes, and study guides are in progress. Each piece will appear here as it's finished.</p>
+			</aside>
+		</main>
+		<!-- Interactive Preview Modal -->
+		<div class="notes-modal" id="notesModal" aria-hidden="true" role="dialog">
+			<div class="modal-backdrop" id="modalBackdrop"></div>
+			<div class="modal-content">
+				<button class="modal-close" id="modalClose" aria-label="Close Preview">&times;</button>
+				<div class="modal-header">
+					<span class="modal-tag" id="modalTag">SUBJECT</span>
+					<h2 id="modalTitle"></h2>
+					<div class="modal-meta">
+						<span id="modalReadingTime"></span>
+					</div>
+				</div>
+				<div class="modal-body" id="modalBody">
+					<!-- Injected by JS -->
+				</div>
+				<div class="modal-footer">
+					<a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-olive" id="modalNotionLink">
+						Open in Notion ↗
+					</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

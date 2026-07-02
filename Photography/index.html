@@ -22,24 +22,24 @@
 		<title>Photography | Hafiz Muhammad Saeed</title>
 		<meta
 			name="title"
-			content="Photography Portfolio | Hafiz Muhammad Saeed"
+			content="Photography | Hafiz Muhammad Saeed"
 		/>
 		<meta
 			name="description"
-			content="Explore macro Photography, flora and landscape captured by Hafiz Muhammad Saeed in Taxila and beyond."
+			content="Explore macro Photography, flora and landscape captured by Hafiz Muhammad Saeed in Margalla Hills, Islamabad."
 		/>
 		<meta
 			name="keywords"
 			content="Macro Photography Pakistan, Margalla Hills, Flora Photography, Taxila Photography, Hafiz Muhammad Saeed Photography"
 		/>
-		<link rel="canonical" href="https://hmsaeed.com/Photography/" />
+		<link rel="canonical" href="https://hmsaeed.com/photography/" />
 
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
 		<meta property="og:site_name" content="HMS Photography" />
 		<meta
 			property="og:url"
-			content="https://hmsaeed.com/Photography/"
+			content="https://hmsaeed.com/photography/"
 		/>
 		<meta
 			property="og:title"
@@ -58,7 +58,7 @@
 		<meta property="twitter:card" content="summary_large_image" />
 		<meta
 			property="twitter:url"
-			content="https://hmsaeed.com/Photography/"
+			content="https://hmsaeed.com/photography/"
 		/>
 		<meta
 			property="twitter:title"
@@ -107,25 +107,18 @@
 		<!-- Non-critical CSS (Deferred) -->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" media="print" onload="this.media='all'">
 		<link rel="stylesheet" href="../src/css/main.css" media="print" onload="this.media='all'">
-		<link rel="stylesheet" href="../src/css/components/photography.css" media="print" onload="this.media='all'">
+		<link rel="stylesheet" href="../src/css/pages/photography.css" media="print" onload="this.media='all'">
 		<noscript>
 			<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap">
 			<link rel="stylesheet" href="../src/css/main.css">
-			<link rel="stylesheet" href="../src/css/components/photography.css">
+			<link rel="stylesheet" href="../src/css/pages/photography.css">
 		</noscript>
 
-		<link rel="icon" href="../src/icons/hms.svg" type="image/svg+xml" />
+		<link rel="icon" href="../src/icons/logo-mark.svg" type="image/svg+xml" />
 		<script type="module" src="../src/js/photography.js" defer></script>
 	</head>
 
 	<body>
-
-		<!-- ── SCROLL PROGRESS ─────────────────────────────────────── -->
-		<div
-			class="scroll-progress"
-			id="scrollProgress"
-		></div>
-
 		<!-- ── HERO ─────────────────────────────────────────────────── -->
 		<section class="pg-hero" id="pg-hero">
 			<div class="pg-hero-bg" id="heroBg"></div>
@@ -154,35 +147,29 @@
 				<!-- Filter bar -->
 				<div class="pg-filter-bar">
 					<div class="pg-filter-left">
-						<span class="pg-filter-label">Filter by</span>
 						<!-- buttons injected by JS -->
 					</div>
 					<div class="pg-filter-right">
+
+						<div class="pg-view-count">
+							Showing <span id="visibleCount">0</span> photos
+						</div>
+
 						<div class="pg-view-switcher" id="viewSwitcher">
 							<button
 								class="pg-view-btn active"
 								data-view="rhythm"
 								aria-label="Rhythm View (Masonry)"
 							>
-								<svg class="icon"><use href="#icon-masonry"/></svg>
-							</button>
-							<button
-								class="pg-view-btn"
-								data-view="order"
-								aria-label="Order View (Grid)"
-							>
-								<svg class="icon"><use href="#icon-grid"/></svg>
+								<svg class="icon"><use href="/src/icons/sprite.svg#icon-masonry"/></svg>
 							</button>
 							<button
 								class="pg-view-btn"
 								data-view="focus"
 								aria-label="Focus View (Cinematic)"
 							>
-								<svg class="icon"><use href="#icon-cinematic"/></svg>
+								<svg class="icon"><use href="/src/icons/sprite.svg#icon-cinematic"/></svg>
 							</button>
-						</div>
-						<div class="pg-view-count">
-							Showing <span id="visibleCount">0</span> photos
 						</div>
 					</div>
 				</div>
@@ -191,7 +178,7 @@
 				<div class="pg-grid" id="pgGrid"></div>
 				<div class="pg-empty" id="pgEmpty">
 					<div class="pg-empty-icon">🔭</div>
-					<h3 class="pg-empty-title">Waiting for the Light</h3>
+					<h3 class="pg-empty-title">../404-error for the Light</h3>
 					<p class="pg-empty-sub">
 						Come back soon for new captures.
 					</p>

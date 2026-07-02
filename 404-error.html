@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-T31PJSBQY8"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+			gtag("config", "G-T31PJSBQY8");
+		</script>
+
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="robots" content="noindex, follow" />
+		<title>Coming Soon — Hafiz Muhammad Saeed</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+		/>
+
+		<script>
+			(function () {
+				const theme =
+					localStorage.getItem("theme") ||
+					(window.matchMedia("(prefers-color-scheme: dark)").matches
+						? "dark"
+						: "light");
+				document.documentElement.setAttribute("data-theme", theme);
+			})();
+		</script>
+
+		<link rel="stylesheet" href="../src/css/main.css" />
+		<link rel="stylesheet" href="../src/css/pages/error.css" />
+	</head>
+
+	<body>
+		<main class="error-page-parent-container">
+		<div class = "error-page-container">
+			<img
+				src="../src/icons/logo-mark.svg"
+				alt="HMS Logo"
+				class="brand-logo"
+			/>
+
+			<h1>Coming Soon</h1>
+
+			<div class="back-action-wrap">
+				<a
+					class="back-link"
+					onclick="
+						history.back();
+						return false;
+					"
+					href="#"
+				>
+					<span>Go Back</span>
+				</a>
+			</div>
+		</div>
+		</main>
+	</body>
+</html>

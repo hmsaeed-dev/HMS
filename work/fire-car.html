@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-T31PJSBQY8"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+			gtag("config", "G-T31PJSBQY8");
+		</script>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="robots" content="index, follow" />
+
+		<title id="csPageTitle">
+			Fire Fighting Car — Case Study | Hafiz Muhammad Saeed
+		</title>
+		<meta
+			name="title"
+			content="Fire Fighting Car — Case Study | Hafiz Muhammad Saeed"
+		/>
+		<meta
+			name="description"
+			id="csMetaDesc"
+			content="Fire fighter Car — Binary Coded Decimal (BCD) representation lacks self-complementing properties, making arithmetic subtractor circuits complex."
+		/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Fira+Code:wght@400;500&display=swap"
+		/>
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href="../src/icons/logo-mark.svg"
+		/>
+
+		<script>
+			(function () {
+				const theme =
+					localStorage.getItem("theme") ||
+					(window.matchMedia("(prefers-color-scheme: dark)").matches
+						? "dark"
+						: "light");
+				document.documentElement.setAttribute("data-theme", theme);
+			})();
+		</script>
+
+		<link rel="stylesheet" href="../src/css/main.css" />
+		<script type="module" src="../src/js/page.js" defer></script>
+	</head>
+
+	<body>
+		<main class="cs-article-container" id="csArticleContainer">
+			<div class="cs-back-bar reveal">
+				<a href="index.html" class="cs-back-link">
+					<svg class="icon icon-md">
+						<use href="/src/icons/sprite.svg#icon-arrow-left" />
+					</svg>
+					<span>Works</span>
+				</a>
+			</div>
+
+			<header class="cs-header-block reveal">
+				<h1 class="cs-header-title">Fire Fighting Car</h1>
+				<p class="cs-header-oneliner">Fire fighter Car</p>
+
+				<div class="cs-header-actions">
+					<a
+						href="https://github.com/username/repo"
+						class="btn btn-olive"
+						target="_blank"
+						rel="noopener noreferrer"
+						><span>Live Demo ↗</span>
+					</a>
+					<a
+						href="https://github.com/hmsaeed-dev"
+						class="btn btn-outline"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<svg class="icon icon-md">
+							<use href="/src/icons/sprite.svg#icon-github" />
+						</svg>
+						<span>Source Code</span>
+					</a>
+				</div>
+
+				<div class="cs-hero-image-wrap">
+					<img
+						src="https://images.unsplash.com/photo-1608564697071-ddf911d81370?auto=format&fit=crop&q=80&w=1200"
+						alt="Fire Fighting Car Visual Overview"
+						class="cs-hero-image"
+						loading="eager"
+					/>
+				</div>
+			</header>
+
+			<article class="cs-article-body">
+				<section class="cs-anatomy-section reveal">
+					<h2 class="cs-anatomy-heading">01. The Problem</h2>
+					<p class="cs-anatomy-text">
+						Binary Coded Decimal (BCD) representation lacks
+						self-complementing properties, making arithmetic
+						subtractor circuits complex in early digital computing.
+						Translating BCD inputs into Excess-3 code solves this by
+						enabling simple 9's complement arithmetic.
+					</p>
+				</section>
+
+				<section class="cs-anatomy-section reveal">
+					<h2 class="cs-anatomy-heading">02. The Approach</h2>
+					<p class="cs-anatomy-text">
+						I derived truth tables mapping 4-bit BCD digits (0-9) to
+						Excess-3 values (adding 3 in binary). Invalid BCD inputs
+						(10-15) were treated as don't-care conditions in
+						Karnaugh maps, yielding simplified sum-of-products
+						Boolean equations for hardware implementation.
+					</p>
+				</section>
+
+				<section class="cs-anatomy-section reveal">
+					<h2 class="cs-anatomy-heading">03. What I Built</h2>
+					<p class="cs-anatomy-text">
+						A combinational code converter circuit built using
+						standard NAND and NOR logic gates, tested against all
+						valid 0-9 BCD input combinations to deliver
+						instantaneous unweighted code conversion.
+					</p>
+
+					<div class="cs-built-demo-housing">
+						<div class="demo-mockup-frame">
+							<div class="mockup-header">
+								<span class="mockup-dot red"></span>
+								<span class="mockup-dot yellow"></span>
+								<span class="mockup-dot green"></span>
+								<span class="mockup-title"
+									>Fire Fighting Car — Architecture
+									System</span
+								>
+							</div>
+							<div class="mockup-body" id="csDemoBody">
+								<div class="visual-spec-box">
+									<div class="spec-item">
+										<span class="spec-label"
+											>System State</span
+										>
+										<span class="spec-val">Archived</span>
+									</div>
+									<div class="spec-item">
+										<span class="spec-label"
+											>Architecture</span
+										>
+										<span class="spec-val"
+											>Combinational Logic</span
+										>
+									</div>
+									<div class="spec-item">
+										<span class="spec-label"
+											>Deployment</span
+										>
+										<span class="spec-val"
+											>HARDWARE Module</span
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="cs-anatomy-section reveal">
+					<h2 class="cs-anatomy-heading">04. What I Learned</h2>
+					<p class="cs-anatomy-text">
+						Don't-care conditions in K-maps demonstrated how
+						mathematical abstraction directly optimizes physical
+						hardware cost. Understanding how arithmetic code
+						representations simplify hardware execution gives deeper
+						insight into how CPUs process data.
+					</p>
+				</section>
+
+				<section class="cs-anatomy-section reveal">
+					<h2 class="cs-anatomy-heading">
+						05. What I'd Do Differently
+					</h2>
+					<p class="cs-anatomy-text">
+						I would simulate the circuit in Digital Works or Logisim
+						prior to physical breadboard construction to verify
+						logic transitions and timing propagation under load.
+					</p>
+				</section>
+			</article>
+
+			<footer class="cs-footer-nav reveal">
+				<a href="detector.html" class="cs-nav-link prev">
+					<span class="cs-nav-label">← Previous</span>
+					<span class="cs-nav-title">Binary Palindrome Detector</span>
+				</a>
+				<a href="library.html" class="cs-nav-link next">
+					<span class="cs-nav-label">Next →</span>
+					<span class="cs-nav-title">Digital Library</span>
+				</a>
+			</footer>
+		</main>
+	</body>
+</html>

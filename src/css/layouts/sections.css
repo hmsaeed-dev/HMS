@@ -10,46 +10,4 @@
 	background: var(--color-surface);
 }
 
-/* ── Buttons ──────────────────────────────────────────────── */
 
-.btn-olive {
-	display: inline-flex;
-	align-items: center;
-	gap: var(--space-xs);
-	background: var(--color-accent);
-	color: var(--white);
-	padding: var(--space-sm) var(--space-md);
-	border-radius: var(--radius-full);
-	font-size: var(--fs-400);
-	font-weight: 500;
-	transition: var(--transition);
-	cursor: pointer;
-	border: none;
-}
-
-.btn-olive:hover {
-	background: var(--color-accent-lt);
-	transform: translateY(-2px);
-	box-shadow: var(--shadow-md);
-}
-
-.btn-outline {
-	display: inline-flex;
-	align-items: center;
-	gap: var(--space-xs);
-	border: 1.5px solid var(--color-border);
-	color: var(--color-text);
-	padding: var(--space-xs) var(--space-md);
-	border-radius: var(--radius-full);
-	font-size: var(--fs-300);
-	font-weight: 500;
-	transition: var(--transition);
-	cursor: pointer;
-}
-
-.btn-outline:hover {
-	background: var(--color-overlay);
-	border-color: var(--color-accent);
-	color: var(--color-accent);
-	transform: translateY(-2px);
-}

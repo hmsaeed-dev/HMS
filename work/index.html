@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-T31PJSBQY8"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+			gtag("config", "G-T31PJSBQY8");
+		</script>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="robots" content="index, follow" />
+
+		<!-- Primary Meta Tags -->
+		<title>Work — Hafiz Muhammad Saeed</title>
+		<meta name="title" content="Work — Hafiz Muhammad Saeed" />
+		<meta
+			name="description"
+			content="A collection of things I've built, broken, and learned from — covering web applications, systems architecture, and hardware logic."
+		/>
+		<link rel="canonical" href="https://hmsaeed.com/work/" />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://hmsaeed.com/work/" />
+		<meta property="og:title" content="Work — Hafiz Muhammad Saeed" />
+		<meta
+			property="og:description"
+			content="A collection of things I've built, broken, and learned from."
+		/>
+		<meta
+			property="og:image"
+			content="https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto/f_auto/v1779626952/logo_te0qiv.webp"
+		/>
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content="https://hmsaeed.com/work/" />
+		<meta property="twitter:title" content="Work — Hafiz Muhammad Saeed" />
+		<meta
+			property="twitter:description"
+			content="A collection of things I've built, broken, and learned from."
+		/>
+		<meta
+			property="twitter:image"
+			content="https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto/f_auto/v1779626952/logo_te0qiv.webp"
+		/>
+
+		<!-- Structured Data -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "CollectionPage",
+				"name": "Work — Hafiz Muhammad Saeed",
+				"description": "A collection of projects built, broken, and learned from by Hafiz Muhammad Saeed.",
+				"url": "https://hmsaeed.com/work/",
+				"author": { "@type": "Person", "name": "Hafiz Muhammad Saeed" }
+			}
+		</script>
+
+		<!-- Fonts & Favicon -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap"
+		/>
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href="../src/icons/logo-mark.svg"
+		/>
+
+		<!-- Theme Detection -->
+		<script>
+			(function () {
+				const theme =
+					localStorage.getItem("theme") ||
+					(window.matchMedia("(prefers-color-scheme: dark)").matches
+						? "dark"
+						: "light");
+				document.documentElement.setAttribute("data-theme", theme);
+			})();
+		</script>
+
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="../src/css/main.css" />
+		<script type="module" src="../src/js/page.js" defer></script>
+	</head>
+
+	<body>
+		<!-- WORK HERO SECTION -->
+		<header class="cs-hero work-hero">
+			<div class="cs-hero-content">
+				<h1 class="cs-title">Crafted & Built</h1>
+				<p class="cs-intro">
+					A collection of things I've built, broken, and learned from.
+				</p>
+
+				<div class="cs-hero-stats">
+					<div class="cs-stat">
+						<span class="cs-stat-num">04</span>
+						<span class="cs-stat-label">Projects Built</span>
+					</div>
+					<div class="cs-stat">
+						<span class="cs-stat-num">06</span>
+						<span class="cs-stat-label">Technologies</span>
+					</div>
+				</div>
+
+				<!-- FILTER CONTROLS BAR -->
+				<div
+					class="work-filter-bar"
+					role="tablist"
+					aria-label="Filter projects by category"
+				>
+					<button
+						class="work-filter-btn btn-all active btn"
+						data-filter="all"
+					>
+						All
+					</button>
+					<button class="work-filter-btn btn-web btn" data-filter="web">
+						<svg class="icon icon-md">
+							<use href="/src/icons/sprite.svg#icon-code" />
+						</svg>
+						Web
+					</button>
+					<button
+						class="work-filter-btn btn-hardware btn"
+						data-filter="hardware"
+					>
+						<svg class="icon icon-md">
+							<use href="/src/icons/sprite.svg#icon-cpu" />
+						</svg>
+						Hardware
+					</button>
+				</div>
+			</div>
+		</header>
+
+		<!-- MAIN WORK CONTENT -->
+		<main class="container work-container">
+			<div class="work-cards-grid">
+				<!-- PROJECT 1: DIGITAL LIBRARY -->
+				<article class="work-card reveal" data-category="web">
+					<div class="work-card-visual">
+						<img
+							src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&q=80&w=1200"
+							alt="Digital Library Preview"
+							class="work-card-img"
+							loading="lazy"
+						/>
+						<div class="work-card-overlay"></div>
+						<span class="work-badge badge-web">Web App</span>
+					</div>
+					<div class="work-card-body">
+						<div class="work-card-meta"></div>
+						<h2 class="work-card-title">Digital Library</h2>
+						<p class="work-card-desc">
+							A distraction-free, high-performance reading
+							platform for classical literature and poetry with
+							synchronized commentary layers and instant
+							cross-text search.
+						</p>
+						<div class="work-card-actions">
+							<a href="library.html" class="btn-work-primary">
+								<span>Case Study</span>
+								<svg class="icon icon-md">
+									<use
+										href="/src/icons/sprite.svg#icon-arrow-right"
+									/>
+								</svg>
+							</a>
+							<div class="work-external-links">
+								<a
+									href="https://hmslibrary.netlify.app"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="btn-work-icon"
+									title="Live Demo"
+								>
+									<svg class="icon icon-md">
+										<use
+											href="/src/icons/sprite.svg#icon-external"
+										/>
+									</svg>
+								</a>
+								<a
+									href="https://github.com/hmsaeed-dev/E-Library"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="btn-work-icon"
+									title="GitHub Repository"
+								>
+									<svg class="icon icon-md">
+										<use
+											href="/src/icons/sprite.svg#icon-github"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</article>
+
+				<!-- PROJECT 2: Vehicle Management System -->
+				<article class="work-card reveal" data-category="web">
+					<div class="work-card-visual">
+						<img
+							src="../src/assets/images/projects/vms-pic.jpg"
+							alt="Finance Tracker Preview"
+							class="work-card-img"
+							loading="lazy"
+						/>
+						<div class="work-card-overlay"></div>
+						<span class="work-badge badge-web">C++ OOP</span>
+					</div>
+					<div class="work-card-body">
+						<div class="work-card-meta"></div>
+						<h2 class="work-card-title">Vehicle Management System</h2>
+						<p class="work-card-desc">
+							Voluptate exercitation tempor officia quis cillum magna exercitation ullamco sint deserunt culpa.
+						</p>
+						<div class="work-card-actions">
+							<a href="vehicle-sys.html" class="btn-work-primary">
+								<span>Case Study</span>
+								<svg class="icon icon-md">
+									<use
+										href="/src/icons/sprite.svg#icon-arrow-right"
+									/>
+								</svg>
+							</a>
+							<div class="work-external-links">
+								<a
+									href="../404-error.html"
+									class="btn-work-icon"
+									title="Live Demo"
+								>
+									<svg class="icon icon-md">
+										<use
+											href="/src/icons/sprite.svg#icon-external"
+										/>
+									</svg>
+								</a>
+								<a
+									href="https://github.com/hmsaeed-dev/Vehicle-management-system"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="btn-work-icon"
+									title="GitHub Repository"
+								>
+									<svg class="icon icon-md">
+										<use
+											href="/src/icons/sprite.svg#icon-github"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</article>
+
+				<!-- PROJECT 3: HMS TRACKER -->
+				<article class="work-card reveal" data-category="web">
+					<div class="work-card-visual">
+						<img
+							src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1200"
+							alt="Finance Tracker Preview"
+							class="work-card-img"
+							loading="lazy"
+						/>
+						<div class="work-card-overlay"></div>
+						<span class="work-badge badge-web">Web App</span>
+					</div>
+					<div class="work-card-body">
+						<div class="work-card-meta"></div>
+						<h2 class="work-card-title">Finance Tracker</h2>
+						<p class="work-card-desc">
+							An offline-first Progressive Web App built with pure
+							MVC architecture for real-time net worth tracking,
+							multi-account management, and zero-server Zakat
+							computations.
+						</p>
+						<div class="work-card-actions">
+							<a href="tracker.html" class="btn-work-primary">
+								<span>Case Study</span>
+								<svg class="icon icon-md">
+									<use
+										href="/src/icons/sprite.svg#icon-arrow-right"
+									/>
+								</svg>
+							</a>
+							<div class="work-external-links">
+								<a
+									href="../404-error.html"
+									class="btn-work-icon"
+									title="Live Demo"
+								>
+									<svg class="icon icon-md">
+										<use
+											href="/src/icons/sprite.svg#icon-external"
+										/>
+									</svg>
+								</a>
+								<a
+									href="https://github.com/hmsaeed-dev/Finance-Tracker"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="btn-work-icon"
+									title="GitHub Repository"
+								>
+									<svg class="icon icon-md">
+										<use
+											href="/src/icons/sprite.svg#icon-github"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</article>
+
+				<!-- PROJECT 4: BINARY PALINDROME DETECTOR -->
+				<article class="work-card reveal" data-category="hardware">
+					<div class="work-card-visual">
+						<img
+							src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200"
+							alt="Binary Palindrome Circuit"
+							class="work-card-img"
+							loading="lazy"
+						/>
+						<div class="work-card-overlay"></div>
+						<span class="work-badge badge-hardware"
+							>Hardware Logic</span
+						>
+					</div>
+					<div class="work-card-body">
+						<div class="work-card-meta"></div>
+						<h2 class="work-card-title">
+							Binary Palindrome Detector
+						</h2>
+						<p class="work-card-desc">
+							A physical 4-bit combinational logic circuit wired
+							on breadboard with TTL ICs (7486, 7404, 7408) that
+							evaluates bit symmetry in real-time without clock
+							cycles.
+						</p>
+						<div class="work-card-actions">
+							<a href="detector.html" class="btn-work-primary">
+								<span>Case Study</span>
+								<svg class="icon icon-md">
+									<use
+										href="/src/icons/sprite.svg#icon-arrow-right"
+									/>
+								</svg>
+							</a>
+							<div class="work-external-links">
+								<a
+									href="https://github.com/hmsaeed-dev"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="btn-work-icon"
+									title="GitHub Repository"
+								>
+									<svg class="icon icon-md">
+										<use
+											href="/src/icons/sprite.svg#icon-github"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</article>
+
+				<!-- PROJECT 5: FIRE FIGHTING CAR -->
+				<article class="work-card reveal" data-category="hardware">
+					<div class="work-card-visual">
+						<img
+							src="https://images.unsplash.com/photo-1608564697071-ddf911d81370?auto=format&fit=crop&q=80&w=1200"
+							alt="Fire Fighting Car Robotics"
+							class="work-card-img"
+							loading="lazy"
+						/>
+						<div class="work-card-overlay"></div>
+						<span class="work-badge badge-hardware"
+							>Robotics & Systems</span
+						>
+					</div>
+					<div class="work-card-body">
+						<div class="work-card-meta"></div>
+						<h2 class="work-card-title">Fire Fighting Car</h2>
+						<p class="work-card-desc">
+							An autonomous hardware vehicle integrating flame
+							detection sensors, motor driver arrays, and
+							combinational control logic circuits for immediate
+							hazard response.
+						</p>
+						<div class="work-card-actions">
+							<a href="fire-car.html" class="btn-work-primary">
+								<span>Case Study</span>
+								<svg class="icon icon-md">
+									<use
+										href="/src/icons/sprite.svg#icon-arrow-right"
+									/>
+								</svg>
+							</a>
+							<div class="work-external-links">
+								<a
+									href="https://github.com/hmsaeed-dev"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="btn-work-icon"
+									title="GitHub Repository"
+								>
+									<svg class="icon icon-md">
+										<use
+											href="/src/icons/sprite.svg#icon-github"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</article>
+
+
+				<section class="closing-connect" aria-label="Closing">
+			<div class="closing-connect__inner">
+				<div class="closing-connect__rule" aria-hidden="true"></div>
+				<p class="closing-connect__text">
+					Nothing here is finished on purpose.<br />
+					Check back when the season changes.
+				</p>
+				<a href="../connect/index.html" class="closing-connect__link">
+					Say hello <span aria-hidden="true">→</span>
+				</a>
+				<div class="closing-connect__rule" aria-hidden="true"></div>
+			</div>
+		</section>
+			</div>
+
+		</main>
+	</body>
+</html>
