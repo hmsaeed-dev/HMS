@@ -1,6 +1,24 @@
-/* ── PAGE FILTER UTILITIES ──────────────────────────────────── */
+export function applyWritingFilters() {
+	const searchInput = document.getElementById("writingSearch");
+	const query = searchInput ? searchInput.value.toLowerCase() : "";
 
-import { applyWritingFilters } from './notionModal.js';
+	const activeChip = document.querySelector(".archive-chip.active");
+	const categoryFilter = activeChip ? activeChip.dataset.filter : "all";
+
+	const entries = document.querySelectorAll(".post-entry");
+
+	entries.forEach((entry) => {
+		const matchesCategory = (categoryFilter === "all" || entry.dataset.category === categoryFilter);
+		const text = entry.textContent.toLowerCase();
+		const matchesSearch = (query === "" || text.includes(query));
+
+		if (matchesCategory && matchesSearch) {
+			entry.removeAttribute("style");
+		} else {
+			entry.style.display = "none";
+		}
+	});
+}
 
 export function initWorkFilters() {
 	const filterBar = document.querySelector('.work-filter-bar');

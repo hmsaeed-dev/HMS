@@ -1,25 +1,22 @@
 /* ── Photography PAGE JS ────────────────────────────────────────── */
 
-import { photos } from "./data/index.js";
-import { initNavigation } from "./components/Navigation.js";
-import { initFooter } from "./components/Footer.js";
+import { photos } from "../data/index.js";
+import { initNavigation } from "../components/Navigation.js";
+import { initFooter } from "../components/Footer.js";
 
-import { initThemeToggle, initMobileMenu } from "./utils/ui.js";
-import { initScrollReveal, initScrollSpy } from "./utils/scroll.js";
-import { getVisibleItems } from "./utils/dom.js";
-import { animateCount } from "./utils/animations.js";
-import { initLightbox } from "./components/Lightbox.js";
+import { initThemeToggle, initMobileMenu } from "../utils/ui.js";
+import { initScrollReveal, initScrollSpy } from "../utils/scroll.js";
+import { getVisibleItems } from "../utils/dom.js";
+import { animateCount } from "../utils/animations.js";
+import { initLightbox } from "../components/Lightbox.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-	// 1. Inject Components
 	initNavigation({ pathPrefix: "../" });
 	initFooter({ pathPrefix: "../" });
 
-	// 2. UI Logic (Must run after injection)
 	initThemeToggle();
 	initMobileMenu();
 
-	// ── Hero ──────────────────────────────────────────────────
 	const heroBg = document.getElementById("heroBg");
 	const heroBgPhoto = photos.find((p) => p.category === "Flora") || photos[0];
 	if (heroBgPhoto && heroBg) {
@@ -34,7 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		700,
 	);
 
-	// ── Grid & Filters ────────────────────────────────────────
 	const grid = document.getElementById("pgGrid");
 	const visibleCount = document.getElementById("visibleCount");
 	const pgEmpty = document.getElementById("pgEmpty");
@@ -43,7 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	renderGrid(grid, photos);
 	updateVisibleCount(grid, visibleCount, pgEmpty);
 
-	// ── View Switcher Logic ──────────────────────────────────
 	const viewSwitcher = document.getElementById("viewSwitcher");
 	const savedView = localStorage.getItem("pgView") || "rhythm";
 
@@ -51,7 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		grid.dataset.view = view;
 		localStorage.setItem("pgView", view);
 
-		// Update button states
 		viewSwitcher.querySelectorAll(".pg-view-btn").forEach((btn) => {
 			btn.classList.toggle("active", btn.dataset.view === view);
 		});
@@ -66,7 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	}
 
-	// Filter logic
 	document.querySelector(".pg-filter-left").addEventListener("click", (e) => {
 		const btn = e.target.closest(".pg-filter-btn");
 		if (!btn) return;
@@ -85,7 +78,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		updateVisibleCount(grid, visibleCount, pgEmpty);
 	});
 
-	// ── Initialize Lightbox ──────────────────────────────────
 	const openLightbox = initLightbox();
 	if (grid && openLightbox) {
 		grid.addEventListener("click", (e) => {
@@ -139,7 +131,6 @@ function renderGrid(grid, data) {
 		item.dataset.src = photo.src;
 		item.dataset.caption = photo.caption;
 
-		// Set aspect ratio to prevent layout shift
 		if (photo.width && photo.height) {
 			item.style.aspectRatio = `${photo.width} / ${photo.height}`;
 		}

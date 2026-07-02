@@ -1,41 +1,32 @@
 /* ── MAIN ENTRY POINT (HOME PAGE) ────────────────────────── */
 
-import { projects } from "./data/index.js";
-import { initNavigation } from "./components/Navigation.js";
-import { initFooter } from "./components/Footer.js";
+import { projects } from "../data/index.js";
+import { initNavigation } from "../components/Navigation.js";
+import { initFooter } from "../components/Footer.js";
 
-import { initThemeToggle, initMobileMenu } from "./utils/ui.js";
-import { initScrollReveal, initScrollSpy } from "./utils/scroll.js";
-import { renderList, cloneTemplate } from "./utils/dom.js";
-import { initLightbox } from "./components/Lightbox.js";
-import { throttleRAF } from "./utils/throttle.js";
-
-// ── Initialization ──────────────────────────────────────────
+import { initThemeToggle, initMobileMenu } from "../utils/ui.js";
+import { initScrollReveal, initScrollSpy } from "../utils/scroll.js";
+import { renderList, cloneTemplate } from "../utils/dom.js";
+import { initLightbox } from "../components/Lightbox.js";
+import { throttleRAF } from "../utils/throttle.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-	// 1. Inject Components
 	initNavigation({ pathPrefix: "" });
 	initFooter({ pathPrefix: "" });
 
-	// 2. UI Logic (Must run after injection)
 	initThemeToggle();
 	initMobileMenu();
 	initScrollSpy();
     initAtmosphericMotion();
 
-	// Only initialize Lightbox if the container exists in DOM
 	if (document.getElementById("lightbox")) {
 		initLightbox();
 	}
 
-	// 3. Rendering Data
 	renderProjects(projects);
 
-	// 4. Initialize scroll reveal AFTER all content is rendered
 	initScrollReveal();
 });
-
-// ── Render Functions ────────────────────────────────────────
 
 function initAtmosphericMotion() {
 	const updateScroll = throttleRAF(() => {
@@ -68,5 +59,3 @@ function renderProjects(data) {
 		return card;
 	});
 }
-
-

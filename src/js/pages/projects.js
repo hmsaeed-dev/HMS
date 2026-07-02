@@ -1,33 +1,29 @@
 /* ── PROJECTS PAGE REDESIGN JS ────────────────────────────────────────── */
 
-import { caseStudies } from "./data/caseStudies.js";
-import { photos } from "./data/photos.js";
+import { caseStudies } from "../data/caseStudies.js";
+import { photos } from "../data/photos.js";
 
-import { initNavigation } from "./components/Navigation.js";
-import { initFooter } from "./components/Footer.js";
+import { initNavigation } from "../components/Navigation.js";
+import { initFooter } from "../components/Footer.js";
 
-import { initThemeToggle, initMobileMenu } from "./utils/ui.js";
-import { initScrollReveal, initScrollSpy } from "./utils/scroll.js";
-import { renderList, cloneTemplate } from "./utils/dom.js";
-import { animateCount } from "./utils/animations.js";
+import { initThemeToggle, initMobileMenu } from "../utils/ui.js";
+import { initScrollReveal, initScrollSpy } from "../utils/scroll.js";
+import { renderList, cloneTemplate } from "../utils/dom.js";
+import { animateCount } from "../utils/animations.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-	// 1. Inject Layout Components
 	initNavigation({ pathPrefix: "../" });
 	initFooter({ pathPrefix: "../" });
 
-	// 2. Core UI Handlers
 	initThemeToggle();
 	initMobileMenu();
 	initScrollSpy();
 
-	let currentView = "case-studies"; // 'case-studies' or 'grid-showcase'
+	let currentView = "case-studies";
 
-	// 3. Render initial views
 	renderCaseStudiesView(caseStudies);
 	renderGridShowcaseView(projects);
 
-	// 4. Case Studies Mobile Tab Switcher Event Delegation
 	const caseStudiesContainer = document.getElementById(
 		"case-studies-container",
 	);
@@ -39,17 +35,14 @@ document.addEventListener("DOMContentLoaded", () => {
 			const card = btn.closest(".case-study");
 			if (!card) return;
 
-			// 1. Deactivate all buttons in this tab bar
 			card.querySelectorAll(".cs-tab-btn").forEach((b) => {
 				b.classList.remove("active");
 				b.setAttribute("aria-selected", "false");
 			});
 
-			// 2. Activate clicked button
 			btn.classList.add("active");
 			btn.setAttribute("aria-selected", "true");
 
-			// 3. Toggle tab contents
 			const targetTab = btn.dataset.tab;
 			card.querySelectorAll(".cs-tab-content").forEach((c) => {
 				c.classList.remove("active");
@@ -60,7 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	}
 
-	// 5. View Switcher Logic
 	const viewSwitcher = document.getElementById("viewSwitcher");
 	if (viewSwitcher) {
 		viewSwitcher.addEventListener("click", (e) => {
@@ -94,14 +86,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 			filterAndRender();
 
-			// Re-trigger scroll reveal animations
 			if (window.ScrollReveal) {
 				window.ScrollReveal().sync();
 			}
 		});
 	}
 
-	// 6. Hero Stats
 	const totalBuilds = projects.length;
 	const allTech = new Set([
 		...caseStudies.flatMap((s) => s.techStack || []),
@@ -114,13 +104,10 @@ document.addEventListener("DOMContentLoaded", () => {
 	animateCount(document.getElementById("statTech"), allTech.size, 1000);
 	animateCount(document.getElementById("statMetrics"), 100, 1200);
 
-	// Trigger Scroll Reveal
 	setTimeout(() => {
 		initScrollReveal();
 	}, 100);
 });
-
-/* ── EDITORIAL CASE STUDIES RENDERING ──────────────────────────────── */
 
 function renderCaseStudiesView(data) {
 	const container = document.getElementById("case-studies-container");
@@ -135,7 +122,6 @@ function renderCaseStudiesView(data) {
 		item.querySelector(".cs-sidebar-title").textContent = study.title;
 		item.querySelector(".cs-sidebar-desc").textContent = study.shortDesc;
 
-		// Ingest spec panel to DESKTOP & MOBILE containers
 		const mSpecs = item.querySelector(".m-specs");
 		(study.metrics || []).forEach((spec) => {
 			const makeBadge = () => {
@@ -150,7 +136,6 @@ function renderCaseStudiesView(data) {
 			if (mSpecs) mSpecs.appendChild(makeBadge());
 		});
 
-		// Ingest tech badging to DESKTOP & MOBILE containers
 		const dTech = item.querySelector(".d-tech");
 		const mTech = item.querySelector(".m-tech");
 		(study.techStack || []).forEach((tech) => {
@@ -164,7 +149,6 @@ function renderCaseStudiesView(data) {
 			if (mTech) mTech.appendChild(makeBadge());
 		});
 
-		// Action links
 		const linksWrap = item.querySelector(".cs-links-wrap");
 		linksWrap.innerHTML = "";
 		if (study.links?.source) {
@@ -184,7 +168,6 @@ function renderCaseStudiesView(data) {
             `;
 		}
 
-		// Narrative details split between BRIEF and ARCHITECTURE tabs
 		const briefContainer = item.querySelector(".cs-brief-sections");
 		const archContainer = item.querySelector(".cs-architecture-sections");
 
@@ -206,7 +189,6 @@ function renderCaseStudiesView(data) {
 			}
 		});
 
-		// Inject Interactive Widget Box
 		const widgetBox = item.querySelector("#widget-container");
 		if (widgetBox) {
 			widgetBox.id = `widget-${study.id}`;
@@ -217,8 +199,6 @@ function renderCaseStudiesView(data) {
 	});
 }
 
-/* ── COMPACT GRID SHOWCASE RENDERING ──────────────────────────────── */
-
 function renderGridShowcaseView(data) {
 	const grid = document.getElementById("projects-grid");
 	if (!grid) return;
@@ -228,7 +208,6 @@ function renderGridShowcaseView(data) {
 		const card = cloneTemplate("tpl-project-card");
 		if (!card) return;
 
-		// Map tag to category to support correct filtering
 		let category = "web";
 		if (proj.tag === "C++ OOP") category = "systems";
 		if (proj.tag === "Observance") category = "creative";
@@ -264,8 +243,6 @@ function renderGridShowcaseView(data) {
 	});
 }
 
-/* ── INTERACTIVE WIDGET INITIALIZATION ────────────────────────────── */
-
 function initializeInteractiveWidget(id, container) {
 	if (id === "e-library") {
 		renderMVCDiagram(container);
@@ -276,20 +253,16 @@ function initializeInteractiveWidget(id, container) {
 	}
 }
 
-// 1. House of Wisdom MVC Diagram
 function renderMVCDiagram(container) {
 	container.innerHTML = `
         <div class="mvc-widget">
             <h4 class="widget-title">Architectural Dataflow</h4>
 
             <div class="mvc-diagram-frame">
-                <!-- SVG Connections Background -->
                 <svg class="mvc-connections" width="100%" height="100%">
-                    <!-- Horizontal paths (for desktop) -->
                     <path class="conn-path path-m-v h-path" d="M 85 145 C 85 210, 455 210, 455 145" fill="none" stroke-width="2" stroke-dasharray="6,6"/>
                     <path class="conn-path path-v-c" d="M 455 80 C 455 30, 270 30, 270 80" fill="none" stroke-width="2" stroke-dasharray="6,6"/>
                     <path class="conn-path path-c-m" d="M 270 80 C 270 30, 85 30, 85 80" fill="none" stroke-width="2" stroke-dasharray="6,6"/>
-                    <!-- Vertical paths (for mobile) -->
                     <path class="conn-path path-m-v v-path active" d="M 140 205 L 140 255" fill="none" stroke-width="2" stroke-dasharray="6,6"/>
                     <path class="conn-path path-v-c v-path" d="M 140 285 C 220 285, 220 45, 140 45" fill="none" stroke-width="2" stroke-dasharray="6,6"/>
                     <path class="conn-path path-c-m v-path" d="M 140 85 L 140 135" fill="none" stroke-width="2" stroke-dasharray="6,6"/>
@@ -344,7 +317,6 @@ function renderMVCDiagram(container) {
 		},
 	};
 
-	// Set initial active state path highlight
 	const connections = container.querySelectorAll(".conn-path");
 	connections.forEach((path) => path.classList.remove("active"));
 	container
@@ -358,7 +330,6 @@ function renderMVCDiagram(container) {
 
 			const key = node.dataset.node;
 
-			// Toggle path active classes
 			connections.forEach((path) => path.classList.remove("active"));
 			if (key === "model") {
 				container
@@ -383,7 +354,6 @@ function renderMVCDiagram(container) {
 	});
 }
 
-// 2. C++ Vehicle Management System Vintage CLI Emulator
 function renderRetroConsole(container) {
 	container.innerHTML = `
         <div class="retro-widget">
@@ -503,7 +473,6 @@ function renderRetroConsole(container) {
 			"|   [4]   Plan a Trip                               |",
 			"|   [5]   View My Rental History                    |",
 			"|   [Z]   Logout                                    |",
-			"|                                                   |",
 			"+---------------------------------------------------+",
 		],
 	};
@@ -519,10 +488,8 @@ function renderRetroConsole(container) {
 			const outputLines = cmdOutputs[cmd];
 			const cmdText = `./vms_fleet_operations.exe --run-${cmd}`;
 
-			// Reset console input element
 			inputField.textContent = "";
 
-			// Simulate typing of the command
 			let charIndex = 0;
 			const typingInterval = setInterval(() => {
 				if (charIndex < cmdText.length) {
@@ -530,7 +497,6 @@ function renderRetroConsole(container) {
 					charIndex++;
 				} else {
 					clearInterval(typingInterval);
-					// Add outputs
 					setTimeout(() => {
 						appendOutput(outputLines);
 					}, 300);
@@ -541,11 +507,9 @@ function renderRetroConsole(container) {
 }
 
 function appendOutput(lines) {
-	// Clear all previous command runs except initials
 	const logElements = terminalScreen.querySelectorAll(
 		".term-log:not(.prompt-line)",
 	);
-	// Keep the first 5 logs
 	for (let i = 5; i < logElements.length; i++) {
 		logElements[i].remove();
 	}
@@ -560,20 +524,18 @@ function appendOutput(lines) {
 			line.textContent = lines[lineIndex];
 			terminalScreen.insertBefore(line, promptLine);
 
-			// Auto scroll
 			terminalScreen.parentElement.scrollTop =
 				terminalScreen.parentElement.scrollHeight;
 
 			lineIndex++;
 		} else {
 			clearInterval(printingInterval);
-			inputField.textContent = ""; // clear input line
+			inputField.textContent = "";
 			typing = false;
 		}
 	}, 100);
 }
 
-// 3. Photography Portfolio Lens Swiper
 function renderLensGallery(container) {
 	container.innerHTML = `
         <div class="photo-widget">
@@ -585,7 +547,6 @@ function renderLensGallery(container) {
             </div>
 
             <div class="lens-grid" id="lensGrid">
-                <!-- Loaded dynamically -->
             </div>
 
             <div class="photo-performance-stats">
@@ -608,7 +569,6 @@ function renderLensGallery(container) {
 	const lensGrid = container.querySelector("#lensGrid");
 	const lensButtons = container.querySelectorAll(".lens-btn");
 
-	// Initial render
 	loadLensCategory("Macro", lensGrid);
 
 	lensButtons.forEach((btn) => {
@@ -623,7 +583,6 @@ function renderLensGallery(container) {
 
 function loadLensCategory(cat, container) {
 	container.innerHTML = "";
-	// Fetch photos matching the category
 	const filtered = photos.filter((p) => p.category === cat).slice(0, 4);
 
 	filtered.forEach((pic, i) => {
