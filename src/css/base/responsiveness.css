@@ -1,8 +1,0 @@
-/* ── MODERN RESPONSIVE OVERRIDES (MOBILE-FIRST) ───────────────── */
-
-/* 
-   Note: This project strictly adheres to a Mobile Display First architecture.
-   All responsive layout logic and enhancements live directly within individual 
-   component CSS files using progressive `@media (min-width: ...)` queries.
-*/
-
