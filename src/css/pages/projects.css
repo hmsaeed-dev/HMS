@@ -1600,11 +1600,11 @@
 }
 
 .cs-nav-label {
-	font-size: var(--fs-200);
+	font-size: var(--fs-300);
 	text-transform: uppercase;
 	letter-spacing: 0.08em;
 	color: var(--color-accent);
-	font-weight: 700;
+	font-weight: 800;
 }
 
 .cs-nav-title {

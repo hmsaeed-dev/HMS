@@ -51,9 +51,7 @@ Languages:
 - HTML5 & CSS3 (Modular CSS architecture)
 
 Frameworks & Libraries:
-- Node.js
-- React
-- Express.js
+-
 
 Tools & Platforms:
 - Git & GitHub
@@ -65,14 +63,14 @@ Tools & Platforms:
 --------------------------------------------------------------------------------
 5. KEY PROJECTS
 --------------------------------------------------------------------------------
-House of Wisdom (Digital Library System)
+Digital Library System
 - Role: Lead Developer
 - Tech: Vanilla JS (ES Modules), MVC Pattern, Modular CSS.
 - Description: A scalable digital library system designed with a strict
   separation of concerns (Model-View-Controller).
 - Demo: https://hmslibrary.netlify.app/
 
-Personal Finance Tracker
+Finance Tracker
 - Tech: Vanilla JS, Offline Persistence.
 - Description: A progressive offline-first web app focusing on data privacy,
   speed, and data visualization.
@@ -93,8 +91,8 @@ CSP Coordinator | Umeed e Subh (UET Taxila)
 --------------------------------------------------------------------------------
 7. HOBBIES & INTERESTS
 --------------------------------------------------------------------------------
-- Macro Photography: Capturing the intricate details of small life and nature.
-- Strategic Logic: Avid Chess player.
+- Nature Photography: Capturing the intricate details of small life and nature.
+- Strategic Logic: Avid Chess player 1300+ ELO
 - World Building: Passionate about reading and narrative structures.
 - Craft & Nature: Woodworking and walking.
 - Physical Agility: Football and Table Tennis.
