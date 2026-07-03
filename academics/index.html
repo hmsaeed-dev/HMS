@@ -90,18 +90,6 @@
 
 		<link rel="icon" href="../src/icons/logo-mark.svg" type="image/svg+xml" />
 
-		<!-- Theme Detection (Prevents Flash) -->
-		<script>
-			(function () {
-				const theme =
-					localStorage.getItem("theme") ||
-					(window.matchMedia("(prefers-color-scheme: dark)").matches
-						? "dark"
-						: "light");
-				document.documentElement.setAttribute("data-theme", theme);
-			})();
-		</script>
-
 		<link rel="stylesheet" href="../src/css/main.css" />
 		<script type="module" src="../src/js/pages/academics.js"></script>
 	</head>

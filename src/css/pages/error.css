@@ -173,14 +173,3 @@
 		transform: scale(1) translateY(0);
 	}
 }
-
-/* 1. Manual toggle state monitoring */
-[data-theme="dark"] #page-loader {
-	background-color: var(--bg-color, #121110);
-	color: var(--text-color, #f4f3f0);
-}
-
-[data-theme="dark"] .brand-logo,
-[data-theme="dark"] .loader-logo {
-	filter: invert(0.95) brightness(0.95);
-}

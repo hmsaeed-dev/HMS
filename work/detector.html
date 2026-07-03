@@ -42,17 +42,6 @@
 			href="../src/icons/logo-mark.svg"
 		/>
 
-		<script>
-			(function () {
-				const theme =
-					localStorage.getItem("theme") ||
-					(window.matchMedia("(prefers-color-scheme: dark)").matches
-						? "dark"
-						: "light");
-				document.documentElement.setAttribute("data-theme", theme);
-			})();
-		</script>
-
 		<link rel="stylesheet" href="../src/css/main.css" />
 		<script type="module" src="../src/js/pages/subpage.js" defer></script>
 	</head>

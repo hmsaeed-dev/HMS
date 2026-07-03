@@ -1,12 +1,11 @@
 /* ── PROJECTS PAGE REDESIGN JS ────────────────────────────────────────── */
 
-import { caseStudies } from "../data/caseStudies.js";
 import { photos } from "../data/photos.js";
 
 import { initNavigation } from "../components/Navigation.js";
 import { initFooter } from "../components/Footer.js";
 
-import { initThemeToggle, initMobileMenu } from "../utils/ui.js";
+import { initMobileMenu } from "../utils/ui.js";
 import { initScrollReveal, initScrollSpy } from "../utils/scroll.js";
 import { renderList, cloneTemplate } from "../utils/dom.js";
 import { animateCount } from "../utils/animations.js";
@@ -15,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	initNavigation({ pathPrefix: "../" });
 	initFooter({ pathPrefix: "../" });
 
-	initThemeToggle();
 	initMobileMenu();
 	initScrollSpy();
 

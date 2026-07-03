@@ -44,12 +44,6 @@ body::before {
   will-change: transform;
 }
 
-[data-theme="dark"] body::before {
-    opacity: 0.1;
-    mix-blend-mode: soft-light;
-    filter: invert(1);
-}
-
 img,
 picture,
 video,

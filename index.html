@@ -93,18 +93,6 @@
 			type="image/webp"
 		/>
 
-		<!-- Theme Detection (Prevents Flash) -->
-		<script>
-			(function () {
-				const theme =
-					localStorage.getItem("theme") ||
-					(window.matchMedia("(prefers-color-scheme: dark)").matches
-						? "dark"
-						: "light");
-				document.documentElement.setAttribute("data-theme", theme);
-			})();
-		</script>
-
 		<!-- Critical CSS -->
 		<link rel="stylesheet" href="src/css/main.css" />
 		<link rel="stylesheet" href="src/css/pages/error.css" />

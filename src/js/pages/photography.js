@@ -1,10 +1,10 @@
 /* ── Photography PAGE JS ────────────────────────────────────────── */
 
-import { photos } from "../data/index.js";
+import { photos } from "../data/photos.js";
 import { initNavigation } from "../components/Navigation.js";
 import { initFooter } from "../components/Footer.js";
 
-import { initThemeToggle, initMobileMenu } from "../utils/ui.js";
+import { initMobileMenu } from "../utils/ui.js";
 import { initScrollReveal, initScrollSpy } from "../utils/scroll.js";
 import { getVisibleItems } from "../utils/dom.js";
 import { animateCount } from "../utils/animations.js";
@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	initNavigation({ pathPrefix: "../" });
 	initFooter({ pathPrefix: "../" });
 
-	initThemeToggle();
 	initMobileMenu();
 
 	const heroBg = document.getElementById("heroBg");

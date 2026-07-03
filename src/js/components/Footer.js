@@ -26,7 +26,7 @@ export function initFooter({ pathPrefix = "" } = {}) {
                         <svg class="icon"><use href="/src/icons/sprite.svg#icon-instagram"/></svg>
                     </a>
                 </div>
-                <p class="footer-copy">© 2026 Hafiz Muhammad Saeed. Built with care.</p>
+                <p class="footer-copy">© 2026 Hafiz Muhammad Saeed.</p>
             </div>
         </div>
     </footer>

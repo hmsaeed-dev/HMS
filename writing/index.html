@@ -39,18 +39,6 @@
 			href="../src/icons/logo-mark.svg"
 		/>
 
-		<!-- Theme Detection -->
-		<script>
-			(function () {
-				const theme =
-					localStorage.getItem("theme") ||
-					(window.matchMedia("(prefers-color-scheme: dark)").matches
-						? "dark"
-						: "light");
-				document.documentElement.setAttribute("data-theme", theme);
-			})();
-		</script>
-
 		<!-- Stylesheet -->
 		<link rel="stylesheet" href="../src/css/main.css" />
 

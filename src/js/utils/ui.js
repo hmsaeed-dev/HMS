@@ -60,29 +60,3 @@ export function initMobileMenu() {
 		}
 	});
 }
-
-export function initThemeToggle() {
-	const html = document.documentElement;
-
-	function setTheme(theme) {
-		html.setAttribute("data-theme", theme);
-		localStorage.setItem("theme", theme);
-	}
-
-	let current = localStorage.getItem("theme");
-	if (!current) {
-		current = window.matchMedia("(prefers-color-scheme: dark)").matches
-			? "dark"
-			: "light";
-	}
-	setTheme(current);
-
-	const toggles = document.querySelectorAll(".theme-toggle");
-	toggles.forEach((toggle) => {
-		toggle.addEventListener("click", () => {
-			const currentTheme = html.getAttribute("data-theme");
-			const newTheme = currentTheme === "dark" ? "light" : "dark";
-			setTheme(newTheme);
-		});
-	});
-}

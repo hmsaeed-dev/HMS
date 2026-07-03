@@ -19,11 +19,6 @@ export function initNavigation({ pathPrefix = "" } = {}) {
                 <a href="${pathPrefix}writing/index.html">Writings</a>
                 <a href="${pathPrefix}photography/index.html">Photography</a>
                 <a href="${pathPrefix}connect/index.html">Connect</a>
-
-                <a class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                    <svg class="icon sun-icon"><use href="/src/icons/sprite.svg#icon-sun"/></svg>
-                    <svg class="icon moon-icon"><use href="/src/icons/sprite.svg#icon-moon"/></svg>
-                </a>
             </div>
 
             <button class="nav-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
@@ -52,13 +47,6 @@ export function initNavigation({ pathPrefix = "" } = {}) {
         <a href="${pathPrefix}connect/index.html" class="mobile-link">
             <svg class="icon"><use href="/src/icons/sprite.svg#icon-mail"/></svg>
             Connect
-        </a>
-        <a class="mobile-link theme-toggle" id="themeToggleMobile">
-            <div class="theme-icon-container">
-                <svg class="icon sun-icon"><use href="/src/icons/sprite.svg#icon-sun"/></svg>
-                <svg class="icon moon-icon"><use href="/src/icons/sprite.svg#icon-moon"/></svg>
-            </div>
-            Theme
         </a>
     </div>
     `;

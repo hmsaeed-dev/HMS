@@ -79,14 +79,6 @@
 		<link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/dmsans/v15/rP2Fp2K8zQ2C3BFGPgc707SPhA.woff2" crossorigin>
 		<link rel="preload" fetchpriority="high" as="image" href="https://res.cloudinary.com/dkpehrpdm/image/upload/f_auto,q_auto/rose-1_nyur4f" type="image/webp">
 
-		<!-- Theme Detection -->
-		<script>
-			(function() {
-				const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-				document.documentElement.setAttribute('data-theme', theme);
-			})();
-		</script>
-
 		<!-- Critical CSS -->
 		<style>
 			body{background:var(--color-bg);font-family:"DM Sans",sans-serif;line-height:1.6;overflow-x:hidden;}

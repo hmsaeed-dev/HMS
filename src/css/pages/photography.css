@@ -167,17 +167,6 @@
 	animation: pg-shimmer 1.5s infinite linear;
 }
 
-[data-theme="dark"] .pg-item:not(.is-loaded) {
-	background: #2a2a2a;
-	background: linear-gradient(
-		90deg,
-		var(--color-border-lt) 25%,
-		var(--color-border) 50%,
-		var(--color-border-lt) 75%
-	);
-	background-size: 200% 100%;
-}
-
 @keyframes pg-shimmer {
 	0% { background-position: -200% 0; }
 	100% { background-position: 200% 0; }
