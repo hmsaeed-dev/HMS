@@ -488,8 +488,8 @@
 }
 
 .pulse-dot {
-	width: 9px;
-	height: 9px;
+	width: 6px;
+	height: 6px;
 	background-color: var(--color-accent);
 	border-radius: 50%;
 	animation: pulse-ring 2s infinite ease-in-out;
@@ -529,9 +529,10 @@
 
 .manifesto-text {
 	font-size: clamp(1.05rem, 1.8vw, 1.25rem);
-	line-height: 1.75;
+	text-justify: inter-word;
 	color: var(--color-text);
-	font-weight: 400;
+	line-height: 1.5;
+	font-weight: 500;
 	margin: 0;
 }
 
@@ -970,15 +971,6 @@
 	text-align: left;
 }
 
-.now-hero-path {
-	font-family: "DM Sans", sans-serif;
-	font-size: 0.65rem;
-	font-weight: 600;
-	text-transform: uppercase;
-	letter-spacing: 0.15em;
-	color: var(--color-accent);
-}
-
 .now-hero-title {
 	font-family: "Cormorant Garamond", serif;
 	font-size: clamp(3.5rem, 8vw, 5.5rem);
@@ -994,93 +986,6 @@
 	line-height: 1.6;
 	margin-top: var(--space-xs);
 	max-width: 48ch;
-}
-
-/* Celestial Tracker Widget */
-.celestial-tracker-wrap {
-	display: flex;
-	flex-direction: column;
-	gap: var(--space-xs);
-	align-items: flex-start;
-	background: var(--color-surface);
-	border: 1px solid var(--color-border-lt);
-	border-radius: var(--radiussm);
-	padding: var(--space-md);
-	width: 100%;
-	box-sizing: border-box;
-	transition: border-color var(--transition);
-}
-
-@media (min-width: 768px) {
-	.celestial-tracker-wrap {
-		align-items: flex-end;
-		text-align: right;
-		background: transparent;
-		border: none;
-		padding: 0;
-	}
-}
-
-.celestial-tracker-wrap:hover {
-	border-color: var(--color-accent);
-}
-
-.celestial-tracker {
-	width: 100%;
-	max-width: 220px;
-	height: auto;
-}
-
-.celestial-path {
-	width: 100%;
-	height: auto;
-}
-
-.celestial-label {
-	font-family: "DM Sans", sans-serif;
-	font-size: 0.65rem;
-	font-weight: 600;
-	text-transform: uppercase;
-	letter-spacing: 0.1em;
-	color: var(--color-text-muted);
-	margin-top: var(--space-2xs);
-	display: flex;
-	align-items: center;
-	gap: var(--space-2xs);
-}
-
-@media (min-width: 768px) {
-	.celestial-label {
-		justify-content: flex-end;
-	}
-}
-
-.celestial-dot-indicator {
-	width: 6px;
-	height: 6px;
-	border-radius: 50%;
-	display: inline-block;
-	background-color: var(--color-accent);
-}
-
-.now-hero-coordinates {
-	display: flex;
-	flex-direction: column;
-	gap: 2px;
-	font-family: "DM Sans", sans-serif;
-	font-size: 0.72rem;
-	color: var(--color-text-muted);
-	margin-top: var(--space-2xs);
-}
-
-.coord-label {
-	font-weight: 600;
-	text-transform: uppercase;
-	letter-spacing: 0.05em;
-}
-
-.coord-val {
-	font-variant-numeric: tabular-nums;
 }
 
 /* ── Manifesto Editorial Polish ───────────────────────────────── */
@@ -1147,7 +1052,7 @@
 .section-title {
 	font-family: "Cormorant Garamond", serif;
 	font-size: var(--fs-600);
-	font-weight: 400;
+	font-weight: 700;
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
 	color: var(--color-accent);
@@ -1183,9 +1088,9 @@
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
 	color: var(--color-text-muted);
-	font-weight: 600;
+	font-weight: 700;
 	margin: 0;
-	border-bottom: 1px solid var(--color-border-lt);
+	border-bottom: 4px solid var(--color-border-lt);
 	padding-bottom: 6px;
 }
 
