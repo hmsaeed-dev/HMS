@@ -85,213 +85,228 @@
 		<link rel="stylesheet" href="../src/css/main.css" />
 
 		<!-- Entry Script -->
-		<script type="module" src="../src/js/pages/subpage.js" defer></script>
+		<script type="module" src="../src/js/pages/now.js" defer></script>
 	</head>
 
 	<body>
 		<!-- Hero Banner -->
-		<header class="cs-hero now-hero-header">
-			<div class="cs-hero-content reveal">
-				<div class="now-meta-bar">
-					<span class="live-status">
-						<span class="pulse-dot"></span>
-						<span>Live &bull; Taxila</span>
-					</span>
-					<span class="now-date-badge">
-						<svg class="icon icon-md" aria-hidden="true">
-							<use href="/src/icons/sprite.svg#icon-clock"></use>
-						</svg>
-						Last Updated: July 2026
-					</span>
+		<header class="now-hero">
+			<div class="now-hero-inner reveal">
+				<div class="now-hero-title-group">
+					<span class="now-hero-path">hmsaeed.com / now</span>
+					<h1 class="now-hero-title">Now</h1>
+					<p class="now-hero-intro">
+						A real-time snapshot of active projects, studies, and focus.
+					</p>
 				</div>
-				<h1 class="cs-title">Now</h1>
-				<p class="cs-intro">
-					A real-time snapshot of my active projects, deep dives, and current life pursuits.
-				</p>
+				<div class="celestial-tracker-wrap">
+					<div class="celestial-tracker">
+						<svg class="celestial-path" viewBox="0 0 200 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M10 35 Q100 5 190 35" stroke="var(--color-border)" stroke-width="1.5" stroke-dasharray="4 4"/>
+							<g id="celestial-node">
+								<circle cx="10" cy="35" r="4" fill="var(--color-accent)"/>
+								<circle cx="10" cy="35" r="8" stroke="var(--color-accent)" stroke-width="1" opacity="0.4" fill="none"/>
+							</g>
+						</svg>
+					</div>
+					<div class="celestial-label">
+						<span class="celestial-dot-indicator"></span>
+						Taxila Celestial Position
+					</div>
+					<div class="now-hero-coordinates">
+						<span class="coord-label">Coordinates:</span>
+						<span class="coord-val">33.7460° N, 72.8012° E</span>
+					</div>
+				</div>
 			</div>
 		</header>
 
 		<!-- Main Container -->
 		<main class="now-container">
-			<!-- Opening Paragraph / Manifesto Card -->
-			<section class="now-manifesto reveal">
-				<p class="manifesto-text">
-					Second semester's done — this is the gap before whatever's next. Days go to hmsaeed.com, some football, and trying things I don't know yet. Lahore's somewhere in the next few weeks. Wings still soft. Not flying anywhere yet.
-				</p>
-			</section>
+			<div class="now-layout">
+				<!-- LEFT COLUMN: PRIMARY CONTENT -->
+				<div class="now-main-content reveal">
+					<!-- Opening Paragraph / Manifesto -->
+					<section class="now-manifesto-section">
+						<p class="manifesto-text">
+							Second semester's done — this is the gap before whatever's next. Days go to hmsaeed.com, some football, and trying things I don't know yet. Lahore's somewhere in the next few weeks. Wings still soft. Not flying anywhere yet.
+						</p>
+					</section>
 
-			<!-- Context Chips Bar -->
-			<div class="now-context-bar reveal reveal-delay-1">
-				<div class="context-chip">
-					<span class="chip-label">Academics</span>
-					<span class="chip-val">Summer vacations (UET)</span>
-				</div>
-				<div class="context-chip">
-					<span class="chip-label">Location</span>
-					<span class="chip-val">Taxila, Pakistan</span>
-				</div>
-				<div class="context-chip">
-					<span class="chip-label">Reading</span>
-					<span class="chip-val"
-						>Macroeconomics by David Colander</span
-					>
-				</div>
-				<div class="context-chip">
-					<span class="chip-label">Focus</span>
-					<span class="chip-val">Systems & Design</span>
-				</div>
-			</div>
+					<!-- Active Pursuits (Building & Learning merged) -->
+					<section class="now-section active-pursuits">
+						<h2 class="section-title">Active Pursuits</h2>
 
-			<!-- Dashboard Grid -->
-			<div class="now-grid">
-				<!-- WHAT I'M BUILDING -->
-				<section class="now-card building reveal reveal-delay-1">
-					<div class="card-header">
-						<h2>
-							<span class="now-card-title">
-								<svg class="card-icon">
-									<use
-										href="/src/icons/sprite.svg#icon-tool"
-									/>
-								</svg>
-								I'm Building
-							</span>
-						</h2>
-					</div>
-					<div class="building-list">
-						<article class="building-item">
-							<div class="building-meta">
-								<h3 class="now-card-title">hmsaeed.com</h3>
+						<div class="pursuits-list">
+							<div class="pursuit-group">
+								<h3 class="pursuit-header">Building</h3>
+								<article class="pursuit-item">
+									<h4 class="pursuit-title">
+										<a href="../work/index.html">hmsaeed.com</a>
+									</h4>
+									<p class="pursuit-desc">
+										Rebuilding it from a simple portfolio into a dynamic presence system. Unifying visual details and interactions.
+									</p>
+								</article>
+								<article class="pursuit-item">
+									<h4 class="pursuit-title">Design Language</h4>
+									<p class="pursuit-desc">
+										Unifying my mark, digital identity, photography, and website aesthetic into one coherent visual language.
+									</p>
+								</article>
 							</div>
-							<p class="now-card-text">
-								Rebuilding it from a portfolio into something
-								closer to a presence system.
-							</p>
-						</article>
 
-						<article class="building-item">
-							<div class="building-meta">
-								<h3 class="now-card-title">
-									Design Language
-								</h3>
+							<div class="pursuit-group">
+								<h3 class="pursuit-header">Learning</h3>
+								<article class="pursuit-item">
+									<h4 class="pursuit-title">
+										<a href="../writing/index.html">Data Structures & Algorithms</a>
+									</h4>
+									<p class="pursuit-desc">
+										Deepening core problem-solving capacity and computer science foundations.
+									</p>
+								</article>
+								<article class="pursuit-item">
+									<h4 class="pursuit-title">Advanced JavaScript</h4>
+									<p class="pursuit-desc">
+										Moving from fundamentals to advanced asynchronous and functional concepts.
+									</p>
+								</article>
 							</div>
-							<p class="now-card-text">
-								Unifying my mark, digtal identity, photography and website aesthetic into one coherent visual language.
-							</p>
-						</article>
-					</div>
-				</section>
+						</div>
+					</section>
 
-				<!-- WHAT I'M LEARNING -->
-				<section class="now-card learning reveal reveal-delay-2">
-					<div class="card-header">
-						<h2>
-							<span class="now-card-title">
-								<svg class="card-icon">
-									<use
-										href="/src/icons/sprite.svg#icon-book"
-									/>
-								</svg>
-								I'm Learning
+					<!-- Internal Monologue / Thinking About -->
+					<section class="now-section thinking-section">
+						<h2 class="section-title">Thinking About</h2>
+						<div class="thoughts-quotes">
+							<blockquote class="thought-quote">
+								&ldquo;Whether generalism is a strategy or a personality trait — and what it costs.&rdquo;
+							</blockquote>
+							<blockquote class="thought-quote">
+								&ldquo;The difference between building for legacy and building for relevance.&rdquo;
+							</blockquote>
+						</div>
+					</section>
+
+					<!-- Past Seasons History Archive -->
+					<section class="now-section archive-section">
+						<h2 class="section-title">Past Seasons</h2>
+						<div class="timeline-container">
+							<div class="timeline-item">
+								<div class="timeline-meta">
+									<span class="timeline-date">May 2026</span>
+									<span class="timeline-tag">End of 2nd Sem</span>
+								</div>
+								<div class="timeline-content">
+									<h4>Completing Semester & Transition to JS</h4>
+									<p>Wrapped up second semester at UET Taxila. Transitioned from pure C++ Object Oriented programming to frontend development. Began architecting the presence system for hmsaeed.com and consolidating macro lens experiments.</p>
+								</div>
+							</div>
+							<div class="timeline-item">
+								<div class="timeline-meta">
+									<span class="timeline-date">March 2026</span>
+									<span class="timeline-tag">Mid-Sem</span>
+								</div>
+								<div class="timeline-content">
+									<h4>C++ OOP, Systems & Local Macro Flora</h4>
+									<p>Deep dive into classes, polymorphism, and solid OOP principles. Spent weekends macro-photographing spring wild flora around Taxila ruins, laying conceptual seeds for the design aesthetics of my digital platform.</p>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+
+				<!-- RIGHT COLUMN: SIDEBAR -->
+				<aside class="now-sidebar reveal reveal-delay-1">
+					<!-- Taxila Pulse Info -->
+					<div class="sidebar-block pulse-block">
+						<h3 class="sidebar-title">Pulse</h3>
+						<div class="pulse-detail">
+							<span class="live-status">
+								<span class="pulse-dot"></span>
+								<span>Taxila</span>
 							</span>
-						</h2>
+							<div class="time-widget">
+								<span id="taxila-time" class="time-text">--:--:-- --</span>
+								<span id="taxila-status" class="status-text">Detecting pulse...</span>
+							</div>
+						</div>
 					</div>
-					<div class="learning-list">
-						<article class="now-card-item">
-							<div class="learning-content">
-								<h3 class="now-card-title">
-									Data Structures and Algorithms
-								</h3>
-								<p class="now-card-text">
-									Been circling this for a while. Time to actually sit with it.
+
+					<!-- Season Focus Split -->
+					<div class="sidebar-block focus-block">
+						<h3 class="sidebar-title">Season Focus</h3>
+						<div class="focus-split-container">
+							<div class="focus-bar">
+								<div class="focus-segment segment-build" style="width: 40%;" title="Building: 40%"></div>
+								<div class="focus-segment segment-learn" style="width: 30%;" title="Learning: 30%"></div>
+								<div class="focus-segment segment-read" style="width: 20%;" title="Reading & Photography: 20%"></div>
+								<div class="focus-segment segment-life" style="width: 10%;" title="Rest & Football: 10%"></div>
+							</div>
+							<div class="focus-legend">
+								<div class="legend-item">
+									<span class="legend-dot dot-build"></span>
+									<span class="legend-text">Building (40%)</span>
+								</div>
+								<div class="legend-item">
+									<span class="legend-dot dot-learn"></span>
+									<span class="legend-text">Learning (30%)</span>
+								</div>
+								<div class="legend-item">
+									<span class="legend-dot dot-read"></span>
+									<span class="legend-text">Reading (20%)</span>
+								</div>
+								<div class="legend-item">
+									<span class="legend-dot dot-life"></span>
+									<span class="legend-text">Rest (10%)</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Active Reading -->
+					<div class="sidebar-block reading-block">
+						<h3 class="sidebar-title">Active Reading</h3>
+						<div class="reading-widget">
+							<div class="book-cover-mock">
+								<span class="book-title-vertical">MACROECONOMICS</span>
+							</div>
+							<div class="book-details">
+								<h4 class="book-title">Macroeconomics</h4>
+								<span class="book-author">by David Colander</span>
+								<div class="book-progress-bar-wrap">
+									<div class="book-progress-bar" style="width: 35%;"></div>
+								</div>
+								<span class="book-progress-text">Page 180 of 512 (35%)</span>
+								<button class="btn-micro-thoughts" id="toggleBookThoughts">
+									My Takeaways
+									<svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+										<polyline points="6 9 12 15 18 9"></polyline>
+									</svg>
+								</button>
+								<p class="book-thoughts-content" id="bookThoughts">
+									Exploring aggregate supply/demand equilibrium, monetary policy frameworks, and structural economic variables. It offers context on how macroscopic constraints frame design and builder platforms.
 								</p>
 							</div>
-						</article>
-
-						<article class="now-card-item">
-							<div class="learning-content">
-								<h3 class="now-card-title">
-									Practicing JavaScript
-								</h3>
-								<p class="now-card-text">
-									Moving from fundametals to advanced concepts.
-								</p>
-							</div>
-						</article>
-
-						<!-- <article class="now-card-item">
-							<div class="learning-content">
-								<h3 class="now-card-title">
-									Classical Studies
-								</h3>
-								<p class="now-card-text">
-									Magna commodo laborum ipsum deserunt eu sint in id laboris irure.
-								</p>
-							</div>
-						</article> -->
+						</div>
 					</div>
-				</section>
 
-				<!-- WHAT I'M THINKING ABOUT -->
-				<section class="now-card thinking reveal reveal-delay-1">
-					<div class="card-header">
-						<h2>
-							<span class="now-card-title">
-								<svg class="card-icon">
-									<use
-										href="/src/icons/sprite.svg#icon-message"
-									/>
-								</svg>
-								Thinking About
-							</span>
-						</h2>
+					<!-- On Hold / Paused -->
+					<div class="sidebar-block paused-block">
+						<h3 class="sidebar-title">On Hold</h3>
+						<ul class="paused-list-sidebar">
+							<li>
+								<a href="../photography/index.html">HMS Clicks</a>
+								<span>Photography platform details pending integration.</span>
+							</li>
+							<li>
+								<strong>Freelance Services</strong>
+								<span>Unique services package on temporary seasonal hold.</span>
+							</li>
+						</ul>
 					</div>
-					<div class="thinking-list">
-						<blockquote class="thinking-item">
-							&ldquo;Whether generalism is a strategy or a
-							personality trait — and what it costs.&rdquo;
-						</blockquote>
-						<blockquote class="thinking-item">
-							&ldquo;The difference between building for legacy
-							and building for relevance.&rdquo;
-						</blockquote>
-					</div>
-				</section>
-
-				<!-- WHAT'S ON PAUSE -->
-				<section class="now-card paused reveal reveal-delay-2">
-					<div class="card-header">
-						<h2>
-							<span class="now-card-title">
-								<svg class="card-icon">
-									<use
-										href="/src/icons/sprite.svg#icon-pause"
-									/>
-								</svg>
-								On Pause
-							</span>
-						</h2>
-					</div>
-					<div class="paused-list">
-						<article class="paused-item">
-							<div class="paused-meta">
-								<h3 class="paused-title">HMS Clicks</h3>
-							</div>
-							<p class="now-card-text">
-								On hold until I resolve whether it lives inside hmsaeed.com or becomes its own entity. Hobby still going, but not the platform.
-							</p>
-						</article>
-
-						<article class="paused-item">
-							<div class="paused-meta">
-								<h3 class="paused-title">Freelance Services</h3>
-							</div>
-							<p class="now-card-text">
-								Freelance my unique skills package — the idea is still alive, just not the right season.
-							</p>
-						</article>
-					</div>
-				</section>
+				</aside>
 			</div>
 
 			<!-- Closing CTA Banner -->

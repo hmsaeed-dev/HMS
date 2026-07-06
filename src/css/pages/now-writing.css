@@ -921,3 +921,757 @@
 	color: var(--color-accent-lt);
 	gap: var(--space-sm);
 }
+
+/* ── Now Page Hero Header Section ───────────────────────────── */
+.now-hero {
+	padding-top: clamp(6rem, 12vh, 8rem);
+	padding-bottom: var(--space-xl);
+	border-bottom: 1px solid var(--color-border-lt);
+	margin-bottom: var(--space-2xl);
+	background: transparent;
+	position: relative;
+	overflow: hidden;
+}
+
+.now-hero::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-image:
+		radial-gradient(circle at 10% 20%, var(--color-overlay) 0%, transparent 40%),
+		radial-gradient(circle at 90% 80%, var(--color-overlay) 0%, transparent 40%);
+	pointer-events: none;
+	z-index: 0;
+}
+
+.now-hero-inner {
+	max-width: 1040px;
+	margin-inline: auto;
+	padding-inline: clamp(1.25rem, 5vw, 3rem);
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: var(--space-xl);
+	align-items: center;
+	position: relative;
+	z-index: 1;
+}
+
+@media (min-width: 768px) {
+	.now-hero-inner {
+		grid-template-columns: 1.25fr 0.75fr;
+		gap: var(--space-3xl);
+	}
+}
+
+.now-hero-title-group {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-2xs);
+	text-align: left;
+}
+
+.now-hero-path {
+	font-family: "DM Sans", sans-serif;
+	font-size: 0.65rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.15em;
+	color: var(--color-accent);
+}
+
+.now-hero-title {
+	font-family: "Cormorant Garamond", serif;
+	font-size: clamp(3.5rem, 8vw, 5.5rem);
+	font-weight: 700;
+	line-height: 1.05;
+	color: var(--color-text);
+	margin: 0;
+}
+
+.now-hero-intro {
+	font-size: var(--fs-400);
+	color: var(--color-text-muted);
+	line-height: 1.6;
+	margin-top: var(--space-xs);
+	max-width: 48ch;
+}
+
+/* Celestial Tracker Widget */
+.celestial-tracker-wrap {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-xs);
+	align-items: flex-start;
+	background: var(--color-surface);
+	border: 1px solid var(--color-border-lt);
+	border-radius: var(--radiussm);
+	padding: var(--space-md);
+	width: 100%;
+	box-sizing: border-box;
+	transition: border-color var(--transition);
+}
+
+@media (min-width: 768px) {
+	.celestial-tracker-wrap {
+		align-items: flex-end;
+		text-align: right;
+		background: transparent;
+		border: none;
+		padding: 0;
+	}
+}
+
+.celestial-tracker-wrap:hover {
+	border-color: var(--color-accent);
+}
+
+.celestial-tracker {
+	width: 100%;
+	max-width: 220px;
+	height: auto;
+}
+
+.celestial-path {
+	width: 100%;
+	height: auto;
+}
+
+.celestial-label {
+	font-family: "DM Sans", sans-serif;
+	font-size: 0.65rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: var(--color-text-muted);
+	margin-top: var(--space-2xs);
+	display: flex;
+	align-items: center;
+	gap: var(--space-2xs);
+}
+
+@media (min-width: 768px) {
+	.celestial-label {
+		justify-content: flex-end;
+	}
+}
+
+.celestial-dot-indicator {
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	display: inline-block;
+	background-color: var(--color-accent);
+}
+
+.now-hero-coordinates {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	font-family: "DM Sans", sans-serif;
+	font-size: 0.72rem;
+	color: var(--color-text-muted);
+	margin-top: var(--space-2xs);
+}
+
+.coord-label {
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+.coord-val {
+	font-variant-numeric: tabular-nums;
+}
+
+/* ── Manifesto Editorial Polish ───────────────────────────────── */
+.now-manifesto-section {
+	position: relative;
+	padding-left: var(--space-md);
+	border-left: 2px solid var(--color-accent);
+	margin-bottom: var(--space-2xl);
+}
+
+.manifesto-text {
+	font-family: "Cormorant Garamond", serif;
+	font-size: clamp(1.2rem, 2.5vw, 1.45rem);
+	line-height: 1.75;
+	color: var(--color-text);
+	margin: 0;
+}
+
+.now-manifesto-section .manifesto-text::first-letter {
+	font-family: "Cormorant Garamond", serif;
+	font-size: 3.5rem;
+	font-weight: 700;
+	float: left;
+	line-height: 0.8;
+	margin-right: var(--space-xs);
+	margin-top: 4px;
+	color: var(--color-accent);
+}
+
+/* ── Editorial Asymmetrical Layout ───────────────────────────── */
+.now-layout {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: var(--space-2xl);
+}
+
+@media (min-width: 900px) {
+	.now-layout {
+		grid-template-columns: 1.6fr 1fr;
+		gap: var(--space-3xl);
+	}
+}
+
+.now-main-content {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-2xl);
+}
+
+.now-section {
+	border-top: 1px solid var(--color-border-lt);
+	padding-top: var(--space-xl);
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-lg);
+}
+
+.now-section:first-of-type {
+	border-top: none;
+	padding-top: 0;
+}
+
+/* Premium Typography Headings */
+.section-title {
+	font-family: "Cormorant Garamond", serif;
+	font-size: var(--fs-600);
+	font-weight: 400;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--color-accent);
+	margin: 0;
+	display: flex;
+	align-items: center;
+	gap: var(--space-xs);
+}
+
+/* ── Active Pursuits (Building & Learning merged) ────────────── */
+.pursuits-list {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: var(--space-xl);
+}
+
+@media (min-width: 600px) {
+	.pursuits-list {
+		grid-template-columns: 1fr 1fr;
+		gap: var(--space-2xl);
+	}
+}
+
+.pursuit-group {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-lg);
+}
+
+.pursuit-header {
+	font-family: "DM Sans", sans-serif;
+	font-size: var(--fs-300);
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: var(--color-text-muted);
+	font-weight: 600;
+	margin: 0;
+	border-bottom: 1px solid var(--color-border-lt);
+	padding-bottom: 6px;
+}
+
+.pursuit-item {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-2xs);
+}
+
+.pursuit-title {
+	font-family: "Cormorant Garamond", serif;
+	font-size: var(--fs-500);
+	font-weight: 700;
+	margin: 0;
+}
+
+.pursuit-title a {
+	color: var(--color-text);
+	text-decoration: none;
+	border-bottom: 1px dashed var(--color-border);
+	transition: color var(--transition), border-color var(--transition);
+}
+
+.pursuit-title a:hover {
+	color: var(--color-accent);
+	border-bottom-color: var(--color-accent);
+}
+
+.pursuit-desc {
+	font-size: var(--fs-400);
+	color: var(--color-text-muted);
+	line-height: 1.6;
+	margin: 0;
+}
+
+/* ── Internal Monologue (Thinking About) ─────────────────────── */
+.thoughts-quotes {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-md);
+}
+
+.thought-quote {
+	font-family: "Cormorant Garamond", serif;
+	font-size: clamp(1.2rem, 2vw, 1.45rem);
+	font-style: italic;
+	line-height: 1.6;
+	color: var(--color-text);
+	margin: 0;
+	padding-left: var(--space-md);
+	border-left: 2px solid var(--color-sky);
+}
+
+/* ── Sidebar Elements ────────────────────────────────────────── */
+.now-sidebar {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-xl);
+}
+
+@media (min-width: 900px) {
+	.now-sidebar {
+		position: sticky;
+		top: calc(var(--header-height) + var(--space-lg));
+		align-self: start;
+	}
+}
+
+.sidebar-block {
+	padding-bottom: var(--space-xl);
+	border-bottom: 1px solid var(--color-border-lt);
+}
+
+.sidebar-block:last-child {
+	border-bottom: none;
+	padding-bottom: 0;
+}
+
+.sidebar-title {
+	font-family: "DM Sans", sans-serif;
+	font-size: var(--fs-300);
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: var(--color-text-muted);
+	font-weight: 600;
+	margin: 0 0 var(--space-md) 0;
+}
+
+/* Sidebar: Pulse Status */
+.pulse-detail {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-sm);
+}
+
+.pulse-detail .live-status {
+	align-self: flex-start;
+	display: inline-flex;
+	align-items: center;
+	gap: var(--space-xs);
+	font-size: var(--fs-300);
+	font-weight: 600;
+	color: var(--color-accent);
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	background: var(--color-overlay);
+	padding: 6px 14px;
+	border-radius: var(--radius-full);
+	border: 1px solid rgba(114, 134, 73, 0.25);
+}
+
+.pulse-detail .pulse-dot {
+	width: 9px;
+	height: 9px;
+	background-color: var(--color-accent);
+	border-radius: 50%;
+	animation: pulse-ring 2s infinite ease-in-out;
+}
+
+.time-widget {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.time-text {
+	font-family: "DM Sans", sans-serif;
+	font-size: var(--fs-700);
+	font-weight: 700;
+	color: var(--color-text);
+	font-variant-numeric: tabular-nums;
+}
+
+.pulse-detail .status-text {
+	font-size: var(--fs-300);
+	color: var(--color-text-muted);
+	font-weight: 500;
+}
+
+/* Sidebar: Season Focus Split */
+.focus-split-container {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-md);
+}
+
+.focus-bar {
+	display: flex;
+	height: 18px;
+	width: 100%;
+	border-radius: var(--radius-full);
+	overflow: hidden;
+	background: var(--ink-05);
+	border: 1px solid var(--color-border-lt);
+}
+
+.focus-segment {
+	height: 100%;
+	position: relative;
+	transition: filter var(--transition);
+	cursor: pointer;
+}
+
+.focus-segment:hover {
+	filter: brightness(1.08);
+}
+
+.focus-segment.segment-build { background-color: var(--color-accent); }
+.focus-segment.segment-learn { background-color: var(--color-earth); }
+.focus-segment.segment-read { background-color: var(--color-sky); }
+.focus-segment.segment-life { background-color: var(--color-text-muted); }
+
+.focus-legend {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: var(--space-xs);
+}
+
+.legend-item {
+	display: flex;
+	align-items: center;
+	gap: var(--space-xs);
+}
+
+.legend-dot {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	flex-shrink: 0;
+}
+
+.legend-dot.dot-build { background-color: var(--color-accent); }
+.legend-dot.dot-learn { background-color: var(--color-earth); }
+.legend-dot.dot-read { background-color: var(--color-sky); }
+.legend-dot.dot-life { background-color: var(--color-text-muted); }
+
+.legend-text {
+	font-size: var(--fs-300);
+	color: var(--color-text-muted);
+	font-weight: 500;
+}
+
+/* Sidebar: Active Reading */
+.reading-widget {
+	display: flex;
+	gap: var(--space-md);
+	align-items: flex-start;
+}
+
+.book-cover-mock {
+	width: 70px;
+	height: 105px;
+	background: var(--color-earth);
+	color: var(--white-60);
+	border-radius: 4px 8px 8px 4px;
+	box-shadow: 2px 4px 10px rgba(139, 107, 77, 0.2);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: var(--space-2xs);
+	box-sizing: border-box;
+	border-left: 4px solid rgba(0, 0, 0, 0.2);
+	position: relative;
+	overflow: hidden;
+	flex-shrink: 0;
+}
+
+.book-cover-mock::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 4px;
+	width: 1px;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.2);
+}
+
+.book-title-vertical {
+	writing-mode: vertical-rl;
+	text-orientation: mixed;
+	font-family: "Cormorant Garamond", serif;
+	font-size: 0.6rem;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	color: #fff;
+	transform: rotate(180deg);
+}
+
+.book-details {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	flex-grow: 1;
+	width: 100%;
+}
+
+.book-title {
+	font-family: "Cormorant Garamond", serif;
+	font-size: var(--fs-500);
+	font-weight: 700;
+	margin: 0;
+	color: var(--color-text);
+}
+
+.book-author {
+	font-size: var(--fs-300);
+	color: var(--color-text-muted);
+}
+
+.book-progress-bar-wrap {
+	height: 6px;
+	background: var(--ink-05);
+	border-radius: var(--radius-full);
+	overflow: hidden;
+	margin-top: 4px;
+	border: 1px solid var(--color-border-lt);
+}
+
+.book-progress-bar {
+	height: 100%;
+	background: var(--color-earth);
+	border-radius: var(--radius-full);
+}
+
+.book-progress-text {
+	font-size: var(--fs-300);
+	color: var(--color-text-muted);
+	font-weight: 500;
+	margin-bottom: 4px;
+}
+
+.btn-micro-thoughts {
+	background: var(--ink-05);
+	border: 1px solid var(--color-border-lt);
+	color: var(--color-text);
+	padding: 3px 8px;
+	font-size: 0.68rem;
+	font-family: "DM Sans", sans-serif;
+	font-weight: 600;
+	border-radius: var(--radius-full);
+	cursor: pointer;
+	align-self: flex-start;
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	transition: var(--transition);
+	margin-top: 2px;
+}
+
+.btn-micro-thoughts:hover {
+	background: var(--color-overlay);
+	color: var(--color-accent);
+	border-color: var(--color-accent);
+}
+
+.btn-micro-thoughts svg {
+	width: 8px;
+	height: 8px;
+	transition: transform var(--transition);
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 2.5;
+}
+
+.btn-micro-thoughts.active svg {
+	transform: rotate(180deg);
+}
+
+.book-thoughts-content {
+	font-size: var(--fs-300);
+	color: var(--color-text-muted);
+	line-height: 1.5;
+	background: var(--ink-05);
+	padding: var(--space-xs);
+	border-radius: var(--radiussm);
+	margin-top: 6px;
+	border-left: 2px solid var(--color-earth);
+	display: none;
+}
+
+.book-thoughts-content.show {
+	display: block;
+	animation: slideDown 0.25s ease;
+}
+
+/* Sidebar: On Hold */
+.paused-list-sidebar {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-md);
+}
+
+.paused-list-sidebar li {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	font-size: var(--fs-300);
+}
+
+.paused-list-sidebar li a,
+.paused-list-sidebar li strong {
+	font-family: "Cormorant Garamond", serif;
+	font-size: var(--fs-500);
+	font-weight: 700;
+	color: var(--color-text);
+	text-decoration: none;
+	transition: color var(--transition), border-color var(--transition);
+	align-self: flex-start;
+}
+
+.paused-list-sidebar li a {
+	border-bottom: 1px dashed var(--color-border);
+}
+
+.paused-list-sidebar li a:hover {
+	color: var(--color-accent);
+	border-bottom-color: var(--color-accent);
+}
+
+.paused-list-sidebar li span {
+	color: var(--color-text-muted);
+	line-height: 1.5;
+}
+
+/* ── Journal-Style Timeline Archive ─────────────────────────── */
+.timeline-container {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-lg);
+	position: relative;
+	padding-left: var(--space-xl);
+	margin-top: var(--space-xs);
+}
+
+.timeline-container::before {
+	content: "";
+	position: absolute;
+	top: 8px;
+	left: 5px;
+	bottom: 8px;
+	width: 1px;
+	background: var(--color-border-lt);
+}
+
+.timeline-item {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+@media (min-width: 600px) {
+	.timeline-item {
+		flex-direction: row;
+		align-items: flex-start;
+		gap: var(--space-xl);
+	}
+}
+
+.timeline-item::before {
+	content: "";
+	position: absolute;
+	left: calc(-1 * var(--space-xl) + 2px);
+	top: 7px;
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background: var(--color-bg);
+	border: 1px solid var(--color-accent);
+	z-index: 2;
+	transition: background-color var(--transition);
+}
+
+.timeline-item:hover::before {
+	background-color: var(--color-accent);
+}
+
+.timeline-meta {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	flex-shrink: 0;
+	width: 130px;
+}
+
+.timeline-date {
+	font-family: "DM Sans", sans-serif;
+	font-size: var(--fs-400);
+	font-weight: 700;
+	color: var(--color-text);
+}
+
+.timeline-tag {
+	font-size: 0.6rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	color: var(--color-accent);
+	align-self: flex-start;
+	background: var(--color-overlay);
+	padding: 2px 6px;
+	border-radius: var(--radius-full);
+}
+
+.timeline-content {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	flex-grow: 1;
+}
+
+.timeline-content h4 {
+	font-family: "DM Sans", sans-serif;
+	font-size: var(--fs-400);
+	font-weight: 700;
+	margin: 0;
+	color: var(--color-text);
+}
+
+.timeline-content p {
+	font-size: var(--fs-300);
+	color: var(--color-text-muted);
+	line-height: 1.6;
+	margin: 0;
+}
+
