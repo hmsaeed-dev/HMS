@@ -84,7 +84,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Fira+Code:wght@400;500&display=swap"
 			rel="stylesheet"
 		/>
 
@@ -96,75 +96,249 @@
 
 	<body>
 
-		<!-- Hero -->
+		<!-- Hero Banner -->
 		<header class="cs-hero">
-			<div class="cs-hero-content">
+			<div class="cs-hero-content reveal">
 				<h1 class="cs-title">Academics</h1>
-				<p class="cs-intro">
-					Educational pathway and formal qualifications.
-				</p>
+				<p class="cs-intro">BSc Computer Science, UET Taxila</p>
 
 				<div class="cs-hero-stats">
 					<div class="cs-stat">
-						<span class="cs-stat-num" id="statGPA">3.90</span>
-						<span class="cs-stat-label">CGPA</span>
+						<span class="cs-stat-num" id="statGPA">3.96</span>
+						<span class="cs-stat-label">SGPA</span>
+					</div>
+					<div class="cs-stat">
+						<span class="cs-stat-num" style="font-size: var(--fs-500); font-family: 'DM Sans', sans-serif; font-weight: 600;">Second Semester Done</span>
+						<span class="cs-stat-label">Status</span>
 					</div>
 				</div>
 			</div>
 		</header>
 
-		<main class="container">
-			<!-- LEDGER DESIGN - ACADEMIC RECORD -->
-			<section class="section reveal" id="ledger-section">
+		<!-- Main Container -->
+		<main class="now-container academics-container">
 
-				<div class="ledger-container">
-					<table class="ledger-table">
-						<thead>
-							<tr>
-								<th>Period</th>
-								<th>Qualification</th>
-								<th>Institution</th>
-								<th>Status</th>
-							</tr>
-						</thead>
-						<tbody id="ledger-body">
-							<tr>
-								<td class="ledger-year" data-label="Period">2025</td>
-								<td data-label="Qualification">
-									<div class="ledger-degree">BSc in Computer Science</div>
-									<div style="font-size: var(--fs-300); color: var(--color-text-muted); margin-top: 4px;">
-										Second-year student focused on software engineering, web development, and the intersection of design and code.
+			<!-- SEMESTER LEDGER SECTION -->
+			<section class="now-section reveal" id="ledger-section">
+				<h2 class="section-title">Semester Ledger</h2>
+
+				<div class="ledger-accordion">
+					<!-- SEMESTER 1 -->
+					<div class="semester-card">
+						<button class="semester-card-header" aria-expanded="false" aria-controls="sem1-panel">
+							<div class="sem-header-main">
+								<h3 class="sem-card-title">Semester 1</h3>
+								<span class="sem-card-stats">5 Courses &bull; 17 Credit Hours</span>
+							</div>
+							<div class="sem-card-meta">
+								<span class="sem-card-gpa">GPA 3.96</span>
+								<div class="sem-card-toggle">
+									<span class="toggle-bar horizontal"></span>
+									<span class="toggle-bar vertical"></span>
+								</div>
+							</div>
+						</button>
+						<div class="semester-card-body" id="sem1-panel" aria-hidden="true">
+							<div class="semester-card-content">
+								<div class="courses-list">
+
+									<div class="course-row">
+										<div class="course-left">
+											<span class="course-code">CS-111</span>
+											<span class="course-name">Programming Fundamentals</span>
+										</div>
+										<div class="course-right">
+											<span class="course-credits">4 Credits</span>
+											<span class="course-grade">A</span>
+										</div>
 									</div>
-								</td>
-								<td data-label="Institution">University of Engineering and Technology, Taxila</td>
-								<td data-label="Status"><span class="ledger-badge">1st Year Completed</span></td>
-							</tr>
-							<tr>
-								<td class="ledger-year" data-label="Period">2022</td>
-								<td data-label="Qualification">
-									<div class="ledger-degree">Intermediate</div>
-									<div style="font-size: var(--fs-300); color: var(--color-text-muted); margin-top: 4px;">
-										Completed with distinction. Awarded merit scholarship for consecutive academic years.
+
+									<div class="course-row">
+										<div class="course-left">
+											<span class="course-code">CS-112</span>
+											<span class="course-name">ICT</span>
+										</div>
+										<div class="course-right">
+											<span class="course-credits">3 Credits</span>
+											<span class="course-grade">A</span>
+										</div>
 									</div>
-								</td>
-								<td data-label="Institution">Jinnah Education System, Taxila</td>
-								<td data-label="Status"><span class="ledger-badge">Distinction (90%)</span></td>
-							</tr>
-							<tr>
-								<td class="ledger-year" data-label="Period">2020</td>
-								<td data-label="Qualification">
-									<div class="ledger-degree">Matriculation</div>
-									<div style="font-size: var(--fs-300); color: var(--color-text-muted); margin-top: 4px;">
-										Foundation in mathematics, physics and chemistry. Class representative and debate team captain.
+
+									<div class="course-row">
+										<div class="course-left">
+											<span class="course-code">MA-113</span>
+											<span class="course-name">Calculus &amp; Analytical Geometry</span>
+										</div>
+										<div class="course-right">
+											<span class="course-credits">3 Credits</span>
+											<span class="course-grade">A</span>
+										</div>
 									</div>
-								</td>
-								<td data-label="Institution">Jinnah Education System, Taxila</td>
-								<td data-label="Status"><span class="ledger-badge">Grade A+</span></td>
-							</tr>
-						</tbody>
-					</table>
+
+									<div class="course-row">
+										<div class="course-left">
+											<span class="course-code">PH-114</span>
+											<span class="course-name">Applied Physics</span>
+										</div>
+										<div class="course-right">
+											<span class="course-credits">4 Credits</span>
+											<span class="course-grade">A-</span>
+										</div>
+									</div>
+
+									<div class="course-row">
+										<div class="course-left">
+											<span class="course-code">HU-115</span>
+											<span class="course-name">English Composition &amp; Comprehension</span>
+										</div>
+										<div class="course-right">
+											<span class="course-credits">3 Credits</span>
+											<span class="course-grade">A</span>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- SEMESTER 2 -->
+					<div class="semester-card">
+						<button class="semester-card-header" aria-expanded="false" aria-controls="sem2-panel">
+							<div class="sem-header-main">
+								<h3 class="sem-card-title">Semester 2</h3>
+								<span class="sem-card-stats">5 Courses &bull; 17 Credit Hours</span>
+							</div>
+							<div class="sem-card-meta">
+								<span class="sem-card-gpa"></span>
+								<div class="sem-card-toggle">
+									<span class="toggle-bar horizontal"></span>
+									<span class="toggle-bar vertical"></span>
+								</div>
+							</div>
+						</button>
+						<div class="semester-card-body" id="sem2-panel" aria-hidden="true">
+							<div class="semester-card-content">
+								<div class="courses-list">
+
+									<div class="course-row">
+										<div class="course-left">
+											<span class="course-code">CS-121</span>
+											<span class="course-name">
+												<a href="../work/vehicle-sys.html" class="course-project-link">
+													Object Oriented Programming
+													<span class="project-tag-badge">Case Study &rarr;</span>
+												</a>
+											</span>
+										</div>
+										<div class="course-right">
+											<span class="course-credits">4 Credits</span>
+											<span class="course-grade">A</span>
+										</div>
+									</div>
+
+									<div class="course-row">
+										<div class="course-left">
+											<span class="course-code">CS-122</span>
+											<span class="course-name">
+												<a href="../work/detector.html" class="course-project-link">
+													Digital Logic Design
+													<span class="project-tag-badge">Case Study &rarr;</span>
+												</a>
+											</span>
+										</div>
+										<div class="course-right">
+											<span class="course-credits">4 Credits</span>
+											<span class="course-grade">B+</span>
+										</div>
+									</div>
+
+									<div class="course-row">
+										<div class="course-left">
+											<span class="course-code">CS-123</span>
+											<span class="course-name">Discrete Structures</span>
+										</div>
+										<div class="course-right">
+											<span class="course-credits">3 Credits</span>
+											<span class="course-grade">A-</span>
+										</div>
+									</div>
+
+									<div class="course-row">
+										<div class="course-left">
+											<span class="course-code">MA-124</span>
+											<span class="course-name">Probability &amp; Statistics</span>
+										</div>
+										<div class="course-right">
+											<span class="course-credits">3 Credits</span>
+											<span class="course-grade">B</span>
+										</div>
+									</div>
+
+									<div class="course-row">
+										<div class="course-left">
+											<span class="course-code">HU-125</span>
+											<span class="course-name">Communication &amp; Presentation Skills</span>
+										</div>
+										<div class="course-right">
+											<span class="course-credits">3 Credits</span>
+											<span class="course-grade">A</span>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
+
+			<!-- PRE-UNIVERSITY SECTION -->
+			<section class="now-section reveal" id="pre-university-section">
+				<h2 class="section-title">Before UET</h2>
+
+				<div class="timeline-container">
+					<div class="timeline-item">
+						<div class="timeline-meta">
+							<span class="timeline-date">2024</span>
+							<span class="timeline-tag">Intermediate</span>
+						</div>
+						<div class="timeline-content">
+							<h4>FSc</h4>
+							<p>Jinnah Education System, Taxila &bull; 90% (Distinction)</p>
+						</div>
+					</div>
+					<div class="timeline-item">
+						<div class="timeline-meta">
+							<span class="timeline-date">2022</span>
+							<span class="timeline-tag">Matriculation</span>
+						</div>
+						<div class="timeline-content">
+							<h4>Matriculation (Science)</h4>
+							<p>Jinnah Education System, Taxila &bull; Grade A+</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="scores-card reveal">
+					<h3 class="scores-card-title">Competetive Exams</h3>
+					<div class="scores-grid">
+						<div class="score-badge-item">
+							<div class="score-inner">
+								<span class="score-val">315 <span class="score-max">/ 400</span></span>
+								<span class="score-label">ECAT</span>
+							</div>
+						</div>
+						<div class="score-badge-item">
+							<div class="score-inner">
+								<span class="score-val">182 <span class="score-max">/ 200</span></span>
+								<span class="score-label">MDCAT</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
 
 		</main>
 	</body>

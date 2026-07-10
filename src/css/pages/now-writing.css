@@ -179,12 +179,7 @@
 	color: var(--color-earth);
 }
 
-.cat-field {
-	background: rgba(90, 138, 168, 0.15);
-	color: var(--color-sky);
-}
-
-.cat-study {
+.cat-ref {
 	background: rgba(114, 134, 73, 0.15);
 	color: var(--color-accent);
 }
