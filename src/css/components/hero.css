@@ -8,6 +8,17 @@
 	padding-bottom: var(--space-2xl);
 }
 
+.disclaimer {
+    font-size: 0.9rem;
+    color: #555;
+    background-color: #f9f9f9; /* Soft light gray background */
+    border-left: 3px solid #ccc; /* Subtle accent line on the left */
+    padding: 0 10px;
+    margin: 15px auto;
+    max-width: 600px;
+    border-radius: 4px;
+    text-align: left;
+}
 .hero-inner {
 	display: grid;
 	grid-template-columns: 1fr;

@@ -56,29 +56,16 @@
 	margin-bottom: 0.2rem;
 }
 
-.index-desc,
-.index-desc-hover {
+.index-desc {
 	font-size: var(--fs-300);
 	line-height: 1.2;
 	color: var(--color-text-muted);
-}
-
-.index-desc-hover {
-	display: none;
 }
 
 .index-row:hover {
 	border-color: var(--color-accent);
 }
 
-.index-row:hover .index-desc {
-	display: none;
-}
-
-.index-row:hover .index-desc-hover {
-	display: block;
-	color: var(--color-text);
-}
 
 .featured-project {
 	display: grid;
