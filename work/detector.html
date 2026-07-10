@@ -27,7 +27,7 @@
 		<meta
 			name="description"
 			id="csMetaDesc"
-			content="Digital logic circuit using ICs 7486, 7404, 7408 — Verifying whether a multi-bit binary input reads identically forward and backward."
+			content="A physical digital logic circuit utilizing TTL ICs (7486, 7404, 7408) to evaluate bit symmetry."
 		/>
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -53,14 +53,15 @@
 					<svg class="icon icon-md">
 						<use href="/src/icons/sprite.svg#icon-arrow-left" />
 					</svg>
-					<span>Works</span>
+					<span>Builds</span>
 				</a>
 			</div>
 
 			<header class="cs-header-block reveal">
 				<h1 class="cs-header-title">Binary Palindrome Detector</h1>
 				<p class="cs-header-oneliner">
-					Digital logic circuit using ICs 7486, 7404, 7408
+					A physical digital logic circuit built using TTL logic gates
+					(7486, 7404, 7408) to evaluate bit symmetry.
 				</p>
 
 				<div class="cs-header-actions">
@@ -77,6 +78,26 @@
 					</a>
 				</div>
 
+				<!-- Summary Metadata Grid -->
+				<div class="cs-metadata-grid">
+					<div class="meta-block">
+						<span class="meta-label">Role</span>
+						<span class="meta-val">Hardware Designer</span>
+					</div>
+					<div class="meta-block">
+						<span class="meta-label">Timeline</span>
+						<span class="meta-val">1 Week (DLD Lab)</span>
+					</div>
+					<div class="meta-block">
+						<span class="meta-label">Team Size</span>
+						<span class="meta-val">Solo Project</span>
+					</div>
+					<div class="meta-block">
+						<span class="meta-label">Hardware Tech</span>
+						<span class="meta-val">TTL ICs, Breadboard</span>
+					</div>
+				</div>
+
 				<div class="cs-hero-image-wrap">
 					<img
 						src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200"
@@ -88,38 +109,64 @@
 			</header>
 
 			<article class="cs-article-body">
+				<!-- Section 1 -->
 				<section class="cs-anatomy-section reveal">
-					<h2 class="cs-anatomy-heading">01. The Problem</h2>
+					<h2 class="cs-anatomy-heading">
+						The Challenge — Zero-Clock Bit Symmetry
+					</h2>
 					<p class="cs-anatomy-text">
-						In digital logic design, verifying whether a multi-bit
-						binary input reads identically forward and backward
-						requires immediate Boolean evaluations without software
-						clock cycles or microcontrollers. The assignment called
-						for a pure hardware implementation minimizing logic gate
-						count and propagation delay.
+						In software, checking if a string reads identically
+						forward and backward is a trivial task—a simple loop
+						checking indices from both ends. In hardware, performing
+						this evaluation without a CPU, clock cycles, or
+						instruction sets requires a different way of thinking.
+						The problem was to evaluate a 4-bit binary input in
+						real-time using purely combinational logic gates,
+						minimizing delay and logic gate footprint.
 					</p>
 				</section>
 
+				<!-- Section 2 -->
 				<section class="cs-anatomy-section reveal">
-					<h2 class="cs-anatomy-heading">02. The Approach</h2>
+					<h2 class="cs-anatomy-heading">
+						The Logic — Karnaugh Reduction &amp; Gate Economy
+					</h2>
 					<p class="cs-anatomy-text">
-						I mapped the 4-bit palindrome Boolean expressions onto
-						Karnaugh maps to reduce expression complexity. Instead
-						of using redundant logic gates, I utilized XOR gates (IC
-						7486) for bit pair comparisons and AND gates (IC 7408)
-						for output convergence, verifying signal propagation on
-						breadboard logic trainers.
+						To avoid wasting physical ICs on redundant logic paths,
+						I drafted the truth table for the 4-bit palindrome
+						expression (where input bit 0 equals bit 3, and bit 1
+						equals bit 2). Mapping these inputs onto Karnaugh maps
+						allowed me to reduce the Boolean expressions to their
+						simplest forms.
+					</p>
+
+					<blockquote class="cs-pullquote">
+						"Instead of wiring a convoluted array of gates, the math
+						pointed to simple equivalence. I used XOR gates (IC
+						7486) to compare bit pairs (B0-B3 and B1-B2), then
+						passed the inverted signals into an AND gate (IC 7408)
+						for output convergence."
+					</blockquote>
+
+					<p class="cs-anatomy-text">
+						This reduction kept the hardware build clean, utilizing
+						just three TTL chips instead of a sprawling board of
+						redundant wiring.
 					</p>
 				</section>
 
+				<!-- Section 3 -->
 				<section class="cs-anatomy-section reveal">
-					<h2 class="cs-anatomy-heading">03. What I Built</h2>
+					<h2 class="cs-anatomy-heading">
+						The Build — Breadboard Wiring &amp; Indicator LEDs
+					</h2>
 					<p class="cs-anatomy-text">
-						A physical combinational logic circuit wired on a
-						breadboard with ICs 7486 (XOR), 7404 (NOT), and 7408
-						(AND) that evaluates 4-bit binary inputs in real-time
-						and illuminates an LED indicator upon detecting
-						symmetric bit patterns.
+						I assembled the physical circuit on a standard
+						breadboard using logic gates (ICs 7486, 7404, and 7408).
+						The circuit receives inputs from four manual toggle
+						switches and routes the output signal to a single red
+						LED indicator, which illuminates immediately when a
+						symmetric binary state is selected.
 					</p>
 
 					<div class="cs-built-demo-housing">
@@ -129,8 +176,7 @@
 								<span class="mockup-dot yellow"></span>
 								<span class="mockup-dot green"></span>
 								<span class="mockup-title"
-									>Binary Palindrome Detector — Architecture
-									System</span
+									>Logic Gate Trainer Setup</span
 								>
 							</div>
 							<div class="mockup-body" id="csDemoBody">
@@ -146,7 +192,7 @@
 											>Architecture</span
 										>
 										<span class="spec-val"
-											>TTL Hardware Logic</span
+											>Combinational Logic</span
 										>
 									</div>
 									<div class="spec-item">
@@ -154,7 +200,7 @@
 											>Deployment</span
 										>
 										<span class="spec-val"
-											>HARDWARE Module</span
+											>TTL Hardware Trainer</span
 										>
 									</div>
 								</div>
@@ -163,26 +209,45 @@
 					</div>
 				</section>
 
+				<!-- Section 4 -->
 				<section class="cs-anatomy-section reveal">
-					<h2 class="cs-anatomy-heading">04. What I Learned</h2>
+					<h2 class="cs-anatomy-heading">
+						Physical Debugging — Floating Pins &amp; Signal Noise
+					</h2>
 					<p class="cs-anatomy-text">
-						Hardware logic leaves zero room for hand-waving. Unlike
-						software debugging where you can log variables,
-						diagnosing floating pins or loose ground wires on a
-						breadboard teaches you systematic signal tracing and
-						physical precision.
+						Software errors output a compiler warning or log details
+						to a terminal. Hardware debugging is completely silent.
+						During first power-up, the output LED behaved randomly,
+						flickering even when inputs were stable.
+					</p>
+
+					<blockquote class="cs-pullquote">
+						"A floating input pin acts like a tiny antenna, picking
+						up electrostatic charge and fluctuating between logical
+						high and low. Diagnosing this taught me the discipline
+						of hard-wiring unused gate pins to ground."
+					</blockquote>
+
+					<p class="cs-anatomy-text">
+						Tracing logic propagation gate-by-gate with a logic
+						probe and a multimeter taught me to respect the physical
+						constraints of signals—something that compiler
+						abstractions completely hide.
 					</p>
 				</section>
 
+				<!-- Section 5 -->
 				<section class="cs-anatomy-section reveal">
 					<h2 class="cs-anatomy-heading">
-						05. What I'd Do Differently
+						Retrospective — Schematic Routing &amp; Color Coding
 					</h2>
 					<p class="cs-anatomy-text">
-						I would draw full wiring schematic diagrams with
-						color-coded pin assignments before plugging chips into
-						the breadboard. Neat wire management upfront prevents
-						hours of probing IC pins with a multimeter later.
+						While the circuit worked, my wiring layout was a messy
+						'rats nest' of raw jumpers. If I rebuilt this, I would
+						draw a strict, physical pinout diagram beforehand and
+						use color-coded wires (e.g. red for VCC, black for GND,
+						yellow for input signals, and blue for intermediate gate
+						states) to make the physical board readable at a glance.
 					</p>
 				</section>
 			</article>

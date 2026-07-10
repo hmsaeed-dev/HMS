@@ -44,7 +44,6 @@
 
 		<link rel="stylesheet" href="../src/css/main.css" />
 		<script type="module" src="../src/js/pages/subpage.js" defer></script>
-
 	</head>
 
 	<body>
@@ -54,15 +53,15 @@
 					<svg class="icon icon-md">
 						<use href="/src/icons/sprite.svg#icon-arrow-left" />
 					</svg>
-					<span>Works</span>
+					<span>Builds</span>
 				</a>
 			</div>
 
 			<header class="cs-header-block reveal">
 				<h1 class="cs-header-title">Vehicle Management System</h1>
 				<p class="cs-header-oneliner">
-					A C++ console application for fleet tracking, rentals, sales,
-					damage inspection, and trip planning.
+					A C++ console application for fleet tracking, rentals,
+					sales, damage inspection, and trip planning.
 				</p>
 
 				<div class="cs-header-actions">
@@ -86,6 +85,26 @@
 					</a>
 				</div>
 
+				<!-- Summary Metadata Grid -->
+				<div class="cs-metadata-grid">
+					<div class="meta-block">
+						<span class="meta-label">Role</span>
+						<span class="meta-val">Lead Developer / Team Lead</span>
+					</div>
+					<div class="meta-block">
+						<span class="meta-label">Timeline</span>
+						<span class="meta-val">4 Weeks (OOP Lab)</span>
+					</div>
+					<div class="meta-block">
+						<span class="meta-label">Team Size</span>
+						<span class="meta-val">4 Members</span>
+					</div>
+					<div class="meta-block">
+						<span class="meta-label">Core Tech</span>
+						<span class="meta-val">C++17, File Streams</span>
+					</div>
+				</div>
+
 				<div class="cs-hero-image-wrap">
 					<img
 						src="../src/assets/images/projects/vms-pic.jpg"
@@ -97,100 +116,111 @@
 			</header>
 
 			<article class="cs-article-body">
+				<!-- Section 1 -->
 				<section class="cs-anatomy-section reveal">
-					<h2 class="cs-anatomy-heading">01. The Problem</h2>
+					<h2 class="cs-anatomy-heading">
+						The Friction — Paper Trails &amp; Human Memory
+					</h2>
 					<p class="cs-anatomy-text">
-						Renting out a fleet of cars by hand has predictable failure
-						points. Someone forgets to mark a car as returned and it gets
-						double-booked. A late fee gets calculated wrong because nobody
-						wrote down the exact return date. A car comes back with damage
-						and there's no consistent way to decide what that costs the
-						customer. It's just what happens when
-						a business runs on memory and paper instead of a system.
+						Renting out a fleet of vehicles by hand is an exercise
+						in predictable human failure. Late fees get
+						miscalculated on scrap paper, return inspections are
+						forgotten, and damage claims are resolved by arguments
+						rather than records. It’s what happens when a business
+						attempts to run on human memory instead of a strict,
+						mathematical system.
 					</p>
 					<p class="cs-anatomy-text">
-						For our university OOP lab project, three teammates and I built
-						that system in C++ ; fleet tracking, rentals, sales,
-						damage inspection, and a customer-facing trip planner, all
-						running as a shared console application.
+						For our university Object-Oriented Programming (OOP) lab
+						project at UET Taxila, three teammates and I decided to
+						tackle this logistical chaos. We set out to design a
+						shared console application that handles fleet tracking,
+						sales, returns, dynamic billing, and a customer-facing
+						trip planner.
 					</p>
 				</section>
 
+				<!-- Section 2 -->
 				<section class="cs-anatomy-section reveal">
-					<h2 class="cs-anatomy-heading">02. The Approach</h2>
+					<h2 class="cs-anatomy-heading">
+						The Architecture — Decoupled Base Blueprints
+					</h2>
 					<p class="cs-anatomy-text">
-						We split the project into modules — vehicles and pricing, transactions, saving/loading data, and input safety — and reviewed how the pieces came together as the team built them.
+						We split the application into logical segments — UI
+						orchestration, data persistence, transactions, and input
+						validation. The core architectural decision revolved
+						around decoupling: using abstract base classes with pure
+						virtual functions so that distinct vehicle types could
+						evaluate their own pricing models while sharing a common
+						interface.
 					</p>
+
+					<blockquote class="cs-pullquote">
+						"We chose simple file streams over database
+						configurations. It was a deliberate trade-off: we wanted
+						our limited 4-week window spent mastering C++
+						inheritance and SOLID principles, not debugging database
+						connection strings."
+					</blockquote>
+
 					<p class="cs-anatomy-text">
-						The core architectural decision was using abstract base classes
-						with pure virtual functions so each vehicle type could calculate
-						its own pricing while sharing a common interface. <code>Vehicle</code>,
-						<code>User</code>, and <code>Transaction</code> became the three
-						blueprints everything else built on.
+						Under the hood, <code>Vehicle</code>, <code>User</code>,
+						and <code>Transaction</code> served as the three
+						structural blueprints that the rest of the systems
+						integrated with.
 					</p>
 				</section>
 
+				<!-- Mermaid Architecture flow -->
+				<div class="mermaid reveal">
+					graph TD %% Define Nodes with clean HTML strings Menu["<b
+						>MenuHandler</b
+					><br /><small>UI Orchestration & Session Workflow</small>"]
+					AdminS["<b>Admin Session</b>"] CustS["<b>Customer Session</b
+					>"] Eng["<b>SearchEngine & TripPlanner</b>"] AdminF["<b
+						>Admin Features</b
+					><br />• Dashboard<br />• Fleet CRUD<br />• User
+					Management"] Trans["<b>Transactions Layer</b><br />•
+					Rentals<br />• Sales<br />• Post-Return Inspections"] %%
+					Connections Menu --> AdminS Menu --> CustS Menu --> Eng
+					AdminS --> AdminF CustS --> Trans Eng --> Trans %% Assign
+					Classes class Menu main; class AdminS,CustS,Eng sub; class
+					AdminF,Trans feat;
+				</div>
 
-	<div class="mermaid">
-    graph TD
-        %% Define Nodes with clean HTML strings
-        Menu["<b>MenuHandler</b><br><small>UI Orchestration & Session Workflow</small>"]
-
-        AdminS["<b>Admin Session</b>"]
-        CustS["<b>Customer Session</b>"]
-        Eng["<b>SearchEngine & TripPlanner</b>"]
-
-        AdminF["<b>Admin Features</b><br>• Dashboard<br>• Fleet CRUD<br>• User Management"]
-        Trans["<b>Transactions Layer</b><br>• Rentals<br>• Sales<br>• Post-Return Inspections"]
-
-        %% Connections
-        Menu --> AdminS
-        Menu --> CustS
-        Menu --> Eng
-
-        AdminS --> AdminF
-        CustS --> Trans
-        Eng --> Trans
-
-        %% Assign Classes
-        class Menu main;
-        class AdminS,CustS,Eng sub;
-        class AdminF,Trans feat;
-
-</div>
-
+				<!-- Section 3 -->
 				<section class="cs-anatomy-section reveal">
-					<h2 class="cs-anatomy-heading">03. What I Built</h2>
+					<h2 class="cs-anatomy-heading">
+						Core Mechanics — State Inspections &amp; Dynamic Rates
+					</h2>
 					<p class="cs-anatomy-text">
-						The system has two kinds of users — Admin and Customer — sharing
-						one fleet. Cars come in four types: Economy, Luxury, SUV, and
-						Van. Every type shares the same basic blueprint but calculates
-						its own price. A few decisions we made on purpose:
+						The application manages a single fleet shared between
+						Admins and Customers. Vehicles fall into four
+						categories: Economy, Luxury, SUV, and Van. To make the
+						console application feel like a real utility, we focused
+						on several detailed logic paths:
 					</p>
 					<ul class="cs-anatomy-list">
 						<li>
-							Renting longer costs less per day. 4–7 days
-							gets a 10% discount; 8 or more gets 20%. Pricing needed its
-							own logic path, not a flat formula.
+							<strong>Ligated Rental Rates:</strong> Renting
+							longer costs less per day. 4–7 days triggers an
+							automatic 10% discount, and 8 or more days grants a
+							20% discount.
 						</li>
 						<li>
-							Returns go through an inspection, not just a
-							checkbox. Fuel level, mileage, and condition all get
-							logged. Condition — Good, Fair, or Poor — decides a damage
-							fee (nothing, half a day's rate, or double) that gets added
-							to the final bill automatically.
+							<strong>Inspection Workflows:</strong> Returns go
+							through a rigorous logging phase rather than a flat
+							checklist. Condition metrics—mapped as
+							<code>Good</code>, <code>Fair</code>, or
+							<code>Poor</code>—calculate damage surcharge fees
+							(ranging from zero to double daily rates) and append
+							them to the customer's final receipt.
 						</li>
 						<li>
-							Renting and selling share a backbone but stay
-							distinct. Both are transactions against a vehicle
-							and a customer, but they behave differently enough that
-							treating them identically would have caused problems.
-						</li>
-						<li>
-							Everything saves to disk in plain text
-							files — no database engine. A deliberate scope
-							choice for a four-week lab project: we wanted our time going
-							into the design, not into learning a database.
+							<strong>Transaction Backbone:</strong> Renting and
+							selling share a base class but behave differently
+							enough that merging them into a single class would
+							have violated single-responsibility principles.
 						</li>
 					</ul>
 
@@ -201,7 +231,8 @@
 								<span class="mockup-dot yellow"></span>
 								<span class="mockup-dot green"></span>
 								<span class="mockup-title"
-									>Vehicle Management System — Architecture</span
+									>Vehicle Management System — Compiled
+									Sandbox</span
 								>
 							</div>
 							<div class="mockup-body" id="csDemoBody">
@@ -210,25 +241,21 @@
 										<span class="spec-label"
 											>System State</span
 										>
-										<span class="spec-val"
-											>Complete</span
-										>
+										<span class="spec-val">Complete</span>
 									</div>
 									<div class="spec-item">
 										<span class="spec-label"
 											>Architecture</span
 										>
 										<span class="spec-val"
-											>OOP / Inheritance</span
+											>SOLID / OOP</span
 										>
 									</div>
 									<div class="spec-item">
 										<span class="spec-label"
-											>Language</span
+											>Compiled For</span
 										>
-										<span class="spec-val"
-											>C++ Console</span
-										>
+										<span class="spec-val">MSVC C++17</span>
 									</div>
 								</div>
 							</div>
@@ -236,67 +263,78 @@
 					</div>
 				</section>
 
+				<!-- Section 4 -->
 				<section class="cs-anatomy-section reveal">
-					<h2 class="cs-anatomy-heading">04. What I Learned</h2>
+					<h2 class="cs-anatomy-heading">
+						Team Dynamics —VS Code Syncing &amp; Class Agreements
+					</h2>
 					<p class="cs-anatomy-text">
-						Leading four people through one shared codebase surfaced
-						problems that don't show up when you're building alone — two
-						people writing code against the same shared file at the same
-						time, or one teammate building on top of a piece that hadn't
-						actually been finalized yet. Most of what I'd call "learning"
-						here wasn't really about C++ — it was about sequencing: agree on
-						the shape of the shared pieces before people start
-						building on top of them, or you end up redoing work later. We
-						also hit enough messy console input early on that we gave
-						input-checking its own dedicated piece of the system instead of
-						scattering it everywhere.
+						Leading a small team through one shared codebase taught
+						me that coordination is harder than coding. In the early
+						days, we suffered from merge conflicts, broken builds,
+						and files written against assumptions we hadn't actually
+						agreed on yet.
+					</p>
+
+					<blockquote class="cs-pullquote">
+						"Most of what we called 'debugging' had nothing to do
+						with syntax. It was about sequencing: aligning on the
+						interfaces of shared classes before anybody starts
+						writing code on top of them."
+					</blockquote>
+
+					<p class="cs-anatomy-text">
+						We also hit issues with user inputs crash-looping the
+						console application (e.g. putting a string into an
+						integer variable), which led us to build a robust,
+						centralized input validation filter module early in the
+						cycle rather than scattering checks across the code.
 					</p>
 				</section>
 
+				<!-- Section 5 -->
 				<section class="cs-anatomy-section reveal">
 					<h2 class="cs-anatomy-heading">
-						05. What I'd Do Differently
+						Retrospective — Replacing Text Files &amp; Securing
+						Logins
 					</h2>
 					<p class="cs-anatomy-text">
-						Plain text files were the right call for a four-week lab
-						project, but they're the first thing I'd replace — a real
-						database would remove a lot of fragility (one manually broken
-						line can currently mess up loading, though we did build in
-						handling so it skips a bad line instead of crashing). I'd also
-						want real password protection instead of storing login details
-						as plain text, and I'd lock down who owns which part of the
-						system on day one, rather than a few days in, once code already
-						existed that assumed things we hadn't actually agreed on yet.
+						While flat text files served their purpose for our
+						timeline, they are the first thing I would replace. One
+						broken line in a raw file can currently corrupt data
+						loading. In a real-world rebuild, I would integrate
+						SQLite to gain ACID transaction guarantees and
+						relational integrity. I would also add cryptographic
+						password hashing (using bcrypt or argon2) to replace the
+						current plaintext user logins.
 					</p>
 				</section>
 			</article>
 
 			<footer class="cs-footer-nav reveal">
-				<a href="library.html" class="cs-nav-link prev">
+				<a href="fire-car.html" class="cs-nav-link prev">
 					<span class="cs-nav-label">← Previous</span>
-					<span class="cs-nav-title">Digital Library</span>
+					<span class="cs-nav-title">Fire Fighting Car</span>
 				</a>
-				<a href="tracker.html" class="cs-nav-link next">
+				<a href="library.html" class="cs-nav-link next">
 					<span class="cs-nav-label">Next →</span>
-					<span class="cs-nav-title">Finance Tracker</span>
+					<span class="cs-nav-title">Digital Library</span>
 				</a>
 			</footer>
 
-<script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-    mermaid.initialize({
-        startOnLoad: true,
-        theme: 'light',
-        // htmlLabels: true ensures the HTML tags inside the nodes render beautifully
-        flowchart: { htmlLabels: true, curve: basis, },
-        themeVariables: {
-            fontFamily: 'system-ui, -apple-system, sans-serif',
-            fontSize: '14px'
-        }
-    });
-</script>
-
-
+			<script type="module">
+				import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+				mermaid.initialize({
+					startOnLoad: true,
+					theme: "light",
+					// htmlLabels: true ensures the HTML tags inside the nodes render beautifully
+					flowchart: { htmlLabels: true, curve: basis },
+					themeVariables: {
+						fontFamily: "system-ui, -apple-system, sans-serif",
+						fontSize: "14px",
+					},
+				});
+			</script>
 		</main>
 	</body>
 </html>

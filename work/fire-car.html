@@ -27,7 +27,7 @@
 		<meta
 			name="description"
 			id="csMetaDesc"
-			content="Fire fighter Car — Binary Coded Decimal (BCD) representation lacks self-complementing properties, making arithmetic subtractor circuits complex."
+			content="An autonomous hardware vehicle utilizing flame detection, motor driver arrays, and combinational logic circuits for immediate hazard response."
 		/>
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -53,20 +53,24 @@
 					<svg class="icon icon-md">
 						<use href="/src/icons/sprite.svg#icon-arrow-left" />
 					</svg>
-					<span>Works</span>
+					<span>Builds</span>
 				</a>
 			</div>
 
 			<header class="cs-header-block reveal">
 				<h1 class="cs-header-title">Fire Fighting Car</h1>
-				<p class="cs-header-oneliner">Fire fighter Car</p>
+				<p class="cs-header-oneliner">
+					An autonomous hardware vehicle integrating flame sensors,
+					motor drivers, and combinational control logic.
+				</p>
 
 				<div class="cs-header-actions">
 					<a
 						href="../error.html"
 						class="btn btn-olive"
 						rel="noopener noreferrer"
-						><span>Live Demo ↗</span>
+					>
+						<span>Live Demo ↗</span>
 					</a>
 					<a
 						href="https://github.com/hmsaeed-dev/fire-fighting-car"
@@ -81,6 +85,28 @@
 					</a>
 				</div>
 
+				<!-- Summary Metadata Grid -->
+				<div class="cs-metadata-grid">
+					<div class="meta-block">
+						<span class="meta-label">Role</span>
+						<span class="meta-val">Lead Systems Integrator</span>
+					</div>
+					<div class="meta-block">
+						<span class="meta-label">Timeline</span>
+						<span class="meta-val">2 Weeks (Lab Project)</span>
+					</div>
+					<div class="meta-block">
+						<span class="meta-label">Team Size</span>
+						<span class="meta-val">2 Members</span>
+					</div>
+					<div class="meta-block">
+						<span class="meta-label">Hardware Tech</span>
+						<span class="meta-val"
+							>L293D, Flame IR Sensors, TTL Gates</span
+						>
+					</div>
+				</div>
+
 				<div class="cs-hero-image-wrap">
 					<img
 						src="https://images.unsplash.com/photo-1608564697071-ddf911d81370?auto=format&fit=crop&q=80&w=1200"
@@ -92,35 +118,66 @@
 			</header>
 
 			<article class="cs-article-body">
+				<!-- Section 1 -->
 				<section class="cs-anatomy-section reveal">
-					<h2 class="cs-anatomy-heading">01. The Problem</h2>
+					<h2 class="cs-anatomy-heading">
+						The Challenge — Autonomous Hazard Response
+					</h2>
 					<p class="cs-anatomy-text">
-						Binary Coded Decimal (BCD) representation lacks
-						self-complementing properties, making arithmetic
-						subtractor circuits complex in early digital computing.
-						Translating BCD inputs into Excess-3 code solves this by
-						enabling simple 9's complement arithmetic.
+						The goal was to build a physical, autonomous
+						mini-vehicle capable of navigating a simulated maze,
+						detecting a localized flame source, steering towards it,
+						and activating an onboard water pump to extinguish it.
+						The twist? No microcontrollers or code were allowed. The
+						entire control loop had to be hard-wired using analog
+						infrared flame sensors, combinational logic gates, and a
+						motor driver.
 					</p>
 				</section>
 
+				<!-- Section 2 -->
 				<section class="cs-anatomy-section reveal">
-					<h2 class="cs-anatomy-heading">02. The Approach</h2>
+					<h2 class="cs-anatomy-heading">
+						The Control Loop — Hard-wired Steering Logic
+					</h2>
 					<p class="cs-anatomy-text">
-						I derived truth tables mapping 4-bit BCD digits (0-9) to
-						Excess-3 values (adding 3 in binary). Invalid BCD inputs
-						(10-15) were treated as don't-care conditions in
-						Karnaugh maps, yielding simplified sum-of-products
-						Boolean equations for hardware implementation.
+						We positioned three infrared flame sensors at the front
+						of the vehicle: Left, Center, and Right. These sensors
+						evaluate light wavelengths and output a simple logical
+						HIGH or LOW based on the presence of fire. To steer, the
+						outputs of the sensors had to map directly onto the
+						L293D motor driver inputs that control the dual DC
+						motors.
+					</p>
+
+					<blockquote class="cs-pullquote">
+						"Without an Arduino to write conditional 'if'
+						statements, the steering logic had to be baked into
+						logic chips. If the left sensor detected a flame, we
+						routed the signal through logic gates to spin the right
+						wheel forward while keeping the left wheel idle,
+						pivoting the chassis toward the heat source."
+					</blockquote>
+
+					<p class="cs-anatomy-text">
+						A center detection triggers both motors forward to
+						charge directly toward the fire, while a proximity
+						threshold triggers a relay to activate the water pump.
 					</p>
 				</section>
 
+				<!-- Section 3 -->
 				<section class="cs-anatomy-section reveal">
-					<h2 class="cs-anatomy-heading">03. What I Built</h2>
+					<h2 class="cs-anatomy-heading">
+						The Assembly — Motor Drivers &amp; Pumps
+					</h2>
 					<p class="cs-anatomy-text">
-						A combinational code converter circuit built using
-						standard NAND and NOR logic gates, tested against all
-						valid 0-9 BCD input combinations to deliver
-						instantaneous unweighted code conversion.
+						The physical chassis is a 3-wheeled robot base featuring
+						two gear motors and a front caster wheel. The control
+						circuitry is wired on a breadboard mounted to the
+						chassis, housing the logic gates, L293D H-bridge IC, a
+						5V mini-submersible pump, a small water tank, and a
+						1-channel relay module.
 					</p>
 
 					<div class="cs-built-demo-housing">
@@ -130,8 +187,7 @@
 								<span class="mockup-dot yellow"></span>
 								<span class="mockup-dot green"></span>
 								<span class="mockup-title"
-									>Fire Fighting Car — Architecture
-									System</span
+									>Robotics Chassis Configuration</span
 								>
 							</div>
 							<div class="mockup-body" id="csDemoBody">
@@ -144,18 +200,18 @@
 									</div>
 									<div class="spec-item">
 										<span class="spec-label"
-											>Architecture</span
+											>Control Loop</span
 										>
 										<span class="spec-val"
-											>Combinational Logic</span
+											>Hardwired Analog</span
 										>
 									</div>
 									<div class="spec-item">
 										<span class="spec-label"
-											>Deployment</span
+											>Actuators</span
 										>
 										<span class="spec-val"
-											>HARDWARE Module</span
+											>DC Motors, 5V Pump</span
 										>
 									</div>
 								</div>
@@ -164,25 +220,53 @@
 					</div>
 				</section>
 
+				<!-- Section 4 -->
 				<section class="cs-anatomy-section reveal">
-					<h2 class="cs-anatomy-heading">04. What I Learned</h2>
+					<h2 class="cs-anatomy-heading">
+						Physical Engineering — Back-EMF Noise &amp; Voltage Dips
+					</h2>
 					<p class="cs-anatomy-text">
-						Don't-care conditions in K-maps demonstrated how
-						mathematical abstraction directly optimizes physical
-						hardware cost. Understanding how arithmetic code
-						representations simplify hardware execution gives deeper
-						insight into how CPUs process data.
+						Building robotics on paper is easy; building them in the
+						physical world is messy. During initial testing, the car
+						tracked the flame perfectly. However, the moment the
+						water pump relay clicked on to extinguish the fire, the
+						car spun out of control, resetting its logic states in
+						an endless loop.
+					</p>
+
+					<blockquote class="cs-pullquote">
+						"Inductive loads like DC motors and water pumps create
+						massive voltage spikes and electrical noise when
+						switched. This 'back-EMF' was traveling back through our
+						single power rail, dipping the logic gate voltage enough
+						to reboot the chips."
+					</blockquote>
+
+					<p class="cs-anatomy-text">
+						To resolve this, we split the power distribution into
+						two isolated circuits: a 5V power source for the logic
+						gates and H-bridge logic inputs, and a separate 9V
+						battery rail for the DC motors and water pump.
+						Decoupling capacitors (100uF and 0.1uF) were placed
+						directly across the IC power pins to absorb residual
+						electrical noise.
 					</p>
 				</section>
 
+				<!-- Section 5 -->
 				<section class="cs-anatomy-section reveal">
 					<h2 class="cs-anatomy-heading">
-						05. What I'd Do Differently
+						Retrospective — Optocouplers &amp; Weight Distribution
 					</h2>
 					<p class="cs-anatomy-text">
-						I would simulate the circuit in Digital Works or Logisim
-						prior to physical breadboard construction to verify
-						logic transitions and timing propagation under load.
+						Splitting the battery rails solved the noise issue, but
+						a better approach would have been using optocouplers
+						(like the PC817) to electrically isolate the logic
+						signals from the relay circuits. Furthermore, carrying a
+						heavy liquid payload caused rear-wheel slippage. In a
+						future iteration, I would design a custom 3D-printed
+						chassis with the water tank mounted directly over the
+						driving axles for better traction.
 					</p>
 				</section>
 			</article>

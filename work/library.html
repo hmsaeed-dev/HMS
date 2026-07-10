@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
 	<head>
-		<!-- Google tag (gtag.js) -->
 		<script
 			async
 			src="https://www.googletagmanager.com/gtag/js?id=G-T31PJSBQY8"
@@ -18,16 +17,19 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="robots" content="index, follow" />
 
-		<!-- Primary Meta Tags -->
-		<title id="csPageTitle">Case Study — Hafiz Muhammad Saeed</title>
-		<meta name="title" content="Case Study — Hafiz Muhammad Saeed" />
+		<title id="csPageTitle">
+			Digital Library — Case Study | Hafiz Muhammad Saeed
+		</title>
+		<meta
+			name="title"
+			content="Digital Library — Case Study | Hafiz Muhammad Saeed"
+		/>
 		<meta
 			name="description"
 			id="csMetaDesc"
-			content="A technical deep dive into architecture, architectural decisions, and honest reflections."
+			content="A distraction-free digital library for Urdu classical poetry, optimizing Nastaliq typography and reading layers."
 		/>
 
-		<!-- Fonts & Favicon -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -40,28 +42,26 @@
 			href="../src/icons/logo-mark.svg"
 		/>
 
-		<!-- Stylesheets -->
 		<link rel="stylesheet" href="../src/css/main.css" />
 		<script type="module" src="../src/js/pages/subpage.js" defer></script>
 	</head>
 
 	<body>
-		<!-- Main Container -->
 		<main class="cs-article-container" id="csArticleContainer">
 			<div class="cs-back-bar reveal">
 				<a href="index.html" class="cs-back-link">
 					<svg class="icon icon-md">
 						<use href="/src/icons/sprite.svg#icon-arrow-left" />
 					</svg>
-					<span>Works</span>
+					<span>Builds</span>
 				</a>
 			</div>
 
 			<header class="cs-header-block reveal">
 				<h1 class="cs-header-title">Digital Library</h1>
 				<p class="cs-header-oneliner">
-					A one-liner description of the architecture and project
-					mission.
+					A distraction-free web reader for classical Urdu literature
+					and synchronized commentaries.
 				</p>
 
 				<div class="cs-header-actions">
@@ -86,10 +86,30 @@
 					</a>
 				</div>
 
+				<!-- Summary Metadata Grid -->
+				<div class="cs-metadata-grid">
+					<div class="meta-block">
+						<span class="meta-label">Role</span>
+						<span class="meta-val">Frontend Architect</span>
+					</div>
+					<div class="meta-block">
+						<span class="meta-label">Timeline</span>
+						<span class="meta-val">3 Weeks (Personal Project)</span>
+					</div>
+					<div class="meta-block">
+						<span class="meta-label">Team Size</span>
+						<span class="meta-val">Solo Project</span>
+					</div>
+					<div class="meta-block">
+						<span class="meta-label">Core Tech</span>
+						<span class="meta-val">HTML5, CSS Grid, Netlify</span>
+					</div>
+				</div>
+
 				<div class="cs-hero-image-wrap">
 					<img
 						src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&q=80&w=1200"
-						alt="Project Visual Overview"
+						alt="Digital Library Workspace Overview"
 						class="cs-hero-image"
 						loading="eager"
 					/>
@@ -97,37 +117,65 @@
 			</header>
 
 			<article class="cs-article-body">
+				<!-- Section 1 -->
 				<section class="cs-anatomy-section reveal">
-					<h2 class="cs-anatomy-heading">01. The Problem</h2>
+					<h2 class="cs-anatomy-heading">
+						The Gap — Fragmented Cultural Texts
+					</h2>
 					<p class="cs-anatomy-text">
-						Iqbal's texts are scattered across poorly maintained
-						government sites, scanned PDFs, and academic
-						repositories that assume you already know what you're
-						looking for. There's no place designed for a student to
-						sit with a single work, read it deeply, and understand
-						it — not just find it.
+						Urdu classical poetry, particularly the philosophical
+						works of Allama Iqbal, is widely available online but
+						suffers from poor presentation. Scanned PDFs, broken
+						government web portals, and unformatted databases make
+						reading these texts difficult. I wanted to build a
+						dedicated digital space for reading these works,
+						complete with translation layers and structural
+						annotations.
 					</p>
 				</section>
 
+				<!-- Section 2 -->
 				<section class="cs-anatomy-section reveal">
-					<h2 class="cs-anatomy-heading">02. The Approach</h2>
+					<h2 class="cs-anatomy-heading">
+						The Strategy — Focused Scope &amp; Bi-directional
+						Layouts
+					</h2>
 					<p class="cs-anatomy-text">
-						The competitor analysis of iap.gov.pk and
-						allamaiqbal.com confirmed the moat: both have the texts,
-						neither has the reading layer. The decision to focus
-						only on public domain Iqbal works narrowed the scope in
-						a way that made the project actually finishable — rather
-						than an endless library cataloguing problem.
+						A common pitfall of cataloging projects is scope creep.
+						Attempting to build a general digital library would
+						result in an endless archiving problem. Instead, I
+						narrowed the focus: I selected a few public-domain
+						classical poetry collections to build a high-fidelity
+						reading layer rather than a vast inventory.
+					</p>
+
+					<blockquote class="cs-pullquote">
+						"In digital curation, content structure dictates
+						interface design. The biggest challenge was formatting
+						the bi-directional layout so Urdu Nastaliq script aligns
+						fluidly with English commentary without breaking visual
+						balance."
+					</blockquote>
+
+					<p class="cs-anatomy-text">
+						Focusing on typography, font scaling, and reading
+						comfort proved to be a more valuable project goal than
+						attempting to index thousands of unformatted texts.
 					</p>
 				</section>
 
+				<!-- Section 3 -->
 				<section class="cs-anatomy-section reveal">
-					<h2 class="cs-anatomy-heading">03. What I Built</h2>
+					<h2 class="cs-anatomy-heading">
+						The Interface — Urdu Nastaliq &amp; Distraction-Free
+						Grids
+					</h2>
 					<p class="cs-anatomy-text">
-						A distraction-free reading interface featuring
-						synchronized commentary layers, custom typography
-						tailored for Urdu script readability, and instant
-						cross-text search across classical poetry collections.
+						I designed a minimalist, dual-column reading interface.
+						The right column displays the primary Urdu verse styled
+						with optimized Nastaliq web fonts, while the left column
+						renders the corresponding translation and annotations in
+						a clean, sans-serif font.
 					</p>
 
 					<div class="cs-built-demo-housing">
@@ -137,7 +185,7 @@
 								<span class="mockup-dot yellow"></span>
 								<span class="mockup-dot green"></span>
 								<span class="mockup-title"
-									>Project Name — Architecture System</span
+									>Library Reader Panel</span
 								>
 							</div>
 							<div class="mockup-body" id="csDemoBody">
@@ -146,25 +194,21 @@
 										<span class="spec-label"
 											>System State</span
 										>
-										<span class="spec-val"
-											>In Progress</span
-										>
+										<span class="spec-val">Live</span>
 									</div>
 									<div class="spec-item">
 										<span class="spec-label"
 											>Architecture</span
 										>
 										<span class="spec-val"
-											>MVC / Modular</span
+											>Static Web App</span
 										>
 									</div>
 									<div class="spec-item">
 										<span class="spec-label"
 											>Deployment</span
 										>
-										<span class="spec-val"
-											>DEVELOPMENT Module</span
-										>
+										<span class="spec-val">Netlify</span>
 									</div>
 								</div>
 							</div>
@@ -172,29 +216,45 @@
 					</div>
 				</section>
 
+				<!-- Section 4 -->
 				<section class="cs-anatomy-section reveal">
-					<h2 class="cs-anatomy-heading">04. What I Learned</h2>
+					<h2 class="cs-anatomy-heading">
+						The Content Trap — Curation vs. Code
+					</h2>
 					<p class="cs-anatomy-text">
-						I underestimated how much the content problem dwarfs the
-						engineering problem. Building the reading interface is
-						tractable. Curating, structuring, and annotating Iqbal's
-						corpus in a way that's actually useful to a scholar —
-						that's a years-long project, not a semester one. The
-						pitch to a scholarly collaborator was the right move; I
-						can't do this alone.
+						Writing the HTML and CSS for a responsive reading layout
+						took only a few days. The real challenge lay in the
+						content itself: verifying translations, structuring
+						annotations, and formatting the verses.
+					</p>
+
+					<blockquote class="cs-pullquote">
+						"It is easy to build a reader; it is incredibly hard to
+						curate a corpus. I realized that data curation is a
+						scholarly discipline of its own, requiring far more
+						effort than writing frontend code."
+					</blockquote>
+
+					<p class="cs-anatomy-text">
+						Structuring text files into structured JSON layers
+						taught me that the complexity of a software product
+						often lies in the data it processes, not the code that
+						displays it.
 					</p>
 				</section>
 
+				<!-- Section 5 -->
 				<section class="cs-anatomy-section reveal">
 					<h2 class="cs-anatomy-heading">
-						05. What I'd Do Differently
+						Retrospective — Depth Over Breadth
 					</h2>
 					<p class="cs-anatomy-text">
-						I would focus on perfecting a single poem's full
-						interactive annotation experience before building out
-						the wider library container. Prototyping the depth of
-						the reading experience first would have validated user
-						interest much faster.
+						If I were to rebuild this project, I would focus on
+						perfecting a single collection's annotation layer before
+						building out the library shell. Creating a highly
+						detailed reading experience for one text, rather than a
+						broad index, would have provided a more immediate proof
+						of concept.
 					</p>
 				</section>
 			</article>

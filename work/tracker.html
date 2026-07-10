@@ -27,7 +27,7 @@
 		<meta
 			name="description"
 			id="csMetaDesc"
-			content="A lightweight, offline-first Progressive Web App that tracks accounts, calculates net worth in real-time, and automatically computes Zakat thresholds."
+			content="An offline-first Progressive Web App with local encryption and automated Zakat computations."
 		/>
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -53,15 +53,15 @@
 					<svg class="icon icon-md">
 						<use href="/src/icons/sprite.svg#icon-arrow-left" />
 					</svg>
-					<span>Works</span>
+					<span>Builds</span>
 				</a>
 			</div>
 
 			<header class="cs-header-block reveal">
 				<h1 class="cs-header-title">Finance Tracker</h1>
 				<p class="cs-header-oneliner">
-					Offline-first personal financial engine with automated Zakat
-					calculations.
+					An offline-first personal financial engine with automated
+					Zakat calculations.
 				</p>
 
 				<div class="cs-header-actions">
@@ -86,10 +86,30 @@
 					</a>
 				</div>
 
+				<!-- Summary Metadata Grid -->
+				<div class="cs-metadata-grid">
+					<div class="meta-block">
+						<span class="meta-label">Role</span>
+						<span class="meta-val">Solo Fullstack Developer</span>
+					</div>
+					<div class="meta-block">
+						<span class="meta-label">Timeline</span>
+						<span class="meta-val">4 Weeks (PWA Project)</span>
+					</div>
+					<div class="meta-block">
+						<span class="meta-label">Team Size</span>
+						<span class="meta-val">Solo Project</span>
+					</div>
+					<div class="meta-block">
+						<span class="meta-label">Core Tech</span>
+						<span class="meta-val">Vanilla JS, LocalStorage</span>
+					</div>
+				</div>
+
 				<div class="cs-hero-image-wrap">
 					<img
 						src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1200"
-						alt="Finance Tracker Visual Overview"
+						alt="Finance Tracker Interface Layout"
 						class="cs-hero-image"
 						loading="eager"
 					/>
@@ -97,40 +117,62 @@
 			</header>
 
 			<article class="cs-article-body">
+				<!-- Section 1 -->
 				<section class="cs-anatomy-section reveal">
-					<h2 class="cs-anatomy-heading">01. The Problem</h2>
+					<h2 class="cs-anatomy-heading">
+						The Friction — Obfuscated Personal Finances
+					</h2>
 					<p class="cs-anatomy-text">
-						I had no clear picture of where my money was going or
-						what I actually owned at any given time. Existing apps
-						were either too complex, required subscriptions, or
-						didn't account for Zakat calculation — which is a
-						non-negotiable part of how I think about money. I needed
-						something minimal, offline-capable, and built around my
-						actual financial logic.
+						Keeping track of personal savings, debts, and assets
+						across different platforms is frustrating. Most
+						commercial finance apps are bloated with ads, require
+						cloud syncing, or charge subscriptions. More
+						importantly, none of them natively handle Zakat—an
+						annual wealth-sharing calculation that is a core
+						requirement of my financial planning. I needed a
+						private, lightweight, and offline-capable dashboard.
 					</p>
 				</section>
 
+				<!-- Section 2 -->
 				<section class="cs-anatomy-section reveal">
-					<h2 class="cs-anatomy-heading">02. The Approach</h2>
+					<h2 class="cs-anatomy-heading">
+						The Architecture — Vanilla MVC without Frameworks
+					</h2>
 					<p class="cs-anatomy-text">
-						The core architectural decision was MVC in vanilla JS —
-						no framework. The reason was deliberate constraint: I
-						wanted to understand the patterns before abstracting
-						them. The 38-stage build specification I wrote before
-						touching code forced every feature decision upfront,
-						which meant almost no rework mid-build.
+						To avoid library fatigue, I built the app using vanilla
+						JavaScript. I drafted a strict, 38-stage build
+						specification detailing state machines, view updates,
+						and storage logic before writing a single line of code.
+						Sticking to the Model-View-Controller (MVC) pattern kept
+						state changes decoupled from DOM updates.
+					</p>
+
+					<blockquote class="cs-pullquote">
+						"In vanilla development, structure is your compiler
+						guard. Without React or Vue to manage DOM sync, we
+						engineered a custom Pub/Sub event dispatcher to trigger
+						interface updates whenever the underlying ledger state
+						changes."
+					</blockquote>
+
+					<p class="cs-anatomy-text">
+						This approach ensured that all financial calculations
+						occurred within isolated modules, independent of the UI
+						layers.
 					</p>
 				</section>
 
+				<!-- Section 3 -->
 				<section class="cs-anatomy-section reveal">
-					<h2 class="cs-anatomy-heading">03. What I Built</h2>
+					<h2 class="cs-anatomy-heading">
+						Core Mechanics — Local Storage &amp; PWA Integration
+					</h2>
 					<p class="cs-anatomy-text">
-						A lightweight, offline-first Progressive Web App that
-						tracks accounts, calculates net worth in real-time, and
-						automatically computes Zakat thresholds based on active
-						assets. It operates with zero external server
-						dependencies, storing all encrypted state directly in
-						browser storage.
+						The application functions as a fully offline Progressive
+						Web App (PWA). Data is saved directly in browser
+						LocalStorage, preventing external servers from seeing
+						sensitive personal transaction details.
 					</p>
 
 					<div class="cs-built-demo-housing">
@@ -140,7 +182,7 @@
 								<span class="mockup-dot yellow"></span>
 								<span class="mockup-dot green"></span>
 								<span class="mockup-title"
-									>Finance Tracker — Architecture System</span
+									>Finance Engine Console</span
 								>
 							</div>
 							<div class="mockup-body" id="csDemoBody">
@@ -149,16 +191,14 @@
 										<span class="spec-label"
 											>System State</span
 										>
-										<span class="spec-val"
-											>In Progress</span
-										>
+										<span class="spec-val">Complete</span>
 									</div>
 									<div class="spec-item">
 										<span class="spec-label"
 											>Architecture</span
 										>
 										<span class="spec-val"
-											>Vanilla MVC</span
+											>Vanilla MVC / PWA</span
 										>
 									</div>
 									<div class="spec-item">
@@ -166,7 +206,7 @@
 											>Deployment</span
 										>
 										<span class="spec-val"
-											>PWA / Local Storage</span
+											>Local Offline-First</span
 										>
 									</div>
 								</div>
@@ -175,28 +215,44 @@
 					</div>
 				</section>
 
+				<!-- Section 4 -->
 				<section class="cs-anatomy-section reveal">
-					<h2 class="cs-anatomy-heading">04. What I Learned</h2>
+					<h2 class="cs-anatomy-heading">
+						The Spec Trap — Rigid Specifications vs. Real agility
+					</h2>
 					<p class="cs-anatomy-text">
-						The 38-stage spec was both the project's biggest
-						strength and its biggest constraint. It forced clarity
-						upfront but made mid-build pivots expensive. I'd use a
-						lighter spec next time — enough to prevent scope creep,
-						not so rigid it prevents good ideas from entering late.
+						The 38-stage build specification kept the project
+						focused, but it became a double-edged sword during
+						development. It prevented scope creep, but made minor
+						styling adjustments expensive.
+					</p>
+
+					<blockquote class="cs-pullquote">
+						"Over-specifying a build creates coding rigidity. I
+						spent hours refactoring event listeners simply because I
+						hadn't budgeted for a nested DOM container node in stage
+						14 of the design spec."
+					</blockquote>
+
+					<p class="cs-anatomy-text">
+						It taught me that while rigid planning is valuable for
+						core logic, front-end visual structures require
+						flexibility and iterative prototyping to feel polished.
 					</p>
 				</section>
 
+				<!-- Section 5 -->
 				<section class="cs-anatomy-section reveal">
 					<h2 class="cs-anatomy-heading">
-						05. What I'd Do Differently
+						Retrospective — Decoupling Math Engines
 					</h2>
 					<p class="cs-anatomy-text">
-						If I were starting over today, I would separate out the
-						financial calculation engine into pure mathematical
-						helper functions earlier in the process. While the MVC
-						model handles state well, decoupling the Zakat logic
-						from state listeners would have made unit testing much
-						cleaner.
+						If I rebuilt this engine, I would separate the financial
+						logic (like Zakat gold/silver price ratios) into pure,
+						stateless mathematical helper functions earlier. Mixing
+						math equations with MVC state registers made unit
+						testing difficult. Isolating calculations from the app
+						state is a practice I now apply to all projects.
 					</p>
 				</section>
 			</article>
@@ -206,7 +262,7 @@
 					<span class="cs-nav-label">← Previous</span>
 					<span class="cs-nav-title">Digital Library</span>
 				</a>
-				<a href="binary-palindrome.html" class="cs-nav-link next">
+				<a href="detector.html" class="cs-nav-link next">
 					<span class="cs-nav-label">Next →</span>
 					<span class="cs-nav-title">Binary Palindrome Detector</span>
 				</a>
