@@ -1158,17 +1158,6 @@
 	padding-bottom: var(--space-4xl);
 }
 
-.work-filter-bar {
-	display: flex;
-	align-items: flex-start;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	gap: var(--space-md);
-	margin-bottom: var(--space-lg);
-	padding-bottom: var(--space-md);
-	border-bottom: 1px solid var(--color-border);
-}
-
 /* ── WORK PAGE REDESIGN & CARDS GRID ─────────────────────────── */
 .mobile-menu-checkbox,
 .work-filter-radio {
@@ -1187,14 +1176,23 @@
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	gap: var(--space-xs);
+    gap: clamp(0.25rem, 1vw, var(--space-xs));
+    padding: clamp(0.25rem, 1.5vw, var(--space-md));
+    max-width: 100%;
 	background: var(--color-surface);
-	padding: 6px;
 	border-radius: var(--radius-full);
 	border: 1px solid var(--color-border);
 	box-shadow: var(--shadow-sm);
 	margin-top: var(--space-xl);
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
+}
+
+/* 3. Ensure the child buttons scale down proportionally */
+.work-filter-bar > * {
+    flex-shrink: 1;
+    white-space: nowrap;
+    font-size: clamp(0.75rem, 2.5vw, 0.9rem);
+    padding: clamp(0.25rem, 1vw, 0.5rem) clamp(0.5rem, 2vw, 1rem);
 }
 
 .work-filter-btn {

@@ -1,717 +1,428 @@
 /* ── ACADEMICS SUBPAGE STYLES ────────────────────────────────────────── */
 
-/* ── NEXT MILESTONE BANNER ───────────────────────────────────────────── */
-.next-milestone-banner {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-xs);
-    background-color: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-full);
-    padding: var(--space-2xs) var(--space-md);
-    margin-top: var(--space-xl);
-    box-shadow: var(--shadow-sm);
-    text-align: left;
+/* ── HERO / HEADER INTRO ─────────────────────────────────────────────── */
+.academics-hero {
+	padding-top: calc(var(--header-height) + var(--space-3xl));
+	padding-bottom: var(--space-lg);
+	text-align: center;
 }
 
-.milestone-dot {
-    width: 6px;
-    height: 6px;
-    background-color: var(--color-earth); /* Amber accent */
-    border-radius: 50%;
-    animation: pulse-milestone 2s infinite;
-    flex-shrink: 0;
+.academics-hero-content {
+	max-width: 720px;
+	margin-inline: auto;
+	padding-inline: var(--space-md);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-@keyframes pulse-milestone {
-    0% { transform: scale(0.9); opacity: 0.6; }
-    50% { transform: scale(1.25); opacity: 1; }
-    100% { transform: scale(0.9); opacity: 0.6; }
+.academics-title {
+	font-family: "Cormorant Garamond", serif;
+	font-size: var(--fs-h2);
+	font-weight: 700;
+	color: var(--color-text);
+	margin-bottom: var(--space-2xs);
+	line-height: 1.1;
 }
 
-.milestone-text {
-    font-size: var(--fs-300);
-    color: var(--color-text-muted);
+.academics-intro {
+	font-family: "DM Sans", sans-serif;
+	font-size: var(--fs-500);
+	color: var(--color-text-muted);
+	margin: 0 0 var(--space-xs);
 }
 
-/* ── SEMESTER CARDS ACCORDION ───────────────────────────────────────── */
-.ledger-accordion {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-lg);
-    margin-top: var(--space-lg);
+/* Typographically quiet CGPA note — single occurrence */
+.academics-running-stat {
+	font-family: "DM Sans", sans-serif;
+	font-size: var(--fs-300);
+	font-weight: 500;
+	color: var(--color-text-muted);
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	margin: 0;
 }
 
-.semester-card {
-    background-color: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-left: 4px solid var(--color-border); /* Muted gray border on default state */
-    border-radius: var(--radiusmd);
-    box-shadow: var(--shadow-sm);
-    overflow: hidden;
-    transition:
-        border-color var(--transition-lg),
-        border-left-color var(--transition-lg),
-        transform var(--transition-lg),
-        box-shadow var(--transition-lg);
+/* ── SEMESTERS STACK ─────────────────────────────────────────────────── */
+.academics-semesters-section {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-xl);
+	margin-bottom: var(--space-2xl);
 }
 
-.semester-card:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-    border-color: var(--color-accent-lt);
+.semester-block {
+	background-color: var(--color-surface);
+	border: 1px solid var(--color-border);
+	border-radius: var(--radiussm);
+	padding: clamp(1.5rem, 3.5vw, 2.25rem);
+	box-shadow: var(--shadow-sm);
+	transition:
+		border-color var(--transition-lg),
+		box-shadow var(--transition-lg),
+		transform var(--transition-lg);
 }
 
-.semester-card.expanded {
-    border-color: var(--color-accent);
-    border-left-color: var(--color-accent); /* Active brand color (olive) on expand */
+.semester-block:hover {
+	box-shadow: var(--shadow-md);
+	border-color: var(--color-accent-lt);
 }
 
-.semester-card-header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: clamp(1.25rem, 3vw, 2rem);
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    text-align: left;
-    outline: none;
+/* Visibly lighter / dashed treatment for in-progress semester */
+.semester-block.semester-in-progress {
+	background-color: rgba(255, 255, 255, 0.65);
+	border: 1.5px dashed var(--color-border);
+	box-shadow: none;
 }
 
-.sem-header-main {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-2xs);
+.semester-block.semester-in-progress:hover {
+	border-color: var(--color-earth);
+	box-shadow: var(--shadow-sm);
 }
 
-.sem-card-title {
-    font-family: "Cormorant Garamond", serif;
-    font-size: var(--fs-600);
-    font-weight: 700;
-    color: var(--color-text);
-    margin: 0;
+/* ── SEMESTER SECTION MARKER ─────────────────────────────────────────── */
+.semester-marker {
+	display: flex;
+	align-items: center;
+	gap: var(--space-xs);
+	margin-bottom: var(--space-md);
 }
 
-.sem-card-stats {
-    font-size: var(--fs-300);
-    color: var(--color-text-muted);
+.dragonfly-glyph {
+	width: 22px;
+	height: 14px;
+	color: var(--color-earth); /* Amber accent */
+	flex-shrink: 0;
+	display: inline-block;
 }
 
-.sem-card-meta {
-    display: flex;
-    align-items: center;
-    gap: var(--space-lg);
+.semester-title {
+	font-family: "Cormorant Garamond", serif;
+	font-size: clamp(1.4rem, 2.8vw, 1.85rem);
+	font-weight: 600;
+	color: var(--color-text);
+	margin: 0;
+	line-height: 1.25;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: var(--space-xs);
 }
 
-.sem-card-gpa {
-    font-family: "Fira Code", "Courier New", monospace;
-    font-size: var(--fs-500);
-    font-weight: 600;
-    color: var(--color-accent);
+.semester-status-hint {
+	font-family: "DM Sans", sans-serif;
+	font-size: var(--fs-300);
+	font-weight: 400;
+	font-style: italic;
+	color: var(--color-text-muted);
 }
 
-.sem-card-toggle {
-    position: relative;
-    width: 14px;
-    height: 14px;
-    display: block;
+/* ── NARRATIVE LAYER ─────────────────────────────────────────────────── */
+.semester-narrative {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-sm);
+	margin-bottom: var(--space-md);
 }
 
-.toggle-bar {
-    position: absolute;
-    background-color: var(--color-text-muted);
-    transition: transform var(--transition-lg), background-color var(--transition-lg);
+.semester-narrative p {
+	font-family: "DM Sans", sans-serif;
+	font-size: var(--fs-400);
+	line-height: 1.7;
+	color: var(--color-text);
+	margin: 0;
 }
 
-.toggle-bar.horizontal {
-    top: 6px;
-    left: 0;
-    width: 14px;
-    height: 2px;
+/* ── COLLAPSIBLE TRIGGER & DETAILS PANEL ─────────────────────────────── */
+.collapsible-block {
+	margin-top: var(--space-sm);
+	border-top: 1px solid var(--color-border-lt);
+	padding-top: var(--space-xs);
 }
 
-.toggle-bar.vertical {
-    top: 0;
-    left: 6px;
-    width: 2px;
-    height: 14px;
+.collapsible-trigger {
+	display: inline-flex;
+	align-items: center;
+	gap: var(--space-xs);
+	background: transparent;
+	border: none;
+	padding: var(--space-xs) 0;
+	color: var(--color-earth);
+	font-family: "DM Sans", sans-serif;
+	font-size: var(--fs-300);
+	font-weight: 500;
+	cursor: pointer;
+	text-decoration: none;
+	transition: color var(--transition);
 }
 
-/* Toggle transitions */
-.semester-card.expanded .toggle-bar.vertical {
-    transform: rotate(90deg) scale(0);
+.collapsible-trigger:hover {
+	color: var(--color-text);
 }
 
-.semester-card.expanded .toggle-bar.horizontal {
-    background-color: var(--color-earth); /* Amber on active */
+.collapsible-trigger:focus-visible {
+	outline: 2px solid var(--color-accent);
+	outline-offset: 2px;
+	border-radius: 4px;
 }
 
-/* Body and panel sliding */
-.semester-card-body {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows var(--transition-lg);
+.collapsible-icon {
+	color: currentColor;
+	transition: transform var(--transition);
 }
 
-.semester-card.expanded .semester-card-body {
-    grid-template-rows: 1fr;
+.collapsible-block.expanded .collapsible-icon {
+	transform: rotate(90deg);
 }
 
-.semester-card-content {
-    overflow: hidden;
+/* Smooth Accordion Expansion */
+.collapsible-content {
+	display: grid;
+	grid-template-rows: 0fr;
+	transition: grid-template-rows var(--transition-lg), margin-top var(--transition-lg);
+	margin-top: 0;
 }
 
-.courses-list {
-    padding: 0 clamp(1.25rem, 3vw, 2rem) clamp(1.5rem, 3vw, 2.5rem);
-    display: flex;
-    flex-direction: column;
+.collapsible-block.expanded .collapsible-content {
+	grid-template-rows: 1fr;
+	margin-top: var(--space-sm);
 }
 
-.course-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-block: var(--space-sm);
-    border-bottom: 1px solid var(--color-border-lt);
-    transition: background-color var(--transition);
+.collapsible-inner {
+	overflow: hidden;
 }
 
-.course-row:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
+/* ── ACADEMIC BREAKDOWN TABLE ────────────────────────────────────────── */
+.academic-table-wrap {
+	overflow-x: auto;
+	border: 1px solid var(--color-border-lt);
+	border-radius: var(--radiussm);
+	background-color: var(--color-surface);
 }
 
-.course-left {
-    display: flex;
-    align-items: center;
-    gap: var(--space-md);
+.academic-table {
+	width: 100%;
+	border-collapse: collapse;
+	text-align: left;
+	font-size: var(--fs-300);
 }
 
-.course-code {
-    font-family: "Fira Code", monospace;
-    font-size: var(--fs-300);
-    color: var(--color-accent);
-    background-color: var(--color-border-lt);
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-variant-numeric: tabular-nums;
+.academic-table th {
+	background-color: rgba(42, 42, 34, 0.03);
+	font-family: "DM Sans", sans-serif;
+	font-size: var(--fs-200);
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	color: var(--color-text-muted);
+	padding: var(--space-xs) var(--space-md);
+	border-bottom: 1px solid var(--color-border-lt);
+	white-space: nowrap;
 }
 
-.course-name {
-    font-family: "DM Sans", sans-serif;
-    font-weight: 500;
-    color: var(--color-text);
+.academic-table td {
+	padding: var(--space-sm) var(--space-md);
+	border-bottom: 1px solid var(--color-border-lt);
+	color: var(--color-text);
+	vertical-align: middle;
+}
+
+.academic-table tbody tr:last-child td {
+	border-bottom: none;
+}
+
+.academic-table tbody tr:hover {
+	background-color: rgba(42, 42, 34, 0.015);
+}
+
+.code-pill {
+	font-family: "Fira Code", monospace;
+	font-size: 0.75rem;
+	font-weight: 500;
+	color: var(--color-earth);
+	background-color: rgba(139, 107, 77, 0.08);
+	padding: 2px 6px;
+	border-radius: 4px;
+	display: inline-block;
+	font-variant-numeric: tabular-nums;
+}
+
+.td-course {
+	font-family: "DM Sans", sans-serif;
+	font-weight: 500;
+}
+
+.type-tag {
+	font-family: "DM Sans", sans-serif;
+	font-size: var(--fs-200);
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	color: var(--color-text-muted);
+	font-weight: 600;
+}
+
+.td-cr {
+	font-family: "Fira Code", monospace;
+	font-variant-numeric: tabular-nums;
+	color: var(--color-text-muted);
+}
+
+.td-grade {
+	font-family: "Fira Code", monospace;
+	font-weight: 600;
+	color: var(--color-text);
+}
+
+.td-gp {
+	font-family: "Fira Code", monospace;
+	font-variant-numeric: tabular-nums;
+	color: var(--color-text-muted);
+}
+
+.td-teacher {
+	font-family: "DM Sans", sans-serif;
+	color: var(--color-text-muted);
+	font-size: var(--fs-300);
+}
+
+.dept-tag {
+	font-size: var(--fs-200);
+	color: var(--color-text-muted);
+	font-weight: 500;
+}
+
+.table-summary-row td {
+	background-color: rgba(42, 42, 34, 0.025);
+	border-top: 1px solid var(--color-border);
+	font-size: var(--fs-300);
+	padding: var(--space-xs) var(--space-md);
+}
+
+.td-summary-label {
+	font-family: "DM Sans", sans-serif;
+	font-weight: 600;
+	color: var(--color-text);
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	font-size: var(--fs-200);
+}
+
+.td-summary-val,
+.td-summary-gpa {
+	font-family: "Fira Code", monospace;
+	font-weight: 600;
+	color: var(--color-text);
+}
+
+.td-summary-status {
+	font-family: "DM Sans", sans-serif;
+	font-size: var(--fs-200);
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	color: var(--color-earth);
+	font-weight: 600;
+	text-align: right;
 }
 
 .course-project-link {
-    color: var(--color-text);
-    text-decoration: none;
-    border-bottom: 1px dashed var(--color-border);
-    transition: color var(--transition), border-color var(--transition);
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-xs);
+	color: var(--color-text);
+	text-decoration: none;
+	border-bottom: 1px dashed var(--color-border);
+	display: inline-flex;
+	align-items: center;
+	gap: var(--space-xs);
+	transition: color var(--transition), border-color var(--transition);
 }
 
 .course-project-link:hover {
-    color: var(--color-earth);
-    border-bottom-color: var(--color-earth);
+	color: var(--color-earth);
+	border-bottom-color: var(--color-earth);
 }
 
 .project-tag-badge {
-    font-size: var(--fs-200);
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    color: var(--color-earth);
-    background-color: rgba(139, 107, 77, 0.08); /* Amber transparency */
-    padding: 2px 6px;
-    border-radius: 4px;
-    display: inline-block;
-}
-
-.course-right {
-    display: flex;
-    align-items: center;
-    gap: var(--space-xl);
-}
-
-.course-credits {
-    font-size: var(--fs-300);
-    color: var(--color-text-muted);
-}
-
-.course-grade {
-    font-family: "Fira Code", monospace;
-    font-weight: 700;
-    font-size: var(--fs-400);
-    color: var(--color-text);
-    text-align: right;
-    min-width: 30px;
-    font-variant-numeric: tabular-nums;
-}
-
-/* Responsive Courses List */
-@media (max-width: 768px) {
-    .course-row {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: var(--space-2xs);
-        padding-block: var(--space-md);
-    }
-
-    .course-right {
-        width: 100%;
-        justify-content: space-between;
-        margin-top: var(--space-2xs);
-        padding-left: 0;
-    }
-
-    .course-left {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: var(--space-2xs);
-    }
-
-    .course-project-link {
-        flex-wrap: wrap;
-    }
+	font-size: var(--fs-200);
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+	color: var(--color-earth);
+	background-color: rgba(139, 107, 77, 0.08);
+	padding: 2px 6px;
+	border-radius: 4px;
+	display: inline-block;
 }
 
 /* ── PRE-UNIVERSITY & TIMELINE ───────────────────────────────────────── */
-.pivot-sentence {
-    font-size: var(--fs-400);
-    color: var(--color-text);
-    font-style: italic;
-    margin-block: var(--space-lg);
-    line-height: 1.6;
-    border-left: 2px solid var(--color-accent);
-    padding-left: var(--space-md);
-}
-
-/* Entrance Exams Scores Display Card */
 .scores-card {
-    background-color: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radiusmd);
-    padding: clamp(1.25rem, 3vw, 2rem);
-    margin-top: var(--space-lg);
-    box-shadow: var(--shadow-sm);
+	background-color: var(--color-surface);
+	border: 1px solid var(--color-border);
+	border-radius: var(--radiussm);
+	padding: clamp(1.25rem, 3vw, 2rem);
+	margin-top: var(--space-lg);
+	box-shadow: var(--shadow-sm);
 }
 
 .scores-card-title {
-    font-family: "Cormorant Garamond", serif;
-    font-size: var(--fs-500);
-    font-weight: 700;
-    color: var(--color-text);
-    margin-top: 0;
-    margin-bottom: var(--space-md);
+	font-family: "Cormorant Garamond", serif;
+	font-size: var(--fs-500);
+	font-weight: 700;
+	color: var(--color-text);
+	margin-top: 0;
+	margin-bottom: var(--space-md);
 }
 
 .scores-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-md);
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: var(--space-md);
 }
 
 .score-badge-item {
-    background-color: var(--color-bg);
-    border: 1px solid var(--color-border-lt);
-    border-radius: var(--radiussm);
-    padding: var(--space-md);
-    transition: transform var(--transition), border-color var(--transition);
+	background-color: var(--color-bg);
+	border: 1px solid var(--color-border-lt);
+	border-radius: var(--radiussm);
+	padding: var(--space-md);
+	transition: transform var(--transition), border-color var(--transition);
 }
 
 .score-badge-item:hover {
-    transform: translateY(-2px);
-    border-color: var(--color-accent-lt);
+	transform: translateY(-2px);
+	border-color: var(--color-accent-lt);
 }
 
 .score-inner {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
 }
 
 .score-val {
-    font-family: "Fira Code", monospace;
-    font-size: var(--fs-600);
-    font-weight: 700;
-    color: black;
+	font-family: "Fira Code", monospace;
+	font-size: var(--fs-600);
+	font-weight: 700;
+	color: var(--color-text);
 }
 
 .score-max {
-    font-size: var(--fs-400);
-    color: var(--color-text-muted);
-    font-weight: 400;
+	font-size: var(--fs-400);
+	color: var(--color-text-muted);
+	font-weight: 400;
 }
 
 .score-label {
-    font-size: var(--fs-300);
-    font-weight: 600;
-    color: var(--color-text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+	font-size: var(--fs-300);
+	font-weight: 600;
+	color: var(--color-text-muted);
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
 }
 
 @media (max-width: 600px) {
-    .scores-grid {
-        grid-template-columns: 1fr;
-    }
-}
+	.scores-grid {
+		grid-template-columns: 1fr;
+	}
 
-/* ── FORWARD LINKS CONNECT CTA ───────────────────────────────────────── */
-.academic-cta {
-    margin-top: var(--space-lg);
-    width: 100%;
-}
-
-.cta-rule {
-    height: 1px;
-    background-color: var(--color-border-lt);
-}
-
-.cta-links-container {
-    display: flex;
-    justify-content: space-around;
-    padding-block: var(--space-lg);
-    gap: var(--space-md);
-}
-
-.cta-link-item {
-    display: flex;
-    align-items: center;
-    gap: var(--space-xs);
-    text-decoration: none;
-    color: var(--color-text-muted);
-    font-family: "Cormorant Garamond", serif;
-    font-size: var(--fs-600);
-    font-weight: 700;
-    transition: color var(--transition), transform var(--transition);
-}
-
-.cta-link-item:hover {
-    color: var(--color-earth);
-    transform: translateX(4px);
-}
-
-.cta-link-item .icon {
-    transition: transform var(--transition);
-    color: var(--color-accent);
-}
-
-.cta-link-item:hover .icon {
-    color: var(--color-earth);
-    transform: translateX(4px);
-}
-
-@media (max-width: 600px) {
-    .cta-links-container {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: var(--space-sm);
-        padding-left: var(--space-md);
-    }
-}
-
-/* ── INTERACTIVE PREVIEW MODAL ────────────────────────────────────────── */
-.notes-modal {
-    position: fixed;
-    inset: 0;
-    z-index: var(--z-lightbox);
-    display: flex;
-    align-items: flex-end; /* Align to viewport bottom for standard mobile card slide up */
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.4s ease;
-}
-
-.notes-modal.active {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.modal-backdrop {
-    position: absolute;
-    inset: 0;
-    background: rgba(42, 42, 34, 0.4);
-    backdrop-filter: blur(8px);
-}
-
-.modal-content {
-    background: var(--color-bg);
-    border: none;
-    width: 100%;
-    height: 100%;
-    max-height: 100vh;
-    border-radius: 0;
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    box-shadow: var(--shadow-lg);
-    transform: translateY(100%); /* Full window slide transformation anchor */
-    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    overflow: hidden;
-}
-
-.notes-modal.active .modal-content {
-    transform: translateY(0);
-}
-
-.modal-close {
-    position: absolute;
-    top: var(--space-xs);
-    right: var(--space-sm);
-    background: none;
-    border: none;
-    font-size: var(--fs-800);
-    cursor: pointer;
-    color: var(--color-text-muted);
-    transition: color var(--transition);
-    z-index: 10;
-}
-
-.modal-close:hover {
-    color: var(--color-text);
-}
-
-.modal-header {
-    background: var(--color-surface);
-    padding: var(--space-md) var(--space-lg);
-    border-bottom: 1px solid var(--color-border-lt);
-}
-
-.modal-tag {
-    display: inline-block;
-    font-size: var(--fs-300);
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.12em !important; /* Micro-copy contrast adjustment */
-    color: var(--color-accent);
-    margin-bottom: var(--space-2xs);
-}
-
-#modalTitle {
-    font-family: "Cormorant Garamond", serif;
-    font-size: var(--fs-700);
-    font-weight: 700;
-    color: var(--color-text);
-    line-height: 1.2;
-}
-
-.modal-meta {
-    font-size: var(--fs-300);
-    color: var(--color-text-muted);
-    margin-top: var(--space-2xs);
-}
-
-.modal-body {
-    flex-grow: 1;
-    padding: 0;
-    overflow-y: auto;
-    position: relative;
-    height: calc(100vh - 180px); /* Account headroom for top navigation panels */
-}
-
-.modal-footer {
-    background: var(--color-surface);
-    padding: var(--space-sm) var(--space-lg);
-    border-top: 1px solid var(--color-border-lt);
-    display: flex;
-    justify-content: flex-end;
-}
-
-.modal-footer .btn {
-    width: 100%;
-    justify-content: center;
-}
-
-/* Desktop App Adaptive Lightbox Display Scale Modifiers */
-@media (min-width: 769px) {
-    .notes-modal {
-        align-items: center; /* Center layout block */
-        justify-content: center;
-    }
-
-    .modal-content {
-        width: 90%;
-        max-width: 800px;
-        height: 90vh;
-        border-radius: var(--radiusmd);
-        border: 1px solid var(--color-border);
-        transform: translateY(20px);
-    }
-
-    .modal-close {
-        top: var(--space-sm);
-        right: var(--space-md);
-        font-size: var(--fs-800);
-    }
-
-    .modal-header {
-        padding: var(--space-lg) var(--space-xl) var(--space-md);
-    }
-
-    #modalTitle {
-        font-size: var(--fs-800);
-    }
-
-    .modal-body {
-        height: 100%;
-        overflow: hidden;
-    }
-
-    .modal-footer {
-        padding: var(--space-md) var(--space-xl);
-    }
-
-    .modal-footer .btn {
-        width: auto;
-    }
-}
-
-/* Notion Simulated Page elements */
-.notion-page {
-    font-family: "DM Sans", sans-serif;
-    color: var(--color-text);
-    line-height: 1.7;
-}
-
-.notion-page h3 {
-    font-family: "Cormorant Garamond", serif;
-    font-size: var(--fs-700);
-    font-weight: 700;
-    color: var(--color-text);
-    margin-top: var(--space-lg);
-    margin-bottom: var(--space-xs);
-    border-bottom: 1px solid var(--color-border-lt);
-    padding-bottom: 4px;
-}
-
-.notion-page h4 {
-    font-family: "DM Sans", sans-serif;
-    font-size: var(--fs-500);
-    font-weight: 700;
-    color: var(--color-text);
-    margin-top: var(--space-md);
-    margin-bottom: var(--space-2xs);
-}
-
-.notion-page p {
-    margin-bottom: var(--space-md);
-}
-
-.notion-page ul, .notion-page ol {
-    margin-bottom: var(--space-md);
-    padding-left: var(--space-lg);
-}
-
-.notion-page ul { list-style-type: disc; }
-.notion-page ol { list-style-type: decimal; }
-.notion-page li { margin-bottom: var(--space-2xs); }
-
-/* Callouts Layouts */
-.notion-callout {
-    display: flex;
-    gap: var(--space-sm);
-    background: var(--color-surface);
-    border: 1px solid var(--color-border-lt);
-    border-left: 4px solid var(--color-accent);
-    padding: var(--space-md);
-    border-radius: var(--radiussm);
-    margin-bottom: var(--space-lg);
-}
-
-.notion-callout-emoji {
-    font-size: 1.3rem;
-    line-height: 1.2;
-}
-
-.notion-callout-text {
-    font-size: var(--fs-400);
-    color: var(--color-text);
-}
-
-.notion-callout.alert-info {
-    border-left-color: var(--color-accent);
-    background: var(--color-overlay);
-}
-
-.notion-callout.alert-warning {
-    border-left-color: var(--color-earth);
-    background: rgba(166, 124, 82, 0.08);
-}
-
-.notion-callout.alert-success {
-    border-left-color: #4cd964;
-    background: rgba(76, 217, 100, 0.08);
-}
-
-/* Code Blocks Styles */
-.notion-code {
-    background: #1e1e19; /* Dark code block background */
-    color: #f5f2e8;
-    padding: var(--space-md);
-    border-radius: var(--radiussm);
-    font-family: "Courier New", Courier, monospace;
-    font-size: var(--fs-300);
-    line-height: 1.5;
-    overflow-x: auto;
-    margin-bottom: var(--space-lg);
-    border: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-.notion-code code {
-    font-family: inherit;
-}
-
-/* Syntax Highlighting Utilities */
-.code-keyword { color: #d68742; font-weight: 700; }
-.code-type { color: #4aa5b8; }
-.code-func { color: #a9b76c; }
-.code-str { color: #ca5757; }
-.code-comment { color: #7a7a6f; font-style: italic; }
-.code-number { color: #cf62be; }
-
-/* Tables in Notion Preview Modules */
-.notion-page table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: var(--space-lg);
-}
-
-.notion-page th {
-    background: var(--color-border-lt);
-    font-weight: 700;
-    padding: var(--space-xs) var(--space-sm);
-    border: 1px solid var(--color-border);
-    font-size: var(--fs-300);
-}
-
-.notion-page td {
-    padding: var(--space-xs) var(--space-sm);
-    border: 1px solid var(--color-border);
-    font-size: var(--fs-300);
-}
-
-
-/* ── UI/UX REFINEMENT ADJUSTMENTS ────────────────────────────────────── */
-
-/* Skeleton Shimmer Keyframe System */
-.skeleton-shimmer {
-    background: linear-gradient(90deg,
-        var(--color-border-lt) 25%,
-        var(--color-border) 37%,
-        var(--color-border-lt) 63%
-    );
-    background-size: 400% 100%;
-    animation: skeleton-pulse 1.4s ease infinite;
-}
-
-@keyframes skeleton-pulse {
-    0% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+	.academic-table th,
+	.academic-table td {
+		padding: var(--space-xs) var(--space-sm);
+	}
 }

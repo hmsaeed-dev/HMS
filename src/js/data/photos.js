@@ -51,14 +51,6 @@ export const photos = [
 		height: 1200,
 	},
 	{
-		src: "https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto/f_auto/v1779626956/pink-bud_blsxcp.jpg",
-		caption: "Morning Dew",
-		category: "Flora",
-		desc: "Soft pink petals adorned with crystal-clear morning dew droplets.",
-		width: 900,
-		height: 1200,
-	},
-	{
 		src: "https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto/f_auto/v1779626936/purple-grey_y35u87.jpg",
 		caption: "Violet Hue",
 		category: "Flora",
@@ -71,14 +63,6 @@ export const photos = [
 		caption: "Magic Caged",
 		category: "Flora",
 		desc: "A delicate pink core behind nature's sharp, crown-like thorns.",
-		width: 900,
-		height: 1200,
-	},
-	{
-		src: "https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto/f_auto/v1779626923/anaar-bud_e5yveq.jpg",
-		caption: "Pomegranate Bloom",
-		category: "Flora",
-		desc: "The unique, waxy flower of a pomegranate tree.",
 		width: 900,
 		height: 1200,
 	},
@@ -116,6 +100,14 @@ export const photos = [
 		width: 1200,
 		height: 900,
 	},
+	{
+		src: "https://res.cloudinary.com/dkpehrpdm/image/upload/v1787676014/pigeon_with_green_neck_feathers_rg31fy.jpg",
+		caption: "Gaze",
+		category: "Animals",
+		desc: "A magnificent pigeon",
+		width: 1200,
+		height: 900,
+	},
 
 	// ── LANDSCAPES ───────────────────────────────────────────
 	{
@@ -131,14 +123,6 @@ export const photos = [
 		caption: "Ethereal Dusk",
 		category: "Landscapes",
 		desc: "A breathtaking layered sunset casting a purple glow over the valley.",
-		width: 1200,
-		height: 800,
-	},
-	{
-		src: "https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto/f_auto/v1779626938/clouds-mountains_iho0uy.jpg",
-		caption: "Clouds & Sky",
-		category: "Landscapes",
-		desc: "Dramatic cloud formations.",
 		width: 1200,
 		height: 800,
 	},

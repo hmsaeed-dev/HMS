@@ -9,15 +9,13 @@
 }
 
 .disclaimer {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: #555;
     background-color: #f9f9f9; /* Soft light gray background */
-    border-left: 3px solid #ccc; /* Subtle accent line on the left */
     padding: 5px 10px;
     margin: 15px auto;
-    max-width: 600px;
-    border-radius: 4px;
-    text-align: left;
+    max-width: 550px;
+    text-align: center;
 }
 .hero-inner {
 	display: grid;

@@ -2,40 +2,31 @@
 
 import { initNavigation } from "../components/Navigation.js";
 import { initFooter } from "../components/Footer.js";
-
 import { initMobileMenu } from "../utils/ui.js";
 import { initScrollReveal } from "../utils/scroll.js";
-import { animateGPA } from "../utils/animations.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 	// Standard page header/footer components
 	initNavigation({ pathPrefix: "../" });
 	initFooter({ pathPrefix: "../" });
-
 	initMobileMenu();
 
-	// Animate the main CGPA statistic
-	const gpaEl = document.getElementById("statGPA");
-	if (gpaEl) {
-		animateGPA(gpaEl, 3.96, 800);
-	}
+	// Collapsible Block Toggle Behavior
+	const collapsibleBlocks = document.querySelectorAll(".collapsible-block");
+	collapsibleBlocks.forEach((block) => {
+		const trigger = block.querySelector(".collapsible-trigger");
+		const content = block.querySelector(".collapsible-content");
 
-	// Ledger Accordion Toggle Behavior
-	const cards = document.querySelectorAll(".semester-card");
-	cards.forEach((card) => {
-		const trigger = card.querySelector(".semester-card-header");
-		const panel = card.querySelector(".semester-card-body");
-
-		if (trigger && panel) {
+		if (trigger && content) {
 			trigger.addEventListener("click", () => {
 				const isExpanded = trigger.getAttribute("aria-expanded") === "true";
 
 				// Toggle accessibility attributes
-				trigger.setAttribute("aria-expanded", !isExpanded);
-				panel.setAttribute("aria-hidden", isExpanded);
+				trigger.setAttribute("aria-expanded", String(!isExpanded));
+				content.setAttribute("aria-hidden", String(isExpanded));
 
-				// Toggle visual active state class
-				card.classList.toggle("expanded", !isExpanded);
+				// Toggle visual expanded state
+				block.classList.toggle("expanded", !isExpanded);
 			});
 		}
 	});
