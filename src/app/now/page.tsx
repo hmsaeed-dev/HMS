@@ -1,7 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
-import TaxilaPulse from "@/components/TaxilaPulse";
+import TaxilaPulse from "@/components/modules/TaxilaPulse";
 
 export const metadata: Metadata = {
   title: "Now",

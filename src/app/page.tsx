@@ -182,7 +182,9 @@ export default function HomePage() {
             {testimonials.concat(testimonials).map((t, idx) => (
               <article
                 key={idx}
-                className="w-[340px] md:w-[380px] p-6 rounded-2xl border border-[rgba(42,42,34,0.12)] bg-gradient-to-br from-white to-[#728649]/10 shadow-sm flex flex-col justify-between flex-shrink-0 hover:-translate-y-1 hover:shadow-md transition-all duration-300"
+                className={`w-[340px] md:w-[380px] p-6 rounded-2xl border border-[rgba(42,42,34,0.12)] bg-gradient-to-br from-white to-[#728649]/10 shadow-sm flex flex-col justify-between flex-shrink-0 transition-all duration-300 hover:rotate-0 hover:-translate-y-1 hover:shadow-md ${
+                  idx % 2 === 0 ? "-rotate-1" : "rotate-1"
+                }`}
               >
                 <p className="font-serif text-lg leading-relaxed text-[#2a2a22] mb-4">
                   “{t.quote}”

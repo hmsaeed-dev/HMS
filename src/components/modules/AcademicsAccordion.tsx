@@ -2,8 +2,10 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { ChevronDown, ArrowRight } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { academicsData, Semester } from "@/data/academics";
+import DragonflyGlyph from "@/components/primitives/DragonflyGlyph";
+import Badge from "@/components/primitives/Badge";
 
 export default function AcademicsAccordion() {
   const [expandedSemesters, setExpandedSemesters] = useState<
@@ -32,15 +34,14 @@ export default function AcademicsAccordion() {
           >
             {/* Header / Marker */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-              <div>
-                <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3">
+                <DragonflyGlyph className="w-7 h-7 text-[#728649] shrink-0 opacity-80" />
+                <div className="flex items-center gap-3 flex-wrap">
                   <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#2a2a22]">
                     {sem.title}
                   </h2>
                   {sem.statusHint && (
-                    <span className="text-xs px-2.5 py-0.5 rounded-full bg-[#728649]/15 text-[#728649] font-mono">
-                      {sem.statusHint}
-                    </span>
+                    <Badge variant="subtle">{sem.statusHint}</Badge>
                   )}
                 </div>
               </div>

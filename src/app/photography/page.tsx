@@ -1,7 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
-import { photos } from "@/data/photos";
-import PhotoGallery from "@/components/PhotoGallery";
+import { photos } from "@/data";
+import PhotoGallery from "@/components/modules/PhotoGallery";
 
 export const metadata: Metadata = {
   title: "Photography",

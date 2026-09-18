@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Post } from "@/data/writing";
+import Badge from "@/components/primitives/Badge";
+import { cn } from "@/lib/utils";
 
 interface WritingListProps {
   posts: Post[];
@@ -30,9 +32,7 @@ export default function WritingList({ posts }: WritingListProps) {
           className="p-8 md:p-10 rounded-3xl border border-[#728649]/30 bg-gradient-to-br from-white to-[#728649]/5 shadow-sm relative overflow-hidden"
         >
           <div className="flex items-center justify-between gap-4 mb-4">
-            <span className="px-3 py-1 rounded-full text-xs font-mono uppercase tracking-wider bg-[#728649] text-white">
-              Featured
-            </span>
+            <Badge variant="olive">Featured</Badge>
             <span className="text-xs text-[rgba(42,42,34,0.50)] font-mono">
               {featuredPost.readTime}
             </span>
@@ -67,44 +67,48 @@ export default function WritingList({ posts }: WritingListProps) {
         <button
           type="button"
           onClick={() => setActiveFilter("all")}
-          className={`px-4 py-1.5 rounded-full text-xs uppercase tracking-wider font-medium transition-all ${
+          className={cn(
+            "px-4 py-1.5 rounded-full text-xs uppercase tracking-wider font-medium transition-all",
             activeFilter === "all"
               ? "bg-[#728649] text-white shadow-sm"
               : "border border-[rgba(42,42,34,0.15)] text-[rgba(42,42,34,0.60)] hover:border-[#728649] hover:text-[#728649]"
-          }`}
+          )}
         >
           All
         </button>
         <button
           type="button"
           onClick={() => setActiveFilter("essay")}
-          className={`px-4 py-1.5 rounded-full text-xs uppercase tracking-wider font-medium transition-all ${
+          className={cn(
+            "px-4 py-1.5 rounded-full text-xs uppercase tracking-wider font-medium transition-all",
             activeFilter === "essay"
               ? "bg-[#728649] text-white shadow-sm"
               : "border border-[rgba(42,42,34,0.15)] text-[rgba(42,42,34,0.60)] hover:border-[#728649] hover:text-[#728649]"
-          }`}
+          )}
         >
           Essays
         </button>
         <button
           type="button"
           onClick={() => setActiveFilter("note")}
-          className={`px-4 py-1.5 rounded-full text-xs uppercase tracking-wider font-medium transition-all ${
+          className={cn(
+            "px-4 py-1.5 rounded-full text-xs uppercase tracking-wider font-medium transition-all",
             activeFilter === "note"
               ? "bg-[#728649] text-white shadow-sm"
               : "border border-[rgba(42,42,34,0.15)] text-[rgba(42,42,34,0.60)] hover:border-[#728649] hover:text-[#728649]"
-          }`}
+          )}
         >
           Notes
         </button>
         <button
           type="button"
           onClick={() => setActiveFilter("ref")}
-          className={`px-4 py-1.5 rounded-full text-xs uppercase tracking-wider font-medium transition-all ${
+          className={cn(
+            "px-4 py-1.5 rounded-full text-xs uppercase tracking-wider font-medium transition-all",
             activeFilter === "ref"
               ? "bg-[#728649] text-white shadow-sm"
               : "border border-[rgba(42,42,34,0.15)] text-[rgba(42,42,34,0.60)] hover:border-[#728649] hover:text-[#728649]"
-          }`}
+          )}
         >
           Reflections
         </button>
@@ -115,9 +119,7 @@ export default function WritingList({ posts }: WritingListProps) {
         {filteredPosts.map((post) => (
           <article key={post.slug} className="py-6 space-y-2 group">
             <div className="flex items-center gap-3">
-              <span className="text-xs px-2.5 py-0.5 rounded-full bg-[#728649]/10 text-[#728649] font-mono">
-                {post.categoryLabel}
-              </span>
+              <Badge variant="subtle">{post.categoryLabel}</Badge>
               <span className="text-xs text-[rgba(42,42,34,0.40)] font-mono">
                 {post.readTime}
               </span>

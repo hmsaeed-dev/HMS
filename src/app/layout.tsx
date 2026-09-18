@@ -1,11 +1,15 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, DM_Sans, Fira_Code } from "next/font/google";
 import Script from "next/script";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
-import BackToTop from "@/components/BackToTop";
-import ScrollProgress from "@/components/ScrollProgress";
+import Navigation from "@/components/layout/Navigation";
+import Footer from "@/components/layout/Footer";
+import BackToTop from "@/components/layout/BackToTop";
+import ScrollProgress from "@/components/layout/ScrollProgress";
 import "./globals.css";
+
+export const viewport: Viewport = {
+  themeColor: "#f7f4ef",
+};
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],

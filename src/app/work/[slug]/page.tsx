@@ -1,6 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ExternalLink, Github } from "lucide-react";
 import { projects } from "@/data/projects";
@@ -128,11 +129,13 @@ export default async function ProjectCaseStudyPage({ params }: PageProps) {
 
         {/* Hero image */}
         <div className="rounded-3xl overflow-hidden aspect-[16/10] relative shadow-lg mt-8">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src={project.heroImage}
             alt={project.title}
-            className="w-full h-full object-cover"
+            fill
+            priority
+            sizes="(max-width: 896px) 100vw, 896px"
+            className="object-cover"
           />
         </div>
       </header>

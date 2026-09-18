@@ -1,8 +1,8 @@
 import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { projects } from "@/data/projects";
-import WorkGrid from "@/components/WorkGrid";
+import { projects } from "@/data";
+import WorkGrid from "@/components/modules/WorkGrid";
 
 export const metadata: Metadata = {
   title: "Work",

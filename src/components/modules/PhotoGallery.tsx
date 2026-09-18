@@ -4,7 +4,8 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { LayoutGrid, Maximize2 } from "lucide-react";
 import { Photo } from "@/data/photos";
-import Lightbox from "@/components/Lightbox";
+import Lightbox from "./Lightbox";
+import { cn } from "@/lib/utils";
 
 interface PhotoGalleryProps {
   photos: Photo[];
@@ -55,11 +56,12 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
               key={cat}
               type="button"
               onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-1.5 rounded-full text-xs uppercase tracking-wider font-medium transition-all ${
+              className={cn(
+                "px-4 py-1.5 rounded-full text-xs uppercase tracking-wider font-medium transition-all",
                 activeCategory === cat
                   ? "bg-[#728649] text-white shadow-sm"
                   : "border border-[rgba(42,42,34,0.15)] text-[rgba(42,42,34,0.60)] hover:border-[#728649] hover:text-[#728649]"
-              }`}
+              )}
             >
               {cat}
             </button>
@@ -77,11 +79,12 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
               type="button"
               onClick={() => handleSetView("rhythm")}
               aria-label="Rhythm View (Masonry)"
-              className={`p-1.5 rounded-lg transition-colors ${
+              className={cn(
+                "p-1.5 rounded-lg transition-colors",
                 viewMode === "rhythm"
                   ? "bg-[#728649] text-white"
                   : "text-[rgba(42,42,34,0.60)] hover:text-[#2a2a22]"
-              }`}
+              )}
               title="Masonry View"
             >
               <LayoutGrid className="w-4 h-4" />
@@ -90,11 +93,12 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
               type="button"
               onClick={() => handleSetView("focus")}
               aria-label="Focus View (Cinematic)"
-              className={`p-1.5 rounded-lg transition-colors ${
+              className={cn(
+                "p-1.5 rounded-lg transition-colors",
                 viewMode === "focus"
                   ? "bg-[#728649] text-white"
                   : "text-[rgba(42,42,34,0.60)] hover:text-[#2a2a22]"
-              }`}
+              )}
               title="Cinematic View"
             >
               <Maximize2 className="w-4 h-4" />
@@ -122,12 +126,12 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
                 viewMode === "focus" ? "aspect-[4/3]" : "aspect-[3/4]"
               }`}
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src={photo.src}
                 alt={photo.caption}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-white">
                 <h3 className="font-serif text-lg font-bold">

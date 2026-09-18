@@ -3,19 +3,19 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Container from "@/components/primitives/Container";
 
 interface NavItem {
   name: string;
   href: string;
-  icon?: string;
 }
 
 const navItems: NavItem[] = [
-  { name: "Builds", href: "/work", icon: "icon-code" },
-  { name: "Writing", href: "/writing", icon: "icon-book" },
-  { name: "Academics", href: "/academics", icon: "icon-graduation" },
-  { name: "Photography", href: "/photography", icon: "icon-camera" },
-  { name: "Connect", href: "/connect", icon: "icon-mail" },
+  { name: "Builds", href: "/work" },
+  { name: "Writing", href: "/writing" },
+  { name: "Academics", href: "/academics" },
+  { name: "Photography", href: "/photography" },
+  { name: "Connect", href: "/connect" },
 ];
 
 export default function Navigation() {
@@ -42,10 +42,22 @@ export default function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isOpen]);
 
-  // Close menu on route change
+  // Close menu on route change & unlock scroll
   useEffect(() => {
     setIsOpen(false);
   }, [pathname]);
+
+  // Lock body scroll when mobile drawer is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
 
   const isActive = (href: string) => {
     if (href === "/") return pathname === "/";
@@ -60,7 +72,7 @@ export default function Navigation() {
           isHidden ? "-translate-y-full" : "translate-y-0"
         }`}
       >
-        <div className="max-w-[1200px] mx-auto px-5 sm:px-8 md:px-12 flex items-center justify-between h-full">
+        <Container className="flex items-center justify-between h-full">
           <Link
             href="/"
             className="font-serif text-[1.625rem] font-bold text-[#2a2a22] tracking-[-0.02em] hover:text-[#728649] transition-colors"
@@ -117,7 +129,7 @@ export default function Navigation() {
               }`}
             />
           </button>
-        </div>
+        </Container>
       </nav>
 
       {/* Mobile Drawer Menu */}

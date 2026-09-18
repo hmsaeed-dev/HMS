@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useCallback, useState } from "react";
-import Image from "next/image";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Photo } from "@/data/photos";
 
@@ -33,6 +32,18 @@ export default function Lightbox({
     onNavigate((currentIndex - 1 + photos.length) % photos.length);
   }, [currentIndex, photos.length, onNavigate]);
 
+  // Preload adjacent images in browser cache for instant zero-flicker navigation
+  useEffect(() => {
+    if (!isOpen || photos.length <= 1) return;
+    const nextIdx = (currentIndex + 1) % photos.length;
+    const prevIdx = (currentIndex - 1 + photos.length) % photos.length;
+    const imgNext = new window.Image();
+    imgNext.src = photos[nextIdx].src;
+    const imgPrev = new window.Image();
+    imgPrev.src = photos[prevIdx].src;
+  }, [currentIndex, isOpen, photos]);
+
+  // Keyboard navigation & scroll locking
   useEffect(() => {
     if (!isOpen) return;
 
@@ -130,8 +141,14 @@ export default function Lightbox({
               {currentPhoto.desc}
             </p>
           )}
-          <div className="text-xs text-[#8a9e60] tracking-wider uppercase mt-2 font-mono">
-            {currentPhoto.category} • {currentIndex + 1} / {photos.length}
+          <div className="text-xs text-[#8a9e60] tracking-wider uppercase mt-2 font-mono flex items-center justify-center gap-2 flex-wrap">
+            <span>{currentPhoto.category}</span>
+            <span className="opacity-40">•</span>
+            <span>Taxila &amp; Margalla Hills</span>
+            <span className="opacity-40">•</span>
+            <span>
+              {currentIndex + 1} / {photos.length}
+            </span>
           </div>
         </div>
       </div>

@@ -1,8 +1,8 @@
 import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { academicsData } from "@/data/academics";
-import AcademicsAccordion from "@/components/AcademicsAccordion";
+import { academicsData } from "@/data";
+import AcademicsAccordion from "@/components/modules/AcademicsAccordion";
 
 export const metadata: Metadata = {
   title: "Academics",

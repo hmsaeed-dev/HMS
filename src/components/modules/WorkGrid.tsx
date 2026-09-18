@@ -5,6 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, ExternalLink, Github, Code, Cpu } from "lucide-react";
 import { Project } from "@/data/projects";
+import Badge from "@/components/primitives/Badge";
+import { cn } from "@/lib/utils";
 
 interface WorkGridProps {
   projects: Project[];
@@ -31,22 +33,24 @@ export default function WorkGrid({ projects }: WorkGridProps) {
         <button
           type="button"
           onClick={() => setActiveFilter("all")}
-          className={`px-5 py-2 rounded-2xl text-xs uppercase tracking-wider font-medium transition-all ${
+          className={cn(
+            "px-5 py-2 rounded-2xl text-xs uppercase tracking-wider font-medium transition-all",
             activeFilter === "all"
               ? "bg-[#728649] text-white shadow-sm"
               : "border border-[rgba(42,42,34,0.15)] text-[rgba(42,42,34,0.60)] hover:border-[#728649] hover:text-[#728649]"
-          }`}
+          )}
         >
           All ({projects.length})
         </button>
         <button
           type="button"
           onClick={() => setActiveFilter("web")}
-          className={`px-5 py-2 rounded-2xl text-xs uppercase tracking-wider font-medium inline-flex items-center gap-2 transition-all ${
+          className={cn(
+            "px-5 py-2 rounded-2xl text-xs uppercase tracking-wider font-medium inline-flex items-center gap-2 transition-all",
             activeFilter === "web"
               ? "bg-[#728649] text-white shadow-sm"
               : "border border-[rgba(42,42,34,0.15)] text-[rgba(42,42,34,0.60)] hover:border-[#728649] hover:text-[#728649]"
-          }`}
+          )}
         >
           <Code className="w-3.5 h-3.5" />
           <span>Web</span>
@@ -54,11 +58,12 @@ export default function WorkGrid({ projects }: WorkGridProps) {
         <button
           type="button"
           onClick={() => setActiveFilter("hardware")}
-          className={`px-5 py-2 rounded-2xl text-xs uppercase tracking-wider font-medium inline-flex items-center gap-2 transition-all ${
+          className={cn(
+            "px-5 py-2 rounded-2xl text-xs uppercase tracking-wider font-medium inline-flex items-center gap-2 transition-all",
             activeFilter === "hardware"
               ? "bg-[#728649] text-white shadow-sm"
               : "border border-[rgba(42,42,34,0.15)] text-[rgba(42,42,34,0.60)] hover:border-[#728649] hover:text-[#728649]"
-          }`}
+          )}
         >
           <Cpu className="w-3.5 h-3.5" />
           <span>Hardware</span>
@@ -74,17 +79,17 @@ export default function WorkGrid({ projects }: WorkGridProps) {
           >
             {/* Visual Header */}
             <div className="relative aspect-[16/10] w-full overflow-hidden bg-[rgba(42,42,34,0.05)]">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src={project.featuredImage}
                 alt={project.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60" />
-              <span className="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-mono uppercase tracking-wider bg-white/90 text-[#2a2a22] shadow-sm">
-                {project.badge}
-              </span>
+              <div className="absolute top-4 left-4">
+                <Badge variant="neutral">{project.badge}</Badge>
+              </div>
             </div>
 
             {/* Body */}

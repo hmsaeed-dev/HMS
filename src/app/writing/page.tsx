@@ -1,7 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
-import { posts } from "@/data/writing";
-import WritingList from "@/components/WritingList";
+import { posts } from "@/data";
+import WritingList from "@/components/modules/WritingList";
 
 export const metadata: Metadata = {
   title: "Writing",
