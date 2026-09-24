@@ -48,7 +48,7 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
   return (
     <div className="space-y-8">
       {/* Filter and View Switcher Bar */}
-      <div className="flex flex-col md:flex-row items-center justify-between gap-6 py-4 border-b border-[rgba(42,42,34,0.08)]">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-6 py-4">
         {/* Category Buttons */}
         <div className="flex items-center gap-2 flex-wrap">
           {categories.map((cat) => (
@@ -57,10 +57,10 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
               type="button"
               onClick={() => setActiveCategory(cat)}
               className={cn(
-                "px-4 py-1.5 rounded-full text-xs uppercase tracking-wider font-medium transition-all",
+                "px-3.5 py-1.5 rounded-sharp text-xs font-mono uppercase tracking-wider transition-all",
                 activeCategory === cat
-                  ? "bg-[#728649] text-white shadow-sm"
-                  : "border border-[rgba(42,42,34,0.15)] text-[rgba(42,42,34,0.60)] hover:border-[#728649] hover:text-[#728649]"
+                  ? "bg-ink-primary text-canvas shadow-sm font-semibold"
+                  : "text-ink-secondary hover:text-ink-primary bg-canvas-surface hover:bg-canvas-vellum shadow-sm"
               )}
             >
               {cat}
@@ -70,38 +70,38 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
 
         {/* View Count & View Switcher */}
         <div className="flex items-center gap-4 self-end md:self-auto">
-          <span className="text-xs text-[rgba(42,42,34,0.50)] font-mono">
-            Showing {filteredPhotos.length} photos
+          <span className="text-xs text-ink-tertiary font-mono">
+            Plate Index: {filteredPhotos.length} captures
           </span>
 
-          <div className="flex items-center border border-[rgba(42,42,34,0.15)] rounded-xl p-1 gap-1">
+          <div className="flex items-center p-0.5 gap-0.5 bg-canvas-surface rounded-sharp shadow-sm">
             <button
               type="button"
               onClick={() => handleSetView("rhythm")}
               aria-label="Rhythm View (Masonry)"
               className={cn(
-                "p-1.5 rounded-lg transition-colors",
+                "p-1.5 rounded-sharp transition-colors",
                 viewMode === "rhythm"
-                  ? "bg-[#728649] text-white"
-                  : "text-[rgba(42,42,34,0.60)] hover:text-[#2a2a22]"
+                  ? "bg-ink-primary text-canvas"
+                  : "text-ink-secondary hover:text-ink-primary"
               )}
               title="Masonry View"
             >
-              <LayoutGrid className="w-4 h-4" />
+              <LayoutGrid className="w-3.5 h-3.5" />
             </button>
             <button
               type="button"
               onClick={() => handleSetView("focus")}
               aria-label="Focus View (Cinematic)"
               className={cn(
-                "p-1.5 rounded-lg transition-colors",
+                "p-1.5 rounded-sharp transition-colors",
                 viewMode === "focus"
-                  ? "bg-[#728649] text-white"
-                  : "text-[rgba(42,42,34,0.60)] hover:text-[#2a2a22]"
+                  ? "bg-ink-primary text-canvas"
+                  : "text-ink-secondary hover:text-ink-primary"
               )}
               title="Cinematic View"
             >
-              <Maximize2 className="w-4 h-4" />
+              <Maximize2 className="w-3.5 h-3.5" />
             </button>
           </div>
         </div>
@@ -112,17 +112,17 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
         className={
           viewMode === "rhythm"
             ? "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 items-start"
-            : "grid grid-cols-1 md:grid-cols-2 gap-10 items-start"
+            : "grid grid-cols-1 md:grid-cols-2 gap-8 items-start"
         }
       >
         {filteredPhotos.map((photo, idx) => (
           <article
             key={photo.src}
             onClick={() => openPhoto(idx)}
-            className="group cursor-pointer rounded-2xl overflow-hidden bg-[rgba(42,42,34,0.04)] relative shadow-sm hover:shadow-lg transition-all duration-300"
+            className="group cursor-pointer p-2.5 bg-canvas-surface shadow-plate rounded-card hover:shadow-md transition-all duration-300"
           >
             <div
-              className={`relative w-full overflow-hidden ${
+              className={`relative w-full overflow-hidden bg-canvas-recessed ${
                 viewMode === "focus" ? "aspect-[4/3]" : "aspect-[3/4]"
               }`}
             >
@@ -131,32 +131,36 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
                 alt={photo.caption}
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                className="object-cover group-hover:scale-[1.02] transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-white">
-                <h3 className="font-serif text-lg font-bold">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-canvas">
+                <h3 className="font-serif text-lg font-light">
                   {photo.caption}
                 </h3>
-                <p className="text-xs text-white/80 line-clamp-1 font-sans">
-                  {photo.desc}
+                <p className="text-[11px] font-mono text-canvas/80 line-clamp-1">
+                  {photo.category} · {photo.desc}
                 </p>
-                <span className="text-[0.65rem] font-mono uppercase tracking-widest text-[#8a9e60] mt-1">
-                  {photo.category}
-                </span>
               </div>
+            </div>
+
+            <div className="pt-2 px-1 flex items-center justify-between font-mono text-[10px] text-ink-tertiary">
+              <span className="truncate max-w-[70%]">{photo.caption}</span>
+              <span className="text-rust">{photo.category}</span>
             </div>
           </article>
         ))}
       </div>
 
-      {/* Lightbox Component */}
-      <Lightbox
-        photos={filteredPhotos}
-        currentIndex={lightboxIndex}
-        isOpen={lightboxOpen}
-        onClose={() => setLightboxOpen(false)}
-        onNavigate={(index) => setLightboxIndex(index)}
-      />
+      {/* Lightbox Modal */}
+      {lightboxOpen && (
+        <Lightbox
+          photos={filteredPhotos}
+          currentIndex={lightboxIndex}
+          isOpen={lightboxOpen}
+          onClose={() => setLightboxOpen(false)}
+          onNavigate={(index) => setLightboxIndex(index)}
+        />
+      )}
     </div>
   );
 }

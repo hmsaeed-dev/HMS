@@ -4,96 +4,100 @@ import Link from "next/link";
 import TaxilaPulse from "@/components/modules/TaxilaPulse";
 
 export const metadata: Metadata = {
-  title: "Now",
+  title: "Now // Active Focus & Focus Ledger",
   description:
-    "A live update on what Hafiz Muhammad Saeed is building, learning, and thinking about right now at UET Taxila.",
+    "A real-time snapshot of active engineering projects, studies, readings, and focus areas by Hafiz Muhammad Saeed.",
 };
 
 export default function NowPage() {
   return (
-    <div className="max-w-[1200px] mx-auto px-5 sm:px-8 md:px-12 py-16 space-y-16">
+    <div className="max-w-[1240px] mx-auto px-5 sm:px-8 md:px-12 py-16 sm:py-24 space-y-16 pt-24 sm:pt-28">
       {/* ── HERO ────────────────────────────────────────── */}
-      <header className="max-w-2xl">
-        <h1 className="font-serif text-5xl md:text-6xl font-bold text-[#2a2a22] mb-4">
-          Now
+      <header className="max-w-3xl space-y-6">
+        <div className="font-mono text-xs uppercase tracking-widest text-rust">
+          Folio 2026 // Real-time Ledger
+        </div>
+        <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-light text-ink-primary leading-tight">
+          Current Focus &amp; Pursuits
         </h1>
-        <p className="text-lg text-[rgba(42,42,34,0.60)] leading-relaxed">
-          A real-time snapshot of active projects, studies, and focus.
+        <p className="text-base sm:text-lg text-ink-secondary leading-relaxed font-sans">
+          A living record of active builds, technical learning trajectories, and intellectual focus. 
+          Updated as the season shifts.
         </p>
       </header>
 
       {/* ── TWO COLUMN LAYOUT ───────────────────────────── */}
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-12 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-12 items-start">
         {/* LEFT COLUMN: MAIN CONTENT */}
         <div className="space-y-16">
           {/* Opening Manifesto */}
-          <section className="p-6 rounded-2xl border border-[rgba(42,42,34,0.08)] bg-white/40">
-            <p className="font-serif text-xl md:text-2xl italic text-[#2a2a22]">
-              Third Semester about to start, a new beginning.
+          <section className="p-6 bg-canvas-recessed/60 border border-ink-hairline">
+            <p className="font-serif text-xl sm:text-2xl italic text-ink-primary leading-relaxed">
+              “Third Semester in motion. Consolidating systems engineering, front-end architecture, 
+              and taking on bespoke freelance client contracts.”
             </p>
           </section>
 
           {/* Active Pursuits */}
           <section className="space-y-8">
-            <h2 className="font-serif text-3xl font-bold text-[#2a2a22]">
+            <h2 className="font-serif text-3xl font-light text-ink-primary">
               Active Pursuits
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Building */}
-              <div className="space-y-6">
-                <h3 className="font-mono text-xs uppercase tracking-widest text-[#728649] font-bold">
+              <div className="p-6 bg-canvas-surface border border-ink-hairline shadow-plate space-y-6">
+                <h3 className="font-mono text-xs uppercase tracking-widest text-rust font-semibold">
                   Building
                 </h3>
                 <div className="space-y-6">
-                  <article className="space-y-1">
-                    <h4 className="font-serif text-xl font-bold text-[#2a2a22]">
+                  <article className="space-y-1.5">
+                    <h4 className="font-serif text-xl font-normal text-ink-primary">
                       hmsaeed.com
                     </h4>
-                    <p className="text-sm text-[rgba(42,42,34,0.70)] leading-relaxed">
-                      Rebuilding it from a simple portfolio into a dynamic
-                      presence system. Unifying visual details and interactions.
+                    <p className="text-sm text-ink-secondary leading-relaxed font-sans">
+                      Refactoring the personal digital identity hub into a warm, 
+                      editorial, client-conversion machine.
                     </p>
                   </article>
-                  <article className="space-y-1">
-                    <h4 className="font-serif text-xl font-bold text-[#2a2a22]">
-                      Design Language
+                  <article className="space-y-1.5">
+                    <h4 className="font-serif text-xl font-normal text-ink-primary">
+                      Digital Monograph System
                     </h4>
-                    <p className="text-sm text-[rgba(42,42,34,0.70)] leading-relaxed">
-                      Unifying my mark, digital identity, photography and
-                      website aesthetic into a coherent visual language.
+                    <p className="text-sm text-ink-secondary leading-relaxed font-sans">
+                      Refining a reusable design language based on paper stocks, 
+                      classical typography scales, and hairline borders.
                     </p>
                   </article>
                 </div>
               </div>
 
               {/* Learning */}
-              <div className="space-y-6">
-                <h3 className="font-mono text-xs uppercase tracking-widest text-[#728649] font-bold">
-                  Learning
+              <div className="p-6 bg-canvas-surface border border-ink-hairline shadow-plate space-y-6">
+                <h3 className="font-mono text-xs uppercase tracking-widest text-olive font-semibold">
+                  Exploring
                 </h3>
                 <div className="space-y-6">
-                  <article className="space-y-1">
-                    <h4 className="font-serif text-xl font-bold text-[#2a2a22]">
+                  <article className="space-y-1.5">
+                    <h4 className="font-serif text-xl font-normal text-ink-primary">
                       <Link
                         href="/writing"
-                        className="hover:text-[#728649] transition-colors"
+                        className="hover:text-rust transition-colors"
                       >
-                        Data Structures &amp; Algorithms
+                        Data Structures &amp; Systems
                       </Link>
                     </h4>
-                    <p className="text-sm text-[rgba(42,42,34,0.70)] leading-relaxed">
-                      Deepening core problem-solving capacity and computer
-                      science foundations.
+                    <p className="text-sm text-ink-secondary leading-relaxed font-sans">
+                      Deepening core algorithm performance, memory hierarchies, and 
+                      distributed systems architecture.
                     </p>
                   </article>
-                  <article className="space-y-1">
-                    <h4 className="font-serif text-xl font-bold text-[#2a2a22]">
-                      Advanced JavaScript
+                  <article className="space-y-1.5">
+                    <h4 className="font-serif text-xl font-normal text-ink-primary">
+                      Advanced Next.js 15 Patterns
                     </h4>
-                    <p className="text-sm text-[rgba(42,42,34,0.70)] leading-relaxed">
-                      Moving from fundamentals to advanced asynchronous and
-                      functional concepts.
+                    <p className="text-sm text-ink-secondary leading-relaxed font-sans">
+                      Mastering Server Actions, parallel routes, and zero-layout-shift streaming.
                     </p>
                   </article>
                 </div>
@@ -103,49 +107,45 @@ export default function NowPage() {
 
           {/* Past Seasons History */}
           <section className="space-y-8">
-            <h2 className="font-serif text-3xl font-bold text-[#2a2a22]">
-              Past Seasons
+            <h2 className="font-serif text-3xl font-light text-ink-primary">
+              Recent Seasons
             </h2>
-            <div className="border-l-2 border-[#728649]/30 pl-6 space-y-8">
+            <div className="border-l border-ink-hairline pl-6 space-y-8">
               <div className="relative">
-                <span className="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-[#728649] border-2 border-[#f7f4ef]" />
+                <span className="absolute -left-[30.5px] top-1.5 w-2 h-2 rounded-full bg-rust border-2 border-canvas" />
                 <div className="flex items-center gap-3">
-                  <span className="font-mono text-xs text-[#728649] font-bold">
+                  <span className="font-mono text-xs text-rust font-semibold">
                     May 2026
                   </span>
-                  <span className="text-xs px-2 py-0.5 rounded-full bg-[#728649]/10 text-[#728649]">
-                    End of 2nd Sem
+                  <span className="text-[10px] px-2 py-0.5 font-mono uppercase bg-olive/10 text-olive">
+                    End of Semester 2
                   </span>
                 </div>
-                <h4 className="font-serif text-lg font-bold text-[#2a2a22] mt-1">
-                  Completing Semester &amp; Transition to JS
+                <h4 className="font-serif text-xl font-light text-ink-primary mt-1">
+                  C++ Systems to Web Architecture Transition
                 </h4>
-                <p className="text-sm text-[rgba(42,42,34,0.70)] leading-relaxed mt-1">
-                  Wrapped up second semester at UET Taxila. Transitioned from
-                  pure C++ Object Oriented programming to frontend development.
-                  Began architecting the presence system for hmsaeed.com and
-                  consolidating macro lens experiments.
+                <p className="text-sm text-ink-secondary leading-relaxed mt-1 font-sans">
+                  Completed C++ OOP lab systems. Began full-time investment in modern TypeScript, 
+                  Next.js, and publishing personal engineering notes.
                 </p>
               </div>
 
               <div className="relative">
-                <span className="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-[#728649] border-2 border-[#f7f4ef]" />
+                <span className="absolute -left-[30.5px] top-1.5 w-2 h-2 rounded-full bg-rust border-2 border-canvas" />
                 <div className="flex items-center gap-3">
-                  <span className="font-mono text-xs text-[#728649] font-bold">
+                  <span className="font-mono text-xs text-rust font-semibold">
                     March 2026
                   </span>
-                  <span className="text-xs px-2 py-0.5 rounded-full bg-[#728649]/10 text-[#728649]">
+                  <span className="text-[10px] px-2 py-0.5 font-mono uppercase bg-canvas-recessed text-ink-tertiary">
                     Mid-Sem
                   </span>
                 </div>
-                <h4 className="font-serif text-lg font-bold text-[#2a2a22] mt-1">
-                  C++ OOP, Systems &amp; Local Macro Flora
+                <h4 className="font-serif text-xl font-light text-ink-primary mt-1">
+                  OOP Architecture &amp; Macro Flora
                 </h4>
-                <p className="text-sm text-[rgba(42,42,34,0.70)] leading-relaxed mt-1">
-                  Deep dive into classes, polymorphism, and solid OOP
-                  principles. Spent weekends macro-photographing spring wild
-                  flora around Taxila ruins, laying conceptual seeds for the
-                  design aesthetics of my digital platform.
+                <p className="text-sm text-ink-secondary leading-relaxed mt-1 font-sans">
+                  Explored inheritance hierarchies and polymorphism. Spent weekends macro-photographing 
+                  wild flora across the Taxila archaeological valleys.
                 </p>
               </div>
             </div>
@@ -157,39 +157,39 @@ export default function NowPage() {
           <TaxilaPulse />
 
           {/* Active Reading Widget */}
-          <div className="p-6 rounded-2xl border border-[rgba(42,42,34,0.12)] bg-white/60 backdrop-blur-sm space-y-4">
-            <h3 className="font-mono text-xs uppercase tracking-wider text-[#728649] font-bold">
-              Active Reading
+          <div className="p-6 bg-canvas-surface border border-ink-hairline shadow-plate space-y-4">
+            <h3 className="font-mono text-xs uppercase tracking-wider text-rust font-semibold">
+              Current Reading
             </h3>
             <div className="space-y-3">
               <div>
-                <h4 className="font-serif text-xl font-bold text-[#2a2a22]">
+                <h4 className="font-serif text-xl font-normal text-ink-primary">
                   Macroeconomics
                 </h4>
-                <span className="text-xs text-[rgba(42,42,34,0.60)]">
+                <span className="text-xs text-ink-tertiary font-mono">
                   by David Colander
                 </span>
               </div>
 
               <div className="space-y-1">
-                <div className="w-full h-1.5 bg-[rgba(42,42,34,0.10)] rounded-full overflow-hidden">
-                  <div className="h-full bg-[#728649] rounded-full w-[35%]" />
+                <div className="w-full h-1 bg-ink-hairline overflow-hidden">
+                  <div className="h-full bg-rust w-[35%]" />
                 </div>
-                <div className="text-xs text-[rgba(42,42,34,0.50)] font-mono">
+                <div className="text-[11px] text-ink-tertiary font-mono">
                   Page 80 of 512 (18%)
                 </div>
               </div>
 
               <details className="text-xs group pt-2">
-                <summary className="cursor-pointer text-[#728649] font-medium hover:underline flex items-center justify-between">
-                  <span>My Takeaways</span>
+                <summary className="cursor-pointer text-rust font-mono hover:underline flex items-center justify-between">
+                  <span>Marginal Notes</span>
                   <span className="group-open:rotate-180 transition-transform">
                     ↓
                   </span>
                 </summary>
-                <p className="mt-2 text-[rgba(42,42,34,0.75)] leading-relaxed italic bg-white/80 p-3 rounded-lg border border-[rgba(42,42,34,0.06)]">
+                <p className="mt-2 text-ink-secondary leading-relaxed italic bg-canvas-recessed p-3 border border-ink-hairline font-serif text-sm">
                   Exploring aggregate supply/demand equilibrium, monetary policy
-                  frameworks, and structural economic variables.
+                  frameworks, and macroeconomic structural constraints.
                 </p>
               </details>
             </div>
@@ -197,23 +197,22 @@ export default function NowPage() {
         </aside>
       </div>
 
-      {/* ── CLOSING CTA BANNER ──────────────────────────── */}
-      <section className="p-8 rounded-2xl border border-[rgba(42,42,34,0.12)] bg-white/40 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
-        <p className="text-base text-[rgba(42,42,34,0.70)]">
-          This page updates every few weeks.
-        </p>
-        <div className="flex flex-wrap gap-4">
+      {/* ── CLOSING CALLOUT ─────────────────────────────── */}
+      <section className="p-8 bg-canvas-surface border border-ink-hairline shadow-plate flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div>
+          <h3 className="font-serif text-xl font-light text-ink-primary">
+            Looking to collaborate this season?
+          </h3>
+          <p className="text-xs text-ink-secondary mt-1">
+            Accepting select engineering and design contracts for Q2 &amp; Q3 2026.
+          </p>
+        </div>
+        <div className="flex items-center gap-4 shrink-0">
           <Link
             href="/connect"
-            className="px-6 py-2.5 rounded-2xl bg-[#728649] text-white text-xs uppercase tracking-wider font-medium hover:bg-[#8a9e60] transition-colors"
+            className="px-5 py-2.5 rounded-sharp bg-ink-primary hover:bg-rust text-canvas text-xs font-mono uppercase tracking-widest font-semibold transition-colors shadow-plate"
           >
-            Say Hello
-          </Link>
-          <Link
-            href="/work"
-            className="px-6 py-2.5 rounded-2xl border border-[rgba(42,42,34,0.20)] text-[#2a2a22] text-xs uppercase tracking-wider font-medium hover:border-[#728649] hover:text-[#728649] transition-colors"
-          >
-            Explore Projects
+            Start a Project →
           </Link>
         </div>
       </section>

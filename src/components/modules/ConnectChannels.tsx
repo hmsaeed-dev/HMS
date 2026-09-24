@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Mail, Linkedin, MessageCircle, Github, Check, Copy } from "lucide-react";
+import { Mail, Linkedin, MessageCircle, Github, Check, Copy, ArrowUpRight } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/constants";
 
 export default function ConnectChannels() {
@@ -15,96 +15,135 @@ export default function ConnectChannels() {
   };
 
   return (
-    <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-      {/* Email with 1-click copy */}
-      <div className="relative group">
+    <section className="flex sm:grid sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 overflow-x-auto scroll-snap-x no-scrollbar pb-2">
+      {/* Email: Terracotta Accent */}
+      <div className="w-[78vw] max-w-[280px] sm:w-auto shrink-0 snap-card relative group p-6 bg-canvas-paper shadow-plate rounded-card hover:shadow-md transition-all duration-300 flex flex-col justify-between h-full">
         <a
-          href={`mailto:${SITE_CONFIG.links.email}`}
-          className="p-6 rounded-3xl border border-[rgba(42,42,34,0.10)] bg-white/60 backdrop-blur-sm flex flex-col items-center justify-center text-center gap-3 hover:border-[#728649] hover:shadow-md hover:-translate-y-1 transition-all h-full block"
+          href={`mailto:${SITE_CONFIG.links.email}?subject=Project%20Inquiry%20%E2%80%94%20[Your%20Name%20or%20Company]`}
+          className="space-y-4 block"
         >
-          <div className="p-3 rounded-2xl bg-[#728649]/10 text-[#728649] group-hover:bg-[#728649] group-hover:text-white transition-colors">
-            <Mail className="w-6 h-6" />
+          <div className="flex items-center justify-between">
+            <div className="p-2.5 rounded-sharp bg-rust/10 text-rust group-hover:bg-rust group-hover:text-canvas transition-colors">
+              <Mail className="w-5 h-5" />
+            </div>
+            <ArrowUpRight className="w-4 h-4 text-ink-tertiary group-hover:text-rust transition-colors" />
           </div>
-          <span className="font-serif text-xl font-bold text-[#2a2a22]">
-            Email
-          </span>
-          <span className="font-mono text-xs text-[rgba(42,42,34,0.50)]">
-            {SITE_CONFIG.links.email}
-          </span>
+          <div>
+            <span className="font-serif text-xl font-normal text-ink-primary block group-hover:text-rust transition-colors">
+              Direct Email
+            </span>
+            <span className="font-mono text-xs text-ink-tertiary break-all">
+              {SITE_CONFIG.links.email}
+            </span>
+          </div>
         </a>
 
-        <button
-          type="button"
-          onClick={handleCopyEmail}
-          aria-label="Copy email"
-          className="absolute top-4 right-4 p-1.5 rounded-lg bg-[rgba(42,42,34,0.05)] hover:bg-[#728649] hover:text-white text-[rgba(42,42,34,0.40)] transition-all text-xs flex items-center gap-1"
-          title="Copy email to clipboard"
-        >
-          {copied ? (
-            <Check className="w-3.5 h-3.5 text-[#728649]" />
-          ) : (
-            <Copy className="w-3.5 h-3.5" />
-          )}
-        </button>
-        {copied && (
-          <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-[#2a2a22] text-white text-[0.7rem] px-2.5 py-1 rounded-md font-mono whitespace-nowrap shadow-lg z-10">
-            Copied to clipboard!
-          </div>
-        )}
+        <div className="pt-3 flex items-center justify-between">
+          <span className="font-mono text-[10px] uppercase text-rust font-semibold">
+            ● SLA &lt; 24h
+          </span>
+          <button
+            type="button"
+            onClick={handleCopyEmail}
+            aria-label="Copy email"
+            className="p-1 rounded-sharp text-ink-tertiary hover:text-ink-primary hover:bg-canvas-vellum text-xs transition-colors flex items-center gap-1"
+            title="Copy email to clipboard"
+          >
+            {copied ? (
+              <span className="text-[10px] font-mono text-rust flex items-center gap-1">
+                <Check className="w-3 h-3" /> Copied
+              </span>
+            ) : (
+              <span className="text-[10px] font-mono flex items-center gap-1">
+                <Copy className="w-3 h-3" /> Copy
+              </span>
+            )}
+          </button>
+        </div>
       </div>
 
-      {/* LinkedIn */}
-      <a
-        href={SITE_CONFIG.links.linkedin}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="p-6 rounded-3xl border border-[rgba(42,42,34,0.10)] bg-white/60 backdrop-blur-sm flex flex-col items-center justify-center text-center gap-3 hover:border-[#728649] hover:shadow-md hover:-translate-y-1 transition-all group"
-      >
-        <div className="p-3 rounded-2xl bg-[#728649]/10 text-[#728649] group-hover:bg-[#728649] group-hover:text-white transition-colors">
-          <Linkedin className="w-6 h-6" />
-        </div>
-        <span className="font-serif text-xl font-bold text-[#2a2a22]">
-          LinkedIn
-        </span>
-        <span className="font-mono text-xs text-[rgba(42,42,34,0.50)]">
-          in/hmsaeed
-        </span>
-      </a>
-
-      {/* WhatsApp */}
+      {/* WhatsApp: Moss Accent */}
       <a
         href={SITE_CONFIG.links.whatsapp}
         target="_blank"
         rel="noopener noreferrer"
-        className="p-6 rounded-3xl border border-[rgba(42,42,34,0.10)] bg-white/60 backdrop-blur-sm flex flex-col items-center justify-center text-center gap-3 hover:border-[#728649] hover:shadow-md hover:-translate-y-1 transition-all group"
+        className="w-[78vw] max-w-[280px] sm:w-auto shrink-0 snap-card p-6 bg-canvas-paper shadow-plate rounded-card hover:shadow-md transition-all duration-300 flex flex-col justify-between group"
       >
-        <div className="p-3 rounded-2xl bg-[#728649]/10 text-[#728649] group-hover:bg-[#728649] group-hover:text-white transition-colors">
-          <MessageCircle className="w-6 h-6" />
+        <div className="space-y-4">
+          <div className="flex items-center justify-between">
+            <div className="p-2.5 rounded-sharp bg-moss/10 text-moss group-hover:bg-moss group-hover:text-canvas transition-colors">
+              <MessageCircle className="w-5 h-5" />
+            </div>
+            <ArrowUpRight className="w-4 h-4 text-ink-tertiary group-hover:text-moss transition-colors" />
+          </div>
+          <div>
+            <span className="font-serif text-xl font-normal text-ink-primary block group-hover:text-moss transition-colors">
+              WhatsApp
+            </span>
+            <span className="font-mono text-xs text-ink-tertiary">
+              +92 321 9798860
+            </span>
+          </div>
         </div>
-        <span className="font-serif text-xl font-bold text-[#2a2a22]">
-          WhatsApp
-        </span>
-        <span className="font-mono text-xs text-[rgba(42,42,34,0.50)]">
-          +92 321 9798860
-        </span>
+        <div className="pt-3 font-mono text-[10px] uppercase text-moss font-semibold">
+          Instant Messaging
+        </div>
       </a>
 
-      {/* GitHub */}
+      {/* LinkedIn: Lapis Accent */}
+      <a
+        href={SITE_CONFIG.links.linkedin}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-[78vw] max-w-[280px] sm:w-auto shrink-0 snap-card p-6 bg-canvas-paper shadow-plate rounded-card hover:shadow-md transition-all duration-300 flex flex-col justify-between group"
+      >
+        <div className="space-y-4">
+          <div className="flex items-center justify-between">
+            <div className="p-2.5 rounded-sharp bg-lapis/10 text-lapis group-hover:bg-lapis group-hover:text-canvas transition-colors">
+              <Linkedin className="w-5 h-5" />
+            </div>
+            <ArrowUpRight className="w-4 h-4 text-ink-tertiary group-hover:text-lapis transition-colors" />
+          </div>
+          <div>
+            <span className="font-serif text-xl font-normal text-ink-primary block group-hover:text-lapis transition-colors">
+              LinkedIn
+            </span>
+            <span className="font-mono text-xs text-ink-tertiary">
+              in/hmsaeed
+            </span>
+          </div>
+        </div>
+        <div className="pt-3 font-mono text-[10px] uppercase text-lapis font-semibold">
+          Professional Network
+        </div>
+      </a>
+
+      {/* GitHub: Deep Carbon Accent */}
       <a
         href={SITE_CONFIG.links.github}
         target="_blank"
         rel="noopener noreferrer"
-        className="p-6 rounded-3xl border border-[rgba(42,42,34,0.10)] bg-white/60 backdrop-blur-sm flex flex-col items-center justify-center text-center gap-3 hover:border-[#728649] hover:shadow-md hover:-translate-y-1 transition-all group"
+        className="w-[78vw] max-w-[280px] sm:w-auto shrink-0 snap-card p-6 bg-canvas-paper shadow-plate rounded-card hover:shadow-md transition-all duration-300 flex flex-col justify-between group"
       >
-        <div className="p-3 rounded-2xl bg-[#728649]/10 text-[#728649] group-hover:bg-[#728649] group-hover:text-white transition-colors">
-          <Github className="w-6 h-6" />
+        <div className="space-y-4">
+          <div className="flex items-center justify-between">
+            <div className="p-2.5 rounded-sharp bg-ink-primary/10 text-ink-primary group-hover:bg-ink-primary group-hover:text-canvas transition-colors">
+              <Github className="w-5 h-5" />
+            </div>
+            <ArrowUpRight className="w-4 h-4 text-ink-tertiary group-hover:text-ink-primary transition-colors" />
+          </div>
+          <div>
+            <span className="font-serif text-xl font-normal text-ink-primary block">
+              GitHub
+            </span>
+            <span className="font-mono text-xs text-ink-tertiary">
+              hmsaeed-dev
+            </span>
+          </div>
         </div>
-        <span className="font-serif text-xl font-bold text-[#2a2a22]">
-          GitHub
-        </span>
-        <span className="font-mono text-xs text-[rgba(42,42,34,0.50)]">
-          hmsaeed-dev
-        </span>
+        <div className="pt-3 font-mono text-[10px] uppercase text-ink-tertiary">
+          Source Repositories
+        </div>
       </a>
     </section>
   );

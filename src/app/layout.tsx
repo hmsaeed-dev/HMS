@@ -1,8 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, DM_Sans, Fira_Code } from "next/font/google";
 import Script from "next/script";
-import Navigation from "@/components/layout/Navigation";
-import Footer from "@/components/layout/Footer";
+import AppLayoutFrame from "@/components/layout/AppLayoutFrame";
 import BackToTop from "@/components/layout/BackToTop";
 import ScrollProgress from "@/components/layout/ScrollProgress";
 import "./globals.css";
@@ -114,7 +113,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="font-sans antialiased text-[#2a2a22] bg-[#f7f4ef] min-h-screen flex flex-col justify-between pt-[65px]">
+      <body className="font-sans antialiased text-ink bg-canvas min-h-screen flex flex-col justify-between selection:bg-rust/15 selection:text-ink">
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-T31PJSBQY8"
@@ -130,9 +129,7 @@ export default function RootLayout({
         </Script>
 
         <ScrollProgress />
-        <Navigation />
-        <main className="flex-grow">{children}</main>
-        <Footer />
+        <AppLayoutFrame>{children}</AppLayoutFrame>
         <BackToTop />
       </body>
     </html>

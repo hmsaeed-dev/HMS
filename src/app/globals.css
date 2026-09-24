@@ -3,38 +3,120 @@
 @tailwind utilities;
 
 :root {
-  --scroll-thumb: #8a9e60;
-  --scroll-track: #f7f4ef;
+  /* ── 1. NUMERICAL PRIMITIVE SHADE LADDERS (50–950) ───────── */
+  /* Canvas / Surface: Warm Parchment & Cream */
+  --parchment-50: #FAF7F2;          /* Alabaster Canvas Base */
+  --parchment-100: #F6EFE6;         /* Soft Cream Vellum */
+  --parchment-200: #F0E8DC;         /* Tactile Monograph Paper Stock */
+  --parchment-300: #E5DBCE;         /* Warm Tint Inset / Recessed Well */
+  --parchment-400: #D5C8B6;         /* Muted Sandstone Tone */
+  --parchment-500: #C2B39E;         /* Neutral Khaki Parchment */
+  --parchment-600: #A79883;         /* Aged Bookcloth Tan */
+  --parchment-700: #877967;         /* Weathered Silt */
+  --parchment-800: #625749;         /* Deep Raw Umber Wash */
+  --parchment-900: #3F372E;         /* Espresso Grain Shadow */
+  --parchment-950: #26211C;         /* Nocturnal Paper Inset */
 
-  --olive: #728649;
-  --olive-lt: #8a9e60;
-  --warm-bg: #f7f4ef;
-  --white: #ffffff;
-  --ink: #2a2a22;
-  --ink-60: rgba(42, 42, 34, 0.6);
-  --ink-40: rgba(42, 42, 34, 0.4);
-  --ink-20: rgba(42, 42, 34, 0.2);
-  --ink-10: rgba(42, 42, 34, 0.08);
-  --ink-05: rgba(42, 42, 34, 0.04);
+  /* Primary Brand: Deep Forest / Hunter Pine / Taxila Olive */
+  --forest-50: #F1F5EE;             /* Crisp Sage Mist Tint */
+  --forest-100: #E1EAD9;            /* Pale Lichen Wash */
+  --forest-200: #C3D5B5;            /* Soft Celadon Meadow */
+  --forest-300: #A2BC8E;            /* Ancient Herbal Olive */
+  --forest-400: #7A9C63;            /* Muted Moss Sprout */
+  --forest-500: #5B7B44;            /* Vibrant Hunter Pine */
+  --forest-600: #4B5838;            /* Signature Taxila Olive / Primary Brand */
+  --forest-700: #38432A;            /* Deep Forest Evergreen (Hover) */
+  --forest-800: #2A3320;            /* Nocturnal Pine Canopy (Active) */
+  --forest-900: #1D2416;            /* Deep Blackened Spruce */
+  --forest-950: #12170E;            /* Shadowed Pine Void */
 
-  --earth: #8b6b4d;
-  --sky: #5a8aa8;
-  --color-accent: var(--olive);
-  --color-accent-lt: var(--olive-lt);
-  --color-earth: var(--earth);
-  --color-sky: var(--sky);
-  --color-text: var(--ink);
-  --color-text-muted: var(--ink-60);
-  --color-bg: var(--warm-bg);
-  --color-surface: var(--white);
-  --color-border: var(--ink-10);
-  --color-border-lt: var(--ink-05);
-  --color-overlay: rgba(114, 134, 73, 0.15);
-  --color-selection: rgba(114, 134, 73, 0.25);
+  /* Action & Conversion: Terracotta / Warm Ochre */
+  --action-50: #FDF4F0;             /* Porcelain Blush Tint */
+  --action-100: #FBE4DC;            /* Warm Bisque Wash */
+  --action-200: #F5C7B7;            /* Soft Apricot Clay (Inverted Subheading) */
+  --action-300: #EBA08A;            /* Sunlit Sandstone */
+  --action-400: #DE775B;            /* Bright Terracotta Ember */
+  --action-500: #C75735;            /* Burnished Clay Focus Ring */
+  --action-600: #A64426;            /* Signature Rust / Primary Kinetic CTA */
+  --action-700: #88351C;            /* Deep Sienna (Hover State) */
+  --action-800: #6C2A16;            /* Active Pressed Mahogany */
+  --action-900: #4F1F10;            /* Dark Smoked Ochre */
+  --action-950: #31120A;            /* Carbon Rust Anchor */
 
-  --white-60: rgba(255, 255, 255, 0.6);
-  --white-40: rgba(255, 255, 255, 0.4);
-  --white-20: rgba(255, 255, 255, 0.2);
+  /* Ink & Neutral: Charcoal / Muted Umber */
+  --neutral-50: #F9F8F6;            /* Alabaster Bone */
+  --neutral-100: #EFECE7;           /* Pale Fog Wash */
+  --neutral-200: #DCD6CD;           /* Soft Slate Hairline */
+  --neutral-300: #C2BAB0;           /* Warm Gray Neutral */
+  --neutral-400: #988E82;           /* Muted Lead Neutral */
+  --neutral-500: #6C645A;           /* Ink Tertiary / Micro-label (4.7:1) */
+  --neutral-600: #474139;           /* Ink Secondary / Body Copy (7.6:1) */
+  --neutral-700: #342E28;           /* Dark Umber Text */
+  --neutral-800: #26211C;           /* Nocturnal Inset Card */
+  --neutral-900: #1A1614;           /* Deep Nocturnal Umber / Inverted Section */
+  --neutral-950: #171412;           /* Signature Ink Primary (16.5:1 AAA) */
+
+  /* ── 2. SEMANTIC ROLE TOKENS ────────────────────────────── */
+  --bg-canvas: var(--parchment-50);
+  --bg-surface-elevated: var(--parchment-200);
+  --bg-surface-recessed: var(--parchment-100);
+  --bg-section-muted: var(--parchment-100);
+  --bg-section-inverted: var(--neutral-900);
+  --bg-section-inverted-card: var(--neutral-800);
+  --surface-overlay: rgba(250, 247, 242, 0.88);
+
+  --text-ink-primary: var(--neutral-950);
+  --text-ink-secondary: var(--neutral-600);
+  --text-ink-muted: var(--neutral-500);
+  --text-ink-inverted: var(--parchment-50);
+  --text-ink-inverted-muted: var(--parchment-300);
+
+  --border-hairline: transparent;
+  --border-strong: transparent;
+  --border-accent: var(--action-600);
+  --border-contrast: var(--neutral-950);
+
+  --btn-primary-bg: var(--action-600);
+  --btn-primary-hover: var(--action-700);
+  --btn-primary-active: var(--action-800);
+  --btn-focus-ring: rgba(166, 68, 38, 0.20);
+
+  --pattern-mask-tint: rgba(23, 20, 18, 0.045);
+  --glow-ambient-tint: rgba(166, 68, 38, 0.08);
+
+  /* ── 3. DYNAMIC CANVASES & COMPATIBILITY ALIASES ───────── */
+  --canvas-base: var(--bg-canvas);
+  --surface-paper: var(--bg-surface-elevated);
+  --surface-tint-warm: var(--bg-surface-recessed);
+  --surface-dark: var(--bg-section-inverted);
+  --surface-dark-card: var(--bg-section-inverted-card);
+
+  --ink-primary: var(--text-ink-primary);
+  --ink-secondary: var(--text-ink-secondary);
+  --ink-tertiary: var(--text-ink-muted);
+
+  --accent-rust: var(--action-600);
+  --accent-rust-hover: var(--action-700);
+  --accent-rust-wash: rgba(166, 68, 38, 0.10);
+
+  --accent-moss: var(--forest-600);
+  --accent-moss-hover: var(--forest-700);
+  --accent-moss-wash: rgba(75, 88, 56, 0.10);
+
+  --accent-lapis: #234559;
+  --accent-lapis-hover: #162E3D;
+  --accent-lapis-wash: rgba(35, 69, 89, 0.10);
+
+  --accent-ochre: #C68A34;
+  --accent-ochre-wash: rgba(198, 138, 52, 0.12);
+
+  --accent-celadon: #8C9B8C;
+  --ink: var(--ink-primary);
+  --ink-60: var(--ink-secondary);
+  --ink-40: var(--ink-tertiary);
+  --ink-20: rgba(23, 20, 18, 0.20);
+  --ink-10: var(--border-hairline);
+  --ink-05: rgba(23, 20, 18, 0.05);
 
   --space-2xs: 0.25rem;
   --space-xs: 0.5rem;
@@ -54,14 +136,21 @@
   --z-lightbox: 1000;
   --z-tooltip: 1100;
 
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 20px rgba(114, 134, 73, 0.15);
-  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.1);
+  /* ── 5. RIGID GEOMETRY & SHADOW SYSTEM ─────────────────── */
+  --radius-sharp: 4px;
+  --radius-card: 8px;
+  --radius-dock: 9999px;
+  --radius: 8px;
+  --radiusmd: 8px;
+  --radiussm: 4px;
+  --radius-full: 9999px;
 
-  --radius: 32px;
-  --radiusmd: 24px;
-  --radiussm: 16px;
-  --radius-full: 999px;
+  --shadow-plate: 0 4px 20px -2px rgba(23, 20, 18, 0.05), 0 1px 3px rgba(23, 20, 18, 0.02);
+  --shadow-dock: 0 8px 30px -4px rgba(23, 20, 18, 0.08), 0 2px 8px -2px rgba(23, 20, 18, 0.04);
+  --shadow-dark-card: 0 4px 24px rgba(0, 0, 0, 0.25);
+  --shadow-sm: 0 1px 3px rgba(23, 20, 18, 0.03);
+  --shadow-md: 0 4px 16px rgba(23, 20, 18, 0.05);
+  --shadow-lg: 0 12px 32px rgba(23, 20, 18, 0.06);
 
   --fs-base: 16px;
   --fs-200: 0.5rem;
@@ -79,21 +168,21 @@
   --fs-h4: clamp(1.5rem, 3.5vw, 2.25rem);
   --fs-display: clamp(2.8rem, 6vw, 5.5rem);
 
-  --transition: 0.25s ease;
-  --transition-lg: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-lg: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 
-  --container-max: 1200px;
+  --container-max: 1240px;
   --header-height: 65px;
   --sidebar-width: 320px;
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 ::-webkit-scrollbar-thumb {
   background: var(--scroll-thumb);
-  border-radius: 4px;
+  border-radius: 3px;
 }
 ::-webkit-scrollbar-track {
   background: var(--scroll-track);
@@ -105,66 +194,72 @@ html {
   scrollbar-color: var(--scroll-thumb) var(--scroll-track);
 }
 
+/* Atmospheric Ambient Background Radiance */
 body {
-  background-color: var(--color-bg);
-  color: var(--color-text);
-  line-height: 1.6;
+  background-color: var(--canvas-base);
+  color: var(--ink-primary);
+  line-height: 1.74;
   overflow-x: hidden;
-  background-image: radial-gradient(circle at center, var(--color-overlay) 1px, transparent 1px);
-  background-size: var(--space-md) var(--space-md);
   position: relative;
+  /* Luminous organic chromatic glow */
+  background-image: 
+    radial-gradient(ellipse 65% 45% at 90% 8%, rgba(166, 68, 38, 0.045) 0%, transparent 70%),
+    radial-gradient(ellipse 55% 35% at 8% 42%, rgba(35, 69, 89, 0.04) 0%, transparent 60%),
+    radial-gradient(ellipse 65% 45% at 85% 82%, rgba(75, 88, 56, 0.045) 0%, transparent 70%);
+  background-repeat: no-repeat;
+}
+
+/* Subtle organic paper grain overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.022;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
 ::selection {
   background: var(--color-selection);
-  color: var(--color-text);
+  color: var(--ink-primary);
 }
 
-/* Testimonial Marquee Animation */
-@keyframes testimonial-scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-50% - 1rem));
-  }
+/* ── MOBILE-FIRST ANTI-FATIGUE SCROLL & SNAP UTILITIES ── */
+.scroll-snap-x {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
-.testimonial-marquee {
-  overflow: hidden;
-  padding-block: 1.5rem;
-  position: relative;
-  width: 100%;
-  mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+.snap-card {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
-.testimonial-track {
-  display: flex;
-  gap: 2rem;
-  width: max-content;
-  animation: testimonial-scroll 45s linear infinite;
-  will-change: transform;
-  padding: 1rem;
-}
-
-.testimonial-marquee:hover .testimonial-track,
-.testimonial-marquee:focus-within .testimonial-track {
-  animation-play-state: paused;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .testimonial-track {
-    animation: none;
-    overflow-x: auto;
-    mask-image: none;
-  }
-}
-
-/* Custom details accordion animation */
-details > summary {
-  list-style: none;
-}
-details > summary::-webkit-details-marker {
+.no-scrollbar::-webkit-scrollbar {
   display: none;
+  width: 0;
+  height: 0;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ── STRATEGIC VECTOR PATTERNS (3%–6% OPACITY THRESHOLD) ── */
+.pattern-taxila-geometry {
+  background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24 0L48 24L24 48L0 24Z' fill='none' stroke='%23171412' stroke-width='0.6' stroke-opacity='0.045'/%3E%3Ccircle cx='24' cy='24' r='12' fill='none' stroke='%23A64426' stroke-width='0.5' stroke-opacity='0.035'/%3E%3C/svg%3E");
+}
+
+.pattern-dark-mesh {
+  background-image: radial-gradient(rgba(250, 247, 242, 0.06) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.pattern-architectural-grid {
+  background-image: 
+    linear-gradient(to right, rgba(23, 20, 18, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(23, 20, 18, 0.035) 1px, transparent 1px);
+  background-size: 32px 32px;
 }
