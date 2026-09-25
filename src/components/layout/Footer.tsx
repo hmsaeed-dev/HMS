@@ -6,7 +6,7 @@ import { SITE_CONFIG } from "@/lib/constants";
 
 export default function Footer() {
   return (
-    <footer className="py-16 border-t border-border-hairline mt-20 bg-canvas/40">
+    <footer className="py-20 sm:py-24 mt-24 sm:mt-32 bg-surface-recessed/60">
       <Container className="space-y-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {/* Identity & Tagline */}
@@ -18,44 +18,43 @@ export default function Footer() {
               Hafiz Muhammad Saeed<span className="text-accent">.</span>
             </Link>
             <p className="text-sm text-ink-secondary max-w-sm leading-relaxed">
-              Front-end architect and interface designer. Building digital systems with
-              typographical poise, editorial warmth, and architectural rigor.
+              A computer science student building systems, studying ideas, and observing the world carefully.
             </p>
-            <div className="flex items-center gap-2 pt-2 text-xs font-mono text-accent">
-              <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-              <span>Available for select engineering &amp; design contracts</span>
+            <div className="flex items-center gap-2 pt-2 text-xs font-sans text-accent">
+              <span className="w-2 h-2 rounded-full bg-accent" />
+              <span>Taxila, PK (UTC+5) · Open to technical dialogue &amp; collaboration</span>
             </div>
           </div>
 
           {/* Quick Index */}
           <div className="space-y-3">
             <h4 className="text-xs font-semibold text-primary font-sans uppercase tracking-wider">
-              Directory
+              Index
             </h4>
             <ul className="space-y-1 text-xs font-sans text-ink-secondary">
               <li>
                 <Link href="/work" className="hover:text-primary transition-colors min-h-[40px] flex items-center">
-                  Selected Works
+                  Work (Building)
                 </Link>
               </li>
               <li>
-                <Link href="/writing" className="hover:text-primary transition-colors min-h-[40px] flex items-center">
-                  Essays &amp; Notes
+                <Link href="/thought" className="hover:text-primary transition-colors min-h-[40px] flex items-center">
+                  Thought (Thinking)
                 </Link>
               </li>
               <li>
-                <Link href="/story" className="hover:text-primary transition-colors min-h-[40px] flex items-center">
-                  Philosophy &amp; Story
+                <Link href="/about" className="hover:text-primary transition-colors min-h-[40px] flex items-center">
+                  About (Connecting)
                 </Link>
               </li>
               <li>
-                <Link href="/photography" className="hover:text-primary transition-colors min-h-[40px] flex items-center">
-                  Macro Photography
+                <Link href="/visuals" className="hover:text-primary transition-colors min-h-[40px] flex items-center">
+                  Visuals (Observing)
                 </Link>
               </li>
               <li>
-                <Link href="/academics" className="hover:text-primary transition-colors text-ink-tertiary min-h-[40px] flex items-center">
-                  Academic Ledger ↗
+                <Link href="/connect" className="hover:text-primary transition-colors min-h-[40px] flex items-center">
+                  Connect ↗
                 </Link>
               </li>
             </ul>
@@ -69,7 +68,7 @@ export default function Footer() {
             <div className="space-y-2 text-xs">
               <a
                 href={`mailto:${SITE_CONFIG.links.email}`}
-                className="font-mono text-ink-primary hover:text-accent transition-colors min-h-[44px] flex items-center break-all"
+                className="font-sans font-medium text-ink-primary hover:text-accent transition-colors min-h-[44px] flex items-center break-all"
               >
                 {SITE_CONFIG.links.email}
               </a>
@@ -110,12 +109,11 @@ export default function Footer() {
         </div>
 
         {/* Colophon & Typography Note */}
-        <div className="pt-8 border-t border-border-hairline flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-ink-tertiary font-mono">
+        <div className="pt-12 sm:pt-16 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-ink-tertiary font-sans">
           <p>
             Set in{" "}
             <span className="font-sans font-bold text-ink-primary">Inter</span>
-            , <span className="font-serif italic text-ink-primary">Instrument Serif</span>
-            , and <span className="font-mono text-ink-primary">Fira Code</span>.
+            {" "}and <span className="font-serif italic text-ink-primary">Instrument Serif</span>.
           </p>
           <p>© 2026 {SITE_CONFIG.name}. Built with editorial precision.</p>
         </div>

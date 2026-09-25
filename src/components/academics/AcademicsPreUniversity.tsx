@@ -21,10 +21,10 @@ export default function AcademicsPreUniversity({
             {academicsData.preUniversity.map((item, idx) => (
               <div key={idx} className="p-5 bg-canvas-paper border border-border-hairline rounded-card space-y-2">
                 <div className="flex items-center gap-3">
-                  <span className="font-mono text-xs text-rust font-semibold">
+                  <span className="font-sans text-xs text-accent font-semibold">
                     {item.year}
                   </span>
-                  <span className="text-[10px] px-2 py-0.5 font-mono uppercase bg-moss/10 text-moss rounded-pill">
+                  <span className="text-[10px] px-2 py-0.5 font-sans uppercase tracking-wider bg-accent-subtle text-accent rounded-pill font-medium">
                     {item.tag}
                   </span>
                 </div>
@@ -50,13 +50,13 @@ export default function AcademicsPreUniversity({
                   key={idx}
                   className="p-4 bg-canvas-recessed/60 rounded-sharp shadow-sm text-center space-y-1"
                 >
-                  <div className="font-mono text-2xl font-light text-ink-primary">
+                  <div className="font-sans text-2xl font-bold text-ink-primary">
                     {exam.score}{" "}
                     <span className="text-xs font-normal text-ink-tertiary">
                       / {exam.max}
                     </span>
                   </div>
-                  <div className="font-mono text-[10px] uppercase tracking-wider text-rust font-semibold">
+                  <div className="font-sans text-[10px] uppercase tracking-wider text-accent font-semibold">
                     {exam.label}
                   </div>
                 </div>

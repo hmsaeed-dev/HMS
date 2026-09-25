@@ -21,7 +21,7 @@ export default function ArticleHeader({ post }: ArticleHeaderProps) {
       </div>
 
       <div className="space-y-3">
-        <div className="flex items-center gap-2.5 font-mono text-xs text-ink-tertiary">
+        <div className="flex items-center gap-2.5 font-sans text-xs text-ink-tertiary">
           <span>{post.date}</span>
           <span>·</span>
           <span className="text-primary font-medium">{post.categoryLabel}</span>
@@ -33,7 +33,7 @@ export default function ArticleHeader({ post }: ArticleHeaderProps) {
         </h1>
       </div>
 
-      <p className="text-xl sm:text-2xl text-ink-secondary italic leading-relaxed font-serif pt-2 border-b border-border-hairline pb-8 font-normal">
+      <p className="text-xl sm:text-2xl text-ink-secondary italic leading-relaxed font-serif pt-2 pb-4 font-normal">
         {post.summary}
       </p>
     </header>

@@ -141,7 +141,7 @@ export default function Lightbox({
               {currentPhoto.desc}
             </p>
           )}
-          <div className="text-xs text-[#8a9e60] tracking-wider uppercase mt-2 font-mono flex items-center justify-center gap-2 flex-wrap">
+          <div className="text-xs text-[#C94A2F] tracking-wider uppercase mt-2 font-sans font-medium flex items-center justify-center gap-2 flex-wrap">
             <span>{currentPhoto.category}</span>
             <span className="opacity-40">•</span>
             <span>Taxila &amp; Margalla Hills</span>

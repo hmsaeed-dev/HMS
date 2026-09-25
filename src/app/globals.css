@@ -3,45 +3,46 @@
 @tailwind utilities;
 
 :root {
-  /* ── 1. CORE BRAND COLOR TOKENS ─────────────────────────── */
-  /* Primary Color: Deep Architectural Prussian Indigo (AAA 10.5:1 against canvas) */
-  --primary: #1C314B;
-  --primary-hover: #142438;
-  --primary-active: #0E1A29;
-  --primary-subtle: rgba(28, 49, 75, 0.07);
-  --primary-border: rgba(28, 49, 75, 0.20);
-  --primary-foreground: #FAF8F5;
+  /* ── 1. CORE BRAND COLOR TOKENS (TRIAD SYSTEM) ──────────── */
+  /* Structure: Deep Blue-Black (#151927) */
+  --primary: #151927;
+  --primary-hover: #0E111C;
+  --primary-active: #080A11;
+  --primary-subtle: rgba(21, 25, 39, 0.05);
+  --primary-border: rgba(21, 25, 39, 0.16);
+  --primary-foreground: #F7F5F1;
 
-  /* Accent Color: Substack Warm Terracotta / Burnt Ochre (AA 5.1:1 against canvas) */
-  --accent: #C04A26;
-  --accent-hover: #A53C1C;
-  --accent-subtle: rgba(192, 74, 38, 0.08);
-  --accent-border: rgba(192, 74, 38, 0.26);
+  /* Expression: Warm Editorial Red (#C94A2F) - "Red is the signal" */
+  --accent: #C94A2F;
+  --accent-hover: #AF3E25;
+  --accent-active: #94331C;
+  --accent-subtle: rgba(201, 74, 47, 0.08);
+  --accent-border: rgba(201, 74, 47, 0.24);
   --accent-foreground: #FFFFFF;
 
-  /* ── 2. TINTED NEUTRALS & ARCHIVAL CANVASES ─────────────── */
-  /* Warm Archival Paper & Bone (Moving away from raw #FFFFFF) */
-  --canvas-base: #FAF8F5;           /* Archival Warm Alabaster */
-  --surface-paper: #FFFFFF;         /* Crisp Plate Surface */
-  --surface-recessed: #F2EFE9;      /* Warm Parchment Recess */
-  --surface-tint-warm: #EAE5DC;     /* Inset Tint Tone */
+  /* ── 2. SPACE & ARCHIVAL CANVASES ────────────────────────── */
+  /* Space: Warm Off-White (#F7F5F1) */
+  --canvas-base: #F7F5F1;           /* Dominant warm background */
+  --surface-paper: #FFFFFF;         /* Elevated card surface */
+  --surface-recessed: #EFECE6;      /* Inset tint tone */
+  --surface-tint-warm: #E6E2D8;     /* Tint tone */
 
-  /* Deep Tinted Night Slate (Moving away from raw #000000) */
-  --surface-dark: #131722;          /* Nocturnal Tinted Slate */
-  --surface-dark-card: #1B212F;     /* Nocturnal Elevated Card */
-  --surface-overlay: rgba(250, 248, 245, 0.94);
+  /* Deep Blue-Black Sections (Color-field moments) */
+  --surface-dark: #151927;          /* Full-width dark chapter */
+  --surface-dark-card: #1D2336;     /* Elevated dark card */
+  --surface-overlay: rgba(247, 245, 241, 0.95);
 
-  /* Tinted Ink Typography */
-  --text-ink-primary: #141824;      /* Deep Tinted Charcoal Ink (AAA 15.8:1) */
-  --text-ink-secondary: #4D5569;    /* Warm Slate Gray Body (AA 5.5:1) */
-  --text-ink-muted: #6E7688;        /* Tinted Cool Slate (AA compliant for UI/large) */
-  --text-ink-inverted: #FAF8F5;     /* Inverted Archival Bone */
-  --text-ink-inverted-muted: #CBD5E1;
+  /* Structure Typography */
+  --text-ink-primary: #151927;      /* Deep blue-black headings & primary */
+  --text-ink-secondary: #484E5F;    /* Editorial slate body */
+  --text-ink-muted: #72798C;        /* Subtle metadata / mono labels */
+  --text-ink-inverted: #F7F5F1;     /* Inverted text on dark chapters */
+  --text-ink-inverted-muted: #CBD2E1;
 
-  /* Hairlines & Borders */
-  --border-hairline: rgba(28, 49, 75, 0.10);
-  --border-subtle: rgba(28, 49, 75, 0.06);
-  --border-strong: rgba(28, 49, 75, 0.20);
+  /* Hairlines & Structural Borders */
+  --border-hairline: rgba(21, 25, 39, 0.09);
+  --border-subtle: rgba(21, 25, 39, 0.05);
+  --border-strong: rgba(21, 25, 39, 0.18);
   --border-accent: var(--accent);
   --border-contrast: var(--text-ink-primary);
 
@@ -49,7 +50,7 @@
   --btn-primary-bg: var(--primary);
   --btn-primary-hover: var(--primary-hover);
   --btn-primary-active: var(--primary-active);
-  --btn-focus-ring: rgba(192, 74, 38, 0.25);
+  --btn-focus-ring: rgba(201, 74, 47, 0.25);
 
   /* Backward Compatibility & Semantic Mappings */
   --bg-canvas: var(--canvas-base);
@@ -66,33 +67,22 @@
   --accent-rust: var(--accent);
   --accent-rust-hover: var(--accent-hover);
   --accent-rust-wash: var(--accent-subtle);
-  --accent-moss: #3E5A44;
-  --accent-moss-hover: #2E4533;
-  --accent-moss-wash: rgba(62, 90, 68, 0.10);
+  
+  /* Greens completely purged - remapped to structure & signal */
+  --accent-moss: var(--accent);
+  --accent-moss-hover: var(--accent-hover);
+  --accent-moss-wash: var(--accent-subtle);
   --accent-lapis: var(--primary);
   --accent-lapis-hover: var(--primary-hover);
   --accent-lapis-wash: var(--primary-subtle);
-  --accent-ochre: #C68A34;
-  --accent-rust-wash: rgba(166, 68, 38, 0.10);
-
-  --accent-moss: var(--forest-600);
-  --accent-moss-hover: var(--forest-700);
-  --accent-moss-wash: rgba(75, 88, 56, 0.10);
-
-  --accent-lapis: #234559;
-  --accent-lapis-hover: #162E3D;
-  --accent-lapis-wash: rgba(35, 69, 89, 0.10);
-
-  --accent-ochre: #C68A34;
-  --accent-ochre-wash: rgba(198, 138, 52, 0.12);
-
-  --accent-celadon: #8C9B8C;
+  --accent-ochre: var(--accent);
+  --accent-celadon: var(--text-ink-muted);
   --ink: var(--ink-primary);
   --ink-60: var(--ink-secondary);
   --ink-40: var(--ink-tertiary);
-  --ink-20: rgba(23, 20, 18, 0.20);
+  --ink-20: rgba(21, 25, 39, 0.20);
   --ink-10: var(--border-hairline);
-  --ink-05: rgba(23, 20, 18, 0.05);
+  --ink-05: rgba(21, 25, 39, 0.05);
 
   --space-2xs: 0.25rem;
   --space-xs: 0.5rem;

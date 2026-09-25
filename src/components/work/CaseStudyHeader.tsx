@@ -58,9 +58,9 @@ export default function CaseStudyHeader({ project }: CaseStudyHeaderProps) {
       </div>
 
       {/* Metadata Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 p-6 bg-canvas-paper border border-border-hairline rounded-card mt-6">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 p-6 bg-canvas-paper rounded-card mt-6">
         <div>
-          <span className="block font-mono text-[10px] uppercase tracking-wider text-ink-tertiary">
+          <span className="block font-sans text-[10px] uppercase tracking-wider text-ink-tertiary font-semibold">
             Role
           </span>
           <span className="text-sm font-medium text-ink-primary">
@@ -68,7 +68,7 @@ export default function CaseStudyHeader({ project }: CaseStudyHeaderProps) {
           </span>
         </div>
         <div>
-          <span className="block font-mono text-[10px] uppercase tracking-wider text-ink-tertiary">
+          <span className="block font-sans text-[10px] uppercase tracking-wider text-ink-tertiary font-semibold">
             Timeline
           </span>
           <span className="text-sm font-medium text-ink-primary">
@@ -76,7 +76,7 @@ export default function CaseStudyHeader({ project }: CaseStudyHeaderProps) {
           </span>
         </div>
         <div>
-          <span className="block font-mono text-[10px] uppercase tracking-wider text-ink-tertiary">
+          <span className="block font-sans text-[10px] uppercase tracking-wider text-ink-tertiary font-semibold">
             Team
           </span>
           <span className="text-sm font-medium text-ink-primary">
@@ -84,7 +84,7 @@ export default function CaseStudyHeader({ project }: CaseStudyHeaderProps) {
           </span>
         </div>
         <div>
-          <span className="block font-mono text-[10px] uppercase tracking-wider text-ink-tertiary">
+          <span className="block font-sans text-[10px] uppercase tracking-wider text-ink-tertiary font-semibold">
             Core Tech
           </span>
           <span className="text-sm font-medium text-ink-primary">
@@ -94,7 +94,7 @@ export default function CaseStudyHeader({ project }: CaseStudyHeaderProps) {
       </div>
 
       {/* Hero Image Plate */}
-      <div className="overflow-hidden aspect-[16/10] relative border border-border-hairline rounded-card mt-8 bg-canvas-vellum">
+      <div className="overflow-hidden aspect-[16/10] relative rounded-card mt-8 bg-canvas-vellum shadow-sm">
         <Image
           src={project.heroImage}
           alt={project.title}

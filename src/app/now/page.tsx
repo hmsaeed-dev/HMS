@@ -14,7 +14,7 @@ export default function NowPage() {
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 space-y-16 pt-20 sm:pt-24">
       {/* ── HERO ────────────────────────────────────────── */}
       <header className="max-w-3xl space-y-6">
-        <div className="font-mono text-xs uppercase tracking-widest text-accent font-semibold flex items-center gap-1.5">
+        <div className="font-sans text-xs uppercase tracking-widest text-accent font-semibold flex items-center gap-1.5">
           <span className="w-1.5 h-1.5 rounded-full bg-accent" />
           <span>Folio 2026 // Real-time Ledger</span>
         </div>
@@ -48,7 +48,7 @@ export default function NowPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
               {/* Building */}
               <div className="p-6 bg-canvas-paper border border-border-hairline rounded-card shadow-sm space-y-6 hover:border-primary/30 transition-all">
-                <h3 className="font-mono text-xs uppercase tracking-widest text-accent font-semibold flex items-center gap-1.5">
+                <h3 className="font-sans text-xs uppercase tracking-widest text-accent font-semibold flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-accent" />
                   <span>Building</span>
                 </h3>
@@ -76,7 +76,7 @@ export default function NowPage() {
 
               {/* Learning */}
               <div className="p-6 bg-canvas-paper border border-border-hairline rounded-card shadow-sm space-y-6 hover:border-primary/30 transition-all">
-                <h3 className="font-mono text-xs uppercase tracking-widest text-primary font-semibold flex items-center gap-1.5">
+                <h3 className="font-sans text-xs uppercase tracking-widest text-primary font-semibold flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary" />
                   <span>Exploring</span>
                 </h3>
@@ -117,10 +117,10 @@ export default function NowPage() {
               <div className="relative">
                 <span className="absolute -left-[30.5px] top-1.5 w-2 h-2 rounded-full bg-accent border-2 border-canvas" />
                 <div className="flex items-center gap-3">
-                  <span className="font-mono text-xs text-accent font-semibold">
+                  <span className="font-sans text-xs text-accent font-semibold">
                     May 2026
                   </span>
-                  <span className="text-[10px] px-2 py-0.5 font-mono uppercase bg-primary-subtle text-primary rounded-sharp font-medium">
+                  <span className="text-[10px] px-2 py-0.5 font-sans uppercase tracking-wider bg-primary-subtle text-primary rounded-sharp font-semibold">
                     End of Semester 2
                   </span>
                 </div>
@@ -136,10 +136,10 @@ export default function NowPage() {
               <div className="relative">
                 <span className="absolute -left-[30.5px] top-1.5 w-2 h-2 rounded-full bg-accent border-2 border-canvas" />
                 <div className="flex items-center gap-3">
-                  <span className="font-mono text-xs text-accent font-semibold">
+                  <span className="font-sans text-xs text-accent font-semibold">
                     March 2026
                   </span>
-                  <span className="text-[10px] px-2 py-0.5 font-mono uppercase bg-canvas-recessed text-ink-tertiary rounded-sharp">
+                  <span className="text-[10px] px-2 py-0.5 font-sans uppercase tracking-wider bg-canvas-recessed text-ink-tertiary rounded-sharp font-medium">
                     Mid-Sem
                   </span>
                 </div>
@@ -161,7 +161,7 @@ export default function NowPage() {
 
           {/* Active Reading Widget */}
           <div className="p-6 bg-canvas-paper border border-border-hairline rounded-card shadow-sm space-y-4">
-            <h3 className="font-mono text-xs uppercase tracking-wider text-accent font-semibold flex items-center gap-1.5">
+            <h3 className="font-sans text-xs uppercase tracking-wider text-accent font-semibold flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-accent" />
               <span>Current Reading</span>
             </h3>
@@ -170,7 +170,7 @@ export default function NowPage() {
                 <h4 className="font-serif text-xl font-normal text-ink-primary">
                   Macroeconomics
                 </h4>
-                <span className="text-xs text-ink-tertiary font-mono">
+                <span className="text-xs text-ink-tertiary font-sans">
                   by David Colander
                 </span>
               </div>
@@ -179,13 +179,13 @@ export default function NowPage() {
                 <div className="w-full h-1 bg-border-hairline overflow-hidden rounded-full">
                   <div className="h-full bg-accent w-[35%]" />
                 </div>
-                <div className="text-[11px] text-ink-tertiary font-mono">
+                <div className="text-[11px] text-ink-tertiary font-sans">
                   Page 80 of 512 (18%)
                 </div>
               </div>
 
               <details className="text-xs group pt-2">
-                <summary className="cursor-pointer text-accent font-mono hover:underline flex items-center justify-between min-h-[44px]">
+                <summary className="cursor-pointer text-accent font-sans hover:underline flex items-center justify-between min-h-[44px]">
                   <span>Marginal Notes</span>
                   <span className="group-open:rotate-180 transition-transform">
                     ↓

@@ -15,7 +15,7 @@ export default function PhotographyHero({
   categoryCount = new Set(allPhotos.map((p) => p.category)).size,
 }: PhotographyHeroProps) {
   return (
-    <section className="w-full bg-surface-canvas pt-12 sm:pt-16 pb-10 border-b border-border-hairline">
+    <section className="w-full bg-surface-canvas pt-16 sm:pt-20 pb-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <header className="max-w-3xl space-y-6">
           <h1 className="font-sans font-black text-3xl sm:text-5xl md:text-6xl tracking-tight text-ink-primary leading-[1.08] break-words">
@@ -30,7 +30,7 @@ export default function PhotographyHero({
               <span className="font-sans font-black text-2xl sm:text-3xl text-primary block">
                 {totalPlates}
               </span>
-              <span className="font-mono text-[10px] uppercase tracking-wider text-ink-tertiary">
+              <span className="font-sans text-[10px] uppercase tracking-wider text-ink-tertiary font-semibold">
                 Archived Plates
               </span>
             </div>
@@ -38,7 +38,7 @@ export default function PhotographyHero({
               <span className="font-sans font-black text-2xl sm:text-3xl text-primary block">
                 0{categoryCount}
               </span>
-              <span className="font-mono text-[10px] uppercase tracking-wider text-ink-tertiary">
+              <span className="font-sans text-[10px] uppercase tracking-wider text-ink-tertiary font-semibold">
                 Themes (Macro · Flora · Land)
               </span>
             </div>

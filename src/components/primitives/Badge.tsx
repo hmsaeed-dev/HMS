@@ -28,9 +28,9 @@ export default function Badge({
     accent: "bg-accent-subtle text-accent border border-accent-border font-medium",
     rust: "bg-accent-subtle text-accent font-medium",
     lapis: "bg-primary-subtle text-primary font-medium",
-    moss: "bg-moss/10 text-moss font-medium",
-    ochre: "bg-ochre/15 text-ochre font-medium",
-    olive: "bg-moss/10 text-moss font-medium",
+    moss: "bg-primary-subtle text-primary font-medium",
+    ochre: "bg-accent-subtle text-accent font-medium",
+    olive: "bg-primary-subtle text-primary font-medium",
     neutral: "bg-canvas-paper text-ink-primary border border-border-hairline shadow-sm",
     dark: "bg-white/10 text-canvas-base border border-white/10",
     outline: "text-ink-secondary bg-transparent border border-border-hairline",
@@ -40,7 +40,7 @@ export default function Badge({
   return (
     <span
       className={cn(
-        "inline-flex items-center px-2 py-0.5 rounded-sharp text-[10px] font-mono uppercase tracking-wider",
+        "inline-flex items-center px-2 py-0.5 rounded-sharp text-[10px] font-sans uppercase tracking-wider font-semibold",
         variantStyles[variant],
         className
       )}

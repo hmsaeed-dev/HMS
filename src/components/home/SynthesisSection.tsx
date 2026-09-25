@@ -38,7 +38,7 @@ const DEFAULT_PILLARS: PillarItem[] = [
   {
     num: "03",
     icon: Layers,
-    iconClass: "text-moss",
+    iconClass: "text-primary",
     title: "Interface Audits & Refactoring",
     description: "Eliminating frontend tech debt, optimizing Core Web Vitals, and ensuring strict WCAG AA/AAA accessibility compliance across all viewport densities.",
     tech: "Performance Audits · WCAG AAA · Component Toolkits",
@@ -54,7 +54,7 @@ export default function SynthesisSection({
     <section className="w-full bg-surface-canvas py-16 sm:py-24 lg:py-32">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-16">
         {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-border-hairline pb-6">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-4">
           <div className="space-y-2 max-w-xl">
             <h2 className="font-sans font-black text-3xl sm:text-4xl md:text-5xl tracking-tight text-ink-primary">
               Deliberate solutions for complex digital needs.
@@ -81,7 +81,7 @@ export default function SynthesisSection({
                   className="p-6 bg-canvas-paper border border-border-hairline rounded-card space-y-3 hover:border-primary/30 transition-all duration-300 group shadow-sm"
                 >
                   <div className="flex items-center justify-between">
-                    <span className="font-mono text-xs font-bold text-primary">
+                    <span className="font-sans text-xs font-bold text-primary">
                       {pillar.num}
                     </span>
                     <Icon className="w-4 h-4 text-accent transition-transform group-hover:scale-110 duration-300" />
@@ -92,7 +92,7 @@ export default function SynthesisSection({
                   <p className="text-sm text-ink-secondary leading-relaxed font-sans font-normal">
                     {pillar.description}
                   </p>
-                  <div className="pt-1 font-mono text-[11px] text-ink-tertiary">
+                  <div className="pt-1 font-sans text-[11px] text-ink-tertiary">
                     {pillar.tech}
                   </div>
                 </div>
@@ -107,7 +107,7 @@ export default function SynthesisSection({
               <blockquote className="font-serif italic text-2xl sm:text-3xl lg:text-4xl text-ink-primary leading-tight font-normal">
                 “{quote}”
               </blockquote>
-              <p className="font-mono text-[11px] uppercase tracking-wider text-ink-tertiary">
+              <p className="font-sans text-[11px] uppercase tracking-wider text-ink-tertiary">
                 — {quoteAuthor}
               </p>
             </div>

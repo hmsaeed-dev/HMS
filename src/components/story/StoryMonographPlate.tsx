@@ -26,7 +26,7 @@ export default function StoryMonographPlate({
               className="object-cover grayscale contrast-[1.04] hover:grayscale-0 transition-all duration-700"
             />
           </div>
-          <div className="pt-3 flex items-center justify-between font-mono text-[10px] tracking-wider uppercase text-ink-tertiary">
+          <div className="pt-3 flex items-center justify-between font-sans text-[10px] tracking-wider uppercase text-ink-tertiary font-semibold">
             <span>{caption}</span>
             <span>{location}</span>
           </div>

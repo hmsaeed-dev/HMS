@@ -1,23 +1,17 @@
 import React from "react";
 import type { Metadata } from "next";
-import ConnectHero from "@/components/connect/ConnectHero";
-import ConnectChannelsSection from "@/components/connect/ConnectChannelsSection";
-import ConnectEngagementModels from "@/components/connect/ConnectEngagementModels";
-import ConnectLocationTimezone from "@/components/connect/ConnectLocationTimezone";
+import ConnectView from "@/components/connect/ConnectView";
 
 export const metadata: Metadata = {
-  title: "Connect & Inquiries",
+  title: "Connect // Write to Saeed",
   description:
-    "Direct channels to hire Hafiz Muhammad Saeed for freelance engineering, Next.js architecture, and high-craft design projects.",
+    "Direct channels to reach Hafiz Muhammad Saeed for low-level engineering collaboration, chess challenges, or philosophical dialogue.",
 };
 
 export default function ConnectPage() {
   return (
-    <div className="w-full flex flex-col pt-16 sm:pt-20">
-      <ConnectHero />
-      <ConnectChannelsSection />
-      <ConnectEngagementModels />
-      <ConnectLocationTimezone />
-    </div>
+    <main className="w-full flex flex-col">
+      <ConnectView />
+    </main>
   );
 }

@@ -19,7 +19,7 @@ export default function StreamsSection({
     <section id="selected-works" className="w-full bg-surface-canvas py-16 sm:py-24 lg:py-32">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-border-hairline pb-6">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-4">
           <div className="space-y-2 max-w-xl">
             <h2 className="font-sans font-black text-3xl sm:text-4xl md:text-5xl tracking-tight text-ink-primary">
               {title}
@@ -67,14 +67,14 @@ export default function StreamsSection({
                 </div>
 
                 {/* Consolidated Single-Line Metadata Lockup */}
-                <div className="pt-1 flex items-center gap-2 font-mono text-xs text-ink-tertiary">
+                <div className="pt-1 flex items-center gap-2 font-sans text-xs text-ink-tertiary">
                   <span className="text-primary font-medium">{project.meta.role}</span>
                   <span className="opacity-30">/</span>
                   <span className="truncate">{project.meta.coreTech}</span>
                 </div>
 
                 {/* Action Links with 44px+ Touch Ergonomics */}
-                <div className="flex items-center justify-between pt-2 border-t border-border-hairline">
+                <div className="flex items-center justify-between pt-4">
                   <Link
                     href={`/work/${project.slug}`}
                     className="inline-flex items-center gap-1.5 min-h-[44px] text-xs font-sans font-medium text-ink-primary hover:text-accent transition-colors"

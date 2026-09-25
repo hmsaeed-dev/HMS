@@ -38,7 +38,7 @@ export default function StoryTrajectoryTimeline({
               key={idx}
               className="p-4 sm:p-5 bg-canvas-paper border border-border-hairline rounded-card flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-6 group hover:border-primary/30 transition-all shadow-sm"
             >
-              <div className="font-mono text-xs text-accent font-semibold shrink-0 sm:w-24">
+              <div className="font-sans text-xs text-accent font-semibold shrink-0 sm:w-24">
                 {evt.year}
               </div>
               <div className="text-sm sm:text-base text-ink-primary font-sans leading-relaxed">

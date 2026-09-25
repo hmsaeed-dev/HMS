@@ -11,8 +11,8 @@ export const metadata: Metadata = {
 export default function NotFound() {
   return (
     <div className="min-h-[70vh] flex items-center justify-center max-w-[1240px] mx-auto px-5 sm:px-8 py-20 text-center pt-28">
-      <div className="max-w-md space-y-6 p-8 bg-canvas-surface border border-ink-hairline shadow-plate">
-        <span className="font-mono text-xs uppercase tracking-widest text-rust font-semibold">
+      <div className="max-w-md space-y-6 p-8 bg-canvas-paper rounded-card shadow-sm">
+        <span className="font-sans text-xs uppercase tracking-widest text-accent font-semibold">
           404 · Uncharted Route
         </span>
         <h1 className="font-serif text-4xl sm:text-5xl font-light text-ink-primary">
@@ -25,7 +25,7 @@ export default function NotFound() {
         <div className="pt-2">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-sharp bg-ink-primary hover:bg-rust text-canvas font-mono text-xs uppercase tracking-widest font-semibold transition-colors shadow-plate"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-pill bg-primary hover:bg-primary-hover text-primary-foreground font-sans text-xs uppercase tracking-wider font-semibold transition-colors shadow-sm"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
             <span>Return to Folio Index</span>

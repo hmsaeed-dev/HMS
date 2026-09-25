@@ -32,14 +32,14 @@ export default function ConnectChannels() {
             <span className="font-sans font-bold text-lg tracking-tight text-ink-primary block group-hover:text-accent transition-colors">
               Direct Email
             </span>
-            <span className="font-mono text-xs text-ink-tertiary break-all">
+            <span className="font-sans text-xs text-ink-tertiary break-all">
               {SITE_CONFIG.links.email}
             </span>
           </div>
         </a>
 
         <div className="pt-4 flex items-center justify-between border-t border-border-hairline mt-4">
-          <span className="font-mono text-[10px] uppercase text-accent font-semibold flex items-center gap-1.5">
+          <span className="font-sans text-[10px] uppercase text-accent font-semibold flex items-center gap-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
             <span>Reply &lt; 24h</span>
           </span>
@@ -51,11 +51,11 @@ export default function ConnectChannels() {
             title="Copy email to clipboard"
           >
             {copied ? (
-              <span className="text-[10px] font-mono text-accent flex items-center gap-1">
+              <span className="text-[10px] font-sans text-accent font-semibold flex items-center gap-1">
                 <Check className="w-3.5 h-3.5" /> Copied
               </span>
             ) : (
-              <span className="text-[10px] font-mono flex items-center gap-1">
+              <span className="text-[10px] font-sans flex items-center gap-1">
                 <Copy className="w-3.5 h-3.5" /> Copy
               </span>
             )}
@@ -81,12 +81,12 @@ export default function ConnectChannels() {
             <span className="font-sans font-bold text-lg tracking-tight text-ink-primary block group-hover:text-primary transition-colors">
               WhatsApp
             </span>
-            <span className="font-mono text-xs text-ink-tertiary">
+            <span className="font-sans text-xs text-ink-tertiary">
               +92 321 9798860
             </span>
           </div>
         </div>
-        <div className="pt-4 font-mono text-[10px] uppercase text-primary font-semibold flex items-center gap-1.5 border-t border-border-hairline mt-4">
+        <div className="pt-4 font-sans text-[10px] uppercase text-primary font-semibold flex items-center gap-1.5 border-t border-border-hairline mt-4">
           <span className="w-1.5 h-1.5 rounded-full bg-primary" />
           <span>Instant Messaging</span>
         </div>
@@ -110,12 +110,12 @@ export default function ConnectChannels() {
             <span className="font-sans font-bold text-lg tracking-tight text-ink-primary block group-hover:text-primary transition-colors">
               LinkedIn
             </span>
-            <span className="font-mono text-xs text-ink-tertiary">
+            <span className="font-sans text-xs text-ink-tertiary">
               in/hmsaeed
             </span>
           </div>
         </div>
-        <div className="pt-4 font-mono text-[10px] uppercase text-primary font-semibold flex items-center gap-1.5 border-t border-border-hairline mt-4">
+        <div className="pt-4 font-sans text-[10px] uppercase text-primary font-semibold flex items-center gap-1.5 border-t border-border-hairline mt-4">
           <span className="w-1.5 h-1.5 rounded-full bg-primary" />
           <span>Professional Network</span>
         </div>
@@ -139,12 +139,12 @@ export default function ConnectChannels() {
             <span className="font-sans font-bold text-lg tracking-tight text-ink-primary block group-hover:text-primary transition-colors">
               GitHub
             </span>
-            <span className="font-mono text-xs text-ink-tertiary">
+            <span className="font-sans text-xs text-ink-tertiary">
               hmsaeed-dev
             </span>
           </div>
         </div>
-        <div className="pt-4 font-mono text-[10px] uppercase text-ink-tertiary flex items-center gap-1.5 border-t border-border-hairline mt-4">
+        <div className="pt-4 font-sans text-[10px] uppercase text-ink-tertiary flex items-center gap-1.5 border-t border-border-hairline mt-4">
           <span className="w-1.5 h-1.5 rounded-full bg-ink-tertiary" />
           <span>Source Repositories</span>
         </div>

@@ -46,7 +46,7 @@ export default async function ProjectCaseStudyPage({ params }: PageProps) {
   return (
     <article className="max-w-4xl mx-auto px-5 sm:px-8 py-16 sm:py-24 space-y-12 pt-24 sm:pt-28">
       <CaseStudyHeader project={project} />
-      <CaseStudyBody sections={project.sections} />
+      <CaseStudyBody project={project} />
       <CaseStudyCallout />
     </article>
   );

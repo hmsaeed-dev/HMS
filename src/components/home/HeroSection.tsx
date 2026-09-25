@@ -18,30 +18,30 @@ export interface HeroSectionProps {
 
 export default function HeroSection({
   headline,
-  subtitle = "I collaborate with ambitious founders, creative studios, and engineering teams to craft high-performance Next.js systems, tactile digital identities, and resilient software architectures.",
+  subtitle = "Computer Science student at UET Taxila. Engineering offline-first applications, low-level systems in C++, and capturing the quiet geometry of the world through macro lenses.",
   portraitSrc = "https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto,f_auto,w_880/v1779627924/Saeed_68_cewriq.jpg",
   portraitAlt = "Hafiz Muhammad Saeed",
-  portraitCaption = "Plate 01: Principal Identity",
+  portraitCaption = "Hafiz Muhammad Saeed",
   portraitLocation = "Taxila, PK",
-  primaryCtaText = "Initiate a Project",
-  primaryCtaHref = "/connect",
-  secondaryCtaText = "Selected Works",
-  secondaryCtaHref = "#selected-works",
+  primaryCtaText = "View Selected Work",
+  primaryCtaHref = "#selected-work",
+  secondaryCtaText = "About Saeed",
+  secondaryCtaHref = "/about",
 }: HeroSectionProps) {
   return (
-    <section className="w-full bg-surface-canvas text-ink-primary pt-12 sm:pt-20 md:pt-28 pb-16 sm:pb-24 lg:pb-32 overflow-hidden">
+    <section className="w-full bg-surface-canvas text-ink-primary pt-12 sm:pt-20 md:pt-28 pb-16 sm:pb-24 lg:pb-28 overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_0.7fr] gap-12 sm:gap-16 lg:gap-20 items-center">
           {/* ── MASTHEAD & ACTIONS ─────────────────────────── */}
           <div className="space-y-6 sm:space-y-8 max-w-2xl">
-            <h1 className="font-sans font-black text-[clamp(2.15rem,6.5vw,4.75rem)] leading-[1.06] tracking-tight text-ink-primary break-words">
+            <h1 className="font-sans font-black text-[clamp(1.85rem,6.5vw,4.75rem)] leading-[1.08] tracking-tight text-ink-primary break-words">
               {headline || (
                 <>
-                  Engineering bespoke web systems with{" "}
+                  Building digital systems with{" "}
                   <span className="font-serif italic font-normal text-accent tracking-normal">
-                    typographical poise
+                    architectural rigor
                   </span>{" "}
-                  and production rigor.
+                  and observational care.
                 </>
               )}
             </h1>
@@ -50,23 +50,23 @@ export default function HeroSection({
               {subtitle}
             </p>
 
-            {/* Utilitarian Linear Action Triggers */}
+            {/* Direct Action Triggers */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
-              <Link
+              <a
                 href={primaryCtaHref}
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-pill bg-primary hover:bg-primary-hover active:bg-primary-active text-primary-foreground font-sans text-xs font-medium tracking-normal transition-all group min-h-[44px] w-full sm:w-auto shadow-sm"
               >
                 <span>{primaryCtaText}</span>
                 <ArrowRight className="w-3.5 h-3.5 text-accent transition-transform group-hover:translate-x-1" />
-              </Link>
+              </a>
 
-              <a
+              <Link
                 href={secondaryCtaHref}
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-pill border border-primary-border hover:bg-primary-subtle text-primary font-sans text-xs font-medium tracking-normal transition-colors min-h-[44px] w-full sm:w-auto"
               >
                 <span>{secondaryCtaText}</span>
                 <ArrowDown className="w-3.5 h-3.5 text-accent transition-transform group-hover:translate-y-0.5" />
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -83,7 +83,7 @@ export default function HeroSection({
                   className="object-cover grayscale contrast-[1.03] group-hover:grayscale-0 transition-all duration-700"
                 />
               </div>
-              <div className="pt-2.5 px-0.5 flex items-center justify-between font-mono text-[10px] tracking-wide uppercase text-ink-tertiary">
+              <div className="pt-2.5 px-0.5 flex items-center justify-between font-sans text-[11px] tracking-wide uppercase text-ink-tertiary">
                 <span className="text-ink-primary font-medium">{portraitCaption}</span>
                 <span className="text-accent font-medium">{portraitLocation}</span>
               </div>

@@ -14,7 +14,7 @@ export default function ConnectHero({
   slaPledge = "Response pledge: Under 24h",
 }: ConnectHeroProps) {
   return (
-    <section className="w-full bg-surface-canvas pt-12 sm:pt-16 pb-10 border-b border-border-hairline">
+    <section className="w-full bg-surface-canvas pt-16 sm:pt-20 pb-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <header className="max-w-3xl space-y-6">
           <h1 className="font-sans font-black text-3xl sm:text-5xl md:text-6xl tracking-tight text-ink-primary leading-[1.08] break-words">
@@ -24,7 +24,7 @@ export default function ConnectHero({
             {description}
           </p>
 
-          <div className="flex flex-wrap items-center gap-4 sm:gap-6 pt-2 font-mono text-xs text-ink-tertiary">
+          <div className="flex flex-wrap items-center gap-4 sm:gap-6 pt-2 font-sans text-xs text-ink-tertiary">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
               <span className="text-primary font-medium">{bookingStatus}</span>

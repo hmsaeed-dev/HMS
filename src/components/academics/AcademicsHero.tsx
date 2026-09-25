@@ -13,7 +13,7 @@ export default function AcademicsHero({
   runningStat = academicsData.hero.runningStat,
 }: AcademicsHeroProps) {
   return (
-    <section className="w-full bg-surface-canvas pt-12 sm:pt-16 pb-10 border-b border-border-hairline">
+    <section className="w-full bg-surface-canvas pt-16 sm:pt-20 pb-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <header className="max-w-3xl space-y-6">
           <h1 className="font-sans font-black text-3xl sm:text-5xl md:text-6xl tracking-tight text-ink-primary leading-[1.08] break-words">
@@ -22,7 +22,7 @@ export default function AcademicsHero({
           <p className="text-base sm:text-lg text-ink-secondary leading-relaxed font-sans font-normal">
             {intro}
           </p>
-          <p className="font-mono text-xs text-accent font-medium pt-2 flex items-center gap-1.5">
+          <p className="font-sans text-xs text-accent font-semibold pt-2 flex items-center gap-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
             <span>{runningStat}</span>
           </p>

@@ -24,7 +24,7 @@ export default function WorkHero({
   metrics = DEFAULT_METRICS,
 }: WorkHeroProps) {
   return (
-    <section className="w-full bg-surface-canvas pt-12 sm:pt-16 pb-12 sm:pb-16 border-b border-border-hairline">
+    <section className="w-full bg-surface-canvas pt-16 sm:pt-20 pb-12 sm:pb-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <header className="max-w-3xl space-y-6">
           <h1 className="font-sans font-black text-3xl sm:text-5xl md:text-6xl tracking-tight text-ink-primary leading-[1.08] break-words">
@@ -40,7 +40,7 @@ export default function WorkHero({
                 <span className="font-sans font-black text-2xl sm:text-3xl text-primary block">
                   {m.value}
                 </span>
-                <span className="font-mono text-[9px] sm:text-[10px] uppercase tracking-wider text-ink-tertiary">
+                <span className="font-sans text-[9px] sm:text-[10px] uppercase tracking-wider text-ink-tertiary font-medium">
                   {m.label}
                 </span>
               </div>

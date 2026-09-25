@@ -15,7 +15,7 @@ export default function StoryHero({
         <h1 className="font-sans font-black text-3xl sm:text-5xl md:text-6xl tracking-tight text-ink-primary leading-[1.08] break-words">
           {title}
         </h1>
-        <p className="font-serif italic text-xl sm:text-2xl text-ink-secondary leading-relaxed font-normal pt-2 border-b border-border-hairline pb-8">
+        <p className="font-serif italic text-xl sm:text-2xl text-ink-secondary leading-relaxed font-normal pt-2 pb-4">
           {leadQuote}
         </p>
       </div>

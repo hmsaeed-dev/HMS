@@ -19,7 +19,7 @@ export default function ConnectLocationTimezone({
   return (
     <section className="w-full bg-surface-canvas pb-20 sm:pb-28">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="p-8 sm:p-12 bg-canvas/40 border border-border-hairline rounded-card">
+        <div className="p-8 sm:p-12 bg-canvas-paper border border-border-hairline rounded-card">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="space-y-3">
               <h3 className="font-sans font-bold text-xl sm:text-2xl tracking-tight text-ink-primary">
@@ -29,7 +29,7 @@ export default function ConnectLocationTimezone({
                 {description}
               </p>
             </div>
-            <div className="space-y-2 font-mono text-xs text-ink-secondary md:pl-8 divide-y divide-border-hairline">
+            <div className="space-y-3 font-sans text-xs text-ink-secondary md:pl-8">
               <div className="flex justify-between py-1.5">
                 <span className="text-ink-tertiary">Primary Email:</span>
                 <span className="text-ink-primary font-medium">{email}</span>

@@ -7,7 +7,7 @@ import ScrollProgress from "@/components/layout/ScrollProgress";
 import "./globals.css";
 
 export const viewport: Viewport = {
-  themeColor: "#faf9f6",
+  themeColor: "#F7F5F1",
 };
 
 const instrumentSerif = Instrument_Serif({
@@ -114,7 +114,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="font-sans antialiased text-ink bg-canvas min-h-screen flex flex-col justify-between selection:bg-rust/15 selection:text-ink">
+      <body className="font-sans antialiased text-ink bg-canvas min-h-screen flex flex-col justify-between selection:bg-accent/15 selection:text-ink">
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-T31PJSBQY8"

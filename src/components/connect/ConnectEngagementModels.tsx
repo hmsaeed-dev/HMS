@@ -46,7 +46,7 @@ export default function ConnectEngagementModels({
               key={idx}
               className="p-6 bg-canvas-paper border border-border-hairline rounded-card space-y-3 hover:border-primary/30 transition-all shadow-sm"
             >
-              <div className="font-mono text-[10px] uppercase text-accent tracking-wider font-semibold flex items-center gap-1.5">
+              <div className="font-sans text-[10px] uppercase text-accent tracking-wider font-semibold flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-accent" />
                 <span>{model.timeline}</span>
               </div>

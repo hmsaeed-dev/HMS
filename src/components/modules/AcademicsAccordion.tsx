@@ -47,7 +47,7 @@ export default function AcademicsAccordion() {
               </div>
 
               {sem.gpaText && (
-                <div className="font-mono text-xs px-3 py-1 rounded-pill bg-ink-primary text-canvas self-start sm:self-auto font-medium">
+                <div className="font-sans text-xs px-3 py-1 rounded-pill bg-primary text-primary-foreground self-start sm:self-auto font-semibold">
                   {sem.gpaText}
                 </div>
               )}
@@ -88,7 +88,7 @@ export default function AcademicsAccordion() {
                 <div id={sem.id} className="pt-6 overflow-x-auto">
                   <table className="w-full text-left text-sm border-collapse min-w-[600px]">
                     <thead>
-                      <tr className="text-ink-tertiary font-mono text-[11px] uppercase tracking-wider">
+                      <tr className="text-ink-tertiary font-sans text-[11px] uppercase tracking-wider font-semibold">
                         <th className="py-2.5 px-2 font-medium">Code</th>
                         <th className="py-2.5 px-2 font-medium">Title</th>
                         <th className="py-2.5 px-2 font-medium">Type</th>
@@ -108,7 +108,7 @@ export default function AcademicsAccordion() {
                           key={c.code}
                           className="hover:bg-canvas-recessed/40 transition-colors"
                         >
-                          <td className="py-3 px-2 font-mono text-xs text-rust font-medium">
+                          <td className="py-3 px-2 font-sans text-xs text-accent font-semibold">
                             {c.code}
                           </td>
                           <td className="py-3 px-2 font-medium text-ink-primary">
@@ -118,7 +118,7 @@ export default function AcademicsAccordion() {
                                 className="hover:text-rust underline decoration-rust/30 underline-offset-4 inline-flex items-center gap-1.5"
                               >
                                 <span>{c.title}</span>
-                                <span className="text-[10px] uppercase font-mono px-1.5 py-0.5 rounded-sharp bg-rust/10 text-rust">
+                                <span className="text-[10px] uppercase font-sans px-1.5 py-0.5 rounded-sharp bg-accent/10 text-accent font-semibold">
                                   Case Study →
                                 </span>
                               </Link>
@@ -126,18 +126,18 @@ export default function AcademicsAccordion() {
                               c.title
                             )}
                           </td>
-                          <td className="py-3 px-2 font-mono text-xs text-ink-tertiary">
+                          <td className="py-3 px-2 font-sans text-xs text-ink-tertiary">
                             {c.type}
                           </td>
-                          <td className="py-3 px-2 font-mono text-xs text-ink-tertiary">
+                          <td className="py-3 px-2 font-sans text-xs text-ink-tertiary">
                             {c.credits}
                           </td>
                           {sem.gpaText && (
                             <>
-                              <td className="py-3 px-2 font-mono text-xs font-semibold text-ink-primary">
+                              <td className="py-3 px-2 font-sans text-xs font-semibold text-ink-primary">
                                 {c.grade || "—"}
                               </td>
-                              <td className="py-3 px-2 font-mono text-xs text-ink-tertiary">
+                              <td className="py-3 px-2 font-sans text-xs text-ink-tertiary">
                                 {c.gradePoints || "—"}
                               </td>
                             </>

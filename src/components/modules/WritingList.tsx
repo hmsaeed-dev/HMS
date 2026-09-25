@@ -32,11 +32,11 @@ export default function WritingList({ posts }: WritingListProps) {
           className="p-8 sm:p-10 bg-canvas-paper border border-border-hairline rounded-card relative overflow-hidden group hover:border-primary/30 transition-all duration-300 shadow-sm"
         >
           <div className="flex items-center justify-between gap-4 mb-4">
-            <span className="font-mono text-[11px] uppercase tracking-wider text-accent font-semibold flex items-center gap-1.5">
+            <span className="font-sans text-[11px] uppercase tracking-wider text-accent font-semibold flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-accent" />
               <span>Featured Essay</span>
             </span>
-            <span className="text-xs text-ink-tertiary font-mono">
+            <span className="text-xs text-ink-tertiary font-sans">
               {featuredPost.readTime}
             </span>
           </div>
@@ -63,7 +63,7 @@ export default function WritingList({ posts }: WritingListProps) {
 
       {/* Filter Tabs (Linear-Style Pill Controls with 44px+ Touch Targets) */}
       <div
-        className="flex items-center gap-2 flex-wrap border-b border-border-hairline pb-4"
+        className="flex items-center gap-2 flex-wrap pb-4"
         role="tablist"
         aria-label="Writing filters"
       >
@@ -118,13 +118,13 @@ export default function WritingList({ posts }: WritingListProps) {
       </div>
 
       {/* Writing Archive List (Substack-Style Clean Row Flow) */}
-      <div className="divide-y divide-border-hairline">
+      <div className="space-y-10 sm:space-y-14">
         {filteredPosts.map((post) => (
           <article
             key={post.slug}
-            className="py-8 sm:py-10 space-y-3 group"
+            className="space-y-3 group"
           >
-            <div className="flex items-center gap-2.5 font-mono text-xs text-ink-tertiary">
+            <div className="flex items-center gap-2.5 font-sans text-xs text-ink-tertiary">
               <span>{post.date}</span>
               <span>·</span>
               <span className="text-primary font-medium">{post.categoryLabel}</span>
@@ -154,8 +154,8 @@ export default function WritingList({ posts }: WritingListProps) {
       </div>
 
       {/* Forthcoming Essays Note */}
-      <aside className="p-6 bg-canvas/40 border border-border-hairline rounded-card text-center">
-        <p className="text-xs font-mono text-ink-secondary">
+      <aside className="p-6 bg-canvas-paper border border-border-hairline rounded-card text-center">
+        <p className="text-xs font-sans text-ink-secondary">
           Additional essays on systems architecture, language models, and classical philosophy are in progress.
         </p>
       </aside>

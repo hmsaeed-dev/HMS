@@ -48,7 +48,7 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
   return (
     <div className="space-y-8">
       {/* Filter and View Switcher Bar */}
-      <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 py-4 border-b border-border-hairline">
+      <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 py-4 pb-6">
         {/* Category Buttons with 44px+ Touch Ergonomics */}
         <div className="flex items-center gap-2 flex-wrap">
           {categories.map((cat) => (
@@ -70,7 +70,7 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
 
         {/* View Count & View Switcher */}
         <div className="flex items-center gap-4 self-stretch sm:self-auto justify-between sm:justify-start">
-          <span className="text-xs text-ink-tertiary font-mono">
+          <span className="text-xs text-ink-tertiary font-sans">
             Plate Index: {filteredPhotos.length} captures
           </span>
 
@@ -137,13 +137,13 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
                 <h3 className="font-serif text-lg font-light">
                   {photo.caption}
                 </h3>
-                <p className="text-[11px] font-mono text-canvas/80 line-clamp-1">
+                <p className="text-[11px] font-sans text-canvas/80 line-clamp-1">
                   {photo.category} · {photo.desc}
                 </p>
               </div>
             </div>
 
-            <div className="pt-2 px-1 flex items-center justify-between font-mono text-[10px] text-ink-tertiary">
+            <div className="pt-2 px-1 flex items-center justify-between font-sans text-[10px] uppercase tracking-wider text-ink-tertiary">
               <span className="truncate max-w-[70%]">{photo.caption}</span>
               <span className="text-accent font-medium">{photo.category}</span>
             </div>

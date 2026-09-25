@@ -10,26 +10,26 @@ export interface CaseStudyCalloutProps {
 }
 
 export default function CaseStudyCallout({
-  headline = "Need a similar architecture or interface built?",
-  subtext = "Let's evaluate your technical brief, timeline, and scope.",
-  ctaText = "Start a Project",
+  headline = "Interested in discussing this architecture?",
+  subtext = "I'm always open to technical dialogue, code reviews, and exploring new problem spaces.",
+  ctaText = "Start a Conversation",
   ctaHref = "/connect",
 }: CaseStudyCalloutProps) {
   return (
     <div className="pt-12 space-y-8">
-      {/* Inverted Nocturnal Conversion Callout */}
-      <div className="p-8 sm:p-10 bg-canvas-dark text-canvas-base border border-white/10 rounded-card flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 relative overflow-hidden">
+      {/* Refined Dialogue Callout */}
+      <div className="p-6 sm:p-8 bg-canvas-paper rounded-card flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 relative overflow-hidden">
         <div className="space-y-1 relative z-10">
-          <h3 className="font-sans font-black text-xl sm:text-2xl text-canvas-base tracking-tight">
+          <h3 className="font-sans font-bold text-xl sm:text-2xl text-ink-primary tracking-tight">
             {headline}
           </h3>
-          <p className="text-xs sm:text-sm text-canvas-paper/80 font-sans font-normal">
+          <p className="text-xs sm:text-sm text-ink-secondary font-sans font-normal">
             {subtext}
           </p>
         </div>
         <Link
           href={ctaHref}
-          className="px-6 py-2.5 rounded-pill bg-canvas text-ink-primary hover:bg-neutral-200 text-xs font-sans font-medium transition-colors shrink-0 relative z-10"
+          className="px-6 py-2.5 rounded-pill bg-primary hover:bg-primary-hover active:bg-primary-active text-primary-foreground text-xs font-sans font-medium transition-colors shrink-0 shadow-sm"
         >
           <span>{ctaText}</span>
           <span className="ml-1.5">→</span>
@@ -37,7 +37,7 @@ export default function CaseStudyCallout({
       </div>
 
       {/* Footer Return Route Links */}
-      <div className="flex justify-between items-center text-xs font-mono">
+      <div className="flex justify-between items-center text-xs font-sans">
         <Link
           href="/work"
           className="inline-flex items-center gap-1.5 text-ink-tertiary hover:text-rust transition-colors"

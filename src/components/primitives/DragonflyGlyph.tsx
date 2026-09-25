@@ -6,7 +6,7 @@ interface DragonflyGlyphProps {
 }
 
 export default function DragonflyGlyph({
-  className = "w-8 h-8 text-[#728649]",
+  className = "w-8 h-8 text-accent",
 }: DragonflyGlyphProps) {
   return (
     <svg
