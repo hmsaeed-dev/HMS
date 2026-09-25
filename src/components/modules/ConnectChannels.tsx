@@ -15,21 +15,21 @@ export default function ConnectChannels() {
   };
 
   return (
-    <section className="flex sm:grid sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 overflow-x-auto scroll-snap-x no-scrollbar pb-2">
+    <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
       {/* Email: Terracotta Accent */}
-      <div className="w-[78vw] max-w-[280px] sm:w-auto shrink-0 snap-card relative group p-6 bg-canvas-paper shadow-plate rounded-card hover:shadow-md transition-all duration-300 flex flex-col justify-between h-full">
+      <div className="relative group p-6 bg-canvas-paper border border-border-hairline rounded-card hover:border-accent/40 transition-all duration-300 flex flex-col justify-between h-full shadow-sm">
         <a
           href={`mailto:${SITE_CONFIG.links.email}?subject=Project%20Inquiry%20%E2%80%94%20[Your%20Name%20or%20Company]`}
           className="space-y-4 block"
         >
           <div className="flex items-center justify-between">
-            <div className="p-2.5 rounded-sharp bg-rust/10 text-rust group-hover:bg-rust group-hover:text-canvas transition-colors">
+            <div className="p-2.5 rounded-sharp bg-accent-subtle text-accent group-hover:bg-accent group-hover:text-accent-foreground transition-colors">
               <Mail className="w-5 h-5" />
             </div>
-            <ArrowUpRight className="w-4 h-4 text-ink-tertiary group-hover:text-rust transition-colors" />
+            <ArrowUpRight className="w-4 h-4 text-ink-tertiary group-hover:text-accent transition-colors" />
           </div>
           <div>
-            <span className="font-serif text-xl font-normal text-ink-primary block group-hover:text-rust transition-colors">
+            <span className="font-sans font-bold text-lg tracking-tight text-ink-primary block group-hover:text-accent transition-colors">
               Direct Email
             </span>
             <span className="font-mono text-xs text-ink-tertiary break-all">
@@ -38,46 +38,47 @@ export default function ConnectChannels() {
           </div>
         </a>
 
-        <div className="pt-3 flex items-center justify-between">
-          <span className="font-mono text-[10px] uppercase text-rust font-semibold">
-            ● SLA &lt; 24h
+        <div className="pt-4 flex items-center justify-between border-t border-border-hairline mt-4">
+          <span className="font-mono text-[10px] uppercase text-accent font-semibold flex items-center gap-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
+            <span>Reply &lt; 24h</span>
           </span>
           <button
             type="button"
             onClick={handleCopyEmail}
-            aria-label="Copy email"
-            className="p-1 rounded-sharp text-ink-tertiary hover:text-ink-primary hover:bg-canvas-vellum text-xs transition-colors flex items-center gap-1"
+            aria-label="Copy email address"
+            className="min-h-[44px] px-3 py-1.5 rounded-pill border border-border-hairline text-ink-secondary hover:text-accent hover:border-accent hover:bg-accent-subtle text-xs transition-colors flex items-center gap-1.5 focus:outline-none focus:ring-2 focus:ring-accent"
             title="Copy email to clipboard"
           >
             {copied ? (
-              <span className="text-[10px] font-mono text-rust flex items-center gap-1">
-                <Check className="w-3 h-3" /> Copied
+              <span className="text-[10px] font-mono text-accent flex items-center gap-1">
+                <Check className="w-3.5 h-3.5" /> Copied
               </span>
             ) : (
               <span className="text-[10px] font-mono flex items-center gap-1">
-                <Copy className="w-3 h-3" /> Copy
+                <Copy className="w-3.5 h-3.5" /> Copy
               </span>
             )}
           </button>
         </div>
       </div>
 
-      {/* WhatsApp: Moss Accent */}
+      {/* WhatsApp: Primary Accent */}
       <a
         href={SITE_CONFIG.links.whatsapp}
         target="_blank"
         rel="noopener noreferrer"
-        className="w-[78vw] max-w-[280px] sm:w-auto shrink-0 snap-card p-6 bg-canvas-paper shadow-plate rounded-card hover:shadow-md transition-all duration-300 flex flex-col justify-between group"
+        className="p-6 bg-canvas-paper border border-border-hairline rounded-card hover:border-primary/40 transition-all duration-300 flex flex-col justify-between group shadow-sm min-h-[160px]"
       >
         <div className="space-y-4">
           <div className="flex items-center justify-between">
-            <div className="p-2.5 rounded-sharp bg-moss/10 text-moss group-hover:bg-moss group-hover:text-canvas transition-colors">
+            <div className="p-2.5 rounded-sharp bg-primary-subtle text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
               <MessageCircle className="w-5 h-5" />
             </div>
-            <ArrowUpRight className="w-4 h-4 text-ink-tertiary group-hover:text-moss transition-colors" />
+            <ArrowUpRight className="w-4 h-4 text-ink-tertiary group-hover:text-primary transition-colors" />
           </div>
           <div>
-            <span className="font-serif text-xl font-normal text-ink-primary block group-hover:text-moss transition-colors">
+            <span className="font-sans font-bold text-lg tracking-tight text-ink-primary block group-hover:text-primary transition-colors">
               WhatsApp
             </span>
             <span className="font-mono text-xs text-ink-tertiary">
@@ -85,27 +86,28 @@ export default function ConnectChannels() {
             </span>
           </div>
         </div>
-        <div className="pt-3 font-mono text-[10px] uppercase text-moss font-semibold">
-          Instant Messaging
+        <div className="pt-4 font-mono text-[10px] uppercase text-primary font-semibold flex items-center gap-1.5 border-t border-border-hairline mt-4">
+          <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+          <span>Instant Messaging</span>
         </div>
       </a>
 
-      {/* LinkedIn: Lapis Accent */}
+      {/* LinkedIn: Primary Accent */}
       <a
         href={SITE_CONFIG.links.linkedin}
         target="_blank"
         rel="noopener noreferrer"
-        className="w-[78vw] max-w-[280px] sm:w-auto shrink-0 snap-card p-6 bg-canvas-paper shadow-plate rounded-card hover:shadow-md transition-all duration-300 flex flex-col justify-between group"
+        className="p-6 bg-canvas-paper border border-border-hairline rounded-card hover:border-primary/40 transition-all duration-300 flex flex-col justify-between group shadow-sm min-h-[160px]"
       >
         <div className="space-y-4">
           <div className="flex items-center justify-between">
-            <div className="p-2.5 rounded-sharp bg-lapis/10 text-lapis group-hover:bg-lapis group-hover:text-canvas transition-colors">
+            <div className="p-2.5 rounded-sharp bg-primary-subtle text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
               <Linkedin className="w-5 h-5" />
             </div>
-            <ArrowUpRight className="w-4 h-4 text-ink-tertiary group-hover:text-lapis transition-colors" />
+            <ArrowUpRight className="w-4 h-4 text-ink-tertiary group-hover:text-primary transition-colors" />
           </div>
           <div>
-            <span className="font-serif text-xl font-normal text-ink-primary block group-hover:text-lapis transition-colors">
+            <span className="font-sans font-bold text-lg tracking-tight text-ink-primary block group-hover:text-primary transition-colors">
               LinkedIn
             </span>
             <span className="font-mono text-xs text-ink-tertiary">
@@ -113,27 +115,28 @@ export default function ConnectChannels() {
             </span>
           </div>
         </div>
-        <div className="pt-3 font-mono text-[10px] uppercase text-lapis font-semibold">
-          Professional Network
+        <div className="pt-4 font-mono text-[10px] uppercase text-primary font-semibold flex items-center gap-1.5 border-t border-border-hairline mt-4">
+          <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+          <span>Professional Network</span>
         </div>
       </a>
 
-      {/* GitHub: Deep Carbon Accent */}
+      {/* GitHub: Primary Accent */}
       <a
         href={SITE_CONFIG.links.github}
         target="_blank"
         rel="noopener noreferrer"
-        className="w-[78vw] max-w-[280px] sm:w-auto shrink-0 snap-card p-6 bg-canvas-paper shadow-plate rounded-card hover:shadow-md transition-all duration-300 flex flex-col justify-between group"
+        className="p-6 bg-canvas-paper border border-border-hairline rounded-card hover:border-primary/40 transition-all duration-300 flex flex-col justify-between group shadow-sm min-h-[160px]"
       >
         <div className="space-y-4">
           <div className="flex items-center justify-between">
-            <div className="p-2.5 rounded-sharp bg-ink-primary/10 text-ink-primary group-hover:bg-ink-primary group-hover:text-canvas transition-colors">
+            <div className="p-2.5 rounded-sharp bg-primary-subtle text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
               <Github className="w-5 h-5" />
             </div>
-            <ArrowUpRight className="w-4 h-4 text-ink-tertiary group-hover:text-ink-primary transition-colors" />
+            <ArrowUpRight className="w-4 h-4 text-ink-tertiary group-hover:text-primary transition-colors" />
           </div>
           <div>
-            <span className="font-serif text-xl font-normal text-ink-primary block">
+            <span className="font-sans font-bold text-lg tracking-tight text-ink-primary block group-hover:text-primary transition-colors">
               GitHub
             </span>
             <span className="font-mono text-xs text-ink-tertiary">
@@ -141,8 +144,9 @@ export default function ConnectChannels() {
             </span>
           </div>
         </div>
-        <div className="pt-3 font-mono text-[10px] uppercase text-ink-tertiary">
-          Source Repositories
+        <div className="pt-4 font-mono text-[10px] uppercase text-ink-tertiary flex items-center gap-1.5 border-t border-border-hairline mt-4">
+          <span className="w-1.5 h-1.5 rounded-full bg-ink-tertiary" />
+          <span>Source Repositories</span>
         </div>
       </a>
     </section>

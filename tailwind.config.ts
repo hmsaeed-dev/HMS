@@ -9,6 +9,29 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        /* ── BRAND IDENTITY SYSTEM: PRIMARY & ACCENT TOKENS ── */
+        primary: {
+          DEFAULT: "var(--primary)",
+          hover: "var(--primary-hover)",
+          active: "var(--primary-active)",
+          subtle: "var(--primary-subtle)",
+          border: "var(--primary-border)",
+          foreground: "var(--primary-foreground)",
+        },
+        accent: {
+          DEFAULT: "var(--accent)",
+          hover: "var(--accent-hover)",
+          subtle: "var(--accent-subtle)",
+          border: "var(--accent-border)",
+          foreground: "var(--accent-foreground)",
+        },
+        border: {
+          hairline: "var(--border-hairline)",
+          strong: "var(--border-strong)",
+          subtle: "var(--border-subtle)",
+          accent: "var(--border-accent)",
+        },
+
         /* ── 1. NUMERICAL PRIMITIVE SHADE LADDERS (50–950) ── */
         parchment: {
           50: "var(--parchment-50)",
@@ -132,9 +155,17 @@ const config: Config = {
         sky: "#234559",
       },
       fontFamily: {
-        serif: ["var(--font-serif)", "Cormorant Garamond", "serif"],
-        sans: ["var(--font-sans)", "DM Sans", "sans-serif"],
+        serif: ["var(--font-serif)", "Instrument Serif", "Georgia", "serif"],
+        sans: ["var(--font-sans)", "Inter", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
         mono: ["var(--font-mono)", "Fira Code", "monospace"],
+      },
+      letterSpacing: {
+        tighter: "-0.05em",
+        tight: "-0.035em",
+        snug: "-0.02em",
+        normal: "-0.011em",
+        wide: "0.03em",
+        widest: "0.08em",
       },
       fontSize: {
         "fs-200": "0.50rem",
@@ -167,9 +198,13 @@ const config: Config = {
         sharp: "var(--radius-sharp)",
         card: "var(--radius-card)",
         dock: "var(--radius-dock)",
-        "sm-custom": "8px",
-        "md-custom": "12px",
-        "lg-custom": "16px",
+        pill: "9999px",
+        "sm-custom": "6px",
+        "md-custom": "10px",
+        "lg-custom": "14px",
+      },
+      borderWidth: {
+        hairline: "1px",
       },
       boxShadow: {
         plate: "var(--shadow-plate)",

@@ -3,100 +3,76 @@
 @tailwind utilities;
 
 :root {
-  /* ── 1. NUMERICAL PRIMITIVE SHADE LADDERS (50–950) ───────── */
-  /* Canvas / Surface: Warm Parchment & Cream */
-  --parchment-50: #FAF7F2;          /* Alabaster Canvas Base */
-  --parchment-100: #F6EFE6;         /* Soft Cream Vellum */
-  --parchment-200: #F0E8DC;         /* Tactile Monograph Paper Stock */
-  --parchment-300: #E5DBCE;         /* Warm Tint Inset / Recessed Well */
-  --parchment-400: #D5C8B6;         /* Muted Sandstone Tone */
-  --parchment-500: #C2B39E;         /* Neutral Khaki Parchment */
-  --parchment-600: #A79883;         /* Aged Bookcloth Tan */
-  --parchment-700: #877967;         /* Weathered Silt */
-  --parchment-800: #625749;         /* Deep Raw Umber Wash */
-  --parchment-900: #3F372E;         /* Espresso Grain Shadow */
-  --parchment-950: #26211C;         /* Nocturnal Paper Inset */
+  /* ── 1. CORE BRAND COLOR TOKENS ─────────────────────────── */
+  /* Primary Color: Deep Architectural Prussian Indigo (AAA 10.5:1 against canvas) */
+  --primary: #1C314B;
+  --primary-hover: #142438;
+  --primary-active: #0E1A29;
+  --primary-subtle: rgba(28, 49, 75, 0.07);
+  --primary-border: rgba(28, 49, 75, 0.20);
+  --primary-foreground: #FAF8F5;
 
-  /* Primary Brand: Deep Forest / Hunter Pine / Taxila Olive */
-  --forest-50: #F1F5EE;             /* Crisp Sage Mist Tint */
-  --forest-100: #E1EAD9;            /* Pale Lichen Wash */
-  --forest-200: #C3D5B5;            /* Soft Celadon Meadow */
-  --forest-300: #A2BC8E;            /* Ancient Herbal Olive */
-  --forest-400: #7A9C63;            /* Muted Moss Sprout */
-  --forest-500: #5B7B44;            /* Vibrant Hunter Pine */
-  --forest-600: #4B5838;            /* Signature Taxila Olive / Primary Brand */
-  --forest-700: #38432A;            /* Deep Forest Evergreen (Hover) */
-  --forest-800: #2A3320;            /* Nocturnal Pine Canopy (Active) */
-  --forest-900: #1D2416;            /* Deep Blackened Spruce */
-  --forest-950: #12170E;            /* Shadowed Pine Void */
+  /* Accent Color: Substack Warm Terracotta / Burnt Ochre (AA 5.1:1 against canvas) */
+  --accent: #C04A26;
+  --accent-hover: #A53C1C;
+  --accent-subtle: rgba(192, 74, 38, 0.08);
+  --accent-border: rgba(192, 74, 38, 0.26);
+  --accent-foreground: #FFFFFF;
 
-  /* Action & Conversion: Terracotta / Warm Ochre */
-  --action-50: #FDF4F0;             /* Porcelain Blush Tint */
-  --action-100: #FBE4DC;            /* Warm Bisque Wash */
-  --action-200: #F5C7B7;            /* Soft Apricot Clay (Inverted Subheading) */
-  --action-300: #EBA08A;            /* Sunlit Sandstone */
-  --action-400: #DE775B;            /* Bright Terracotta Ember */
-  --action-500: #C75735;            /* Burnished Clay Focus Ring */
-  --action-600: #A64426;            /* Signature Rust / Primary Kinetic CTA */
-  --action-700: #88351C;            /* Deep Sienna (Hover State) */
-  --action-800: #6C2A16;            /* Active Pressed Mahogany */
-  --action-900: #4F1F10;            /* Dark Smoked Ochre */
-  --action-950: #31120A;            /* Carbon Rust Anchor */
+  /* ── 2. TINTED NEUTRALS & ARCHIVAL CANVASES ─────────────── */
+  /* Warm Archival Paper & Bone (Moving away from raw #FFFFFF) */
+  --canvas-base: #FAF8F5;           /* Archival Warm Alabaster */
+  --surface-paper: #FFFFFF;         /* Crisp Plate Surface */
+  --surface-recessed: #F2EFE9;      /* Warm Parchment Recess */
+  --surface-tint-warm: #EAE5DC;     /* Inset Tint Tone */
 
-  /* Ink & Neutral: Charcoal / Muted Umber */
-  --neutral-50: #F9F8F6;            /* Alabaster Bone */
-  --neutral-100: #EFECE7;           /* Pale Fog Wash */
-  --neutral-200: #DCD6CD;           /* Soft Slate Hairline */
-  --neutral-300: #C2BAB0;           /* Warm Gray Neutral */
-  --neutral-400: #988E82;           /* Muted Lead Neutral */
-  --neutral-500: #6C645A;           /* Ink Tertiary / Micro-label (4.7:1) */
-  --neutral-600: #474139;           /* Ink Secondary / Body Copy (7.6:1) */
-  --neutral-700: #342E28;           /* Dark Umber Text */
-  --neutral-800: #26211C;           /* Nocturnal Inset Card */
-  --neutral-900: #1A1614;           /* Deep Nocturnal Umber / Inverted Section */
-  --neutral-950: #171412;           /* Signature Ink Primary (16.5:1 AAA) */
+  /* Deep Tinted Night Slate (Moving away from raw #000000) */
+  --surface-dark: #131722;          /* Nocturnal Tinted Slate */
+  --surface-dark-card: #1B212F;     /* Nocturnal Elevated Card */
+  --surface-overlay: rgba(250, 248, 245, 0.94);
 
-  /* ── 2. SEMANTIC ROLE TOKENS ────────────────────────────── */
-  --bg-canvas: var(--parchment-50);
-  --bg-surface-elevated: var(--parchment-200);
-  --bg-surface-recessed: var(--parchment-100);
-  --bg-section-muted: var(--parchment-100);
-  --bg-section-inverted: var(--neutral-900);
-  --bg-section-inverted-card: var(--neutral-800);
-  --surface-overlay: rgba(250, 247, 242, 0.88);
+  /* Tinted Ink Typography */
+  --text-ink-primary: #141824;      /* Deep Tinted Charcoal Ink (AAA 15.8:1) */
+  --text-ink-secondary: #4D5569;    /* Warm Slate Gray Body (AA 5.5:1) */
+  --text-ink-muted: #6E7688;        /* Tinted Cool Slate (AA compliant for UI/large) */
+  --text-ink-inverted: #FAF8F5;     /* Inverted Archival Bone */
+  --text-ink-inverted-muted: #CBD5E1;
 
-  --text-ink-primary: var(--neutral-950);
-  --text-ink-secondary: var(--neutral-600);
-  --text-ink-muted: var(--neutral-500);
-  --text-ink-inverted: var(--parchment-50);
-  --text-ink-inverted-muted: var(--parchment-300);
+  /* Hairlines & Borders */
+  --border-hairline: rgba(28, 49, 75, 0.10);
+  --border-subtle: rgba(28, 49, 75, 0.06);
+  --border-strong: rgba(28, 49, 75, 0.20);
+  --border-accent: var(--accent);
+  --border-contrast: var(--text-ink-primary);
 
-  --border-hairline: transparent;
-  --border-strong: transparent;
-  --border-accent: var(--action-600);
-  --border-contrast: var(--neutral-950);
+  /* Interactive Elements */
+  --btn-primary-bg: var(--primary);
+  --btn-primary-hover: var(--primary-hover);
+  --btn-primary-active: var(--primary-active);
+  --btn-focus-ring: rgba(192, 74, 38, 0.25);
 
-  --btn-primary-bg: var(--action-600);
-  --btn-primary-hover: var(--action-700);
-  --btn-primary-active: var(--action-800);
-  --btn-focus-ring: rgba(166, 68, 38, 0.20);
-
-  --pattern-mask-tint: rgba(23, 20, 18, 0.045);
-  --glow-ambient-tint: rgba(166, 68, 38, 0.08);
-
-  /* ── 3. DYNAMIC CANVASES & COMPATIBILITY ALIASES ───────── */
-  --canvas-base: var(--bg-canvas);
-  --surface-paper: var(--bg-surface-elevated);
-  --surface-tint-warm: var(--bg-surface-recessed);
-  --surface-dark: var(--bg-section-inverted);
-  --surface-dark-card: var(--bg-section-inverted-card);
+  /* Backward Compatibility & Semantic Mappings */
+  --bg-canvas: var(--canvas-base);
+  --bg-surface-elevated: var(--surface-paper);
+  --bg-surface-recessed: var(--surface-recessed);
+  --bg-section-muted: var(--surface-recessed);
+  --bg-section-inverted: var(--surface-dark);
+  --bg-section-inverted-card: var(--surface-dark-card);
 
   --ink-primary: var(--text-ink-primary);
   --ink-secondary: var(--text-ink-secondary);
   --ink-tertiary: var(--text-ink-muted);
 
-  --accent-rust: var(--action-600);
-  --accent-rust-hover: var(--action-700);
+  --accent-rust: var(--accent);
+  --accent-rust-hover: var(--accent-hover);
+  --accent-rust-wash: var(--accent-subtle);
+  --accent-moss: #3E5A44;
+  --accent-moss-hover: #2E4533;
+  --accent-moss-wash: rgba(62, 90, 68, 0.10);
+  --accent-lapis: var(--primary);
+  --accent-lapis-hover: var(--primary-hover);
+  --accent-lapis-wash: var(--primary-subtle);
+  --accent-ochre: #C68A34;
   --accent-rust-wash: rgba(166, 68, 38, 0.10);
 
   --accent-moss: var(--forest-600);
@@ -194,29 +170,25 @@ html {
   scrollbar-color: var(--scroll-thumb) var(--scroll-track);
 }
 
-/* Atmospheric Ambient Background Radiance */
+/* Atmospheric Editorial Paper Background */
 body {
   background-color: var(--canvas-base);
   color: var(--ink-primary);
   line-height: 1.74;
   overflow-x: hidden;
   position: relative;
-  /* Luminous organic chromatic glow */
-  background-image: 
-    radial-gradient(ellipse 65% 45% at 90% 8%, rgba(166, 68, 38, 0.045) 0%, transparent 70%),
-    radial-gradient(ellipse 55% 35% at 8% 42%, rgba(35, 69, 89, 0.04) 0%, transparent 60%),
-    radial-gradient(ellipse 65% 45% at 85% 82%, rgba(75, 88, 56, 0.045) 0%, transparent 70%);
-  background-repeat: no-repeat;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Subtle organic paper grain overlay */
+/* Delicate organic paper grain overlay */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 9999;
-  opacity: 0.022;
+  opacity: 0.018;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 

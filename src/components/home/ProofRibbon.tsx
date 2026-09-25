@@ -16,37 +16,38 @@ const DEFAULT_METRICS: ProofMetric[] = [
     value: "05+",
     label: "Production Systems",
     context: "Next.js 15 · TypeScript",
-    highlightColor: "text-rust",
+    highlightColor: "text-primary",
   },
   {
     value: "100%",
     label: "Core Web Vitals",
     context: "Sub-Second Performance",
-    highlightColor: "text-moss",
+    highlightColor: "text-accent",
   },
   {
     value: "UTC+5",
     label: "Taxila Base",
     context: "EU / US Working Overlap",
-    highlightColor: "text-lapis",
+    highlightColor: "text-primary",
   },
   {
     value: "< 24h",
     label: "Direct SLA",
     context: "Zero Agency Overhead",
-    highlightColor: "text-rust",
+    highlightColor: "text-accent",
   },
 ];
 
 export default function ProofRibbon({ metrics = DEFAULT_METRICS }: ProofRibbonProps) {
   return (
-    <section className="w-full bg-canvas-vellum/50 py-8 sm:py-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 items-start">
+    <section className="w-full border-y border-border-hairline bg-canvas-paper/50 py-8 sm:py-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 items-start">
           {metrics.map((item, idx) => (
-            <div key={idx} className="space-y-1">
-              <div className={`font-serif text-2xl sm:text-3xl lg:text-4xl font-light tracking-tight ${item.highlightColor || "text-rust"}`}>
-                {item.value}
+            <div key={idx} className="space-y-1.5 p-2 rounded-card transition-colors">
+              <div className="font-sans font-black text-2xl sm:text-3xl lg:text-4xl tracking-tight text-primary flex items-baseline gap-1">
+                <span>{item.value}</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-accent inline-block mb-1" />
               </div>
               <div className="font-sans text-xs sm:text-sm font-medium text-ink-primary">
                 {item.label}

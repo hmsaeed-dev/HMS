@@ -30,14 +30,14 @@ export default function AcademicsAccordion() {
         return (
           <article
             key={sem.id}
-            className="p-6 md:p-8 bg-canvas-surface shadow-plate rounded-card space-y-6"
+            className="p-6 md:p-8 bg-canvas-paper border border-border-hairline rounded-card space-y-6 hover:border-ink-primary/20 transition-all"
           >
             {/* Header / Marker */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div className="flex items-center gap-3">
                 <DragonflyGlyph className="w-6 h-6 text-rust shrink-0 opacity-80" />
                 <div className="flex items-center gap-3 flex-wrap">
-                  <h2 className="font-serif text-2xl md:text-3xl font-light text-ink-primary">
+                  <h2 className="font-sans font-bold text-xl md:text-2xl tracking-tight text-ink-primary">
                     {sem.title}
                   </h2>
                   {sem.statusHint && (
@@ -47,14 +47,14 @@ export default function AcademicsAccordion() {
               </div>
 
               {sem.gpaText && (
-                <div className="font-mono text-xs px-2.5 py-1 rounded-sharp bg-rust text-canvas self-start sm:self-auto font-medium">
+                <div className="font-mono text-xs px-3 py-1 rounded-pill bg-ink-primary text-canvas self-start sm:self-auto font-medium">
                   {sem.gpaText}
                 </div>
               )}
             </div>
 
             {/* Narrative */}
-            <div className="space-y-3 text-base text-ink-secondary leading-relaxed font-sans">
+            <div className="space-y-3 text-base text-ink-secondary leading-relaxed font-sans font-normal">
               {sem.narrative.map((p, idx) => (
                 <p key={idx}>{p}</p>
               ))}
@@ -67,7 +67,7 @@ export default function AcademicsAccordion() {
                 aria-expanded={isExpanded}
                 aria-controls={sem.id}
                 onClick={() => toggleSemester(sem.id)}
-                className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-ink-primary hover:text-rust font-semibold transition-colors focus:outline-none"
+                className="inline-flex items-center gap-2 text-xs font-sans font-medium text-ink-primary hover:text-rust transition-colors focus:outline-none"
               >
                 <span>
                   {isExpanded

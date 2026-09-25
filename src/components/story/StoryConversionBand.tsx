@@ -21,31 +21,30 @@ export default function StoryConversionBand({
 }: StoryConversionBandProps) {
   return (
     <section className="w-full bg-surface-canvas pt-8 pb-20 sm:pb-28">
-      <div className="max-w-3xl mx-auto px-5 sm:px-8">
-        <div className="p-8 sm:p-12 bg-canvas-dark text-canvas-base pattern-dark-mesh shadow-dark-plate rounded-card space-y-5 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-rust/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 md:px-8">
+        <div className="p-8 sm:p-12 bg-canvas-dark text-canvas-base border border-white/10 rounded-card space-y-5 relative overflow-hidden shadow-md">
           <div className="relative z-10 space-y-3">
-            <h3 className="font-serif text-2xl sm:text-3xl font-light text-canvas-base">
+            <h3 className="font-sans font-black text-2xl sm:text-3xl text-canvas-base tracking-tight break-words">
               {headline}
             </h3>
-            <p className="text-sm sm:text-base text-canvas-paper/80 leading-relaxed font-sans max-w-xl">
+            <p className="text-sm sm:text-base text-canvas-paper/80 leading-relaxed font-sans max-w-xl font-normal">
               {description}
             </p>
           </div>
-          <div className="flex flex-wrap gap-4 pt-2 relative z-10">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3 pt-2 relative z-10">
             <Link
               href={primaryCtaHref}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-sharp bg-rust hover:bg-rust-hover text-canvas text-xs font-mono uppercase tracking-widest font-semibold transition-colors shadow-plate"
+              className="inline-flex items-center justify-center gap-2 min-h-[44px] px-6 py-3 rounded-pill bg-canvas text-primary hover:bg-white text-xs font-sans font-semibold transition-all shadow-sm w-full sm:w-auto"
             >
               <span>{primaryCtaText}</span>
-              <span>→</span>
+              <span className="text-accent">→</span>
             </Link>
             <Link
               href={secondaryCtaHref}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-sharp bg-canvas-dark-card hover:bg-[#2c2520] text-canvas-base text-xs font-mono uppercase tracking-widest transition-colors shadow-sm"
+              className="inline-flex items-center justify-center gap-1.5 min-h-[44px] px-6 py-3 rounded-pill border border-white/20 hover:bg-white/10 text-canvas-base text-xs font-sans font-medium transition-colors w-full sm:w-auto"
             >
               <span>{secondaryCtaText}</span>
-              <ArrowUpRight className="w-3.5 h-3.5" />
+              <ArrowUpRight className="w-3.5 h-3.5 text-accent" />
             </Link>
           </div>
         </div>

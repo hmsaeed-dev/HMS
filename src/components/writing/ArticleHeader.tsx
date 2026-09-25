@@ -13,23 +13,27 @@ export default function ArticleHeader({ post }: ArticleHeaderProps) {
       <div>
         <Link
           href="/writing"
-          className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-ink-tertiary hover:text-rust transition-colors"
+          className="inline-flex items-center gap-2 min-h-[44px] text-xs font-sans font-medium text-ink-secondary hover:text-primary transition-colors"
         >
-          <ArrowLeft className="w-3.5 h-3.5" />
+          <ArrowLeft className="w-3.5 h-3.5 text-accent" />
           <span>Return to Writing Archive</span>
         </Link>
       </div>
 
       <div className="space-y-3">
-        <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-ink-primary leading-tight">
+        <div className="flex items-center gap-2.5 font-mono text-xs text-ink-tertiary">
+          <span>{post.date}</span>
+          <span>·</span>
+          <span className="text-primary font-medium">{post.categoryLabel}</span>
+          <span>·</span>
+          <span>{post.readTime}</span>
+        </div>
+        <h1 className="font-sans font-black text-2xl sm:text-4xl md:text-5xl tracking-tight text-ink-primary leading-[1.08] break-words">
           {post.title}
         </h1>
-        <div className="text-xs text-ink-tertiary font-mono">
-          {post.readTime}
-        </div>
       </div>
 
-      <p className="text-lg text-ink-secondary italic leading-relaxed font-serif pt-1">
+      <p className="text-xl sm:text-2xl text-ink-secondary italic leading-relaxed font-serif pt-2 border-b border-border-hairline pb-8 font-normal">
         {post.summary}
       </p>
     </header>

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, DM_Sans, Fira_Code } from "next/font/google";
+import { Inter, Instrument_Serif, Fira_Code } from "next/font/google";
 import Script from "next/script";
 import AppLayoutFrame from "@/components/layout/AppLayoutFrame";
 import BackToTop from "@/components/layout/BackToTop";
@@ -7,19 +7,20 @@ import ScrollProgress from "@/components/layout/ScrollProgress";
 import "./globals.css";
 
 export const viewport: Viewport = {
-  themeColor: "#f7f4ef",
+  themeColor: "#faf9f6",
 };
 
-const cormorant = Cormorant_Garamond({
+const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
-  weight: ["300", "400", "600", "700"],
+  weight: ["400"],
+  style: ["normal", "italic"],
   variable: "--font-serif",
   display: "swap",
 });
 
-const dmSans = DM_Sans({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  weight: ["400", "500", "600", "700", "800", "900"],
   variable: "--font-sans",
   display: "swap",
 });
@@ -105,7 +106,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cormorant.variable} ${dmSans.variable} ${firaCode.variable}`}
+      className={`${instrumentSerif.variable} ${inter.variable} ${firaCode.variable}`}
     >
       <head>
         <script

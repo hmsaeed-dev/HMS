@@ -27,21 +27,21 @@ export default function StoryTrajectoryTimeline({
 }: StoryTrajectoryTimelineProps) {
   return (
     <section className="w-full bg-surface-canvas py-6 sm:py-8">
-      <div className="max-w-3xl mx-auto px-5 sm:px-8 space-y-6">
-        <h2 className="font-serif text-3xl font-light text-ink-primary">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 md:px-8 space-y-6">
+        <h2 className="font-sans font-bold text-2xl sm:text-3xl tracking-tight text-ink-primary">
           {heading}
         </h2>
 
-        <div className="space-y-3">
+        <div className="space-y-2.5">
           {events.map((evt, idx) => (
             <div
               key={idx}
-              className="p-4 sm:p-5 bg-canvas-paper rounded-card shadow-sm flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-6 group hover:shadow-plate transition-all"
+              className="p-4 sm:p-5 bg-canvas-paper border border-border-hairline rounded-card flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-6 group hover:border-primary/30 transition-all shadow-sm"
             >
-              <div className="font-mono text-xs text-rust font-semibold shrink-0 sm:w-24">
+              <div className="font-mono text-xs text-accent font-semibold shrink-0 sm:w-24">
                 {evt.year}
               </div>
-              <div className="text-base text-ink-primary font-sans leading-relaxed">
+              <div className="text-sm sm:text-base text-ink-primary font-sans leading-relaxed">
                 {evt.desc}
               </div>
             </div>

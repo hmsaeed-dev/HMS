@@ -48,8 +48,8 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
   return (
     <div className="space-y-8">
       {/* Filter and View Switcher Bar */}
-      <div className="flex flex-col md:flex-row items-center justify-between gap-6 py-4">
-        {/* Category Buttons */}
+      <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 py-4 border-b border-border-hairline">
+        {/* Category Buttons with 44px+ Touch Ergonomics */}
         <div className="flex items-center gap-2 flex-wrap">
           {categories.map((cat) => (
             <button
@@ -57,10 +57,10 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
               type="button"
               onClick={() => setActiveCategory(cat)}
               className={cn(
-                "px-3.5 py-1.5 rounded-sharp text-xs font-mono uppercase tracking-wider transition-all",
+                "min-h-[44px] px-4 py-2 rounded-pill text-xs font-sans font-medium transition-all inline-flex items-center justify-center",
                 activeCategory === cat
-                  ? "bg-ink-primary text-canvas shadow-sm font-semibold"
-                  : "text-ink-secondary hover:text-ink-primary bg-canvas-surface hover:bg-canvas-vellum shadow-sm"
+                  ? "bg-primary text-primary-foreground shadow-sm font-semibold"
+                  : "text-ink-secondary hover:text-primary hover:bg-primary-subtle"
               )}
             >
               {cat}
@@ -69,39 +69,39 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
         </div>
 
         {/* View Count & View Switcher */}
-        <div className="flex items-center gap-4 self-end md:self-auto">
+        <div className="flex items-center gap-4 self-stretch sm:self-auto justify-between sm:justify-start">
           <span className="text-xs text-ink-tertiary font-mono">
             Plate Index: {filteredPhotos.length} captures
           </span>
 
-          <div className="flex items-center p-0.5 gap-0.5 bg-canvas-surface rounded-sharp shadow-sm">
+          <div className="flex items-center p-1 gap-1 bg-canvas-paper border border-border-hairline rounded-lg shadow-sm">
             <button
               type="button"
               onClick={() => handleSetView("rhythm")}
               aria-label="Rhythm View (Masonry)"
               className={cn(
-                "p-1.5 rounded-sharp transition-colors",
+                "min-h-[40px] min-w-[40px] flex items-center justify-center rounded-md transition-colors",
                 viewMode === "rhythm"
-                  ? "bg-ink-primary text-canvas"
-                  : "text-ink-secondary hover:text-ink-primary"
+                  ? "bg-primary text-primary-foreground shadow-xs"
+                  : "text-ink-secondary hover:text-primary hover:bg-primary-subtle"
               )}
               title="Masonry View"
             >
-              <LayoutGrid className="w-3.5 h-3.5" />
+              <LayoutGrid className="w-4 h-4" />
             </button>
             <button
               type="button"
               onClick={() => handleSetView("focus")}
               aria-label="Focus View (Cinematic)"
               className={cn(
-                "p-1.5 rounded-sharp transition-colors",
+                "min-h-[40px] min-w-[40px] flex items-center justify-center rounded-md transition-colors",
                 viewMode === "focus"
-                  ? "bg-ink-primary text-canvas"
-                  : "text-ink-secondary hover:text-ink-primary"
+                  ? "bg-primary text-primary-foreground shadow-xs"
+                  : "text-ink-secondary hover:text-primary hover:bg-primary-subtle"
               )}
               title="Cinematic View"
             >
-              <Maximize2 className="w-3.5 h-3.5" />
+              <Maximize2 className="w-4 h-4" />
             </button>
           </div>
         </div>
@@ -119,10 +119,10 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
           <article
             key={photo.src}
             onClick={() => openPhoto(idx)}
-            className="group cursor-pointer p-2.5 bg-canvas-surface shadow-plate rounded-card hover:shadow-md transition-all duration-300"
+            className="group cursor-pointer p-2.5 bg-canvas-paper border border-border-hairline shadow-sm rounded-card hover:border-primary/30 transition-all duration-300"
           >
             <div
-              className={`relative w-full overflow-hidden bg-canvas-recessed ${
+              className={`relative w-full overflow-hidden bg-canvas-vellum rounded-sharp ${
                 viewMode === "focus" ? "aspect-[4/3]" : "aspect-[3/4]"
               }`}
             >
@@ -145,7 +145,7 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
 
             <div className="pt-2 px-1 flex items-center justify-between font-mono text-[10px] text-ink-tertiary">
               <span className="truncate max-w-[70%]">{photo.caption}</span>
-              <span className="text-rust">{photo.category}</span>
+              <span className="text-accent font-medium">{photo.category}</span>
             </div>
           </article>
         ))}

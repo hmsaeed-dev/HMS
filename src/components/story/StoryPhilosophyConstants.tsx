@@ -17,7 +17,7 @@ export default function StoryPhilosophyConstants({
   return (
     <section className="w-full bg-surface-canvas py-6 sm:py-8">
       <div className="max-w-3xl mx-auto px-5 sm:px-8 space-y-6">
-        <h2 className="font-serif text-3xl font-light text-ink-primary">
+        <h2 className="font-sans font-bold text-2xl sm:text-3xl tracking-tight text-ink-primary">
           {heading}
         </h2>
         <div className="space-y-5 text-base sm:text-lg text-ink-secondary leading-[1.78] font-sans">

@@ -10,8 +10,8 @@ export default function AcademicsPreUniversity({
 }: AcademicsPreUniversityProps) {
   return (
     <section className="w-full bg-surface-canvas pb-16 sm:pb-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-        <h2 className="font-serif text-3xl font-light text-ink-primary">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+        <h2 className="font-sans font-black text-2xl sm:text-3xl tracking-tight text-ink-primary">
           {heading}
         </h2>
 
@@ -19,19 +19,19 @@ export default function AcademicsPreUniversity({
           {/* Timeline Cards */}
           <div className="space-y-4">
             {academicsData.preUniversity.map((item, idx) => (
-              <div key={idx} className="p-5 bg-canvas-paper rounded-card shadow-sm space-y-2">
+              <div key={idx} className="p-5 bg-canvas-paper border border-border-hairline rounded-card space-y-2">
                 <div className="flex items-center gap-3">
                   <span className="font-mono text-xs text-rust font-semibold">
                     {item.year}
                   </span>
-                  <span className="text-[10px] px-2 py-0.5 font-mono uppercase bg-olive/10 text-olive rounded-sharp">
+                  <span className="text-[10px] px-2 py-0.5 font-mono uppercase bg-moss/10 text-moss rounded-pill">
                     {item.tag}
                   </span>
                 </div>
-                <h3 className="font-serif text-lg sm:text-xl font-light text-ink-primary">
+                <h3 className="font-sans font-bold text-lg tracking-tight text-ink-primary">
                   {item.title}
                 </h3>
-                <p className="text-sm text-ink-secondary leading-relaxed font-sans">
+                <p className="text-sm text-ink-secondary leading-relaxed font-sans font-normal">
                   {item.description}
                 </p>
               </div>
@@ -39,8 +39,8 @@ export default function AcademicsPreUniversity({
           </div>
 
           {/* Entrance Exam Scores Card */}
-          <div className="p-6 sm:p-8 bg-canvas-surface shadow-plate rounded-card space-y-6">
-            <h3 className="font-serif text-2xl font-light text-ink-primary">
+          <div className="p-6 sm:p-8 bg-canvas-paper border border-border-hairline rounded-card space-y-6">
+            <h3 className="font-sans font-bold text-xl sm:text-2xl tracking-tight text-ink-primary">
               Entrance Exam Scores
             </h3>
 

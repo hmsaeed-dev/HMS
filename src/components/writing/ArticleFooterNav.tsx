@@ -4,10 +4,10 @@ import { ArrowLeft } from "lucide-react";
 
 export default function ArticleFooterNav() {
   return (
-    <div className="pt-12 flex items-center justify-between font-mono text-xs">
+    <div className="pt-8 border-t border-border-hairline flex items-center justify-between font-mono text-xs">
       <Link
         href="/writing"
-        className="inline-flex items-center gap-2 text-ink-tertiary hover:text-rust transition-colors"
+        className="inline-flex items-center gap-2 text-ink-tertiary hover:text-ink-primary transition-colors"
       >
         <ArrowLeft className="w-3.5 h-3.5" />
         <span>All writing pieces</span>
