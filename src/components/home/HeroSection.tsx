@@ -17,15 +17,14 @@ export interface HeroSectionProps {
 }
 
 export default function HeroSection({
-  headline,
+  headline = "Building Digital Systems",
   subtitle = "Computer Science student at UET Taxila. Engineering offline-first applications, low-level systems in C++, and capturing the quiet geometry of the world through macro lenses.",
   portraitSrc = "https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto,f_auto,w_880/v1779627924/Saeed_68_cewriq.jpg",
   portraitAlt = "Hafiz Muhammad Saeed",
   portraitCaption = "Hafiz Muhammad Saeed",
-  portraitLocation = "Taxila, PK",
-  primaryCtaText = "View Selected Work",
+  primaryCtaText = "My Work",
   primaryCtaHref = "#selected-work",
-  secondaryCtaText = "About Saeed",
+  secondaryCtaText = "About Me",
   secondaryCtaHref = "/about",
 }: HeroSectionProps) {
   return (
@@ -35,15 +34,7 @@ export default function HeroSection({
           {/* ── MASTHEAD & ACTIONS ─────────────────────────── */}
           <div className="space-y-6 sm:space-y-8 max-w-2xl">
             <h1 className="font-sans font-black text-[clamp(1.85rem,6.5vw,4.75rem)] leading-[1.08] tracking-tight text-ink-primary break-words">
-              {headline || (
-                <>
-                  Building digital systems with{" "}
-                  <span className="font-serif italic font-normal text-accent tracking-normal">
-                    architectural rigor
-                  </span>{" "}
-                  and observational care.
-                </>
-              )}
+              {headline}
             </h1>
 
             <p className="font-sans text-base sm:text-lg text-ink-secondary leading-[1.75] max-w-xl font-normal">
@@ -72,20 +63,19 @@ export default function HeroSection({
 
           {/* ── PORTRAIT MONOGRAPH MAT (Asymmetric Right Balance) ── */}
           <div className="justify-self-center lg:justify-self-end w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[340px]">
-            <div className="p-3 bg-canvas-paper border border-border-hairline rounded-card transition-all duration-300 group shadow-sm hover:border-primary/30">
-              <div className="overflow-hidden aspect-[4/5] relative bg-canvas-vellum rounded-sharp">
+            <div className="p-3 bg-canvas-paper rounded-card transition-all duration-300 group shadow-sm hover:border-primary/30">
+              <div className="overflow-hidden aspect-[4/5] relative rounded-sharp">
                 <Image
                   src={portraitSrc}
                   alt={portraitAlt}
                   fill
                   priority
                   sizes="(max-width: 640px) 280px, (max-width: 1024px) 320px, 340px"
-                  className="object-cover grayscale contrast-[1.03] group-hover:grayscale-0 transition-all duration-700"
+                  className="object-cover contrast-[1.03] transition-all duration-700"
                 />
               </div>
-              <div className="pt-2.5 px-0.5 flex items-center justify-between font-sans text-[11px] tracking-wide uppercase text-ink-tertiary">
-                <span className="text-ink-primary font-medium">{portraitCaption}</span>
-                <span className="text-accent font-medium">{portraitLocation}</span>
+              <div className="pt-2.5 px-0.5 flex items-center justify-center font-sans text-[11px] tracking-wide uppercase text-ink-tertiary">
+                <span className="text-ink-primary font-bold">{portraitCaption}</span>
               </div>
             </div>
           </div>

@@ -70,9 +70,6 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
 
         {/* View Count & View Switcher */}
         <div className="flex items-center gap-4 self-stretch sm:self-auto justify-between sm:justify-start">
-          <span className="text-xs text-ink-tertiary font-sans">
-            Plate Index: {filteredPhotos.length} captures
-          </span>
 
           <div className="flex items-center p-1 gap-1 bg-canvas-paper border border-border-hairline rounded-lg shadow-sm">
             <button

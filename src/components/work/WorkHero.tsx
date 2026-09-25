@@ -19,7 +19,7 @@ const DEFAULT_METRICS: WorkMetric[] = [
 ];
 
 export default function WorkHero({
-  title = "Selected Works & Systems",
+  title = "Selected Works",
   description = "A curated exhibition of production web applications, architectural prototypes, and custom tools. Built with an emphasis on typographical balance, sub-second performance, and long-term maintainability.",
   metrics = DEFAULT_METRICS,
 }: WorkHeroProps) {

@@ -10,10 +10,6 @@ export default function VisualObservation() {
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <div className="space-y-2 max-w-xl">
-            <div className="text-xs uppercase tracking-widest text-accent font-semibold flex items-center gap-1.5 font-sans">
-              <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-              <span>Observation // 03. Visuals</span>
-            </div>
             <h2 className="font-sans font-black text-3xl sm:text-4xl tracking-tight text-ink-primary">
               HMS Clicks
             </h2>
@@ -26,7 +22,7 @@ export default function VisualObservation() {
             href="/visuals"
             className="inline-flex items-center gap-1.5 text-xs font-sans font-medium text-ink-secondary hover:text-primary transition-colors self-start sm:self-auto min-h-[44px]"
           >
-            <span>Explore Visual Laboratory</span>
+            <span>Explore</span>
             <ArrowRight className="w-3.5 h-3.5 text-accent" />
           </Link>
         </div>

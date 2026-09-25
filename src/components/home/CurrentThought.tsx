@@ -12,15 +12,11 @@ export default function CurrentThought() {
     <section className="w-full bg-surface-canvas py-20 sm:py-28 lg:py-32">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         <div className="flex items-center justify-between pb-2">
-          <div className="text-xs uppercase tracking-widest text-accent font-semibold flex items-center gap-1.5 font-sans">
-            <BookOpen className="w-3.5 h-3.5 text-accent" />
-            <span>Field Note // 04. Current Thought</span>
-          </div>
           <Link
             href="/thought"
-            className="text-xs font-sans text-ink-tertiary hover:text-primary transition-colors min-h-[44px] inline-flex items-center"
+            className="text-xs font-sans text-ink-tertiary hover:text-primary transition-colors min-h-[44px] items-right"
           >
-            All Notes ({posts.length}) →
+            All Notes →
           </Link>
         </div>
 
@@ -45,7 +41,7 @@ export default function CurrentThought() {
               href={`/thought/${latestPost.slug}`}
               className="inline-flex items-center gap-1.5 min-h-[44px] text-xs font-sans font-medium text-ink-primary hover:text-accent transition-colors"
             >
-              <span>Read complete note</span>
+              <span>Read </span>
               <ArrowRight className="w-3.5 h-3.5 text-accent transition-transform group-hover:translate-x-1" />
             </Link>
           </div>

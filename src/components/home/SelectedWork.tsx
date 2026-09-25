@@ -14,10 +14,6 @@ export default function SelectedWork() {
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <div className="space-y-2 max-w-xl">
-            <div className="text-xs uppercase tracking-widest text-accent font-semibold flex items-center gap-1.5 font-sans">
-              <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-              <span>Evidence // 01. Building</span>
-            </div>
             <h2 className="font-sans font-black text-3xl sm:text-4xl md:text-5xl tracking-tight text-ink-primary">
               Selected Systems
             </h2>
@@ -29,7 +25,7 @@ export default function SelectedWork() {
             href="/work"
             className="inline-flex items-center gap-1.5 text-xs font-sans font-medium text-ink-secondary hover:text-primary transition-colors self-start sm:self-auto min-h-[44px]"
           >
-            <span>All Systems ({projects.length})</span>
+            <span>See All</span>
             <ArrowRight className="w-3.5 h-3.5 text-accent" />
           </Link>
         </div>
@@ -59,9 +55,6 @@ export default function SelectedWork() {
                     <h3 className="font-sans font-bold text-xl sm:text-2xl tracking-tight text-ink-primary group-hover:text-primary transition-colors">
                       <Link href={`/work/${project.slug}`}>{project.title}</Link>
                     </h3>
-                    <span className="font-sans text-[11px] text-accent uppercase font-semibold shrink-0">
-                      {project.badge}
-                    </span>
                   </div>
                   <p className="text-xs sm:text-sm text-ink-secondary leading-relaxed font-sans line-clamp-2 font-normal">
                     {project.oneliner}
@@ -74,7 +67,7 @@ export default function SelectedWork() {
                     href={`/work/${project.slug}`}
                     className="inline-flex items-center gap-2 min-h-[44px] text-xs font-sans font-semibold text-ink-primary group-hover:text-accent transition-colors"
                   >
-                    <span>View project</span>
+                    <span>View</span>
                     <ArrowRight className="w-3.5 h-3.5 text-accent transition-transform group-hover:translate-x-1" />
                   </Link>
 

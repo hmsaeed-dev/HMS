@@ -47,10 +47,6 @@ export default function ConnectView() {
           <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 sm:gap-16 items-center">
             {/* The Open Letter */}
             <div className="space-y-6 sm:space-y-8 max-w-xl">
-              <div className="font-sans text-xs uppercase tracking-widest text-accent font-semibold flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-                <span>Signal // Direct Correspondence</span>
-              </div>
 
               <h1 className="font-sans font-black text-4xl sm:text-6xl md:text-7xl tracking-tight text-ink-primary leading-[1.04]">
                 Write to me<span className="text-accent font-serif italic">.</span>
@@ -72,13 +68,6 @@ export default function ConnectView() {
 
               {/* Live Telemetry Data Strip */}
               <div className="pt-2 flex flex-wrap items-center gap-y-2 gap-x-4 text-xs font-sans text-ink-tertiary">
-                <span className="flex items-center gap-1.5 text-ink-primary font-medium">
-                  <span className="w-2 h-2 rounded-full bg-accent" />
-                  <span>Taxila, PK (UTC+5)</span>
-                </span>
-                <span className="opacity-30">•</span>
-                <span>33.7460° N, 72.8397° E</span>
-                <span className="opacity-30">•</span>
                 <span className="text-accent font-medium">Open for select dialogue</span>
               </div>
             </div>
@@ -99,10 +88,6 @@ export default function ConnectView() {
                     />
                   </div>
                 </div>
-                <div className="px-1 flex flex-col font-sans text-[9px] sm:text-[10px] uppercase tracking-wider text-ink-tertiary leading-tight">
-                  <span className="text-ink-primary font-semibold">Plate 01: Identity</span>
-                  <span>Taxila Valley, PK</span>
-                </div>
               </div>
 
               {/* Plate 02: Macro Lens Observation */}
@@ -119,10 +104,6 @@ export default function ConnectView() {
                     />
                   </div>
                 </div>
-                <div className="px-1 flex flex-col font-sans text-[9px] sm:text-[10px] uppercase tracking-wider text-ink-tertiary leading-tight">
-                  <span className="text-ink-primary font-semibold">Plate 02: Observation</span>
-                  <span className="text-accent font-medium">HMS Clicks Macro</span>
-                </div>
               </div>
             </div>
           </div>
@@ -133,16 +114,10 @@ export default function ConnectView() {
       <section className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-16">
         <div className="pb-4 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
           <div>
-            <span className="font-sans text-xs uppercase tracking-widest text-accent font-semibold block">
-              Dialogue Channels // 02. Specialized Inquiry
-            </span>
             <h2 className="font-sans font-black text-2xl sm:text-3xl tracking-tight text-ink-primary mt-1">
               Select Your Wavelength
             </h2>
           </div>
-          <p className="text-xs font-sans text-ink-tertiary">
-            Direct routing to eliminate blank-page friction
-          </p>
         </div>
 
         {/* ── STUDIO 01: LOW-LEVEL SYSTEMS & SOFTWARE ARCHITECTURE ──────── */}
@@ -158,16 +133,11 @@ export default function ConnectView() {
               />
             </div>
             <div className="flex items-center justify-between text-[10px] font-sans tracking-wider text-ink-tertiary px-1">
-              <span>Plate 03: Silicon Architecture</span>
               <span className="text-accent font-semibold">C++17 &amp; Logic Gates</span>
             </div>
           </div>
 
           <div className="space-y-5">
-            <div className="flex items-center gap-2 text-xs font-sans uppercase tracking-wider text-accent font-semibold">
-              <Cpu className="w-3.5 h-3.5" />
-              <span>Studio 01 // Systems &amp; Low-Level Rigor</span>
-            </div>
 
             <h3 className="font-sans font-bold text-2xl sm:text-3xl text-ink-primary tracking-tight">
               On Architectures, Memory &amp; Offline State
@@ -204,16 +174,11 @@ export default function ConnectView() {
               />
             </div>
             <div className="flex items-center justify-between text-[10px] font-sans tracking-wider text-ink-tertiary px-1">
-              <span>Plate 04: The 64 Squares</span>
               <span className="text-accent font-semibold">1,980+ Rapid Games</span>
             </div>
           </div>
 
           <div className="space-y-5">
-            <div className="flex items-center gap-2 text-xs font-sans uppercase tracking-wider text-accent font-semibold">
-              <Trophy className="w-3.5 h-3.5" />
-              <span>Studio 02 // Tactical Geometry</span>
-            </div>
 
             <h3 className="font-sans font-bold text-2xl sm:text-3xl text-ink-primary tracking-tight">
               Across the Sixty-Four Squares
@@ -232,58 +197,7 @@ export default function ConnectView() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 min-h-[44px] rounded-pill bg-primary hover:bg-primary-hover active:bg-primary-active text-primary-foreground font-sans text-xs font-medium tracking-normal transition-all shadow-sm"
               >
-                <span>Challenge on Chess.com (`HMS_aeed`)</span>
-                <ArrowUpRight className="w-3.5 h-3.5 text-accent" />
-              </a>
-
-              <span className="font-sans text-xs text-ink-tertiary px-1">
-                Open Daily · 10+0 or 15+10
-              </span>
-            </div>
-          </div>
-        </article>
-
-        {/* ── STUDIO 03: CLASSICAL PHILOSOPHY, IDEAS & FORMATION ─────────── */}
-        <article className="p-6 sm:p-8 md:p-10 bg-canvas-paper border border-border-hairline rounded-card shadow-sm grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-8 lg:gap-12 items-center group hover:border-primary/40 transition-all duration-300">
-          <div className="space-y-2">
-            <div className="overflow-hidden aspect-[16/10] relative bg-canvas-vellum rounded-sharp border border-border-hairline">
-              <Image
-                src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=1200&q=80"
-                alt="Classical open linen book and heavy typographical paper"
-                fill
-                sizes="(max-width: 1024px) 100vw, 480px"
-                className="object-cover grayscale contrast-[1.04] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
-              />
-            </div>
-            <div className="flex items-center justify-between text-[10px] font-sans tracking-wider text-ink-tertiary px-1">
-              <span>Plate 05: Classical Texts</span>
-              <span className="text-accent font-semibold">Iqbal &amp; Macroeconomics</span>
-            </div>
-          </div>
-
-          <div className="space-y-5">
-            <div className="flex items-center gap-2 text-xs font-sans uppercase tracking-wider text-accent font-semibold">
-              <BookOpen className="w-3.5 h-3.5" />
-              <span>Studio 03 // Ideas &amp; Formation</span>
-            </div>
-
-            <h3 className="font-sans font-bold text-2xl sm:text-3xl text-ink-primary tracking-tight">
-              On Classical Philosophy &amp; Non-Linear Paths
-            </h3>
-
-            <p className="text-sm sm:text-base text-ink-secondary leading-relaxed font-sans font-normal">
-              From Allama Iqbal’s lectures on the reconstruction of religious thought to David Colander’s
-              macroeconomic equilibrium, or navigating a self-directed gap year learning wood carving and
-              Arabic syntax from zero—I welcome thoughtful letters from fellow students, researchers, and
-              curious minds.
-            </p>
-
-            <div className="pt-2">
-              <a
-                href={`mailto:${email}?subject=Dialogue%3A%20Philosophy%2C%20Ideas%20%26%20Formation&body=Hi%20Saeed%2C%0A%0AI%20came%20across%20your%20writing%20and%20field%20notes%20on%20hmsaeed.com%20and%20wanted%20to%20share%20some%20thoughts%20on...`}
-                className="inline-flex items-center gap-2 px-6 py-3 min-h-[44px] rounded-pill bg-primary hover:bg-primary-hover active:bg-primary-active text-primary-foreground font-sans text-xs font-medium tracking-normal transition-all shadow-sm"
-              >
-                <span>Initiate Personal Dialogue</span>
+                <span>Challenge on Chess.com</span>
                 <ArrowUpRight className="w-3.5 h-3.5 text-accent" />
               </a>
             </div>
@@ -302,17 +216,10 @@ export default function ConnectView() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 relative z-10">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-4">
             <div className="space-y-2">
-              <div className="font-sans text-xs uppercase tracking-widest text-[#C94A2F] font-semibold flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#C94A2F]" />
-                <span>Console // 03. Direct Transmission</span>
-              </div>
               <h2 className="font-sans font-black text-3xl sm:text-4xl text-[#F7F5F1] tracking-tight">
                 Architectural Transmission Desk
               </h2>
             </div>
-            <p className="text-xs font-sans text-[#CBD2E1]">
-              Zero-latency direct routing · All channels monitored daily
-            </p>
           </div>
 
           {/* Precision Channel Rows */}
@@ -320,10 +227,6 @@ export default function ConnectView() {
             {/* Row 01: Electronic Mail */}
             <div className="p-6 bg-white/[0.03] hover:bg-white/[0.06] border border-white/10 rounded-card transition-all flex flex-col md:flex-row md:items-center justify-between gap-6 group">
               <div className="space-y-1">
-                <div className="flex items-center gap-2 text-xs font-sans uppercase tracking-wider text-[#C94A2F] font-semibold">
-                  <Mail className="w-3.5 h-3.5" />
-                  <span>Channel 01 // Electronic Mail Direct</span>
-                </div>
                 <div className="font-sans font-bold text-lg sm:text-xl text-[#F7F5F1]">
                   {email}
                 </div>
@@ -347,7 +250,6 @@ export default function ConnectView() {
                   ) : (
                     <>
                       <Copy className="w-3.5 h-3.5" />
-                      <span>Copy Address</span>
                     </>
                   )}
                 </button>
@@ -365,10 +267,6 @@ export default function ConnectView() {
             {/* Row 02: WhatsApp Instant Signal */}
             <div className="p-6 bg-white/[0.03] hover:bg-white/[0.06] border border-white/10 rounded-card transition-all flex flex-col md:flex-row md:items-center justify-between gap-6 group">
               <div className="space-y-1">
-                <div className="flex items-center gap-2 text-xs font-sans uppercase tracking-wider text-[#CBD2E1] font-semibold">
-                  <MessageCircle className="w-3.5 h-3.5 text-[#C94A2F]" />
-                  <span>Channel 02 // WhatsApp Instant Messenger</span>
-                </div>
                 <div className="font-sans font-bold text-lg sm:text-xl text-[#F7F5F1]">
                   +92 321 9798860
                 </div>
@@ -384,7 +282,7 @@ export default function ConnectView() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-5 py-2.5 min-h-[44px] rounded-pill border border-white/20 hover:border-white/40 hover:bg-white/10 text-[#F7F5F1] text-xs font-sans font-medium transition-all"
                 >
-                  <span>Launch WhatsApp</span>
+                  <span>WhatsApp</span>
                   <ArrowUpRight className="w-3.5 h-3.5 text-[#C94A2F]" />
                 </a>
               </div>
@@ -428,15 +326,6 @@ export default function ConnectView() {
                 <ArrowUpRight className="w-4 h-4 text-white/50 group-hover:text-[#C94A2F] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
               </a>
             </div>
-          </div>
-
-          {/* Local Studio Colophon */}
-          <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans text-[#CBD2E1]">
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#C94A2F] animate-pulse" />
-              <span>Taxila Studio (PKT) · Active Season: Semester 2 at UET Taxila</span>
-            </div>
-            <span>No tracking pixels · No automated marketing CRM</span>
           </div>
         </div>
       </section>

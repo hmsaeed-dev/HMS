@@ -11,11 +11,6 @@ interface WorkGridProps {
 export default function WorkGrid({ projects }: WorkGridProps) {
   return (
     <div className="space-y-8">
-      {/* Registry Header */}
-      <div className="flex items-center justify-between pb-4 text-xs font-sans text-ink-tertiary">
-        <span>Curated Systems Registry ({projects.length} Works)</span>
-        <span>Offline-First · C++ · Vision AI · Hardware</span>
-      </div>
 
       {/* Projects Exhibition Grid (Mobile-First 1 Col -> 2 Col MD) */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
@@ -57,7 +52,7 @@ export default function WorkGrid({ projects }: WorkGridProps) {
                   href={`/work/${project.slug}`}
                   className="inline-flex items-center gap-2 min-h-[44px] text-xs font-sans font-semibold text-ink-primary group-hover:text-accent transition-colors"
                 >
-                  <span>View project</span>
+                  <span>View</span>
                   <ArrowRight className="w-3.5 h-3.5 text-accent transition-transform group-hover:translate-x-1" />
                 </Link>
 

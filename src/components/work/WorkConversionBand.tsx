@@ -11,7 +11,7 @@ export interface WorkConversionBandProps {
 export default function WorkConversionBand({
   headline = "Interested in systems architecture or technical dialogue?",
   description = "I welcome discussions on low-level engineering, web systems, and collaborative research. Reach out directly with questions or opportunities.",
-  ctaText = "Initiate Dialogue",
+  ctaText = "Dialogue",
   ctaHref = "/connect",
 }: WorkConversionBandProps) {
   return (

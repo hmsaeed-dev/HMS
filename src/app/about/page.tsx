@@ -15,15 +15,11 @@ export default function AboutPage() {
     <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 space-y-16 sm:space-y-20 pt-20 sm:pt-28">
       {/* ── 01. OPENING: WHO I AM NOW ─────────────────────────────────── */}
       <header className="space-y-6">
-        <div className="font-sans text-xs uppercase tracking-widest text-accent font-semibold flex items-center gap-2">
-          <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-          <span>Profile &amp; Formation</span>
-        </div>
         <h1 className="font-sans font-black text-3xl sm:text-5xl lg:text-6xl tracking-tight text-ink-primary leading-[1.08]">
           Hafiz Muhammad Saeed
         </h1>
         <p className="font-serif italic text-xl sm:text-2xl text-ink-secondary leading-relaxed font-normal">
-          “A computer science student building systems, studying ideas, and observing the world carefully.”
+          A computer science student building systems, studying ideas, and observing the world carefully.
         </p>
       </header>
 
@@ -52,10 +48,6 @@ export default function AboutPage() {
                 sizes="(max-width: 640px) 280px, 320px"
                 className="object-cover grayscale contrast-[1.03] hover:grayscale-0 transition-all duration-700"
               />
-            </div>
-            <div className="pt-2 px-1 flex items-center justify-between font-sans text-[10px] uppercase tracking-wider text-ink-tertiary">
-              <span className="text-ink-primary font-medium">Plate 01: Taxila</span>
-              <span className="text-accent font-medium">UET Taxila</span>
             </div>
           </div>
         </div>
@@ -114,7 +106,7 @@ export default function AboutPage() {
           <div className="flex items-center gap-2">
             <Trophy className="w-4 h-4 text-accent shrink-0" />
             <span>
-              Competitive Chess (<strong className="text-ink-primary font-bold">1,980+ Rapid Games</strong>, 1,318 Peak Rating, Legend League on Chess.com)
+              Chess (<strong className="text-ink-primary font-bold">1,980+ Rapid Games</strong>, 1,318 Peak ELO Rating)
             </span>
           </div>
           <a
@@ -178,7 +170,7 @@ export default function AboutPage() {
       <section className="space-y-6 pt-6 sm:pt-10">
         <div className="font-sans text-xs uppercase tracking-widest text-accent font-semibold flex items-center gap-1.5">
           <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-          <span>Active Season // Now</span>
+          <span>Active Season</span>
         </div>
         <h2 className="font-sans font-bold text-2xl sm:text-3xl tracking-tight text-ink-primary">
           What Occupies My Attention Today
