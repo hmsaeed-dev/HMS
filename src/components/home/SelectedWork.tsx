@@ -25,63 +25,49 @@ export default function SelectedWork() {
             href="/work"
             className="inline-flex items-center gap-1.5 text-xs font-sans font-medium text-ink-secondary hover:text-primary transition-colors self-start sm:self-auto min-h-[44px]"
           >
-            <span>See All</span>
+            <span>See All Works</span>
             <ArrowRight className="w-3.5 h-3.5 text-accent" />
           </Link>
         </div>
 
-        {/* ── SUBSTANTIAL WORK GRID (1 COL -> 2 COL MD -> 3 COL LG) ── */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {featured.map((project) => (
-            <article
-              key={project.slug}
-              className="p-5 sm:p-6 bg-canvas-paper border border-border-hairline rounded-card flex flex-col justify-between space-y-6 hover:border-primary/30 transition-all duration-300 group shadow-sm"
-            >
-              {/* Visual Frame */}
-              <div className="relative aspect-[16/10] w-full overflow-hidden bg-canvas-vellum rounded-sharp">
-                <Image
-                  src={project.featuredImage}
-                  alt={project.title}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 380px"
-                  className="object-cover group-hover:scale-[1.02] transition-transform duration-700"
-                />
-              </div>
+        {/* ── INTEGRATED AERO-GLASS PROJECT CARDS (1 COL -> 2 COL MD -> 3 COL LG) ── */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
+          {featured.map((project) => {
+            const primaryTech = project.meta?.coreTech
+              ? project.meta.coreTech.split(",")[0].trim()
+              : null;
 
-              {/* Information & Narrative */}
-              <div className="flex flex-col justify-between flex-grow space-y-4">
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between gap-2">
-                    <h3 className="font-sans font-bold text-xl sm:text-2xl tracking-tight text-ink-primary group-hover:text-primary transition-colors">
-                      <Link href={`/work/${project.slug}`}>{project.title}</Link>
-                    </h3>
-                  </div>
-                  <p className="text-xs sm:text-sm text-ink-secondary leading-relaxed font-sans line-clamp-2 font-normal">
-                    {project.oneliner}
-                  </p>
+            return (
+              <article
+                key={project.slug}
+                className="group relative flex flex-col justify-end overflow-hidden rounded-3xl border border-slate-800/80 bg-slate-900 shadow-xl min-h-[470px] h-full transition-all duration-300 hover:shadow-2xl hover:border-slate-700/90"
+              >
+                {/* ── 1. TOP PREVIEW VISUAL (55%–60% COVERAGE) ── */}
+                <div className="absolute inset-0 h-[60%] w-full overflow-hidden bg-slate-950">
+                  <Image
+                    src={project.featuredImage}
+                    alt={project.title}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 380px"
+                    className="object-cover object-top"
+                  />
+                  {/* Subtle depth gradient overlay blending into frosted lower pane */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-black/30 pointer-events-none" />
                 </div>
 
-                {/* Progressive Disclosure Action */}
-                <div className="flex items-center justify-between pt-4">
-                  <Link
-                    href={`/work/${project.slug}`}
-                    className="inline-flex items-center gap-2 min-h-[44px] text-xs font-sans font-semibold text-ink-primary group-hover:text-accent transition-colors"
-                  >
-                    <span>View</span>
-                    <ArrowRight className="w-3.5 h-3.5 text-accent transition-transform group-hover:translate-x-1" />
-                  </Link>
-
-                  <div className="flex items-center gap-1">
+                {/* ── EXTERNAL ACCESS ICONS (FLOATING GLASS PILLS) ── */}
+                {(project.liveUrl || project.githubUrl) && (
+                  <div className="absolute top-4 right-4 z-20 flex items-center gap-2">
                     {project.liveUrl && (
                       <a
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="min-h-[44px] min-w-[44px] flex items-center justify-center rounded-md text-ink-muted hover:text-accent transition-colors"
+                        className="h-8 w-8 rounded-full bg-black/45 backdrop-blur-md border border-white/15 text-white/80 hover:text-white hover:bg-black/70 flex items-center justify-center transition-colors shadow-sm"
                         title="Live Deployment"
                         aria-label={`Open ${project.title} live deployment`}
                       >
-                        <ArrowUpRight className="w-4 h-4" />
+                        <ArrowUpRight className="w-3.5 h-3.5" />
                       </a>
                     )}
                     {project.githubUrl && (
@@ -89,18 +75,48 @@ export default function SelectedWork() {
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="min-h-[44px] min-w-[44px] flex items-center justify-center rounded-md text-ink-muted hover:text-primary transition-colors"
-                        title="Repository"
+                        className="h-8 w-8 rounded-full bg-black/45 backdrop-blur-md border border-white/15 text-white/80 hover:text-white hover:bg-black/70 flex items-center justify-center transition-colors shadow-sm"
+                        title="Source Code"
                         aria-label={`Open ${project.title} source code repository`}
                       >
-                        <Github className="w-4 h-4" />
+                        <Github className="w-3.5 h-3.5" />
                       </a>
                     )}
                   </div>
+                )}
+
+                {/* ── 2. AERO-GLASS & GRADIENT OVERLAY PANE ── */}
+                <div className="relative z-10 w-full backdrop-blur-md bg-gradient-to-b from-[rgba(15,23,42,0.78)] via-[rgba(15,23,42,0.92)] to-[rgba(15,23,42,0.98)] p-5 sm:p-6 rounded-b-3xl flex flex-col justify-between space-y-4">
+
+                  {/* Typography: Title & Description */}
+                  <div className="space-y-1.5">
+                    <h3 className="text-white font-semibold text-lg sm:text-xl tracking-tight leading-snug">
+                      <Link
+                        href={`/work/${project.slug}`}
+                        className="hover:text-white/90 transition-colors"
+                      >
+                        {project.title}
+                      </Link>
+                    </h3>
+                    <p className="text-white/70 text-sm line-clamp-2 leading-relaxed font-normal">
+                      {project.oneliner}
+                    </p>
+                  </div>
+
+                  {/* ── 3. FULL-WIDTH CALL TO ACTION (CTA) ── */}
+                  <div className="pt-1">
+                    <Link
+                      href={`/work/${project.slug}`}
+                      className="w-full inline-flex items-center justify-center gap-2 bg-white text-neutral-900 font-medium py-2.5 px-4 rounded-full hover:bg-neutral-100 active:scale-[0.99] transition-all shadow-md text-xs sm:text-sm font-sans"
+                    >
+                      <span>View Project</span>
+                      <ArrowRight className="w-3.5 h-3.5 text-neutral-900" />
+                    </Link>
+                  </div>
                 </div>
-              </div>
-            </article>
-          ))}
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>

@@ -7,12 +7,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticRoutes = [
     "",
-    "/story",
-    "/now",
     "/work",
-    "/writing",
-    "/academics",
-    "/photography",
+    "/thought",
+    "/about",
+    "/visuals",
     "/connect",
   ].map((route) => ({
     url: `${baseUrl}${route}`,
@@ -28,12 +26,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  const writingRoutes = posts.map((post) => ({
-    url: `${baseUrl}/writing/${post.slug}`,
+  const thoughtRoutes = posts.map((post) => ({
+    url: `${baseUrl}/thought/${post.slug}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));
 
-  return [...staticRoutes, ...projectRoutes, ...writingRoutes];
+  return [...staticRoutes, ...projectRoutes, ...thoughtRoutes];
 }
