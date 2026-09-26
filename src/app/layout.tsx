@@ -51,7 +51,7 @@ export const metadata: Metadata = {
 			"Explore the digital works and photographic captures of Hafiz Muhammad Saeed.",
 		images: [
 			{
-				url: "https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto/f_auto/v1779627924/Saeed_68_cewriq.jpg",
+				url: "/assets/portraits/hero-mountain-desktop.jpg",
 				width: 1200,
 				height: 630,
 				alt: "Hafiz Muhammad Saeed",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
 		description:
 			"Explore the digital works and photographic captures of Hafiz Muhammad Saeed.",
 		images: [
-			"https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto/f_auto/v1779627924/Saeed_68_cewriq.jpg",
+			"/assets/portraits/hero-mountain-desktop.jpg",
 		],
 	},
 	icons: {
@@ -78,7 +78,7 @@ const jsonLd = {
 	name: "Hafiz Muhammad Saeed",
 	alternateName: ["HMSaeed", "Hafiz Muhammad Saeed", "HMS"],
 	url: "https://hmsaeed.com",
-	image: "https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto/f_auto/v1779627924/Saeed_68_cewriq.jpg",
+	image: "https://hmsaeed.com/assets/portraits/Saeed.jpg",
 	sameAs: [
 		"https://orcid.org/0009-0007-9947-5047",
 		"https://github.com/hmsaeed-dev",

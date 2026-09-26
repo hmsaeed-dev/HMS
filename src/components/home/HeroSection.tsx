@@ -4,83 +4,179 @@ import Image from "next/image";
 import { ArrowRight, ArrowDown } from "lucide-react";
 
 export interface HeroSectionProps {
-  headline?: React.ReactNode;
-  subtitle?: string;
-  portraitSrc?: string;
-  portraitAlt?: string;
-  portraitCaption?: string;
-  portraitLocation?: string;
-  primaryCtaText?: string;
-  primaryCtaHref?: string;
-  secondaryCtaText?: string;
-  secondaryCtaHref?: string;
+	headline?: React.ReactNode;
+	subtitle?: string;
+	portraitSrc?: string;
+	portraitAlt?: string;
+	primaryCtaText?: string;
+	primaryCtaHref?: string;
+	secondaryCtaText?: string;
+	secondaryCtaHref?: string;
 }
 
 export default function HeroSection({
-  headline = "Building Digital Systems",
-  subtitle = "Computer Science student at UET Taxila. Engineering offline-first applications, low-level systems in C++, and capturing the quiet geometry of the world through macro lenses.",
-  portraitSrc = "https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto,f_auto,w_880/v1779627924/Saeed_68_cewriq.jpg",
-  portraitAlt = "Hafiz Muhammad Saeed",
-  portraitCaption = "Hafiz Muhammad Saeed",
-  primaryCtaText = "My Work",
-  primaryCtaHref = "#selected-work",
-  secondaryCtaText = "About Me",
-  secondaryCtaHref = "/about",
+	headline = "Building Digital Systems",
+	subtitle = "Computer Science student at UET Taxila. Engineering offline-first applications, low-level systems in C++, and capturing the quiet geometry of the world through macro lenses.",
+	portraitSrc = "/assets/portraits/hero-mountain-desktop.jpg",
+	portraitAlt = "Hafiz Muhammad Saeed overlooking Taxila Valley and distant Himalayan ridges",
+	primaryCtaText = "My Work",
+	primaryCtaHref = "#selected-work",
+	secondaryCtaText = "About Me",
+	secondaryCtaHref = "/about",
 }: HeroSectionProps) {
-  return (
-    <section className="w-full bg-surface-canvas text-ink-primary pt-12 sm:pt-20 md:pt-28 pb-16 sm:pb-24 lg:pb-28 overflow-hidden">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_0.7fr] gap-12 sm:gap-16 lg:gap-20 items-center">
-          {/* ── MASTHEAD & ACTIONS ─────────────────────────── */}
-          <div className="space-y-6 sm:space-y-8 max-w-2xl">
-            <h1 className="font-sans font-black text-[clamp(1.85rem,6.5vw,4.75rem)] leading-[1.08] tracking-tight text-ink-primary break-words">
-              {headline}
-            </h1>
+	return (
+		<section className="relative isolate min-h-[calc(100svh-4rem)] w-full overflow-hidden text-white">
+			{/* ── FULL-BLEED HERO IMAGE ─────────────────────────── */}
+			<div className="absolute inset-0 -z-20">
+				<Image
+					src={portraitSrc}
+					alt={portraitAlt}
+					fill
+					priority
+					sizes="100vw"
+					className="
+            object-cover
+            object-[68%_50%]
+            scale-[1.01]
+            contrast-[1.03]
+            saturate-[0.96]
+            transition-transform
+            duration-[1800ms]
+            ease-out
+          "
+				/>
+			</div>
 
-            <p className="font-sans text-base sm:text-lg text-ink-secondary leading-[1.75] max-w-xl font-normal">
-              {subtitle}
-            </p>
+			{/* ── CINEMATIC ATMOSPHERE ──────────────────────────── */}
+			<div
+				aria-hidden="true"
+				className="
+          absolute inset-0 -z-10
+          bg-gradient-to-r
+          from-black/45
+          via-black/10
+          to-transparent
+        "
+			/>
 
-            {/* Direct Action Triggers */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
-              <a
-                href={primaryCtaHref}
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-pill bg-primary hover:bg-primary-hover active:bg-primary-active text-primary-foreground font-sans text-xs font-medium tracking-normal transition-all group min-h-[44px] w-full sm:w-auto shadow-sm"
-              >
-                <span>{primaryCtaText}</span>
-                <ArrowRight className="w-3.5 h-3.5 text-accent transition-transform group-hover:translate-x-1" />
-              </a>
+			<div
+				aria-hidden="true"
+				className="
+          absolute inset-0 -z-10
+        "
+			/>
 
-              <Link
-                href={secondaryCtaHref}
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-pill border border-primary-border hover:bg-primary-subtle text-primary font-sans text-xs font-medium tracking-normal transition-colors min-h-[44px] w-full sm:w-auto"
-              >
-                <span>{secondaryCtaText}</span>
-                <ArrowDown className="w-3.5 h-3.5 text-accent transition-transform group-hover:translate-y-0.5" />
-              </Link>
-            </div>
-          </div>
+			{/* ── HERO CONTENT ─────────────────────────────────── */}
+			<div className="relative mx-auto flex min-h-[calc(100svh-4rem)] w-full max-w-[1400px] items-center px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28">
+				<div className="w-full max-w-3xl">
+					{/* ── HEADLINE ──────────────────────────────────── */}
+					<h1
+						className="
+              max-w-4xl
+              font-sans font-black
+              text-[clamp(3rem,8vw,7.5rem)]
+              leading-[0.91]
+              tracking-[-0.045em]
+              text-white
+              drop-shadow-[0_3px_18px_rgba(0,0,0,0.22)]
+            "
+					>
+						{headline}<span className="text-accent">.</span>
+					</h1>
 
-          {/* ── PORTRAIT MONOGRAPH MAT (Asymmetric Right Balance) ── */}
-          <div className="justify-self-center lg:justify-self-end w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[340px]">
-            <div className="p-3 bg-canvas-paper rounded-card transition-all duration-300 group shadow-sm hover:border-primary/30">
-              <div className="overflow-hidden aspect-[4/5] relative rounded-sharp">
-                <Image
-                  src={portraitSrc}
-                  alt={portraitAlt}
-                  fill
-                  priority
-                  sizes="(max-width: 640px) 280px, (max-width: 1024px) 320px, 340px"
-                  className="object-cover contrast-[1.03] transition-all duration-700"
-                />
-              </div>
-              <div className="pt-2.5 px-0.5 flex items-center justify-center font-sans text-[11px] tracking-wide uppercase text-ink-tertiary">
-                <span className="text-ink-primary font-bold">{portraitCaption}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+					{/* ── DESCRIPTION ───────────────────────────────── */}
+					<p
+						className="
+              mt-7
+              max-w-xl
+              font-sans
+              text-sm
+              leading-[1.7]
+              text-white/85
+              sm:mt-8
+              sm:text-base
+              lg:text-lg
+            "
+					>
+						{subtitle}
+					</p>
+
+					{/* ── ACTIONS ───────────────────────────────────── */}
+					<div
+						className="
+              mt-8
+              flex flex-col
+              gap-3
+              sm:mt-10
+              sm:flex-row
+              sm:items-center
+            "
+					>
+						<a
+							href={primaryCtaHref}
+							className="
+                group
+                inline-flex min-h-[46px]
+                w-full items-center justify-center
+                gap-2
+                rounded-pill
+                bg-white/90
+                px-6 py-3
+                font-sans text-xs font-semibold
+                tracking-wide
+                text-black
+                shadow-lg shadow-black/10
+                transition-all duration-300
+                hover:bg-accent
+                hover:-translate-y-0.5
+                sm:w-auto
+              "
+						>
+							<span>{primaryCtaText}</span>
+
+							<ArrowRight
+								className="
+                  h-3.5 w-3.5
+                  transition-transform duration-300
+                  group-hover:translate-x-1
+                "
+							/>
+						</a>
+
+						<Link
+							href={secondaryCtaHref}
+							className="
+                group
+                inline-flex min-h-[46px]
+                w-full items-center justify-center
+                gap-2
+                rounded-pill
+                border border-white/35
+                bg-black/10
+                px-6 py-3
+                font-sans text-xs font-medium
+                tracking-wide
+                text-white
+                backdrop-blur-[3px]
+                transition-all duration-300
+                hover:border-white/60
+                hover:bg-white/10
+                sm:w-auto
+              "
+						>
+							<span>{secondaryCtaText}</span>
+
+							<ArrowDown
+								className="
+                  h-3.5 w-3.5
+                  transition-transform duration-300
+                  group-hover:translate-y-0.5
+                "
+							/>
+						</Link>
+					</div>
+				</div>
+			</div>
+		</section>
+	);
 }

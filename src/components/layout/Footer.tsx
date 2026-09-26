@@ -18,7 +18,7 @@ export default function Footer() {
 							Hafiz Muhammad Saeed
 							<span className="text-accent">.</span>
 						</Link>
-						<p className="text-sm text-ink-secondary max-w-sm leading-relaxed">
+						<p className="text-sm max-w-sm leading-relaxed">
 							A computer science student building systems,
 							studying ideas, and observing the world carefully.
 						</p>
@@ -29,11 +29,11 @@ export default function Footer() {
 					</div>
 
 					{/* Quick Index */}
-					<div className="space-y-3">
+					<div className="space-y-3 hover:cursor-pointer">
 						<h4 className="text-xs font-semibold font-sans uppercase tracking-wider">
 							Index
 						</h4>
-						<ul className="space-y-1 text-xs font-sans text-ink-secondary">
+						<ul className="space-y-1 text-xs font-sans">
 							<li>
 								<Link
 									href="/work"

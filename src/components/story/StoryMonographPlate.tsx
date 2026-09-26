@@ -9,8 +9,8 @@ export interface StoryMonographPlateProps {
 }
 
 export default function StoryMonographPlate({
-  imageSrc = "https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto,f_auto,w_1000/v1779627924/Saeed_68_cewriq.jpg",
-  imageAlt = "Hafiz Muhammad Saeed",
+  imageSrc = "/assets/portraits/hero-mountain-desktop.jpg",
+  imageAlt = "Hafiz Muhammad Saeed overlooking Taxila Valley and Margalla ridges",
   caption = "Plate 02: Saeed in Contemplation",
   location = "Taxila, PK",
 }: StoryMonographPlateProps) {
@@ -23,7 +23,7 @@ export default function StoryMonographPlate({
               src={imageSrc}
               alt={imageAlt}
               fill
-              className="object-cover grayscale contrast-[1.04] hover:grayscale-0 transition-all duration-700"
+              className="object-cover object-[75%_25%] contrast-[1.04] hover:scale-[1.02] transition-all duration-700"
             />
           </div>
           <div className="pt-3 flex items-center justify-between font-sans text-[10px] tracking-wider uppercase text-ink-tertiary font-semibold">

@@ -24,7 +24,7 @@ export default function AboutPage() {
       </header>
 
       {/* ── PORTRAIT & QUICK LOCATOR ──────────────────────────────────── */}
-      <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-8 items-center py-6 sm:py-10">
+      <div className="grid grid-cols-1 md:grid-cols-[1.25fr_1fr] gap-8 lg:gap-12 items-center py-6 sm:py-10">
         <div className="space-y-4 text-sm sm:text-base text-ink-secondary leading-[1.8] font-sans">
           <p>
             I am currently an undergraduate Computer Science student at the University of Engineering
@@ -37,17 +37,21 @@ export default function AboutPage() {
           </p>
         </div>
 
-        <div className="justify-self-center md:justify-self-end w-full max-w-[280px]">
-          <div className="p-2.5 bg-canvas-paper rounded-card shadow-sm">
+        <div className="justify-self-center md:justify-self-end w-full max-w-[320px] sm:max-w-[360px]">
+          <div className="p-3 bg-canvas-paper border border-border-hairline rounded-card shadow-sm group hover:border-primary/30 transition-all duration-500">
             <div className="overflow-hidden aspect-[4/5] relative bg-canvas-vellum rounded-sharp">
               <Image
-                src="https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto,f_auto,w_880/v1779627924/Saeed_68_cewriq.jpg"
+                src="/assets/portraits/Saeed.jpg"
                 alt="Hafiz Muhammad Saeed"
                 fill
                 priority
-                sizes="(max-width: 640px) 280px, 320px"
-                className="object-cover grayscale contrast-[1.03] hover:grayscale-0 transition-all duration-700"
+                sizes="(max-width: 640px) 320px, 360px"
+                className="object-cover object-[center_18%] contrast-[1.03] group-hover:scale-[1.02] transition-all duration-700"
               />
+            </div>
+            <div className="pt-2.5 px-0.5 flex items-center justify-between font-sans text-[11px] tracking-wide uppercase text-ink-tertiary">
+              <span className="text-ink-primary font-bold">Plate 01 · Identity</span>
+              <span className="text-[10px] text-ink-muted">UET Taxila</span>
             </div>
           </div>
         </div>
@@ -161,6 +165,32 @@ export default function AboutPage() {
             <p className="text-xs text-ink-secondary leading-relaxed font-sans">
               FSc Pre-Engineering/Pre-Medical completed with merit distinction. Matriculation Grade A+
               with debate team captaincy and school representation. Entrance scores: ECAT 315 / 400.
+            </p>
+          </div>
+        </div>
+
+        {/* Archival Milestone Plate: 2024 Pre-University Farewell */}
+        <div className="p-4 sm:p-5 bg-canvas-paper/70 border border-border-hairline rounded-card flex flex-col sm:flex-row items-center gap-5 sm:gap-6 mt-4 group hover:border-primary/30 transition-all duration-300">
+          <div className="w-[120px] sm:w-[130px] shrink-0">
+            <div className="overflow-hidden aspect-square relative rounded-sharp bg-canvas-vellum border border-border-hairline">
+              <Image
+                src="/assets/portraits/12party.jpg"
+                alt="Hafiz Muhammad Saeed at secondary school farewell in Taxila, 2024"
+                fill
+                sizes="130px"
+                className="object-cover object-center grayscale contrast-[1.04] group-hover:grayscale-0 transition-all duration-500"
+              />
+            </div>
+          </div>
+          <div className="space-y-1 text-center sm:text-left">
+            <div className="font-sans text-[11px] uppercase tracking-wider text-accent font-semibold">
+              Plate 02 · Archival Record · Taxila, 2024
+            </div>
+            <h4 className="font-sans font-bold text-sm text-ink-primary">
+              The Threshold of Formal Systems
+            </h4>
+            <p className="text-xs text-ink-secondary font-sans leading-relaxed">
+              Photographed at the secondary school farewell concluding FSc studies. This milestone initiated the self-directed gap year of tactile experimentation, Arabic linguistics, and self-taught C++ before formal university entry at UET.
             </p>
           </div>
         </div>

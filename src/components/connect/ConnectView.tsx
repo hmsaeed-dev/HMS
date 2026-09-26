@@ -79,12 +79,12 @@ export default function ConnectView() {
                 <div className="p-2 sm:p-2.5 bg-canvas-paper rounded-card shadow-sm group">
                   <div className="overflow-hidden aspect-[4/5] relative bg-canvas-vellum rounded-sharp">
                     <Image
-                      src="/assets/images/saeed-taxila.jpg"
-                      alt="Hafiz Muhammad Saeed in natural light in Taxila"
+                      src="/assets/portraits/Harnoi.jpg"
+                      alt="Hafiz Muhammad Saeed in natural sunlight at Harnoi stream"
                       fill
                       priority
                       sizes="(max-width: 640px) 160px, 240px"
-                      className="object-cover grayscale contrast-[1.05] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                      className="object-cover object-[center_15%] contrast-[1.04] group-hover:scale-105 transition-all duration-700"
                     />
                   </div>
                 </div>

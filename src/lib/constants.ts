@@ -13,5 +13,5 @@ export const SITE_CONFIG = {
     whatsapp: "https://wa.me/923219798860?text=Hi%20Saeed%2C%20I%20saw%20your%20portfolio!",
   },
   metaImage:
-    "https://res.cloudinary.com/dkpehrpdm/image/upload/q_auto/f_auto/v1779627924/Saeed_68_cewriq.jpg",
+    "/assets/portraits/hero-mountain-desktop.jpg",
 };

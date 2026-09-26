@@ -74,28 +74,28 @@ export default function Navigation() {
 
             {/* Desktop Nav Links */}
             <nav
-              className="hidden md:flex items-center gap-8 text-xs font-sans font-medium text-ink-secondary"
+              className="hidden md:flex items-center gap-8 text-xs font-sans font-medium text-ink-secondary hover:cursor-pointer"
               aria-label="Main Navigation"
             >
               {navItems.map((item) => {
                 const active = isActive(item.href);
                 return (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    aria-current={active ? "page" : undefined}
-                    className={`transition-colors py-2 relative text-xs tracking-normal ${
-                      active
-                        ? "text-primary font-semibold"
-                        : "hover:text-primary text-ink-secondary"
-                    }`}
-                  >
-                    {item.name}
-                    {active && (
-                      <span className="absolute -bottom-1.5 left-0 right-0 h-[2px] bg-primary rounded-full" />
-                    )}
-                  </Link>
-                );
+					<Link
+						key={item.href}
+						href={item.href}
+						aria-current={active ? "page" : undefined}
+						className={`transition-colors py-2 relative text-xs tracking-normal ${
+							active
+								? "text-primary font-semibold"
+								: "hover:text-accent text-ink-secondary"
+						}`}
+					>
+						{item.name}
+						{active && (
+							<span className="absolute -bottom-1.5 left-0 right-0 h-[px] bg-primary rounded-full" />
+						)}
+					</Link>
+				);
               })}
             </nav>
 
